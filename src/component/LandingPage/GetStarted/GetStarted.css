@@ -1,0 +1,191 @@
+/* Section Style */
+.get-started-section {
+    background-color: #106ebe;
+    padding: 30px 0;
+    color: #fff;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Container Style */
+  .get-started-container {
+    max-width: 1200px;
+    margin: 0 10px;
+    padding-right: 20px;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Content Style */
+  .get-started-content {
+    flex: 0 0 50%;
+    max-width: 50%;
+    text-align: left;
+    padding-right: 20px;
+    margin-bottom: 0;
+  }
+  
+  /* Expert Tag Style */
+  .expert-tag {
+    color: #0ffcbe;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+  }
+  
+  /* Heading Style */
+  .main-heading {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 1.1;
+    color: #fff;
+    margin-bottom: 0;
+  }
+  
+  /* Highlighted Text Style */
+  .highlight {
+    color: #0ffcbe;
+    font-weight: 800;
+  }
+  
+  .no-break {
+    white-space: nowrap;
+    margin-bottom: 0;
+  }
+  
+  /* Description Style */
+  .expert-description {
+    font-family: "Manrope", sans-serif;
+    font-size: 20px;
+    margin-top: 0;
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
+  
+  /* Highlighted Text Style */
+  .highlight-text {
+    color: #0ffcbe;
+    font-weight: 600;
+  }
+  
+  /* CTA Container Style */
+  .cta-container {
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+  }
+  
+  /* Button Styles */
+  .book-call-button,
+  .contact-us-button {
+    background: linear-gradient(to right, #0ffcbe, #02b48a);
+    color: #000;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 30px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: bounce 0.5s ease-in-out;
+    box-shadow: 0 4px 10px rgba(15, 252, 190, 0.3);
+  }
+  
+  .book-call-button:hover,
+  .contact-us-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(15, 252, 190, 0.5);
+  }
+  
+  /* Bounce Animation for Buttons */
+  @keyframes bounce {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Image Container Style */
+  .image-container {
+    flex: 0 0 50%;
+    display: flex;
+    align-items: left;
+    justify-content: flex-start;
+    position: relative;
+    margin-left: 0;
+  }
+  
+  /* Image Style */
+  .get-started-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    animation: fadeIn 1s ease-in-out;
+    margin-left: auto;
+  }
+  
+  /* Fade-In Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1024px) {
+    .get-started-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .get-started-content {
+      max-width: 100%;
+      flex: 0 0 100%;
+      margin-bottom: 40px;
+      padding-right: 0;
+    }
+  
+    .image-container {
+      width: 100%;
+      flex: 0 0 100%;
+      justify-content: center;
+      margin-top: 30px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .main-heading {
+      font-size: 36px;
+    }
+  
+    .cta-container {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+    }
+  
+    .book-call-button,
+    .contact-us-button {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+  
