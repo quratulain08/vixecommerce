@@ -7,6 +7,7 @@ import "./Header.css"
 const Header = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false)
   const [isCaseStudiesOpen, setIsCaseStudiesOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false) // <-- new state for hamburger menu
 
   return (
     <header className="header">
@@ -17,10 +18,17 @@ const Header = () => {
           </Link>
         </div>
 
-        <nav className="navigation">
+        {/* Hamburger Button */}
+        <div className="hamburger" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <div className={`bar ${isMenuOpen ? "open" : ""}`}></div>
+          <div className={`bar ${isMenuOpen ? "open" : ""}`}></div>
+          <div className={`bar ${isMenuOpen ? "open" : ""}`}></div>
+        </div>
+
+        <nav className={`navigation ${isMenuOpen ? "active" : ""}`}>
           <ul className="nav-list">
             <li className="nav-item">
-              <Link to="/" className="nav-link">
+              <Link to="/" className="nav-link" onClick={() => setIsMenuOpen(false)}>
                 HOME
               </Link>
             </li>
@@ -75,23 +83,18 @@ const Header = () => {
               )}
             </li>
             <li className="nav-item">
-              <Link to="/about-us" className="nav-link">
+              <Link to="/about-us" className="nav-link" onClick={() => setIsMenuOpen(false)}>
                 ABOUT US
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/pricing" className="nav-link">
+              <Link to="/pricing" className="nav-link" onClick={() => setIsMenuOpen(false)}>
                 PRICING
               </Link>
             </li>
           </ul>
         </nav>
 
-        <div className="contact-button-container">
-          <Link to="/contact" className="contact-button">
-            CONTACT US <span className="phone-icon">📞</span>
-          </Link>
-        </div>
       </div>
     </header>
   )

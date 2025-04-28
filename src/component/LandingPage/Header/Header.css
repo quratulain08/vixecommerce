@@ -42,7 +42,7 @@
     display: flex;
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding-right: 50px;
   }
   
   .nav-item {
@@ -143,37 +143,73 @@
   .phone-icon {
     margin-left: 8px;
   }
-  
-  /* Responsive styles */
-  @media (max-width: 768px) {
-    .header-container {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .navigation {
-      margin: 15px 0;
-      width: 100%;
-    }
-  
-    .nav-list {
-      flex-direction: column;
-      width: 100%;
-    }
-  
-    .nav-item {
-      margin: 10px 0;
-      width: 100%;
-    }
-  
-    .contact-button-container {
-      margin-top: 15px;
-      width: 100%;
-    }
-  
-    .contact-button {
-      width: 100%;
-      justify-content: center;
-    }
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: auto;
   }
   
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: 0.4s;
+  }
+  
+  /* Animation when open */
+  .bar.open:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  
+  .bar.open:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .bar.open:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+  
+  /* Navigation active when menu is open */
+  .navigation.active {
+    display: flex;
+  }
+  
+
+  
+  @media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .navigation {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #106ebe;
+    position: absolute;
+    top: 80px; /* adjust according to your header height */
+    left: 0;
+    padding: 20px 0;
+    z-index: 1000;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-item {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .contact-button-container {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+  }
+}

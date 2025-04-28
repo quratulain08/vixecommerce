@@ -132,24 +132,27 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   }
   
-  /* Responsive styles */
   @media (max-width: 1024px) {
     .service-cards-grid {
       grid-template-columns: repeat(2, 1fr);
     }
+  
+    .what-we-offer-header h2 {
+      font-size: 38px;
+    }
   }
   
+  /* Mobile screens */
   @media (max-width: 768px) {
     .service-cards-grid {
       grid-template-columns: 1fr;
     }
   
     .what-we-offer-header h2 {
-      font-size: 36px;
+      font-size: 32px;
     }
   
     .service-card {
       min-height: auto;
     }
   }
-  
