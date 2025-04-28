@@ -2,6 +2,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './component/LandingPage/Header/Header';
+import ContactUs from './component/LandingPage/ContactUs/ContactUs';
 import "./App.css";
 import LandingPage from './pages/LandingPage';
 
@@ -18,12 +19,12 @@ function App() {
         {/* VERTICAL ROUTES */}
 
       </Routes>
-      {/* <div className="contactus">
+      <div className="ContactUs">
         <ContactUs />
         </div>
 
      
-      <div className="footer">
+      {/* <div className="footer">
         <Footer />
         </div> */}
 
