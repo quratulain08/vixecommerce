@@ -123,12 +123,12 @@ const ContactUs = () => {
                   <li>
                     <a href="/case-studies/bidding-assistant">Bidding Assistant</a>
                   </li>
-                  <li>
+                  {/* <li>
                     <a href="/case-studies/amazon-ppc">Amazon PPC</a>
                   </li>
                   <li>
                     <a href="/case-studies/product-launch">Product Launch</a>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </div>

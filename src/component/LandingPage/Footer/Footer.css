@@ -1,0 +1,38 @@
+/* Footer.css */
+.footer {
+    background-color: #02b48a;
+    padding: 10px 0;
+    width: 100%;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+  
+  .copyright-text {
+    font-family: "Manrope", sans-serif;
+    font-size: 14px;
+    color: black;
+    font-size: large;
+    margin: 0;
+  }
+  
+  .copyright-text strong {
+    color: #106ebe;
+    font-weight: 600;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 576px) {
+    .footer {
+      padding: 15px 0;
+    }
+    
+    .copyright-text {
+      font-size: 15px;
+      
+    }
+  }

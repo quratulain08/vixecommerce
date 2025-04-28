@@ -191,7 +191,7 @@
   .hamburger {
     display: flex;
   }
-
+  
   .navigation {
     display: none;
     flex-direction: column;
