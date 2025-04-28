@@ -1,6 +1,7 @@
 .header {
-    background-color: #106ebe;
-    padding: 15px 0;
+  background: linear-gradient(to right, white, #02b48a);
+
+    padding: 6px 0;
     width: 100%;
   }
   
@@ -14,8 +15,8 @@
   }
   
   .logo-container {
-    background-color: #fff;
-    padding: 3px;
+    /* background-color: #fff; */
+    padding: 0px;
    
     display: flex;
     align-items: left;
@@ -24,6 +25,14 @@
   
   .logo-link {
     text-decoration: none;
+   
+  }
+  
+  .logo-image {
+    height: 50px; /* Adjust height as needed */
+    width: auto; /* Keep aspect ratio */
+    object-fit: contain;
+    padding-left: 2px;
   }
   
   .logo-text {
@@ -42,7 +51,7 @@
     display: flex;
     list-style: none;
     margin: 0;
-    padding-right: 50px;
+    padding-right: 160px;
   }
   
   .nav-item {
@@ -51,7 +60,7 @@
   }
   
   .nav-link {
-    color: #fff;
+    color: #106ebe;
     text-decoration: none;
     font-family: "Poppins", sans-serif;
     font-weight: 500;
@@ -153,7 +162,7 @@
   .bar {
     width: 25px;
     height: 3px;
-    background-color: #fff;
+    background-color: #106ebe;
     margin: 4px 0;
     transition: 0.4s;
   }
@@ -187,15 +196,17 @@
     display: none;
     flex-direction: column;
     width: 100%;
-    background-color: #106ebe;
+    background-color: white;
     position: absolute;
     top: 80px; /* adjust according to your header height */
     left: 0;
+    padding-right: 20px;
     padding: 20px 0;
     z-index: 1000;
   }
 
   .nav-list {
+    color: #106ebe;
     flex-direction: column;
     width: 100%;
   }

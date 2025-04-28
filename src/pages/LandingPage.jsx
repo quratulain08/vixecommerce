@@ -9,7 +9,7 @@ export default function LandingPage() {
     <div className="landing">
       <GetStarted />
       <WhatWeOffer/>
-      {/* <WhyChooseUs/> */}
+      <WhyChooseUs/>
     </div>
   );
 }

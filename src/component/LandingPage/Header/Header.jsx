@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { Link } from "react-router-dom"
+import LOGO from "../../../assets/LOGO.png"
 import "./Header.css"
 
 const Header = () => {
@@ -12,11 +13,12 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header-container">
-        <div className="logo-container">
-          <Link to="/" className="logo-link">
-            <div className="logo-text">LOGO</div>
-          </Link>
-        </div>
+      <div className="logo-container">
+  <Link to="/" className="logo-link">
+    <img src= {LOGO} alt="Logo" className="logo-image" />
+  </Link>
+</div>
+
 
         {/* Hamburger Button */}
         <div className="hamburger" onClick={() => setIsMenuOpen(!isMenuOpen)}>
