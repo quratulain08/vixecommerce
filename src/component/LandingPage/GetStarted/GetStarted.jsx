@@ -1,7 +1,5 @@
 import "./GetStarted.css"
 import image from "../../../assets/GetStarted.png"
-import { Link } from "react-router-dom"
-import { useState } from "react"
 
 const GetStarted = () => {
   return (
@@ -34,8 +32,6 @@ const GetStarted = () => {
           <div className="cta-container">
             <button className="book-call-button">Book Call Now</button>
           </div>
-
-          
         </div>
 
         <div className="image-container">

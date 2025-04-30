@@ -9,9 +9,11 @@ const WhyChooseUs = () => {
   const [isAnimating, setIsAnimating] = useState(false)
   const [touchStart, setTouchStart] = useState(0)
   const [touchEnd, setTouchEnd] = useState(0)
-  const [slideHeight, setSlideHeight] = useState('auto')
+  const [isPaused, setIsPaused] = useState(false)
+  const [slideHeight, setSlideHeight] = useState("auto")
   const slideContentsRef = useRef([])
   const slideRef = useRef(null)
+  const autoScrollRef = useRef(null)
   const autoPlayRef = useRef(null)
 
   const reasons = [
@@ -65,35 +67,38 @@ const WhyChooseUs = () => {
     },
   ]
 
+  // Duplicate reasons for continuous scrolling
+  const allReasons = [...reasons, ...reasons]
+
   // Calculate and set the maximum slide height
   useEffect(() => {
     const updateSlideHeight = () => {
       if (slideContentsRef.current && slideContentsRef.current.length > 0) {
         // Give a small delay to ensure content is rendered
         setTimeout(() => {
-          let maxHeight = 0;
-          slideContentsRef.current.forEach(contentEl => {
+          let maxHeight = 0
+          slideContentsRef.current.forEach((contentEl) => {
             if (contentEl) {
-              const height = contentEl.offsetHeight;
-              maxHeight = Math.max(maxHeight, height);
+              const height = contentEl.offsetHeight
+              maxHeight = Math.max(maxHeight, height)
             }
-          });
+          })
           // Add some padding to ensure content fits
-          setSlideHeight(`${maxHeight + 30}px`);
-        }, 100);
+          setSlideHeight(`${maxHeight + 30}px`)
+        }, 100)
       }
-    };
+    }
 
     // Update height on window resize
-    window.addEventListener('resize', updateSlideHeight);
-    
+    window.addEventListener("resize", updateSlideHeight)
+
     // Initial height calculation
-    updateSlideHeight();
+    updateSlideHeight()
 
     return () => {
-      window.removeEventListener('resize', updateSlideHeight);
-    };
-  }, []);
+      window.removeEventListener("resize", updateSlideHeight)
+    }
+  }, [])
 
   const nextSlide = () => {
     if (isAnimating) return
@@ -118,6 +123,7 @@ const WhyChooseUs = () => {
 
   // Handle touch events for mobile swipe
   const handleTouchStart = (e) => {
+    setIsPaused(true)
     setTouchStart(e.targetTouches[0].clientX)
   }
 
@@ -126,6 +132,7 @@ const WhyChooseUs = () => {
   }
 
   const handleTouchEnd = () => {
+    setIsPaused(false)
     if (touchStart - touchEnd > 50) {
       // Swipe left
       nextSlide()
@@ -137,22 +144,55 @@ const WhyChooseUs = () => {
     }
   }
 
-  // Auto play functionality
+  // Auto scroll functionality
   useEffect(() => {
-    const play = () => {
-      nextSlide()
+    const scrollContainer = autoScrollRef.current
+    if (!scrollContainer) return
+
+    let animationId
+    let scrollPosition = 0
+    const scrollSpeed = 0.5
+
+    const scroll = () => {
+      if (!isPaused) {
+        scrollPosition += scrollSpeed
+
+        // Reset position when we've scrolled through all slides
+        if (scrollPosition >= scrollContainer.scrollWidth / 2) {
+          scrollPosition = 0
+        }
+
+        if (scrollContainer) {
+          scrollContainer.style.transform = `translateX(-${scrollPosition}px)`
+        }
+      }
+      animationId = requestAnimationFrame(scroll)
     }
 
-    autoPlayRef.current = play
+    // Start the animation
+    animationId = requestAnimationFrame(scroll)
 
-    const interval = setInterval(() => {
-      if (autoPlayRef.current) {
-        autoPlayRef.current()
+    // Pause animation on hover
+    const handleMouseEnter = () => {
+      setIsPaused(true)
+    }
+
+    const handleMouseLeave = () => {
+      setIsPaused(false)
+    }
+
+    scrollContainer.addEventListener("mouseenter", handleMouseEnter)
+    scrollContainer.addEventListener("mouseleave", handleMouseLeave)
+
+    // Clean up
+    return () => {
+      cancelAnimationFrame(animationId)
+      if (scrollContainer) {
+        scrollContainer.removeEventListener("mouseenter", handleMouseEnter)
+        scrollContainer.removeEventListener("mouseleave", handleMouseLeave)
       }
-    }, 6000)
-
-    return () => clearInterval(interval)
-  }, [currentSlide])
+    }
+  }, [isPaused])
 
   // Handle keyboard navigation
   useEffect(() => {
@@ -177,27 +217,17 @@ const WhyChooseUs = () => {
         </div>
 
         <div className="carousel-container">
+          {/* Auto-scrolling carousel */}
           <div
-            className="carousel-wrapper"
-            ref={slideRef}
+            className="carousel-wrapper auto-scroll-wrapper"
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
-            style={{ height: slideHeight }}
           >
-            <div 
-              className="carousel-slides" 
-              style={{ 
-                transform: `translateX(-${currentSlide * 100}%)`,
-                height: slideHeight
-              }}
-            >
-              {reasons.map((reason, index) => (
-                <div key={reason.id} className="carousel-slide" style={{ height: slideHeight }}>
-                  <div 
-                    className="slide-content"
-                    ref={el => slideContentsRef.current[index] = el}
-                  >
+            <div className="carousel-slides auto-scroll" ref={autoScrollRef}>
+              {allReasons.map((reason, index) => (
+                <div key={`${reason.id}-${index}`} className="carousel-slide auto-scroll-slide">
+                  <div className="slide-content" ref={(el) => (slideContentsRef.current[index] = el)}>
                     <div className="reason-number">{reason.number}</div>
                     <div className="reason-text">
                       <h3>{reason.title}</h3>
@@ -210,6 +240,7 @@ const WhyChooseUs = () => {
             </div>
           </div>
 
+          {/* Navigation buttons - will be hidden on mobile */}
           <button className="carousel-arrow prev-arrow" onClick={prevSlide} aria-label="Previous slide">
             <ChevronLeft size={24} />
           </button>

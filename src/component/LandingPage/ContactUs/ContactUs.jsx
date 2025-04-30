@@ -44,57 +44,57 @@ const ContactUs = () => {
   }
 
   return (
-    <section className="contact-section">
-      <div className="contact-header">
+    <section className="vix-contact-section">
+      <div className="vix-contact-header">
         <h1>Get In Touch</h1>
         <p>We're here to help you succeed on Amazon</p>
       </div>
 
-      <div className="contact-container">
-        <div className="contact-info-container">
-          <div className="logo-container">
-            <img src={logo || "/placeholder.svg"} alt="Company Logo" className="logo-image" />
+      <div className="vix-contact-container">
+        <div className="vix-contact-info-container">
+          <div className="vix-logo-container">
+            <img src={logo || "/placeholder.svg"} alt="Company Logo" className="vix-logo-image" />
           </div>
 
-          <p className="company-description">
+          <p className="vix-company-description">
             We provide end-to-end Amazon brand management services with expert team members in Product Research, Content
             Writing, Graphic Design, SEO, and PPC Management all under one roof.
           </p>
 
-          <div className="contact-details">
-            <div className="contact-detail-item">
+          <div className="vix-contact-details">
+            <div className="vix-contact-detail-item">
               <Mail size={20} />
               <span>info@yourcompany.com</span>
             </div>
-            <div className="contact-detail-item">
+            <div className="vix-contact-detail-item">
               <Phone size={20} />
               <span>+1 (555) 123-4567</span>
             </div>
-            <div className="contact-detail-item">
+            <div className="vix-contact-detail-item">
               <MapPin size={20} />
               <span>123 Business Ave, Suite 100, New York, NY 10001</span>
             </div>
           </div>
 
-          <div className="social-links">
-            <a href="#" className="social-link" aria-label="Facebook">
+          <div className="vix-social-links">
+            <a href="#" className="vix-social-link" aria-label="Facebook">
               <Facebook size={24} />
             </a>
-            <a href="#" className="social-link" aria-label="Instagram">
+            <a href="#" className="vix-social-link" aria-label="Instagram">
               <Instagram size={24} />
             </a>
-            <a href="#" className="social-link" aria-label="Twitter">
+            <a href="#" className="vix-social-link" aria-label="Twitter">
               <Twitter size={24} />
             </a>
-            <a href="#" className="social-link" aria-label="LinkedIn">
+            <a href="#" className="vix-social-link" aria-label="LinkedIn">
               <Linkedin size={24} />
             </a>
           </div>
 
-          <div className="quick-links">
+          <div className="vix-quick-links">
             <h3>Quick Links</h3>
-            <div className="links-columns">
-              <div className="links-column">
+            <div className="vix-links-columns">
+              <div className="vix-links-column">
                 <h4>Navigation</h4>
                 <ul>
                   <li>
@@ -114,7 +114,7 @@ const ContactUs = () => {
                   </li>
                 </ul>
               </div>
-              <div className="links-column">
+              <div className="vix-links-column">
                 <h4>Case Studies</h4>
                 <ul>
                   <li>
@@ -123,28 +123,22 @@ const ContactUs = () => {
                   <li>
                     <a href="/case-studies/bidding-assistant">Bidding Assistant</a>
                   </li>
-                  {/* <li>
-                    <a href="/case-studies/amazon-ppc">Amazon PPC</a>
-                  </li>
-                  <li>
-                    <a href="/case-studies/product-launch">Product Launch</a>
-                  </li> */}
                 </ul>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="contact-form-container">
-          <div className="form-header">
+        <div className="vix-contact-form-container">
+          <div className="vix-form-header">
             <h2>Get A Free Audit</h2>
             <p>Fill up the below form and our team will reach you out for a free audit.</p>
           </div>
 
-          <form className="contact-form" onSubmit={handleSubmit}>
-            <div className="form-group">
+          <form className="vix-contact-form" onSubmit={handleSubmit}>
+            <div className="vix-form-group">
               <label htmlFor="fullName">
-                Full Name <span className="required">*</span>
+                Full Name <span className="vix-required">*</span>
               </label>
               <input
                 type="text"
@@ -157,9 +151,9 @@ const ContactUs = () => {
               />
             </div>
 
-            <div className="form-group">
+            <div className="vix-form-group">
               <label htmlFor="email">
-                Email Address <span className="required">*</span>
+                Email Address <span className="vix-required">*</span>
               </label>
               <input
                 type="email"
@@ -172,7 +166,7 @@ const ContactUs = () => {
               />
             </div>
 
-            <div className="form-group">
+            <div className="vix-form-group">
               <label htmlFor="brandName">Brand Name</label>
               <input
                 type="text"
@@ -184,9 +178,9 @@ const ContactUs = () => {
               />
             </div>
 
-            <div className="form-group">
+            <div className="vix-form-group">
               <label htmlFor="revenue">
-                Average Monthly Revenue (USD) <span className="required">*</span>
+                Average Monthly Revenue (USD) <span className="vix-required">*</span>
               </label>
               <input
                 type="text"
@@ -199,9 +193,9 @@ const ContactUs = () => {
               />
             </div>
 
-            <div className="form-group">
+            <div className="vix-form-group">
               <label htmlFor="helpRequired">
-                Help Required <span className="required">*</span>
+                Help Required <span className="vix-required">*</span>
               </label>
               <textarea
                 id="helpRequired"
@@ -214,12 +208,12 @@ const ContactUs = () => {
               ></textarea>
             </div>
 
-            <button type="submit" className="submit-button">
+            <button type="submit" className="vix-submit-button">
               Get a Free Audit Now
             </button>
 
             {formSubmitted && (
-              <div className="form-success-message">
+              <div className="vix-form-success-message">
                 Thank you! Your request has been submitted. We'll contact you shortly.
               </div>
             )}

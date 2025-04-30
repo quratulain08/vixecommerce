@@ -1,11 +1,12 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useState, useEffect, useRef } from "react"
 import { Star, User } from "lucide-react"
 import "./Testimonial.css"
 
 const Testimonials = () => {
-  const scrollRef = useRef(null)
+  const [isPaused, setIsPaused] = useState(false)
+  const autoScrollRef = useRef(null)
 
   const testimonials = [
     {
@@ -69,24 +70,28 @@ const Testimonials = () => {
   // Clone testimonials for infinite scroll effect
   const allTestimonials = [...testimonials, ...testimonials]
 
+  // Auto scroll functionality
   useEffect(() => {
-    const scrollContainer = scrollRef.current
+    const scrollContainer = autoScrollRef.current
     if (!scrollContainer) return
 
     let animationId
     let scrollPosition = 0
-    const totalWidth = scrollContainer.scrollWidth / 2
     const scrollSpeed = 1.5
 
     const scroll = () => {
-      scrollPosition += scrollSpeed
+      if (!isPaused) {
+        scrollPosition += scrollSpeed
 
-      // Reset position when we've scrolled through the first set of testimonials
-      if (scrollPosition >= totalWidth) {
-        scrollPosition = 0
+        // Reset position when we've scrolled through all slides
+        if (scrollPosition >= scrollContainer.scrollWidth / 2) {
+          scrollPosition = 0
+        }
+
+        if (scrollContainer) {
+          scrollContainer.style.transform = `translateX(-${scrollPosition}px)`
+        }
       }
-
-      scrollContainer.scrollLeft = scrollPosition
       animationId = requestAnimationFrame(scroll)
     }
 
@@ -95,15 +100,26 @@ const Testimonials = () => {
 
     // Pause animation on hover
     const handleMouseEnter = () => {
-      cancelAnimationFrame(animationId)
+      setIsPaused(true)
     }
 
     const handleMouseLeave = () => {
-      animationId = requestAnimationFrame(scroll)
+      setIsPaused(false)
+    }
+
+    // Handle touch events for mobile
+    const handleTouchStart = () => {
+      setIsPaused(true)
+    }
+
+    const handleTouchEnd = () => {
+      setIsPaused(false)
     }
 
     scrollContainer.addEventListener("mouseenter", handleMouseEnter)
     scrollContainer.addEventListener("mouseleave", handleMouseLeave)
+    scrollContainer.addEventListener("touchstart", handleTouchStart)
+    scrollContainer.addEventListener("touchend", handleTouchEnd)
 
     // Clean up
     return () => {
@@ -111,9 +127,11 @@ const Testimonials = () => {
       if (scrollContainer) {
         scrollContainer.removeEventListener("mouseenter", handleMouseEnter)
         scrollContainer.removeEventListener("mouseleave", handleMouseLeave)
+        scrollContainer.removeEventListener("touchstart", handleTouchStart)
+        scrollContainer.removeEventListener("touchend", handleTouchEnd)
       }
     }
-  }, [])
+  }, [isPaused])
 
   return (
     <section className="testimonials-section">
@@ -124,31 +142,33 @@ const Testimonials = () => {
         </div>
 
         <div className="testimonials-carousel-container">
-          <div className="testimonials-carousel" ref={scrollRef}>
-            {allTestimonials.map((testimonial, index) => (
-              <div className="testimonial-card" key={`${testimonial.id}-${index}`}>
-                <div className="testimonial-header">
-                  <div className="testimonial-avatar">
-                    <User size={40} strokeWidth={1.5} />
-                  </div>
-                  <div className="testimonial-user-info">
-                    <h3>{testimonial.name}</h3>
-                    <div className="testimonial-country">
-                      <span className="country-flag">{testimonial.flag}</span>
-                      <span>{testimonial.country}</span>
+          <div className="testimonials-carousel-wrapper">
+            <div className="testimonials-carousel auto-scroll" ref={autoScrollRef}>
+              {allTestimonials.map((testimonial, index) => (
+                <div className="testimonial-card" key={`${testimonial.id}-${index}`}>
+                  <div className="testimonial-header">
+                    <div className="testimonial-avatar">
+                      <User size={40} strokeWidth={1.5} />
+                    </div>
+                    <div className="testimonial-user-info">
+                      <h3>{testimonial.name}</h3>
+                      <div className="testimonial-country">
+                        <span className="country-flag">{testimonial.flag}</span>
+                        <span>{testimonial.country}</span>
+                      </div>
                     </div>
                   </div>
+                  <div className="testimonial-rating">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} size={20} className="star-icon" fill="#FFD700" stroke="#FFD700" />
+                    ))}
+                  </div>
+                  <div className="testimonial-text">
+                    <p>{testimonial.text}</p>
+                  </div>
                 </div>
-                <div className="testimonial-rating">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} size={20} className="star-icon" fill="#FFD700" stroke="#FFD700" />
-                  ))}
-                </div>
-                <div className="testimonial-text">
-                  <p>{testimonial.text}</p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
