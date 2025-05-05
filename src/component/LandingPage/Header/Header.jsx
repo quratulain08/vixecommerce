@@ -103,25 +103,25 @@ const Header = () => {
               </Link>
               <ul className={`dropdown-menu ${isServicesOpen ? "show" : ""}`}>
                 <li>
-                  <Link to="/services/service1" onClick={closeMenu}>
-                    Service 1
+                  <Link to="/Services/SEO" onClick={closeMenu}>
+                    SEO
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services/service2" onClick={closeMenu}>
-                    Service 2
+                  <Link to="/Services/AmazonPPCManagement" onClick={closeMenu}>
+                    Amazon PPC Management
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services/service3" onClick={closeMenu}>
-                    Service 3
+                  <Link to="/Services/AmazonBrandManagement" onClick={closeMenu}>
+                    Amazon Brand Management
                   </Link>
                 </li>
               </ul>
             </li>
             <li className="nav-item dropdown">
               <Link
-                to="/case-studies"
+                to="/CaseStudies"
                 className={`nav-link ${isCaseStudiesOpen ? "active" : ""}`}
                 onClick={(e) => handleDropdownToggle(e, setIsCaseStudiesOpen, isCaseStudiesOpen)}
               >
@@ -129,20 +129,20 @@ const Header = () => {
               </Link>
               <ul className={`dropdown-menu ${isCaseStudiesOpen ? "show" : ""}`}>
                 <li>
-                  <Link to="/case-studies/study1" onClick={closeMenu}>
+                  <Link to="/CaseStudies/CaseStudy1" onClick={closeMenu}>
                     Case Study 1
                   </Link>
                 </li>
                 <li>
-                  <Link to="/case-studies/study2" onClick={closeMenu}>
+                  <Link to="CaseStudies/CaseStudy2" onClick={closeMenu}>
                     Case Study 2
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link to="/case-studies/study3" onClick={closeMenu}>
                     Case Study 3
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </li>
             <li className="nav-item">

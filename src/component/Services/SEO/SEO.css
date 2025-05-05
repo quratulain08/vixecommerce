@@ -1,0 +1,602 @@
+/* Main Section Styles */
+.seo-section {
+    width: 100%;
+    font-family: "Manrope", sans-serif;
+    overflow: hidden;
+  }
+  
+  .seo-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+  }
+  
+  .seo-tag {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #106ebe;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+  }
+  
+  .seo-highlight {
+    color: #0ffcbe;
+    font-weight: inherit;
+  }
+  
+  /* Hero Section Styles */
+  .seo-hero {
+    background: linear-gradient(135deg, #fff 0%, #f5f7f9 100%);
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .seo-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(16, 110, 190, 0.05) 0%, rgba(15, 252, 190, 0.05) 100%);
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  .seo-hero .seo-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .seo-hero-content {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-right: 40px;
+  }
+  
+  .seo-hero-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 1.1;
+    color: #003366;
+    margin-bottom: 20px;
+  }
+  
+  .seo-hero-subtitle {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.3;
+    color: #106ebe;
+    margin-bottom: 25px;
+  }
+  
+  .seo-hero-description {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 30px;
+  }
+  
+  .seo-cta-button {
+    background: linear-gradient(to right, #0ffcbe, #02b48a);
+    color: #000;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 30px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(15, 252, 190, 0.3);
+  }
+  
+  .seo-cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(15, 252, 190, 0.5);
+  }
+  
+  .seo-hero-image {
+    flex: 0 0 50%;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .seo-image-placeholder {
+    width: 100%;
+    height: 400px;
+    background-color: #c5d1dc;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    animation: pulse 3s infinite alternate;
+  }
+  
+  .seo-image-shape {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background-color: #ffffff;
+    border-radius: 100% 100% 0 0;
+  }
+  
+  .seo-image-circle {
+    position: absolute;
+    top: 20%;
+    right: 20%;
+    width: 80px;
+    height: 80px;
+    background-color: #ffffff;
+    border-radius: 50%;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.03);
+    }
+  }
+  
+  /* Process Section Styles */
+  .seo-process {
+    background-color: #001a33;
+    padding: 80px 0;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .seo-process::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(16, 110, 190, 0.1) 0%, rgba(15, 252, 190, 0.05) 100%);
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  .seo-process .seo-container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .seo-process-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .seo-process-content {
+    flex: 0 0 45%;
+    max-width: 45%;
+  }
+  
+  .seo-process .seo-tag {
+    color: #0ffcbe;
+  }
+  
+  .seo-process-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-size: 42px;
+    line-height: 1.2;
+    color: #fff;
+    margin-bottom: 25px;
+  }
+  
+  .seo-process-description {
+    font-size: 18px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0;
+  }
+  
+  /* Card Styles */
+  .seo-cards-wrapper {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  
+  .seo-cards-container {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    perspective: 1000px;
+    margin-bottom: 30px;
+    touch-action: pan-x;
+  }
+  
+  .seo-card {
+    position: absolute;
+    width: 100%;
+    background: linear-gradient(135deg, #001a33 0%, #106ebe 100%);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.7s ease;
+    opacity: 0;
+    transform: translateX(100px);
+    top: 0;
+    left: 0;
+    right: 0;
+    visibility: hidden;
+    cursor: grab;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .seo-card.active {
+    opacity: 1;
+    transform: translateX(0);
+    z-index: 3;
+    visibility: visible;
+    animation: cardSlideIn 0.7s ease-out;
+  }
+  
+  .seo-card.next {
+    opacity: 0;
+    transform: translateX(100px);
+    z-index: 1;
+    visibility: hidden;
+  }
+  
+  .seo-card.prev {
+    opacity: 0;
+    transform: translateX(-100px);
+    z-index: 1;
+    visibility: hidden;
+  }
+  
+  .seo-card:active {
+    cursor: grabbing;
+  }
+  
+  .seo-card-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .seo-card-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #fff;
+  }
+  
+  .seo-card-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .seo-card-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .indicator.active {
+    background-color: #0ffcbe;
+    transform: scale(1.2);
+  }
+  
+  /* Navigation Buttons - Add these new styles */
+  .seo-nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+  }
+  
+  .seo-nav-button:hover {
+    background-color: rgba(15, 252, 190, 0.2);
+    border-color: #0ffcbe;
+  }
+  
+  .prev-button {
+    left: -20px;
+  }
+  
+  .next-button {
+    right: -20px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1024px) {
+    .seo-hero .seo-container {
+      flex-direction: column;
+    }
+  
+    .seo-hero-content,
+    .seo-hero-image {
+      flex: 0 0 100%;
+      max-width: 100%;
+      padding-right: 0;
+    }
+  
+    .seo-hero-content {
+      margin-bottom: 40px;
+    }
+  
+    .seo-hero-title {
+      font-size: 42px;
+    }
+  
+    .seo-hero-subtitle {
+      font-size: 24px;
+    }
+  
+    .seo-image-placeholder {
+      height: 350px;
+    }
+  
+    .seo-process-title {
+      font-size: 36px;
+    }
+  
+    .seo-card {
+      max-width: 100%;
+    }
+  
+    .seo-process-layout {
+      flex-direction: column;
+      gap: 60px;
+    }
+  
+    .seo-process-content,
+    .seo-cards-wrapper {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  
+    .seo-cards-container {
+      height: 380px;
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+  
+    .seo-card {
+      padding: 25px;
+    }
+  
+    .seo-nav-button {
+      width: 36px;
+      height: 36px;
+    }
+  
+    .prev-button {
+      left: -10px;
+    }
+  
+    .next-button {
+      right: -10px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .seo-hero,
+    .seo-process {
+      padding: 60px 0;
+    }
+  
+    .seo-hero-title {
+      font-size: 36px;
+    }
+  
+    .seo-hero-subtitle {
+      font-size: 22px;
+    }
+  
+    .seo-hero-description {
+      font-size: 16px;
+    }
+  
+    .seo-process-title {
+      font-size: 32px;
+    }
+  
+    .seo-process-description {
+      font-size: 16px;
+    }
+  
+    .seo-image-placeholder {
+      height: 300px;
+    }
+  
+    .seo-cards-container {
+      height: 420px;
+    }
+  
+    .seo-card {
+      padding: 25px;
+    }
+  
+    .seo-card-title {
+      font-size: 24px;
+    }
+  
+    .seo-card-description {
+      font-size: 15px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .seo-hero,
+    .seo-process {
+      padding: 50px 0;
+    }
+  
+    .seo-tag {
+      font-size: 16px;
+    }
+  
+    .seo-hero-title {
+      font-size: 32px;
+    }
+  
+    .seo-hero-subtitle {
+      font-size: 20px;
+    }
+  
+    .seo-hero-description {
+      font-size: 15px;
+      margin-bottom: 25px;
+    }
+  
+    .seo-cta-button {
+      width: 100%;
+      padding: 14px 20px;
+    }
+  
+    .seo-image-placeholder {
+      height: 250px;
+    }
+  
+    .seo-process-title {
+      font-size: 28px;
+    }
+  
+    .seo-process-description {
+      font-size: 15px;
+      margin-bottom: 30px;
+    }
+  
+    .seo-cards-container {
+      height: 450px;
+    }
+  
+    .seo-card {
+      padding: 20px;
+    }
+  
+    .seo-card-icon {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .seo-card-title {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+  
+    .seo-card-description {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  
+    .seo-card-indicators {
+      margin-top: 15px;
+    }
+  
+    .seo-nav-button {
+      width: 32px;
+      height: 32px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .seo-hero-title {
+      font-size: 28px;
+    }
+  
+    .seo-hero-subtitle {
+      font-size: 18px;
+    }
+  
+    .seo-process-title {
+      font-size: 26px;
+    }
+  
+    .seo-cards-container {
+      height: 480px;
+    }
+  
+    .seo-card {
+      padding: 18px;
+    }
+  
+    .seo-card-title {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  
+    .seo-card-description {
+      font-size: 14px;
+    }
+  
+    .seo-nav-button {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .seo-cards-container {
+      height: 520px;
+    }
+  
+    .seo-card {
+      padding: 16px;
+    }
+  
+    .seo-card-icon {
+      width: 36px;
+      height: 36px;
+      margin-bottom: 15px;
+    }
+  
+    .seo-card-title {
+      font-size: 18px;
+    }
+  
+    .seo-card-description {
+      font-size: 13px;
+    }
+  }
+  

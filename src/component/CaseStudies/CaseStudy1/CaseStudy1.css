@@ -1,0 +1,622 @@
+/* Main Section Styles */
+.case-study-section {
+    width: 100%;
+    font-family: "Manrope", sans-serif;
+    overflow: hidden;
+  }
+  
+  .case-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+  }
+  
+  .case-tag {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #106ebe;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+  }
+  
+  .case-highlight {
+    color: #0ffcbe;
+    font-weight: inherit;
+  }
+  
+  /* Hero Section Styles */
+  .case-hero {
+    background: linear-gradient(135deg, #fff 0%, #f5f7f9 100%);
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .case-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(16, 110, 190, 0.05) 0%, rgba(15, 252, 190, 0.05) 100%);
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  .case-hero .case-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .case-hero-content {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-right: 40px;
+  }
+  
+  .case-hero-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 1.1;
+    color: #003366;
+    margin-bottom: 20px;
+  }
+  
+  .case-hero-description {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 30px;
+  }
+  
+  .case-cta-button {
+    background: linear-gradient(to right, #0ffcbe, #02b48a);
+    color: #000;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 30px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(15, 252, 190, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .case-cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(15, 252, 190, 0.5);
+  }
+  
+  .case-hero-image {
+    flex: 0 0 50%;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .case-image-placeholder {
+    width: 100%;
+    height: 350px;
+    background: linear-gradient(135deg, #e6f5ff 0%, rgba(16, 110, 190, 0.2) 100%);
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    animation: pulse 3s infinite alternate;
+  }
+  
+  .case-image-shape {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background-color: #ffffff;
+    border-radius: 100% 100% 0 0;
+  }
+  
+  .case-image-circle {
+    position: absolute;
+    top: 20%;
+    right: 20%;
+    width: 80px;
+    height: 80px;
+    background-color: #ffffff;
+    border-radius: 50%;
+  }
+  
+  .case-image-stats {
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 20px;
+    z-index: 2;
+  }
+  
+  .case-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    min-width: 80px;
+  }
+  
+  .case-stat-number {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+    color: #106ebe;
+    margin-bottom: 5px;
+  }
+  
+  .case-stat-label {
+    font-family: "Manrope", sans-serif;
+    font-size: 12px;
+    color: #333;
+    text-align: center;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.03);
+    }
+  }
+  
+  /* Stats Section */
+  .case-stats {
+    background-color: #fff;
+    padding: 60px 0;
+    position: relative;
+  }
+  
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  
+  .stat-item {
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    transform: translateY(30px);
+    opacity: 0;
+    transition: all 0.6s ease;
+  }
+  
+  .stat-item.animate {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  .stat-blue {
+    background: linear-gradient(135deg, #e6f5ff 0%, rgba(16, 110, 190, 0.2) 100%);
+  }
+  
+  .stat-green {
+    background: linear-gradient(135deg, #e6fff5 0%, rgba(15, 252, 190, 0.2) 100%);
+  }
+  
+  .stat-purple {
+    background: linear-gradient(135deg, #f0e6ff 0%, rgba(128, 0, 255, 0.2) 100%);
+  }
+  
+  .stat-orange {
+    background: linear-gradient(135deg, #fff5e6 0%, rgba(255, 153, 0, 0.2) 100%);
+  }
+  
+  .stat-number {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-size: 42px;
+    margin-bottom: 10px;
+  }
+  
+  .stat-blue .stat-number {
+    color: #106ebe;
+  }
+  
+  .stat-green .stat-number {
+    color: #02b48a;
+  }
+  
+  .stat-purple .stat-number {
+    color: #8000ff;
+  }
+  
+  .stat-orange .stat-number {
+    color: #ff9900;
+  }
+  
+  .stat-label {
+    font-family: "Manrope", sans-serif;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* Case Study Content */
+  .case-content {
+    padding: 80px 0;
+  }
+  
+  .case-section {
+    margin-bottom: 60px;
+  }
+  
+  .case-section-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-size: 36px;
+    color: #003366;
+    margin-bottom: 10px;
+  }
+  
+  .case-section-subtitle {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: #106ebe;
+    margin-bottom: 30px;
+  }
+  
+  .case-text-with-image {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .case-text {
+    flex: 0 0 55%;
+  }
+  
+  .case-text p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 20px;
+  }
+  
+  .case-image {
+    flex: 0 0 45%;
+  }
+  
+  .case-img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Alternate Section with Cards */
+  .case-section-alt {
+    background-color: #f5f7f9;
+    padding: 60px;
+    border-radius: 20px;
+    margin-bottom: 60px;
+  }
+  
+  .case-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+  
+  .case-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    height: 100%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .case-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  }
+  
+  .case-card-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #106ebe;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 15px;
+  }
+  
+  .case-card-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(to right, #0ffcbe, #02b48a);
+  }
+  
+  .case-card-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444;
+  }
+  
+  .case-image-full {
+    margin-top: 40px;
+  }
+  
+  .case-img-large {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Add these new styles for the updated sections */
+  
+  .case-challenge-section,
+  .case-solution-section,
+  .case-result-section {
+    margin-bottom: 40px;
+  }
+  
+  .case-challenge-section .case-card-title,
+  .case-solution-section .case-card-title,
+  .case-result-section .case-card-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #106ebe;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 15px;
+  }
+  
+  .case-challenge-section .case-card-title::after,
+  .case-solution-section .case-card-title::after,
+  .case-result-section .case-card-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(to right, #0ffcbe, #02b48a);
+  }
+  
+  .case-solution-section .case-card-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 20px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1024px) {
+    .case-hero .case-container {
+      flex-direction: column;
+    }
+  
+    .case-hero-content,
+    .case-hero-image {
+      flex: 0 0 100%;
+      max-width: 100%;
+      padding-right: 0;
+    }
+  
+    .case-hero-content {
+      margin-bottom: 40px;
+    }
+  
+    .case-hero-title {
+      font-size: 42px;
+    }
+  
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+  
+    .case-text-with-image {
+      flex-direction: column;
+    }
+  
+    .case-text,
+    .case-image {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  
+    .case-image {
+      order: -1;
+      margin-bottom: 30px;
+    }
+  
+    .case-columns {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    .case-section-alt {
+      padding: 40px 30px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .case-hero,
+    .case-content {
+      padding: 60px 0;
+    }
+  
+    .case-hero-title {
+      font-size: 36px;
+    }
+  
+    .case-hero-description {
+      font-size: 16px;
+    }
+  
+    .case-stats {
+      padding: 40px 0;
+    }
+  
+    .stat-item {
+      padding: 20px;
+    }
+  
+    .stat-number {
+      font-size: 36px;
+    }
+  
+    .case-section-title {
+      font-size: 32px;
+    }
+  
+    .case-section-subtitle {
+      font-size: 22px;
+    }
+  
+    .case-section-alt {
+      padding: 40px 30px;
+    }
+  
+    .case-stat {
+      padding: 10px;
+      min-width: 70px;
+    }
+  
+    .case-stat-number {
+      font-size: 18px;
+    }
+  
+    .case-stat-label {
+      font-size: 10px;
+    }
+  
+    .case-image-stats {
+      bottom: 15%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .case-hero,
+    .case-content {
+      padding: 50px 0;
+    }
+  
+    .case-tag {
+      font-size: 16px;
+    }
+  
+    .case-hero-title {
+      font-size: 32px;
+    }
+  
+    .case-hero-description {
+      font-size: 15px;
+      margin-bottom: 25px;
+    }
+  
+    .case-cta-button {
+      width: 100%;
+      justify-content: center;
+    }
+  
+    .stats-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .stat-number {
+      font-size: 32px;
+    }
+  
+    .case-section-title {
+      font-size: 28px;
+    }
+  
+    .case-section-subtitle {
+      font-size: 20px;
+    }
+  
+    .case-section-alt {
+      padding: 30px 20px;
+    }
+  
+    .case-card {
+      padding: 20px;
+    }
+  
+    .case-card-title {
+      font-size: 22px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .case-hero-title {
+      font-size: 28px;
+    }
+  
+    .stat-number {
+      font-size: 28px;
+    }
+  
+    .stat-label {
+      font-size: 14px;
+    }
+  
+    .case-section-title {
+      font-size: 26px;
+    }
+  
+    .case-section-subtitle {
+      font-size: 18px;
+    }
+  
+    .case-text p {
+      font-size: 15px;
+    }
+  
+    .case-card-title {
+      font-size: 20px;
+    }
+  
+    .case-card-text {
+      font-size: 15px;
+    }
+  
+    .case-image-stats {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      bottom: auto;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  
+    .case-stat {
+      width: 80%;
+    }
+  }
+  

@@ -6,7 +6,11 @@ import ContactUs from './component/LandingPage/ContactUs/ContactUs';
 import Footer from './component/LandingPage/Footer/Footer';
 import "./App.css";
 import LandingPage from './pages/LandingPage';
-
+import SEO from './component/Services/SEO/SEO';
+import AmazonPPCManagement from './component/Services/AmazonPPCManagement/AmazonPPCManagement';
+import AmazonBrandManagement from './component/Services/AmazonBrandManagement/AmazonBrandManagement';
+import CaseStudy1 from './component/CaseStudies/CaseStudy1/CaseStudy1';
+import CaseStudy2 from './component/CaseStudies/CaseStudy2/CaseStudy2';
 
 function App() {
   return (
@@ -17,8 +21,13 @@ function App() {
       <Routes>
         {/* Landing Page ROUTES */}
         <Route path="/" element={<LandingPage />} />
-        {/* VERTICAL ROUTES */}
-
+        {/* Services ROUTES */}
+        <Route path ="Services/SEO" element={<SEO/>}/>
+        <Route path ="Services/AmazonPPCManagement" element={<AmazonPPCManagement/>}/>
+        <Route path ="Services/AmazonBrandManagement" element={<AmazonBrandManagement/>}/>
+        {/* case studies */}
+        <Route path ="CaseStudies/CaseStudy1" element={<CaseStudy1/>}/>
+        <Route path ="CaseStudies/CaseStudy2" element={<CaseStudy2/>}/>
       </Routes>
       <div className="ContactUs">
         <ContactUs />
