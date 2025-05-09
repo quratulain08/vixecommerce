@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react"
 import "./SEO.css"
 import { Star, ChevronLeft, ChevronRight } from "lucide-react"
+import Testimonials from "../../LandingPage/Testimonial/Testimonial"
 
 const SEO = () => {
   const [activeCard, setActiveCard] = useState(0)
@@ -209,6 +210,7 @@ const SEO = () => {
           </div>
         </div>
       </div>
+      <Testimonials/>
     </section>
   )
 }

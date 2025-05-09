@@ -101,16 +101,16 @@ const ContactUs = () => {
                     <a href="/">Home</a>
                   </li>
                   <li>
-                    <a href="/services">Services</a>
+                    <a href="/Services">Services</a>
                   </li>
                   <li>
-                    <a href="/case-studies">Case Studies</a>
+                    <a href="/CaseStudies">Case Studies</a>
                   </li>
                   <li>
-                    <a href="/about-us">About Us</a>
+                    <a href="/AboutUs">About Us</a>
                   </li>
                   <li>
-                    <a href="/pricing">Pricing</a>
+                    <a href="/Pricing">Pricing</a>
                   </li>
                 </ul>
               </div>
@@ -118,10 +118,16 @@ const ContactUs = () => {
                 <h4>Case Studies</h4>
                 <ul>
                   <li>
-                    <a href="/case-studies/headgear">HeadGear</a>
+                    <a href="/CaseStudies/CaseStudy1">Building 7-Figure brand</a>
                   </li>
                   <li>
-                    <a href="/case-studies/bidding-assistant">Bidding Assistant</a>
+                    <a href="/CaseStudies/CaseStudy2">Double sales with Half-Ad spend</a>
+                  </li>
+                  <li>
+                    <a href="/CaseStudies/CaseStudy3">Textile Niche Product</a>
+                  </li>
+                  <li>
+                    <a href="/CaseStudies/CaseStudy4">Baby Product</a>
                   </li>
                 </ul>
               </div>
