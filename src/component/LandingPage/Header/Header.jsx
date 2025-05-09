@@ -150,19 +150,24 @@ const Header = () => {
               <ul className={`dropdown-menu ${isCaseStudiesOpen ? "show" : ""}`}>
                 <li>
                   <Link to="/CaseStudies/CaseStudy1" onClick={closeMenu}>
-                    Case Study 1
+                    Building 7-figure brand
                   </Link>
                 </li>
                 <li>
                   <Link to="CaseStudies/CaseStudy2" onClick={closeMenu}>
-                    Case Study 2
+                    Double Sales with Half-Ad spend
                   </Link>
                 </li>
-                {/* <li>
-                  <Link to="/case-studies/study3" onClick={closeMenu}>
-                    Case Study 3
+                <li>
+                  <Link to="/CaseStudies/CaseStudy3" onClick={closeMenu}>
+                    Textile Niche Product
                   </Link>
-                </li> */}
+                </li>
+                <li>
+                  <Link to="/CaseStudies/CaseStudy4" onClick={closeMenu}>
+                    Baby Product
+                  </Link>
+                </li>
               </ul>
             </li>
             <li className="nav-item">

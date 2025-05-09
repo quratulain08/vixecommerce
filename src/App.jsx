@@ -15,6 +15,8 @@ import ProductLaunch from './component/Services/ProductLaunch/ProductLaunch';
 import AccountMaintenance from './component/Services/AccountMaintenance/AccountMaintenance';
 import InfluencerMarketing from './component/Services/InfluencerMarketing/InfluencerMarketing';
 import ProductDevelopment from './component/Services/ProductDevelopment/ProductDevelopment';
+import CaseStudy3 from './component/CaseStudies/CaseStudy3/CaseStudy3';
+import CaseStudy4 from './component/CaseStudies/CaseStudy4/CaseStudy4';
 
 function App() {
   return (
@@ -36,6 +38,9 @@ function App() {
         {/* case studies */}
         <Route path ="CaseStudies/CaseStudy1" element={<CaseStudy1/>}/>
         <Route path ="CaseStudies/CaseStudy2" element={<CaseStudy2/>}/>
+        <Route path ="CaseStudies/CaseStudy3" element={<CaseStudy3/>}/>
+        <Route path ="CaseStudies/CaseStudy4" element={<CaseStudy4/>}/>
+
       </Routes>
       <div className="ContactUs">
         <ContactUs />

@@ -1,0 +1,841 @@
+/* Main Section Styles */
+.cs4-section {
+  width: 100%;
+  font-family: "Manrope", sans-serif;
+  overflow: hidden;
+}
+
+.cs4-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+.cs4-tag {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #106ebe;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.cs4-highlight {
+  color: #0ffcbe;
+  font-weight: inherit;
+}
+
+/* Hero Section Styles */
+.cs4-hero {
+  background: linear-gradient(135deg, #fff 0%, #f5f7f9 100%);
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.cs4-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(16, 110, 190, 0.05) 0%, rgba(15, 252, 190, 0.05) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.cs4-hero .cs4-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+
+.cs4-hero-content {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding-right: 40px;
+}
+
+.cs4-hero-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 1.1;
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+.cs4-hero-description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+.cs4-cta-button {
+  background: linear-gradient(to right, #0ffcbe, #02b48a);
+  color: #000;
+  border: none;
+  border-radius: 30px;
+  padding: 15px 30px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(15, 252, 190, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cs4-cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(15, 252, 190, 0.5);
+}
+
+.cs4-hero-image {
+  flex: 0 0 50%;
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cs4-image-placeholder {
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(135deg, #ffe6f0 0%, rgba(255, 105, 180, 0.2) 100%);
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cs4-image-shape {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background-color: #ffffff;
+  border-radius: 100% 100% 0 0;
+}
+
+.cs4-image-circle {
+  position: absolute;
+  top: 20%;
+  right: 20%;
+  width: 80px;
+  height: 80px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+/* Baby animation */
+.cs4-baby-animation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  z-index: 3;
+}
+
+.cs4-baby-rattle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+  background-color: #ff69b4;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+  animation: rattleShake 3s ease-in-out infinite;
+}
+
+.cs4-baby-rattle::before {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 60px;
+  background-color: #ff69b4;
+  border-radius: 10px;
+}
+
+.cs4-baby-stars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.cs4-star {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ffff00;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  animation: twinkle 2s ease-in-out infinite;
+}
+
+.cs4-star-1 {
+  top: 20%;
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.cs4-star-2 {
+  top: 30%;
+  right: 25%;
+  animation-delay: 0.5s;
+}
+
+.cs4-star-3 {
+  bottom: 30%;
+  left: 30%;
+  animation-delay: 1s;
+}
+
+@keyframes rattleShake {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  25% {
+    transform: translate(-50%, -50%) rotate(10deg);
+  }
+  75% {
+    transform: translate(-50%, -50%) rotate(-10deg);
+  }
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+}
+
+/* Stats Section */
+.cs4-stats {
+  background-color: #fff;
+  padding: 60px 0;
+  position: relative;
+}
+
+.cs4-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.cs4-stat-item {
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+.cs4-stat-item.animate {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.cs4-stat-blue {
+  background: linear-gradient(135deg, #e6f5ff 0%, rgba(16, 110, 190, 0.2) 100%);
+}
+
+.cs4-stat-green {
+  background: linear-gradient(135deg, #e6fff5 0%, rgba(15, 252, 190, 0.2) 100%);
+}
+
+.cs4-stat-purple {
+  background: linear-gradient(135deg, #f0e6ff 0%, rgba(128, 0, 255, 0.2) 100%);
+}
+
+.cs4-stat-orange {
+  background: linear-gradient(135deg, #fff5e6 0%, rgba(255, 153, 0, 0.2) 100%);
+}
+
+.cs4-stat-number {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.cs4-stat-blue .cs4-stat-number {
+  color: #106ebe;
+}
+
+.cs4-stat-green .cs4-stat-number {
+  color: #02b48a;
+}
+
+.cs4-stat-purple .cs4-stat-number {
+  color: #8000ff;
+}
+
+.cs4-stat-orange .cs4-stat-number {
+  color: #ff9900;
+}
+
+.cs4-stat-label {
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Case Study Content */
+.cs4-content {
+  padding: 80px 0;
+}
+
+.cs4-section {
+  margin-bottom: 60px;
+}
+
+.cs4-section-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  color: #003366;
+  margin-bottom: 30px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.cs4-section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #0ffcbe, #02b48a);
+  border-radius: 2px;
+}
+
+.cs4-section-text {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+/* Alternate Section with Cards */
+.cs4-section-alt {
+  background-color: #f5f7f9;
+  padding: 60px;
+  border-radius: 20px;
+  margin-bottom: 60px;
+}
+
+.cs4-columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.cs4-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  height: 100%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cs4-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.cs4-card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e6f5ff 0%, rgba(16, 110, 190, 0.2) 100%);
+  color: #106ebe;
+  margin-bottom: 20px;
+}
+
+.cs4-card-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #003366;
+  margin-bottom: 15px;
+}
+
+.cs4-card-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+/* Chart Styles */
+.cs4-chart-container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.cs4-chart-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #003366;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.cs4-chart {
+  padding: 20px;
+}
+
+.cs4-chart-metrics {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.cs4-metric {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cs4-metric-label {
+  flex: 0 0 120px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #333;
+  text-align: right;
+}
+
+.cs4-chart-line-container {
+  flex: 1;
+  height: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cs4-chart-line {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 1.5s ease-out;
+}
+
+.cs4-blue {
+  background: linear-gradient(to right, #106ebe, #0a4d8c);
+}
+
+.cs4-green {
+  background: linear-gradient(to right, #0ffcbe, #02b48a);
+}
+
+.cs4-purple {
+  background: linear-gradient(to right, #8000ff, #6600cc);
+}
+
+.cs4-orange {
+  background: linear-gradient(to right, #ff9900, #ff6600);
+}
+
+.cs4-metric-value {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Valuation Section */
+.cs4-valuation-section {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.cs4-valuation-content {
+  flex: 0 0 60%;
+}
+
+.cs4-valuation-visual {
+  flex: 0 0 40%;
+}
+
+.cs4-valuation-meter {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+
+.cs4-valuation-meter.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cs4-meter-label {
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.cs4-meter-value {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  color: #106ebe;
+  margin-bottom: 20px;
+}
+
+.cs4-meter-bar {
+  height: 30px;
+  background-color: #f0f0f0;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cs4-meter-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background: linear-gradient(to right, #0ffcbe, #02b48a);
+  border-radius: 15px;
+  animation: fillMeter 2s ease-out forwards 0.5s;
+}
+
+@keyframes fillMeter {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+.cs4-meter-target {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cs4-target-label {
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  color: #555;
+}
+
+.cs4-target-value {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #ff9900;
+}
+
+/* Conclusion Section */
+.cs4-conclusion {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.cs4-conclusion-icon {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0ffcbe 0%, #02b48a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.cs4-conclusion-content {
+  flex: 1;
+}
+
+.cs4-conclusion-content p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.cs4-secondary-button {
+  background: linear-gradient(to right, #106ebe, #0a4d8c);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 15px 30px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(16, 110, 190, 0.3);
+  margin-top: 10px;
+}
+
+.cs4-secondary-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(16, 110, 190, 0.5);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .cs4-hero .cs4-container {
+    flex-direction: column;
+  }
+
+  .cs4-hero-content,
+  .cs4-hero-image {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-right: 0;
+  }
+
+  .cs4-hero-content {
+    margin-bottom: 40px;
+  }
+
+  .cs4-hero-title {
+    font-size: 42px;
+  }
+
+  .cs4-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .cs4-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .cs4-section-alt {
+    padding: 40px 30px;
+  }
+
+  .cs4-valuation-section {
+    flex-direction: column;
+  }
+
+  .cs4-valuation-content,
+  .cs4-valuation-visual {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .cs4-valuation-meter {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .cs4-conclusion {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cs4-conclusion-icon {
+    margin-bottom: 20px;
+  }
+
+  .cs4-section-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .cs4-hero,
+  .cs4-content {
+    padding: 60px 0;
+  }
+
+  .cs4-hero-title {
+    font-size: 36px;
+  }
+
+  .cs4-hero-description {
+    font-size: 16px;
+  }
+
+  .cs4-stats {
+    padding: 40px 0;
+  }
+
+  .cs4-stat-item {
+    padding: 20px;
+  }
+
+  .cs4-stat-number {
+    font-size: 36px;
+  }
+
+  .cs4-section-title {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .cs4-section-text {
+    font-size: 16px;
+  }
+
+  .cs4-metric {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .cs4-metric-label {
+    flex: 0 0 auto;
+    text-align: left;
+  }
+
+  .cs4-conclusion-content p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .cs4-hero,
+  .cs4-content {
+    padding: 50px 0;
+  }
+
+  .cs4-tag {
+    font-size: 16px;
+  }
+
+  .cs4-hero-title {
+    font-size: 32px;
+  }
+
+  .cs4-hero-description {
+    font-size: 15px;
+    margin-bottom: 25px;
+  }
+
+  .cs4-cta-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cs4-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cs4-stat-number {
+    font-size: 32px;
+  }
+
+  .cs4-section-title {
+    font-size: 28px;
+  }
+
+  .cs4-section-alt {
+    padding: 30px 20px;
+  }
+
+  .cs4-card {
+    padding: 20px;
+  }
+
+  .cs4-card-title {
+    font-size: 22px;
+  }
+
+  .cs4-meter-value {
+    font-size: 30px;
+  }
+
+  .cs4-secondary-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .cs4-hero-title {
+    font-size: 28px;
+  }
+
+  .cs4-stat-number {
+    font-size: 28px;
+  }
+
+  .cs4-stat-label {
+    font-size: 14px;
+  }
+
+  .cs4-section-title {
+    font-size: 26px;
+  }
+
+  .cs4-card-text {
+    font-size: 15px;
+  }
+
+  .cs4-baby-animation {
+    width: 150px;
+    height: 150px;
+  }
+
+  .cs4-baby-rattle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .cs4-baby-rattle::before {
+    bottom: -20px;
+    width: 15px;
+    height: 40px;
+  }
+
+  .cs4-star {
+    width: 15px;
+    height: 15px;
+  }
+}
