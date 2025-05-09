@@ -506,10 +506,13 @@
     gap: 60px;
   }
 
-  .im-process-content,
-  .im-cards-wrapper {
+  .im-process-content {
     flex: 0 0 100%;
     max-width: 100%;
+  }
+
+  .im-cards-wrapper {
+    width: 100%;
   }
 
   .im-process-title {
