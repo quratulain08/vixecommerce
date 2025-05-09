@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react"
 import { Star, ChevronLeft, ChevronRight } from "lucide-react"
 import "./AmazonPPCManagement.css"
+import Testimonials from "../../LandingPage/Testimonial/Testimonial"
 
 const AmazonPPCManagement = () => {
   const [activeCard, setActiveCard] = useState(0)
@@ -217,6 +218,7 @@ const AmazonPPCManagement = () => {
           </div>
         </div>
       </div>
+    <Testimonials/>
     </section>
   )
 }

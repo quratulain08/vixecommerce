@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react"
 import { Star, ChevronLeft, ChevronRight } from "lucide-react"
 import "./AmazonBrandManagement.css"
+import Testimonials from "../../LandingPage/Testimonial/Testimonial"
 
 const AmazonBrandManagement = () => {
   const [activeCard, setActiveCard] = useState(0)
@@ -240,6 +241,7 @@ const AmazonBrandManagement = () => {
           </div>
         </div>
       </div>
+      <Testimonials/>
     </section>
   )
 }

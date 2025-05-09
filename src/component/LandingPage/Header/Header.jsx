@@ -117,6 +117,26 @@ const Header = () => {
                     Amazon Brand Management
                   </Link>
                 </li>
+                <li>
+                  <Link to="/Services/ProductLaunch" onClick={closeMenu}>
+                    Product Launch
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/Services/AccountMaintenance" onClick={closeMenu}>
+                    Account Maintenance
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/Services/InfluencerMarketing" onClick={closeMenu}>
+                    Influencer Marketing
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/Services/ProductDevelopment" onClick={closeMenu}>
+                    Product Development
+                  </Link>
+                </li>
               </ul>
             </li>
             <li className="nav-item dropdown">
