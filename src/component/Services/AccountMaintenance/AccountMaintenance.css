@@ -500,10 +500,13 @@
     gap: 60px;
   }
 
-  .am-services-content,
-  .am-cards-wrapper {
+  .am-services-content {
     flex: 0 0 100%;
     max-width: 100%;
+  }
+
+  .am-cards-wrapper {
+    width: 100%;
   }
 
   .am-services-title {

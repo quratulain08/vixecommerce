@@ -524,10 +524,13 @@
     gap: 60px;
   }
 
-  .pl-process-content,
-  .pl-cards-wrapper {
+  .pl-process-content {
     flex: 0 0 100%;
     max-width: 100%;
+  }
+
+  .pl-cards-wrapper {
+    width: 100%;
   }
 
   .pl-process-title {

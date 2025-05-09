@@ -41,7 +41,7 @@ const SEO = () => {
       }
     }
 
-    autoPlayRef.current = setInterval(nextSlide, 5000)
+    autoPlayRef.current = setInterval(nextSlide, 2000)
 
     return () => {
       if (autoPlayRef.current) {
