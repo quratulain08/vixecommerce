@@ -386,10 +386,13 @@
       gap: 60px;
     }
   
-    .ppc-process-content,
-    .ppc-cards-wrapper {
+    .ppc-process-content {
       flex: 0 0 100%;
       max-width: 100%;
+    }
+
+    .ppc-cards-wrapper {
+      width: 100%;
     }
   
     .ppc-process-title {

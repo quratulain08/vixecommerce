@@ -394,10 +394,13 @@
       gap: 60px;
     }
   
-    .brand-process-content,
-    .brand-cards-wrapper {
+    .brand-process-content {
       flex: 0 0 100%;
       max-width: 100%;
+    }
+
+    .brand-cards-wrapper {
+      width: 100%;
     }
   
     .brand-process-title {

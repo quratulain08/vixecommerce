@@ -389,10 +389,14 @@
       gap: 60px;
     }
   
-    .seo-process-content,
-    .seo-cards-wrapper {
+    .seo-process-content {
       flex: 0 0 100%;
       max-width: 100%;
+    }
+
+    .seo-cards-wrapper {
+      flex: 0 0 100%;
+      width: 100%;
     }
   
     .seo-cards-container {
