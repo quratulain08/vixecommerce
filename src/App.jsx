@@ -17,6 +17,8 @@ import InfluencerMarketing from './component/Services/InfluencerMarketing/Influe
 import ProductDevelopment from './component/Services/ProductDevelopment/ProductDevelopment';
 import CaseStudy3 from './component/CaseStudies/CaseStudy3/CaseStudy3';
 import CaseStudy4 from './component/CaseStudies/CaseStudy4/CaseStudy4';
+import AboutUs from './component/AboutUs/AboutUs';
+import Team from './component/Team/Team';
 
 function App() {
   return (
@@ -40,6 +42,10 @@ function App() {
         <Route path ="CaseStudies/CaseStudy2" element={<CaseStudy2/>}/>
         <Route path ="CaseStudies/CaseStudy3" element={<CaseStudy3/>}/>
         <Route path ="CaseStudies/CaseStudy4" element={<CaseStudy4/>}/>
+        
+        {/* AboutUS */}
+        <Route path ="/AboutUs" element={<AboutUs/>}/>
+        <Route path ="/Team" element={<Team/>}/>
 
       </Routes>
       <div className="ContactUs">

@@ -11,6 +11,7 @@ const CaseStudy2 = () => {
 
   // Animation for stats when they come into view
   useEffect(() => {
+    window.scrollTo(0,0);
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
