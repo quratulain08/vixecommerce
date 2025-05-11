@@ -19,6 +19,12 @@ import CaseStudy3 from './component/CaseStudies/CaseStudy3/CaseStudy3';
 import CaseStudy4 from './component/CaseStudies/CaseStudy4/CaseStudy4';
 import AboutUs from './component/AboutUs/AboutUs';
 import Team from './component/Team/Team';
+import BrandLaunch from './component/Offers/BrandLaunch/BrandLaunch';
+import FBAManagement from './component/Offers/FBAManagement/FBAManagement';
+import ListingAudit from './component/Offers/ListingAudit/ListingAudit';
+import ListingOptimization from './component/Offers/ListingOptimization/ListingOptimization';
+import PPCManagement from './component/Offers/PPCManagement/PPCManagement';
+import SourcingSEO from './component/Offers/SourcingSEO/SourcingSEO';
 
 function App() {
   return (
@@ -42,11 +48,20 @@ function App() {
         <Route path ="CaseStudies/CaseStudy2" element={<CaseStudy2/>}/>
         <Route path ="CaseStudies/CaseStudy3" element={<CaseStudy3/>}/>
         <Route path ="CaseStudies/CaseStudy4" element={<CaseStudy4/>}/>
-        
-        {/* AboutUS */}
+
+          {/* AboutUS */}
         <Route path ="/AboutUs" element={<AboutUs/>}/>
         <Route path ="/Team" element={<Team/>}/>
 
+
+        {/* offers*/ }
+        <Route path ="Offers/BrandLaunch" element={<BrandLaunch/>}/>
+        <Route path ="Offers/FBAManagement" element={<FBAManagement/>}/>
+        <Route path ="Offers/ListingAudit" element={<ListingAudit/>}/>
+        <Route path ="Offers/ListingOptimization" element={<ListingOptimization/>}/>
+        <Route path ="Offers/PPCManagement" element={<PPCManagement/>}/>
+        <Route path ="Offers/SourcingSEO" element={<SourcingSEO/>}/>
+      
       </Routes>
       <div className="ContactUs">
         <ContactUs />
