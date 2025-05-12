@@ -1,11 +1,11 @@
-.ppc-section {
+.ppcm-section {
   font-family: "Poppins", sans-serif;
   color: #333;
   overflow: hidden;
 }
 
 /* Hero Section */
-.ppc-hero {
+.ppcm-hero {
   position: relative;
   padding: 140px 0;
   text-align: center;
@@ -17,12 +17,12 @@
   color: #fff;
 }
 
-.ppc-hero.animate {
+.ppcm-hero.animate {
   opacity: 1;
   transform: translateY(0);
 }
 
-.hero-background {
+.ppcm-hero-background {
   position: absolute;
   top: 0;
   left: 0;
@@ -32,13 +32,13 @@
   z-index: 1;
 }
 
-.hero-shape {
+.ppcm-hero-shape {
   position: absolute;
   border-radius: 50%;
   filter: blur(60px);
 }
 
-.shape-1 {
+.ppcm-shape-1 {
   top: -10%;
   left: -5%;
   width: 500px;
@@ -47,7 +47,7 @@
   animation: float 15s ease-in-out infinite;
 }
 
-.shape-2 {
+.ppcm-shape-2 {
   bottom: -15%;
   right: -10%;
   width: 600px;
@@ -56,7 +56,7 @@
   animation: float 20s ease-in-out infinite reverse;
 }
 
-.shape-3 {
+.ppcm-shape-3 {
   top: 40%;
   right: 20%;
   width: 300px;
@@ -65,7 +65,7 @@
   animation: float 18s ease-in-out infinite 2s;
 }
 
-.hero-particles {
+.ppcm-hero-particles {
   position: absolute;
   top: 0;
   left: 0;
@@ -73,7 +73,7 @@
   height: 100%;
 }
 
-.particle {
+.ppcm-particle {
   position: absolute;
   width: 6px;
   height: 6px;
@@ -108,108 +108,108 @@
   }
 }
 
-.particle-1 {
+.ppcm-particle-1 {
   top: 10%;
   left: 10%;
   animation: pulse 8s infinite;
 }
-.particle-2 {
+.ppcm-particle-2 {
   top: 20%;
   left: 20%;
   animation: pulse 12s infinite 1s;
 }
-.particle-3 {
+.ppcm-particle-3 {
   top: 30%;
   left: 15%;
   animation: pulse 9s infinite 2s;
 }
-.particle-4 {
+.ppcm-particle-4 {
   top: 40%;
   left: 25%;
   animation: pulse 10s infinite 0.5s;
 }
-.particle-5 {
+.ppcm-particle-5 {
   top: 50%;
   left: 10%;
   animation: pulse 11s infinite 1.5s;
 }
-.particle-6 {
+.ppcm-particle-6 {
   top: 60%;
   left: 30%;
   animation: pulse 9s infinite 3s;
 }
-.particle-7 {
+.ppcm-particle-7 {
   top: 70%;
   left: 15%;
   animation: pulse 12s infinite 2.5s;
 }
-.particle-8 {
+.ppcm-particle-8 {
   top: 80%;
   left: 20%;
   animation: pulse 10s infinite 1s;
 }
-.particle-9 {
+.ppcm-particle-9 {
   top: 90%;
   left: 10%;
   animation: pulse 11s infinite 0.5s;
 }
-.particle-10 {
+.ppcm-particle-10 {
   top: 10%;
   left: 80%;
   animation: pulse 9s infinite 2s;
 }
-.particle-11 {
+.ppcm-particle-11 {
   top: 20%;
   left: 70%;
   animation: pulse 12s infinite 1.5s;
 }
-.particle-12 {
+.ppcm-particle-12 {
   top: 30%;
   left: 85%;
   animation: pulse 10s infinite 1s;
 }
-.particle-13 {
+.ppcm-particle-13 {
   top: 40%;
   left: 75%;
   animation: pulse 11s infinite 2.5s;
 }
-.particle-14 {
+.ppcm-particle-14 {
   top: 50%;
   left: 90%;
   animation: pulse 9s infinite 0.5s;
 }
-.particle-15 {
+.ppcm-particle-15 {
   top: 60%;
   left: 80%;
   animation: pulse 12s infinite 3s;
 }
-.particle-16 {
+.ppcm-particle-16 {
   top: 70%;
   left: 75%;
   animation: pulse 10s infinite 1.5s;
 }
-.particle-17 {
+.ppcm-particle-17 {
   top: 80%;
   left: 85%;
   animation: pulse 11s infinite 2s;
 }
-.particle-18 {
+.ppcm-particle-18 {
   top: 90%;
   left: 80%;
   animation: pulse 9s infinite 1s;
 }
-.particle-19 {
+.ppcm-particle-19 {
   top: 45%;
   left: 45%;
   animation: pulse 12s infinite 0.5s;
 }
-.particle-20 {
+.ppcm-particle-20 {
   top: 55%;
   left: 55%;
   animation: pulse 10s infinite 2.5s;
 }
 
-.ppc-hero-content {
+.ppcm-hero-content {
   position: relative;
   z-index: 2;
   max-width: 1200px;
@@ -217,7 +217,7 @@
   padding: 0 20px;
 }
 
-.hero-badge {
+.ppcm-hero-badge {
   display: inline-block;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
@@ -233,7 +233,7 @@
   animation: fadeInUp 1s ease 0.3s both;
 }
 
-.ppc-hero h1 {
+.ppcm-hero h1 {
   font-size: 4rem;
   font-weight: 800;
   color: #ffffff;
@@ -244,7 +244,7 @@
   animation: fadeInUp 1s ease 0.5s both;
 }
 
-.gradient-text {
+.ppcm-gradient-text {
   background: linear-gradient(to right, #0ffcbe, #0066ff);
   -webkit-background-clip: text;
   background-clip: text;
@@ -252,7 +252,7 @@
   display: inline-block;
 }
 
-.hero-line {
+.ppcm-hero-line {
   width: 80px;
   height: 4px;
   background: linear-gradient(to right, #0ffcbe, #0066ff);
@@ -262,7 +262,7 @@
   animation: fadeInUp 1s ease 0.7s both;
 }
 
-.hero-subtitle {
+.ppcm-hero-subtitle {
   font-size: 1.2rem;
   color: rgba(255, 255, 255, 0.8);
   margin: 0 0 30px;
@@ -272,7 +272,7 @@
   animation: fadeInUp 1s ease 0.9s both;
 }
 
-.hero-button {
+.ppcm-hero-button {
   background: linear-gradient(to right, #0ffcbe, #0066ff);
   color: #000;
   border: none;
@@ -290,16 +290,16 @@
   animation: fadeInUp 1s ease 1.1s both;
 }
 
-.hero-button:hover {
+.ppcm-hero-button:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 25px rgba(15, 252, 190, 0.5);
 }
 
-.btn-icon {
+.ppcm-btn-icon {
   transition: transform 0.3s ease;
 }
 
-.hero-button:hover .btn-icon {
+.ppcm-hero-button:hover .ppcm-btn-icon {
   transform: translateX(5px);
 }
 
@@ -315,14 +315,14 @@
 }
 
 /* Container Styling */
-.ppc-container {
+.ppcm-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 100px 20px;
 }
 
 /* Section Badge */
-.section-badge {
+.ppcm-section-badge {
   display: inline-block;
   background: rgba(0, 102, 204, 0.1);
   border-radius: 30px;
@@ -334,7 +334,7 @@
   letter-spacing: 1px;
 }
 
-.section-title {
+.ppcm-section-title {
   font-size: 2.5rem;
   font-weight: 800;
   color: #003366;
@@ -342,7 +342,7 @@
   position: relative;
 }
 
-.section-title::after {
+.ppcm-section-title::after {
   content: "";
   position: absolute;
   bottom: -10px;
@@ -354,7 +354,7 @@
 }
 
 /* PPC Content Section */
-.ppc-content {
+.ppcm-content {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
@@ -364,24 +364,24 @@
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.ppc-content.animate {
+.ppcm-content.animate {
   opacity: 1;
   transform: translateY(0);
 }
 
-.ppc-text {
+.ppcm-text {
   flex: 1;
   min-width: 300px;
 }
 
-.ppc-text p {
+.ppcm-text p {
   font-size: 1.1rem;
   line-height: 1.8;
   color: #444;
   margin-bottom: 20px;
 }
 
-.ppc-benefits {
+.ppcm-benefits {
   flex: 1;
   min-width: 300px;
   background: #ffffff;
@@ -393,7 +393,7 @@
   overflow: hidden;
 }
 
-.ppc-benefits::before {
+.ppcm-benefits::before {
   content: "";
   position: absolute;
   top: 0;
@@ -403,20 +403,20 @@
   background: linear-gradient(to bottom, #0066ff, #0ffcbe);
 }
 
-.ppc-benefits h3 {
+.ppcm-benefits h3 {
   font-size: 1.5rem;
   font-weight: 700;
   color: #003366;
   margin: 0 0 20px 0;
 }
 
-.benefits-list {
+.ppcm-benefits-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.benefit-item {
+.ppcm-benefit-item {
   display: flex;
   align-items: flex-start;
   margin-bottom: 15px;
@@ -424,25 +424,25 @@
   color: #444;
 }
 
-.benefit-icon {
+.ppcm-benefit-icon {
   color: #0ffcbe;
   margin-right: 10px;
   flex-shrink: 0;
 }
 
 /* Strategies Section */
-.ppc-strategies {
+.ppcm-strategies {
   margin-bottom: 100px;
 }
 
-.strategies-grid {
+.ppcm-strategies-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 25px;
   margin-top: 50px;
 }
 
-.strategy-card {
+.ppcm-strategy-card {
   background: #ffffff;
   border-radius: 15px;
   padding: 30px;
@@ -455,18 +455,18 @@
   transition: all 0.3s ease;
 }
 
-.strategy-card.animate {
+.ppcm-strategy-card.animate {
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.strategy-card:hover {
+.ppcm-strategy-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
 
-.strategy-icon {
+.ppcm-strategy-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -477,28 +477,28 @@
   transition: transform 0.3s ease;
 }
 
-.strategy-blue .strategy-icon {
+.ppcm-strategy-blue .ppcm-strategy-icon {
   background: linear-gradient(135deg, #e6f5ff 0%, rgba(16, 110, 190, 0.2) 100%);
   color: #106ebe;
 }
 
-.strategy-green .strategy-icon {
+.ppcm-strategy-green .ppcm-strategy-icon {
   background: linear-gradient(135deg, #e6fff5 0%, rgba(15, 252, 190, 0.2) 100%);
   color: #02b48a;
 }
 
-.strategy-card:hover .strategy-icon {
+.ppcm-strategy-card:hover .ppcm-strategy-icon {
   transform: scale(1.1);
 }
 
-.strategy-card h3 {
+.ppcm-strategy-card h3 {
   font-size: 1.2rem;
   font-weight: 700;
   color: #003366;
   margin: 0 0 10px 0;
 }
 
-.strategy-card p {
+.ppcm-strategy-card p {
   font-size: 0.95rem;
   line-height: 1.6;
   color: #555;
@@ -506,17 +506,17 @@
 }
 
 /* Process Timeline */
-.ppc-process {
+.ppcm-process {
   margin-bottom: 100px;
 }
 
-.process-timeline {
+.ppcm-process-timeline {
   position: relative;
   margin-top: 60px;
   padding-left: 30px;
 }
 
-.process-timeline::before {
+.ppcm-process-timeline::before {
   content: "";
   position: absolute;
   top: 0;
@@ -526,12 +526,12 @@
   background: linear-gradient(to bottom, #0066ff, #0ffcbe);
 }
 
-.timeline-item {
+.ppcm-timeline-item {
   position: relative;
   padding-bottom: 40px;
 }
 
-.timeline-number {
+.ppcm-timeline-number {
   position: absolute;
   left: -30px;
   width: 30px;
@@ -547,7 +547,7 @@
   z-index: 2;
 }
 
-.timeline-content {
+.ppcm-timeline-content {
   background: #ffffff;
   border-radius: 15px;
   padding: 25px;
@@ -557,18 +557,18 @@
   transition: transform 0.3s ease;
 }
 
-.timeline-content:hover {
+.ppcm-timeline-content:hover {
   transform: translateX(10px);
 }
 
-.timeline-content h3 {
+.ppcm-timeline-content h3 {
   font-size: 1.3rem;
   font-weight: 700;
   color: #003366;
   margin: 0 0 10px 0;
 }
 
-.timeline-content p {
+.ppcm-timeline-content p {
   font-size: 1rem;
   line-height: 1.6;
   color: #555;
@@ -576,18 +576,18 @@
 }
 
 /* Results Section */
-.ppc-results {
+.ppcm-results {
   margin-bottom: 100px;
 }
 
-.results-grid {
+.ppcm-results-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
   margin-top: 50px;
 }
 
-.result-card {
+.ppcm-result-card {
   background: #ffffff;
   border-radius: 15px;
   padding: 40px 30px;
@@ -599,7 +599,7 @@
   overflow: hidden;
 }
 
-.result-card::before {
+.ppcm-result-card::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -612,16 +612,16 @@
   transition: transform 0.5s ease;
 }
 
-.result-card:hover {
+.ppcm-result-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
-.result-card:hover::before {
+.ppcm-result-card:hover::before {
   transform: scaleX(1);
 }
 
-.result-number {
+.ppcm-result-number {
   font-size: 3rem;
   font-weight: 800;
   margin: 0 0 15px 0;
@@ -631,7 +631,7 @@
   display: inline-block;
 }
 
-.result-card p {
+.ppcm-result-card p {
   font-size: 1.1rem;
   line-height: 1.6;
   color: #555;
@@ -639,7 +639,7 @@
 }
 
 /* CTA Section */
-.ppc-cta {
+.ppcm-cta {
   background: #040d21;
   border-radius: 20px;
   padding: 80px 60px;
@@ -649,7 +649,7 @@
   overflow: hidden;
 }
 
-.cta-background {
+.ppcm-cta-background {
   position: absolute;
   top: 0;
   left: 0;
@@ -659,13 +659,13 @@
   z-index: 1;
 }
 
-.cta-shape {
+.ppcm-cta-shape {
   position: absolute;
   border-radius: 50%;
   filter: blur(50px);
 }
 
-.cta-shape-1 {
+.ppcm-cta-shape-1 {
   top: -20%;
   left: -10%;
   width: 400px;
@@ -674,7 +674,7 @@
   animation: float 15s ease-in-out infinite;
 }
 
-.cta-shape-2 {
+.ppcm-cta-shape-2 {
   bottom: -20%;
   right: -10%;
   width: 300px;
@@ -683,7 +683,7 @@
   animation: float 20s ease-in-out infinite reverse;
 }
 
-.ppc-cta h2 {
+.ppcm-cta h2 {
   font-size: 2.5rem;
   font-weight: 700;
   margin: 0 0 20px 0;
@@ -691,7 +691,7 @@
   z-index: 2;
 }
 
-.ppc-cta p {
+.ppcm-cta p {
   font-size: 1.2rem;
   line-height: 1.6;
   max-width: 700px;
@@ -701,7 +701,7 @@
   color: rgba(255, 255, 255, 0.8);
 }
 
-.cta-button {
+.ppcm-cta-button {
   background: linear-gradient(to right, #0ffcbe, #0066ff);
   color: #000;
   border: none;
@@ -720,126 +720,126 @@
   gap: 10px;
 }
 
-.cta-button:hover {
+.ppcm-cta-button:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 25px rgba(15, 252, 190, 0.5);
 }
 
-.cta-button:hover .btn-icon {
+.ppcm-cta-button:hover .ppcm-btn-icon {
   transform: translateX(5px);
 }
 
 /* Responsive Styles */
 @media (max-width: 1024px) {
-  .ppc-hero h1 {
+  .ppcm-hero h1 {
     font-size: 3.5rem;
   }
 
-  .strategies-grid {
+  .ppcm-strategies-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
   }
 
-  .results-grid {
+  .ppcm-results-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
   }
 
-  .section-title {
+  .ppcm-section-title {
     font-size: 2.2rem;
   }
 }
 
 @media (max-width: 768px) {
-  .ppc-hero {
+  .ppcm-hero {
     padding: 100px 0;
   }
 
-  .ppc-hero h1 {
+  .ppcm-hero h1 {
     font-size: 2.8rem;
   }
 
-  .hero-subtitle {
+  .ppcm-hero-subtitle {
     font-size: 1.1rem;
   }
 
-  .ppc-container {
+  .ppcm-container {
     padding: 80px 20px;
   }
 
-  .strategies-grid {
+  .ppcm-strategies-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
   }
 
-  .ppc-cta {
+  .ppcm-cta {
     padding: 60px 40px;
   }
 
-  .ppc-cta h2 {
+  .ppcm-cta h2 {
     font-size: 2rem;
   }
 
-  .section-title {
+  .ppcm-section-title {
     font-size: 2rem;
   }
 }
 
 @media (max-width: 480px) {
-  .ppc-hero {
+  .ppcm-hero {
     padding: 80px 0;
   }
 
-  .ppc-hero h1 {
+  .ppcm-hero h1 {
     font-size: 2.2rem;
   }
 
-  .hero-subtitle {
+  .ppcm-hero-subtitle {
     font-size: 1rem;
   }
 
-  .hero-badge {
+  .ppcm-hero-badge {
     font-size: 0.8rem;
     padding: 6px 16px;
   }
 
-  .hero-line {
+  .ppcm-hero-line {
     width: 60px;
     margin: 20px auto 15px;
   }
 
-  .ppc-container {
+  .ppcm-container {
     padding: 60px 15px;
   }
 
-  .strategies-grid {
+  .ppcm-strategies-grid {
     grid-template-columns: 1fr;
     gap: 25px;
   }
 
-  .results-grid {
+  .ppcm-results-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
 
-  .ppc-cta {
+  .ppcm-cta {
     padding: 40px 20px;
   }
 
-  .ppc-cta h2 {
+  .ppcm-cta h2 {
     font-size: 1.8rem;
   }
 
-  .cta-button {
+  .ppcm-cta-button {
     padding: 12px 25px;
     font-size: 0.9rem;
   }
 
-  .section-title {
+  .ppcm-section-title {
     font-size: 1.8rem;
   }
 
-  .section-badge {
+  .ppcm-section-badge {
     font-size: 0.7rem;
     padding: 5px 14px;
   }

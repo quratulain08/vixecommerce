@@ -47,7 +47,6 @@
   margin-bottom: 40px;
 }
 
-/* Thumbnail style cards */
 .case-card {
   position: relative;
   border-radius: 10px;
@@ -57,8 +56,9 @@
   height: 220px;
   opacity: 0;
   transform: translateY(20px);
-  animation: float 3s ease-in-out infinite;
-  animation-play-state: paused;
+  /* Remove the float animation */
+  /* animation: float 3s ease-in-out infinite; */
+  /* animation-play-state: paused; */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -66,25 +66,33 @@
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.5s ease, transform 0.5s ease;
-  animation-play-state: running;
+  /* Remove animation-play-state */
+  /* animation-play-state: running; */
 }
 
-@keyframes float {
+/* Replace the float animation with a simple fade-in animation */
+@keyframes fadeIn {
   0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-5px);
+    opacity: 0;
+    transform: translateY(20px);
   }
   100% {
-    transform: translateY(0px);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
+/* Apply the new animation to animated cards */
+.case-card.animate {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* Keep the hover effect */
 .case-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
+
 
 /* Image styling */
 .case-card-image {
