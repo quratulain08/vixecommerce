@@ -7,14 +7,17 @@ import Testimonials from '../component/LandingPage/Testimonial/Testimonial';
 import CaseStudies from '../component/LandingPage/CaseStudies/CaseStudies';
 import FAQs from '../component/LandingPage/FAQs/FAQs';
 
+
 export default function LandingPage() {
   return (
     <div className="landing">
       <GetStarted />
+      {/* <About/> */}
       <WhatWeOffer/>
       <WhyChooseUs/>
-      <Testimonials/>
       <CaseStudies/>
+      <Testimonials/>
+  
       <FAQs/>
     </div>
   );

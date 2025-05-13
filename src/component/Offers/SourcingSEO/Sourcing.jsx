@@ -1,10 +1,10 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import { ArrowRight, CheckCircle, Search, Globe, TrendingUp, Package, Truck, BarChart2 } from "lucide-react"
-import "./SourcingSEO.css"
+import { ArrowRight, CheckCircle, Search, Globe, Package, Truck } from "lucide-react"
+import "./Sourcing.css"
 
-const SourcingSEO = () => {
+const Sourcing = () => {
   const sectionRef = useRef(null)
   const contentRef = useRef(null)
   const servicesRef = useRef([])
@@ -87,12 +87,6 @@ const SourcingSEO = () => {
       description: "We coordinate shipping, customs clearance, and delivery to Amazon fulfillment centers.",
       color: "green",
     },
-    {
-      icon: <TrendingUp size={24} />,
-      title: "Amazon SEO",
-      description: "We optimize your listings to rank higher in Amazon's search results and drive organic traffic.",
-      color: "blue",
-    },
   ]
 
   const benefits = [
@@ -100,8 +94,6 @@ const SourcingSEO = () => {
     "Reduce sourcing risks and avoid scams",
     "Ensure consistent product quality",
     "Streamline your supply chain",
-    "Increase organic visibility on Amazon",
-    "Generate more sales without additional ad spend",
   ]
 
   return (
@@ -120,12 +112,12 @@ const SourcingSEO = () => {
         <div className="sourcing-hero-content">
           <div className="hero-badge">OUR SERVICES</div>
           <h1>
-            EFFICIENT SOURCING
+            EFFICIENT
             <br />
-            <span className="gradient-text">& SEO</span>
+            <span className="gradient-text">SOURCING</span>
           </h1>
           <div className="hero-line"></div>
-          <p className="hero-subtitle">Optimize your supply chain and maximize your organic visibility</p>
+          <p className="hero-subtitle">Optimize your supply chain with reliable suppliers and quality products</p>
           <button className="hero-button">
             Get Started <ArrowRight size={16} className="btn-icon" />
           </button>
@@ -136,25 +128,20 @@ const SourcingSEO = () => {
         <div className="sourcing-content" ref={contentRef}>
           <div className="sourcing-text">
             <div className="section-badge">OVERVIEW</div>
-            <h2 className="section-title">Sourcing & SEO Excellence</h2>
+            <h2 className="section-title">Sourcing Excellence</h2>
             <p>
-              Success on Amazon begins with great products and continues with exceptional visibility. Our Efficient
-              Sourcing & SEO service addresses both critical aspects of your Amazon business.
+              Success on Amazon begins with great products. Our Efficient Sourcing service addresses this critical
+              aspect of your Amazon business.
             </p>
             <p>
-              On the sourcing side, we help you find reliable suppliers who can deliver quality products at competitive
-              prices. We manage the entire process from product research to delivery, ensuring your inventory arrives on
-              time and meets Amazon's standards.
-            </p>
-            <p>
-              For SEO, we implement proven strategies to help your listings climb the search rankings. By optimizing
-              your product listings with strategic keywords, enhanced content, and backend optimizations, we help you
-              get more organic traffic and generate more revenue without additional ad spend.
+              We help you find reliable suppliers who can deliver quality products at competitive prices. We manage the
+              entire process from product research to delivery, ensuring your inventory arrives on time and meets
+              Amazon's standards.
             </p>
           </div>
 
           <div className="sourcing-benefits">
-            <h3>Benefits of Our Sourcing & SEO</h3>
+            <h3>Benefits of Our Sourcing</h3>
             <ul className="benefits-list">
               {benefits.map((benefit, index) => (
                 <li key={index} className="benefit-item">
@@ -168,7 +155,7 @@ const SourcingSEO = () => {
 
         <div className="sourcing-services">
           <div className="section-badge">WHAT WE OFFER</div>
-          <h2 className="section-title">Our Sourcing & SEO Services</h2>
+          <h2 className="section-title">Our Sourcing Services</h2>
 
           <div className="services-grid">
             {services.map((service, index) => (
@@ -268,101 +255,15 @@ const SourcingSEO = () => {
           </div>
         </div>
 
-        <div className="seo-approach">
-          <div className="approach-container reverse">
-            <div className="approach-content">
-              <div className="section-badge">OUR APPROACH</div>
-              <h2 className="section-title">SEO Mastery</h2>
-              <p>
-                Our Amazon SEO strategies are designed to improve your organic rankings and drive more traffic to your
-                listings. We focus on both on-page and backend optimizations to ensure maximum visibility in Amazon's
-                search results.
-              </p>
-              <ul className="approach-list">
-                <li>
-                  <span className="approach-number">01</span>
-                  <div>
-                    <h3>Keyword Research</h3>
-                    <p>We identify high-volume, relevant keywords that your target customers are searching for.</p>
-                  </div>
-                </li>
-                <li>
-                  <span className="approach-number">02</span>
-                  <div>
-                    <h3>Listing Optimization</h3>
-                    <p>We optimize your titles, bullet points, and descriptions with strategic keyword placement.</p>
-                  </div>
-                </li>
-                <li>
-                  <span className="approach-number">03</span>
-                  <div>
-                    <h3>Backend Optimization</h3>
-                    <p>
-                      We optimize search terms, subject matter, and other backend fields to improve discoverability.
-                    </p>
-                  </div>
-                </li>
-                <li>
-                  <span className="approach-number">04</span>
-                  <div>
-                    <h3>Enhanced Content</h3>
-                    <p>We create A+ Content and Store pages that improve conversion rates and keyword relevance.</p>
-                  </div>
-                </li>
-                <li>
-                  <span className="approach-number">05</span>
-                  <div>
-                    <h3>Performance Tracking</h3>
-                    <p>We monitor keyword rankings and organic traffic to continuously improve your SEO strategy.</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div className="approach-image seo-image">
-              <div className="approach-image-content">
-                <div className="approach-icon-grid">
-                  <div className="approach-icon-item">
-                    <Search size={28} />
-                    <span>Keyword Research</span>
-                  </div>
-                  <div className="approach-icon-item">
-                    <TrendingUp size={28} />
-                    <span>Ranking Improvement</span>
-                  </div>
-                  <div className="approach-icon-item">
-                    <BarChart2 size={28} />
-                    <span>Performance Tracking</span>
-                  </div>
-                  <div className="approach-icon-item">
-                    <ArrowRight size={28} />
-                    <span>Conversion Optimization</span>
-                  </div>
-                </div>
-                <div className="approach-stats">
-                  <div className="approach-stat">
-                    <span className="stat-number">65%</span>
-                    <span className="stat-label">Avg. Ranking Improvement</span>
-                  </div>
-                  <div className="approach-stat">
-                    <span className="stat-number">3X</span>
-                    <span className="stat-label">Organic Traffic Growth</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         <div className="sourcing-cta">
           <div className="cta-background">
             <div className="cta-shape cta-shape-1"></div>
             <div className="cta-shape cta-shape-2"></div>
           </div>
-          <h2>Ready to Optimize Your Sourcing & SEO?</h2>
+          <h2>Ready to Optimize Your Sourcing?</h2>
           <p>
-            Partner with Vix Commerce to streamline your supply chain and maximize your organic visibility on Amazon.
-            Our team of experts will help you find reliable suppliers and implement effective SEO strategies to grow
-            your business.
+            Partner with Vix Commerce to streamline your supply chain. Our team of experts will help you find reliable
+            suppliers to grow your business.
           </p>
           <button className="cta-button">
             Schedule a Consultation <ArrowRight size={16} className="btn-icon" />
@@ -373,4 +274,4 @@ const SourcingSEO = () => {
   )
 }
 
-export default SourcingSEO
+export default Sourcing

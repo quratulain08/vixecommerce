@@ -24,7 +24,7 @@ import FBAManagement from './component/Offers/FBAManagement/FBAManagement';
 import ListingAudit from './component/Offers/ListingAudit/ListingAudit';
 import ListingOptimization from './component/Offers/ListingOptimization/ListingOptimization';
 import PPCManagement from './component/Offers/PPCManagement/PPCManagement';
-import SourcingSEO from './component/Offers/SourcingSEO/SourcingSEO';
+import SourcingSEO from './component/Offers/SourcingSEO/Sourcing';
 
 function App() {
   return (
@@ -60,7 +60,7 @@ function App() {
         <Route path ="Offers/ListingAudit" element={<ListingAudit/>}/>
         <Route path ="Offers/ListingOptimization" element={<ListingOptimization/>}/>
         <Route path ="Offers/PPCManagement" element={<PPCManagement/>}/>
-        <Route path ="Offers/SourcingSEO" element={<SourcingSEO/>}/>
+        <Route path ="Offers/Sourcing" element={<SourcingSEO/>}/>
       
       </Routes>
       <div className="ContactUs">

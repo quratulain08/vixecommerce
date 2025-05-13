@@ -1,13 +1,14 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import { ArrowRight, CheckCircle, Edit, ImageIcon, Search, FileText, BarChart2 } from "lucide-react"
+import { ArrowRight, CheckCircle, Edit, ImageIcon, Search, FileText, BarChart2, TrendingUp } from "lucide-react"
 import "./ListingOptimization.css"
 
 const ListingOptimization = () => {
   const sectionRef = useRef(null)
   const contentRef = useRef(null)
   const optimizationStepsRef = useRef([])
+  const seoStepsRef = useRef([])
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -20,6 +21,14 @@ const ListingOptimization = () => {
               entry.target.classList.add("animate")
             } else {
               optimizationStepsRef.current.forEach((step, index) => {
+                if (step && entry.target === step) {
+                  setTimeout(() => {
+                    step.classList.add("animate")
+                  }, index * 150)
+                }
+              })
+
+              seoStepsRef.current.forEach((step, index) => {
                 if (step && entry.target === step) {
                   setTimeout(() => {
                     step.classList.add("animate")
@@ -47,6 +56,12 @@ const ListingOptimization = () => {
       }
     })
 
+    seoStepsRef.current.forEach((step) => {
+      if (step) {
+        observer.observe(step)
+      }
+    })
+
     return () => {
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current)
@@ -55,6 +70,11 @@ const ListingOptimization = () => {
         observer.unobserve(contentRef.current)
       }
       optimizationStepsRef.current.forEach((step) => {
+        if (step) {
+          observer.unobserve(step)
+        }
+      })
+      seoStepsRef.current.forEach((step) => {
         if (step) {
           observer.unobserve(step)
         }
@@ -99,6 +119,34 @@ const ListingOptimization = () => {
     },
   ]
 
+  const seoSteps = [
+    {
+      number: "01",
+      title: "Keyword Research",
+      description: "We identify high-volume, relevant keywords that your target customers are searching for.",
+    },
+    {
+      number: "02",
+      title: "Listing Optimization",
+      description: "We optimize your titles, bullet points, and descriptions with strategic keyword placement.",
+    },
+    {
+      number: "03",
+      title: "Backend Optimization",
+      description: "We optimize search terms, subject matter, and other backend fields to improve discoverability.",
+    },
+    {
+      number: "04",
+      title: "Enhanced Content",
+      description: "We create A+ Content and Store pages that improve conversion rates and keyword relevance.",
+    },
+    {
+      number: "05",
+      title: "Performance Tracking",
+      description: "We monitor keyword rankings and organic traffic to continuously improve your SEO strategy.",
+    },
+  ]
+
   const benefits = [
     "Increase organic visibility in Amazon search results",
     "Improve click-through rates with compelling titles and images",
@@ -124,12 +172,14 @@ const ListingOptimization = () => {
         <div className="optimization-hero-content">
           <div className="hero-badge">OUR SERVICES</div>
           <h1>
-            AMAZON LISTING
+            LISTING OPTIMIZATION
             <br />
-            <span className="gradient-text">OPTIMIZATION</span>
+            <span className="gradient-text">& SEO</span>
           </h1>
           <div className="hero-line"></div>
-          <p className="hero-subtitle">Transform your listings into high-converting sales machines</p>
+          <p className="hero-subtitle">
+            Transform your listings into high-converting sales machines with maximum visibility
+          </p>
           <button className="hero-button">
             Get Started <ArrowRight size={16} className="btn-icon" />
           </button>
@@ -140,21 +190,26 @@ const ListingOptimization = () => {
         <div className="optimization-content" ref={contentRef}>
           <div className="optimization-text">
             <div className="section-badge">OVERVIEW</div>
-            <h2 className="section-title">Comprehensive Listing Optimization</h2>
+            <h2 className="section-title">Comprehensive Listing Optimization & SEO</h2>
             <p>
               Your Amazon product listings are your digital storefront. In a marketplace with millions of products,
-              standing out requires more than just good products—it demands exceptional listings that capture attention
-              and drive conversions.
+              standing out requires more than just good products—it demands exceptional listings that capture attention,
+              drive conversions, and rank high in search results.
             </p>
             <p>
-              Our Amazon Listing Optimization service transforms your listings end-to-end. From rewriting titles, bullet
-              points, and descriptions to designing high-quality images, infographics, and videos, we create listings
-              that not only rank higher in search results but also convert browsers into buyers.
+              Our Amazon Listing Optimization & SEO service transforms your listings end-to-end. From rewriting titles,
+              bullet points, and descriptions to designing high-quality images, infographics, and videos, we create
+              listings that not only rank higher in search results but also convert browsers into buyers.
+            </p>
+            <p>
+              We implement proven SEO strategies to help your listings climb the search rankings. By optimizing your
+              product listings with strategic keywords, enhanced content, and backend optimizations, we help you get
+              more organic traffic and generate more revenue without additional ad spend.
             </p>
           </div>
 
           <div className="optimization-benefits">
-            <h3>Benefits of Optimized Listings</h3>
+            <h3>Benefits of Optimized Listings & SEO</h3>
             <ul className="benefits-list">
               {benefits.map((benefit, index) => (
                 <li key={index} className="benefit-item">
@@ -167,7 +222,7 @@ const ListingOptimization = () => {
         </div>
 
         <div className="optimization-process">
-          <div className="section-badge">OUR PROCESS</div>
+          <div className="section-badge">OPTIMIZATION PROCESS</div>
           <h2 className="section-title">How We Optimize Your Listings</h2>
 
           <div className="process-steps">
@@ -270,6 +325,63 @@ const ListingOptimization = () => {
                     Main image + lifestyle images + infographics highlighting key features + size comparison + packaging
                     + close-up details
                   </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="seo-approach">
+          <div className="approach-container">
+            <div className="approach-content">
+              <div className="section-badge">SEO STRATEGY</div>
+              <h2 className="section-title">Amazon SEO Mastery</h2>
+              <p>
+                Our Amazon SEO strategies are designed to improve your organic rankings and drive more traffic to your
+                listings. We focus on both on-page and backend optimizations to ensure maximum visibility in Amazon's
+                search results.
+              </p>
+              <ul className="approach-list">
+                {seoSteps.map((step, index) => (
+                  <li key={index} ref={(el) => (seoStepsRef.current[index] = el)}>
+                    <span className="approach-number">{step.number}</span>
+                    <div>
+                      <h3>{step.title}</h3>
+                      <p>{step.description}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="approach-image seo-image">
+              <div className="approach-image-content">
+                <div className="approach-icon-grid">
+                  <div className="approach-icon-item">
+                    <Search size={28} />
+                    <span>Keyword Research</span>
+                  </div>
+                  <div className="approach-icon-item">
+                    <TrendingUp size={28} />
+                    <span>Ranking Improvement</span>
+                  </div>
+                  <div className="approach-icon-item">
+                    <BarChart2 size={28} />
+                    <span>Performance Tracking</span>
+                  </div>
+                  <div className="approach-icon-item">
+                    <ArrowRight size={28} />
+                    <span>Conversion Optimization</span>
+                  </div>
+                </div>
+                <div className="approach-stats">
+                  <div className="approach-stat">
+                    <span className="stat-number">65%</span>
+                    <span className="stat-label">Avg. Ranking Improvement</span>
+                  </div>
+                  <div className="approach-stat">
+                    <span className="stat-number">3X</span>
+                    <span className="stat-label">Organic Traffic Growth</span>
+                  </div>
                 </div>
               </div>
             </div>

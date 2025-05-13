@@ -1,11 +1,11 @@
 "use client"
 import { ArrowRight } from "lucide-react"
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom"
 
 import "./WhatWeOffer.css"
 
 const WhatWeOffer = () => {
-   const navigate = useNavigate();
+  const navigate = useNavigate()
 
   const handleNavigation = (path) => {
     console.log(`Navigating to: ${path}`)
@@ -43,9 +43,9 @@ const WhatWeOffer = () => {
     },
     {
       id: 4,
-      title: "Amazon Listing Optimization",
+      title: "Amazon Listing Optimization & SEO",
       description:
-        "We enhance your listings end-to-end — from rewriting titles, bullet points, and descriptions to designing high-quality images, infographics, and videos that capture attention and boost conversions.",
+        "We enhance your listings end-to-end — from rewriting titles, bullet points, and descriptions to designing high-quality images. We also implement SEO strategies to help your listings climb the search rankings, get more organic traffic, and generate more revenue without additional ad spend.",
       gradient: "offer-green-gradient",
       path: "/Offers/ListingOptimization",
     },
@@ -59,11 +59,11 @@ const WhatWeOffer = () => {
     },
     {
       id: 6,
-      title: "Efficient Sourcing & SEO",
+      title: "Efficient Sourcing",
       description:
-        "Sourcing the right products at the right price is crucial for success. Our team will connect you with reliable suppliers and ensure your products arrive on time. We also implement SEO strategies to help your listings climb the search rankings, get more organic traffic, and generate more revenue without additional ad spend.",
+        "Sourcing the right products at the right price is crucial for success. Our team will connect you with reliable suppliers and ensure your products arrive on time. We help you find the best manufacturing partners and manage the entire sourcing process from sample to delivery.",
       gradient: "offer-green-gradient",
-      path: "/Offers/SourcingSEO",
+      path: "/Offers/Sourcing",
     },
   ]
 

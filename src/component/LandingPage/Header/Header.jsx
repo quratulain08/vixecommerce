@@ -210,24 +210,8 @@ const Header = () => {
                 CASE STUDIES <span className="dropdown-arrow">▼</span>
               </Link>
               <ul className={`dropdown-menu ${isCaseStudiesOpen ? "show" : ""}`}>
-                <li>
-                  <Link
-                    to="/CaseStudies/CaseStudy1"
-                    className={location.pathname === "/CaseStudies/CaseStudy1" ? "active-sublink" : ""}
-                    onClick={closeMenu}
-                  >
-                    Building 7-figure brand
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/CaseStudies/CaseStudy2"
-                    className={location.pathname === "/CaseStudies/CaseStudy2" ? "active-sublink" : ""}
-                    onClick={closeMenu}
-                  >
-                    Double Sales with Half-Ad spend
-                  </Link>
-                </li>
+               
+              
                 <li>
                   <Link
                     to="/CaseStudies/CaseStudy3"
@@ -244,6 +228,24 @@ const Header = () => {
                     onClick={closeMenu}
                   >
                     Baby Product
+                  </Link>
+                </li>
+                  <li>
+                  <Link
+                    to="/CaseStudies/CaseStudy2"
+                    className={location.pathname === "/CaseStudies/CaseStudy2" ? "active-sublink" : ""}
+                    onClick={closeMenu}
+                  >
+                    Electronic Niche
+                  </Link>
+                </li>
+                 <li>
+                  <Link
+                    to="/CaseStudies/CaseStudy1"
+                    className={location.pathname === "/CaseStudies/CaseStudy1" ? "active-sublink" : ""}
+                    onClick={closeMenu}
+                  >
+                    Household Niche
                   </Link>
                 </li>
               </ul>
