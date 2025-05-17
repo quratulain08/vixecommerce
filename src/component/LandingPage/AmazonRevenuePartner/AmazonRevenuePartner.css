@@ -89,7 +89,7 @@
   gap: 20px;
 }
 
-.stat-card {
+.statt-card {
   background: #ffffff;
   border-radius: 15px;
   padding: 30px;
@@ -102,7 +102,7 @@
   overflow: hidden;
 }
 
-.stat-card.animate {
+.statt-card.animate {
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.5s ease, transform 0.5s ease;
@@ -113,11 +113,11 @@
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
 
-.stat-orange {
+.statt-orange {
   border: 2px solid #ffa500;
 }
 
-.stat-orange::before {
+.statt-orange::before {
   content: "";
   position: absolute;
   top: 0;
@@ -127,12 +127,12 @@
   background: linear-gradient(to right, #ffa500, #ff8c00);
 }
 
-.stat-content {
+.statt-content {
   position: relative;
   z-index: 2;
 }
 
-.stat-label {
+.statt-label {
   font-size: 0.9rem;
   font-weight: 600;
   color: #555;
@@ -140,7 +140,7 @@
   letter-spacing: 0.5px;
 }
 
-.stat-value-container {
+.statt-value-container {
   display: flex;
   align-items: baseline;
   flex-wrap: wrap;
@@ -148,20 +148,20 @@
   margin-bottom: 5px;
 }
 
-.stat-value {
+.statt-value {
   font-size: 3.5rem;
   font-weight: 800;
   color: #ffa500;
   line-height: 1;
 }
 
-.stat-unit {
+.statt-unit {
   font-size: 1.5rem;
   font-weight: 700;
   color: #333;
 }
 
-.stat-subtext {
+.statt-subtext {
   font-size: 0.9rem;
   color: #666;
   margin-top: 5px;

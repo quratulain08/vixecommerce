@@ -98,26 +98,26 @@ const Testimonials = () => {
     // Start the animation
     animationId = requestAnimationFrame(scroll)
 
-    // Pause animation on hover
-    const handleMouseEnter = () => {
-      setIsPaused(true)
+    // Toggle pause on click instead of hover
+    const handleClick = () => {
+      setIsPaused((prevState) => !prevState)
+
+      // Toggle the paused class for visual feedback
+      if (scrollContainer) {
+        scrollContainer.classList.toggle("paused", !isPaused)
+      }
     }
 
-    const handleMouseLeave = () => {
-      setIsPaused(false)
-    }
-
-    // Handle touch events for mobile
-    const handleTouchStart = () => {
-      setIsPaused(true)
+    // Handle touch events for mobile - don't automatically pause/resume
+    const handleTouchStart = (e) => {
+      // Track touch position but don't pause
     }
 
     const handleTouchEnd = () => {
-      setIsPaused(false)
+      // Handle touch end but don't automatically resume
     }
 
-    scrollContainer.addEventListener("mouseenter", handleMouseEnter)
-    scrollContainer.addEventListener("mouseleave", handleMouseLeave)
+    scrollContainer.addEventListener("click", handleClick)
     scrollContainer.addEventListener("touchstart", handleTouchStart)
     scrollContainer.addEventListener("touchend", handleTouchEnd)
 
@@ -125,8 +125,7 @@ const Testimonials = () => {
     return () => {
       cancelAnimationFrame(animationId)
       if (scrollContainer) {
-        scrollContainer.removeEventListener("mouseenter", handleMouseEnter)
-        scrollContainer.removeEventListener("mouseleave", handleMouseLeave)
+        scrollContainer.removeEventListener("click", handleClick)
         scrollContainer.removeEventListener("touchstart", handleTouchStart)
         scrollContainer.removeEventListener("touchend", handleTouchEnd)
       }

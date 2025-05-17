@@ -12,9 +12,8 @@ const WhyChooseUs = () => {
   const [isPaused, setIsPaused] = useState(false)
   const [slideHeight, setSlideHeight] = useState("auto")
   const slideContentsRef = useRef([])
-  const slideRef = useRef(null)
   const autoScrollRef = useRef(null)
-  const autoPlayRef = useRef(null)
+  const autoScrollPositionRef = useRef(0) // Track scroll position for manual navigation
 
   const reasons = [
     {
@@ -100,30 +99,100 @@ const WhyChooseUs = () => {
     }
   }, [])
 
+  // Function to manually navigate to next slide
   const nextSlide = () => {
-    if (isAnimating) return
+    if (isAnimating || !autoScrollRef.current) return
+
+    // Temporarily pause auto-scrolling during manual navigation
+    const wasPaused = isPaused
+    setIsPaused(true)
     setIsAnimating(true)
+
+    // Get slide width from the first slide
+    const slideWidth = autoScrollRef.current.querySelector(".auto-scroll-slide").offsetWidth + 20 // 20px for margin
+
+    // Update position
+    autoScrollPositionRef.current += slideWidth
+    autoScrollRef.current.style.transition = "transform 0.5s ease-in-out"
+    autoScrollRef.current.style.transform = `translateX(-${autoScrollPositionRef.current}px)`
+
+    // Update current slide indicator
     setCurrentSlide((prev) => (prev === reasons.length - 1 ? 0 : prev + 1))
-    setTimeout(() => setIsAnimating(false), 500)
+
+    // Reset auto-scrolling after animation
+    setTimeout(() => {
+      setIsAnimating(false)
+      autoScrollRef.current.style.transition = "none"
+      if (!wasPaused) {
+        setIsPaused(false)
+      }
+    }, 500)
   }
 
+  // Function to manually navigate to previous slide
   const prevSlide = () => {
-    if (isAnimating) return
+    if (isAnimating || !autoScrollRef.current) return
+
+    // Temporarily pause auto-scrolling during manual navigation
+    const wasPaused = isPaused
+    setIsPaused(true)
     setIsAnimating(true)
+
+    // Get slide width from the first slide
+    const slideWidth = autoScrollRef.current.querySelector(".auto-scroll-slide").offsetWidth + 20 // 20px for margin
+
+    // Update position (prevent negative values)
+    autoScrollPositionRef.current = Math.max(0, autoScrollPositionRef.current - slideWidth)
+    autoScrollRef.current.style.transition = "transform 0.5s ease-in-out"
+    autoScrollRef.current.style.transform = `translateX(-${autoScrollPositionRef.current}px)`
+
+    // Update current slide indicator
     setCurrentSlide((prev) => (prev === 0 ? reasons.length - 1 : prev - 1))
-    setTimeout(() => setIsAnimating(false), 500)
+
+    // Reset auto-scrolling after animation
+    setTimeout(() => {
+      setIsAnimating(false)
+      autoScrollRef.current.style.transition = "none"
+      if (!wasPaused) {
+        setIsPaused(false)
+      }
+    }, 500)
   }
 
+  // Function to go to a specific slide
   const goToSlide = (index) => {
-    if (isAnimating || index === currentSlide) return
+    if (isAnimating || index === currentSlide || !autoScrollRef.current) return
+
+    // Temporarily pause auto-scrolling during manual navigation
+    const wasPaused = isPaused
+    setIsPaused(true)
     setIsAnimating(true)
+
+    // Get slide width from the first slide
+    const slideWidth = autoScrollRef.current.querySelector(".auto-scroll-slide").offsetWidth + 20 // 20px for margin
+
+    // Calculate position based on index
+    autoScrollPositionRef.current = index * slideWidth
+
+    // Apply smooth transition
+    autoScrollRef.current.style.transition = "transform 0.5s ease-in-out"
+    autoScrollRef.current.style.transform = `translateX(-${autoScrollPositionRef.current}px)`
+
+    // Update current slide
     setCurrentSlide(index)
-    setTimeout(() => setIsAnimating(false), 500)
+
+    // Reset auto-scrolling after animation
+    setTimeout(() => {
+      setIsAnimating(false)
+      autoScrollRef.current.style.transition = "none"
+      if (!wasPaused) {
+        setIsPaused(false)
+      }
+    }, 500)
   }
 
   // Handle touch events for mobile swipe
   const handleTouchStart = (e) => {
-    setIsPaused(true)
     setTouchStart(e.targetTouches[0].clientX)
   }
 
@@ -132,7 +201,6 @@ const WhyChooseUs = () => {
   }
 
   const handleTouchEnd = () => {
-    setIsPaused(false)
     if (touchStart - touchEnd > 50) {
       // Swipe left
       nextSlide()
@@ -144,26 +212,30 @@ const WhyChooseUs = () => {
     }
   }
 
+  // Toggle pause on click
+  const handleCarouselClick = () => {
+    setIsPaused(!isPaused)
+  }
+
   // Auto scroll functionality
   useEffect(() => {
     const scrollContainer = autoScrollRef.current
     if (!scrollContainer) return
 
     let animationId
-    let scrollPosition = 0
     const scrollSpeed = 0.5
 
     const scroll = () => {
-      if (!isPaused) {
-        scrollPosition += scrollSpeed
+      if (!isPaused && !isAnimating) {
+        autoScrollPositionRef.current += scrollSpeed
 
         // Reset position when we've scrolled through all slides
-        if (scrollPosition >= scrollContainer.scrollWidth / 2) {
-          scrollPosition = 0
+        if (autoScrollPositionRef.current >= scrollContainer.scrollWidth / 2) {
+          autoScrollPositionRef.current = 0
         }
 
         if (scrollContainer) {
-          scrollContainer.style.transform = `translateX(-${scrollPosition}px)`
+          scrollContainer.style.transform = `translateX(-${autoScrollPositionRef.current}px)`
         }
       }
       animationId = requestAnimationFrame(scroll)
@@ -172,27 +244,11 @@ const WhyChooseUs = () => {
     // Start the animation
     animationId = requestAnimationFrame(scroll)
 
-    // Pause animation on hover
-    const handleMouseEnter = () => {
-      setIsPaused(true)
-    }
-
-    const handleMouseLeave = () => {
-      setIsPaused(false)
-    }
-
-    scrollContainer.addEventListener("mouseenter", handleMouseEnter)
-    scrollContainer.addEventListener("mouseleave", handleMouseLeave)
-
     // Clean up
     return () => {
       cancelAnimationFrame(animationId)
-      if (scrollContainer) {
-        scrollContainer.removeEventListener("mouseenter", handleMouseEnter)
-        scrollContainer.removeEventListener("mouseleave", handleMouseLeave)
-      }
     }
-  }, [isPaused])
+  }, [isPaused, isAnimating])
 
   // Handle keyboard navigation
   useEffect(() => {
@@ -201,6 +257,9 @@ const WhyChooseUs = () => {
         prevSlide()
       } else if (e.key === "ArrowRight") {
         nextSlide()
+      } else if (e.key === " ") {
+        // Space bar toggles pause
+        setIsPaused((prev) => !prev)
       }
     }
 
@@ -219,10 +278,11 @@ const WhyChooseUs = () => {
         <div className="carousel-container">
           {/* Auto-scrolling carousel */}
           <div
-            className="carousel-wrapper auto-scroll-wrapper"
+            className={`carousel-wrapper auto-scroll-wrapper ${isPaused ? "paused" : ""}`}
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
+            onClick={handleCarouselClick}
           >
             <div className="carousel-slides auto-scroll" ref={autoScrollRef}>
               {allReasons.map((reason, index) => (
@@ -241,10 +301,24 @@ const WhyChooseUs = () => {
           </div>
 
           {/* Navigation buttons - will be hidden on mobile */}
-          <button className="carousel-arrow prev-arrow" onClick={prevSlide} aria-label="Previous slide">
+          <button
+            className="carousel-arrow prev-arrow"
+            onClick={(e) => {
+              e.stopPropagation() // Prevent click from bubbling to carousel
+              prevSlide()
+            }}
+            aria-label="Previous slide"
+          >
             <ChevronLeft size={24} />
           </button>
-          <button className="carousel-arrow next-arrow" onClick={nextSlide} aria-label="Next slide">
+          <button
+            className="carousel-arrow next-arrow"
+            onClick={(e) => {
+              e.stopPropagation() // Prevent click from bubbling to carousel
+              nextSlide()
+            }}
+            aria-label="Next slide"
+          >
             <ChevronRight size={24} />
           </button>
 
@@ -253,7 +327,10 @@ const WhyChooseUs = () => {
               <button
                 key={index}
                 className={`carousel-indicator ${index === currentSlide ? "active" : ""}`}
-                onClick={() => goToSlide(index)}
+                onClick={(e) => {
+                  e.stopPropagation() // Prevent click from bubbling to carousel
+                  goToSlide(index)
+                }}
                 aria-label={`Go to slide ${index + 1}`}
               />
             ))}

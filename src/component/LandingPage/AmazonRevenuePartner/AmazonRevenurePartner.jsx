@@ -108,14 +108,14 @@ const AmazonRevenuePartner = () => {
 
         <div className="revenue-partner-stats">
           {stats.map((stat, index) => (
-            <div key={stat.id} className={`stat-card stat-${stat.color}`} ref={(el) => (statsRefs.current[index] = el)}>
-              <div className="stat-content">
-                <div className="stat-label">{stat.label}</div>
-                <div className="stat-value-container">
-                  <span className="stat-value">{stat.value}</span>
-                  <span className="stat-unit">{stat.unit}</span>
+            <div key={stat.id} className={`statt-card stat-${stat.color}`} ref={(el) => (statsRefs.current[index] = el)}>
+              <div className="statt-content">
+                <div className="statt-label">{stat.label}</div>
+                <div className="statt-value-container">
+                  <span className="statt-value">{stat.value}</span>
+                  <span className="statt-unit">{stat.unit}</span>
                 </div>
-                {stat.subtext && <div className="stat-subtext">{stat.subtext}</div>}
+                {stat.subtext && <div className="statt-subtext">{stat.subtext}</div>}
               </div>
             </div>
           ))}
