@@ -10,6 +10,7 @@ const PPCManagement = () => {
   const strategyRef = useRef([])
 
   useEffect(() => {
+     window.scrollTo(0,0);
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {

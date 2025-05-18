@@ -16,6 +16,7 @@ const Team = () => {
   const teamMembersRef = useRef([])
 
   useEffect(() => {
+     window.scrollTo(0,0);
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {

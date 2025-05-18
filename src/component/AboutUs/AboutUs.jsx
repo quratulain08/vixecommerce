@@ -23,6 +23,7 @@ const AboutUs = () => {
   const [animateStats, setAnimateStats] = useState(false)
 
   useEffect(() => {
+     window.scrollTo(0,0);
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
