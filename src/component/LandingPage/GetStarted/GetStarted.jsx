@@ -2,6 +2,7 @@ import "./GetStarted.css"
 import image from "../../../assets/GetStarted.png"
 
 const GetStarted = () => {
+  window.scrollTo(0,0);
   return (
     <section className="get-started-section">
       <div className="gradient-overlay"></div>
