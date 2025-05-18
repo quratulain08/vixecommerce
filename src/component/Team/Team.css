@@ -400,8 +400,8 @@
 .leader-image-container {
   position: relative;
   margin-bottom: 20px;
-  width: 280px;
-  height: 280px;
+  width: 220px; /* Increased from 180px */
+  height: 220px; /* Increased from 180px */
 }
 
 .leader-image {
@@ -579,9 +579,54 @@
   gap: 30px;
 }
 
+/* Update the member-image class to make images larger */
+.member-image {
+  position: relative;
+  width: 200px; /* Increased from 160px to 200px */
+  height: 200px; /* Increased from 160px to 200px */
+  overflow: hidden;
+  margin: 0 auto; /* Center the image container */
+  border-radius: 50%; /* Make container circular */
+  margin-top: 25px; /* Add some top margin for spacing */
+  margin-bottom: 15px; /* Add some bottom margin for spacing */
+}
+
+.member-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  border-radius: 50%;
+  border: 5px solid #ffffff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  filter: contrast(1.05) saturate(1.05);
+  /* Remove the scale transform that was causing the oval shape */
+  transform: none;
+  /* Fix for blurry images */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Update the hover effect to not use scale */
+.team-member-card:hover .member-image img {
+  transform: none;
+  border-color: #0066cc;
+}
+
+/* Remove the ::after pseudo-element that was affecting the shape */
+.member-image::after {
+  display: none;
+}
+
 .team-member-card {
   background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
-  border-radius: 30px;
+  border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -618,63 +663,6 @@
 
 .team-member-card:hover::before {
   transform: scaleX(1);
-}
-
-.member-image {
-  position: relative;
-  width: 100%;
-  padding-top: 100%; /* 1:1 Aspect Ratio */
-  overflow: hidden;
-  max-width: 200px; /* Add max-width to control the size */
-  max-height: 200px; /* Add max-height to control the size */
-  margin: 0 auto; /* Center the image container */
-}
-
-.member-image img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-  border-radius: 50%;
-  transform: scale(0.85);
-  border: 5px solid #ffffff;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  filter: contrast(1.05) saturate(1.05);
-  /* Fix for blurry images */
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
-  transform: translateZ(0);
-  -webkit-transform: translateZ(0);
-  will-change: transform;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-}
-
-.member-image::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  /* border: 3px solid #0066cc; */
-  transform: scale(0.85);
-  opacity: 0.7;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  pointer-events: none;
-}
-
-.team-member-card:hover .member-image::after {
-  transform: scale(0.9);
-  opacity: 1;
-}
-
-.team-member-card:hover .member-image img {
-  transform: scale(0.9);
 }
 
 .member-social {
@@ -731,6 +719,7 @@
   color: #555;
   margin: 0;
 }
+
 /* CTA Section */
 .team-cta {
   background: #040d21;
@@ -835,12 +824,17 @@
   }
 
   .leader-image-container {
-    width: 240px;
-    height: 240px;
+    width: 200px; /* Adjusted from 160px */
+    height: 200px; /* Adjusted from 160px */
   }
 
   .section-title {
     font-size: 2.2rem;
+  }
+
+  .member-image {
+    width: 180px;
+    height: 180px;
   }
 }
 
@@ -879,8 +873,8 @@
   }
 
   .leader-image-container {
-    width: 220px;
-    height: 220px;
+    width: 180px; /* Adjusted from 140px */
+    height: 180px; /* Adjusted from 140px */
   }
 
   .leader-icon {
@@ -898,6 +892,11 @@
 
   .section-title {
     font-size: 2rem;
+  }
+
+  .member-image {
+    width: 170px;
+    height: 170px;
   }
 }
 
@@ -946,8 +945,8 @@
   }
 
   .leader-image-container {
-    width: 180px;
-    height: 180px;
+    width: 150px; /* Adjusted from 120px */
+    height: 150px; /* Adjusted from 120px */
   }
 
   .leader-stats {
@@ -976,5 +975,10 @@
   .section-badge {
     font-size: 0.7rem;
     padding: 5px 14px;
+  }
+
+  .member-image {
+    width: 160px;
+    height: 160px;
   }
 }

@@ -435,7 +435,7 @@
   margin-bottom: 100px;
 }
 
-.services-grid {
+.service-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 25px;
@@ -715,7 +715,7 @@
     font-size: 3.5rem;
   }
 
-  .services-grid {
+  .service-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
   }
@@ -746,7 +746,7 @@
     padding: 80px 20px;
   }
 
-  .services-grid {
+  .service-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
   }
@@ -806,7 +806,7 @@
     padding: 60px 15px;
   }
 
-  .services-grid {
+  .service-grid {
     grid-template-columns: 1fr;
     gap: 25px;
   }

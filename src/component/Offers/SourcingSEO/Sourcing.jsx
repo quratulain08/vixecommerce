@@ -157,7 +157,7 @@ const Sourcing = () => {
           <div className="section-badge">WHAT WE OFFER</div>
           <h2 className="section-title">Our Sourcing Services</h2>
 
-          <div className="services-grid">
+          <div className="service-grid">
             {services.map((service, index) => (
               <div
                 key={index}
@@ -242,12 +242,12 @@ const Sourcing = () => {
                 </div>
                 <div className="approach-stats">
                   <div className="approach-stat">
-                    <span className="stat-number">200+</span>
-                    <span className="stat-label">Suppliers</span>
+                    <span className="stat-number">93%</span>
+                    <span className="stat-label">Success Rate</span>
                   </div>
                   <div className="approach-stat">
-                    <span className="stat-number">15+</span>
-                    <span className="stat-label">Countries</span>
+                    <span className="stat-number">50+</span>
+                    <span className="stat-label">Helped Brands</span>
                   </div>
                 </div>
               </div>

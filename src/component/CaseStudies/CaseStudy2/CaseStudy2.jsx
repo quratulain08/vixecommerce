@@ -44,7 +44,7 @@ const CaseStudy2 = () => {
       <div className="cs2-hero">
         <div className="cs2-container">
           <div className="cs2-hero-content">
-            <div className="cs2-tag">CASE STUDY #2</div>
+            <div className="cs2-tag">CASE STUDY #3</div>
             <h1 className="cs2-hero-title">
               Double Sales With <span className="cs2-highlight">Half Ad-Spend</span>
               <br />

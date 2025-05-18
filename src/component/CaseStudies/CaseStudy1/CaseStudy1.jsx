@@ -44,7 +44,7 @@ const CaseStudy1 = () => {
       <div className="case-hero">
         <div className="case-container">
           <div className="case-hero-content">
-            <div className="case-tag">CASE STUDY #1</div>
+            <div className="case-tag">CASE STUDY #4</div>
             <h1 className="case-hero-title">
               European Market <span className="case-highlight">Expansion</span>
               <br />

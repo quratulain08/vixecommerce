@@ -129,7 +129,7 @@ const Header = () => {
             </li>
             <li className="nav-item dropdown">
               <Link
-                to="/services"
+                to="/Offers"
                 className={`nav-link ${isServicesOpen ? "active" : ""} ${activeSection === "services" ? "active-page" : ""}`}
                 onClick={(e) => handleDropdownToggle(e, setIsServicesOpen, isServicesOpen, "services")}
               >
@@ -138,65 +138,57 @@ const Header = () => {
               <ul className={`dropdown-menu ${isServicesOpen ? "show" : ""}`}>
                 <li>
                   <Link
-                    to="/Services/SEO"
-                    className={location.pathname === "/Services/SEO" ? "active-sublink" : ""}
+                    to="/Offers/BrandLaunch"
+                    className={location.pathname === "/Offers/BrandLaunch" ? "active-sublink" : ""}
                     onClick={closeMenu}
                   >
-                    SEO
+                    Amazon Product and Brand Launch
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to="/Services/AmazonPPCManagement"
-                    className={location.pathname === "/Services/AmazonPPCManagement" ? "active-sublink" : ""}
+                    to="/Offers/FBAManagement"
+                    className={location.pathname === "/Offers/FBAManagement" ? "active-sublink" : ""}
+                    onClick={closeMenu}
+                  >
+                    Amazon FBA Management
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/Offers/ListingAudit"
+                    className={location.pathname === "/Offers/ListingAudit" ? "active-sublink" : ""}
+                    onClick={closeMenu}
+                  >
+                    Amazon Listing Audit
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/Offers/ListingOptimization"
+                    className={location.pathname === "/Offers/ListingOptimization" ? "active-sublink" : ""}
+                    onClick={closeMenu}
+                  >
+                    Amazon Listing Optimizatin & SEO
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/Offers/PPCManagement"
+                    className={location.pathname === "/Offers/PPCManagement" ? "active-sublink" : ""}
                     onClick={closeMenu}
                   >
                     Amazon PPC Management
                   </Link>
                 </li>
+                
                 <li>
                   <Link
-                    to="/Services/AmazonBrandManagement"
-                    className={location.pathname === "/Services/AmazonBrandManagement" ? "active-sublink" : ""}
+                    to="/Offers/Sourcing"
+                    className={location.pathname === "/Offers/Sourcing" ? "active-sublink" : ""}
                     onClick={closeMenu}
                   >
-                    Amazon Brand Management
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/Services/ProductLaunch"
-                    className={location.pathname === "/Services/ProductLaunch" ? "active-sublink" : ""}
-                    onClick={closeMenu}
-                  >
-                    Product Launch
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/Services/AccountMaintenance"
-                    className={location.pathname === "/Services/AccountMaintenance" ? "active-sublink" : ""}
-                    onClick={closeMenu}
-                  >
-                    Account Maintenance
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/Services/InfluencerMarketing"
-                    className={location.pathname === "/Services/InfluencerMarketing" ? "active-sublink" : ""}
-                    onClick={closeMenu}
-                  >
-                    Influencer Marketing
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/Services/ProductDevelopment"
-                    className={location.pathname === "/Services/ProductDevelopment" ? "active-sublink" : ""}
-                    onClick={closeMenu}
-                  >
-                    Product Development
+                    Efficient Sourcing
                   </Link>
                 </li>
               </ul>

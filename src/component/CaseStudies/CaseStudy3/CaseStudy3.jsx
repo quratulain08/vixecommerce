@@ -72,7 +72,7 @@ const CaseStudy3 = () => {
       <div className="cs3-hero">
         <div className="cs3-container">
           <div className="cs3-hero-content">
-            <div className="cs3-tag">CASE STUDY #3</div>
+            <div className="cs3-tag">CASE STUDY #1</div>
             <h1 className="cs3-hero-title">
               Textile Niche Product <span className="cs3-highlight">Success</span>
               <br />

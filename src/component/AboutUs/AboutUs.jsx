@@ -1,7 +1,18 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { CheckCircle, Award, TrendingUp, BarChart2, ArrowRight, Users, Target, Shield } from "lucide-react"
+import {
+  CheckCircle,
+  TrendingUp,
+  BarChart2,
+  ArrowRight,
+  Users,
+  Target,
+  Shield,
+  Search,
+  Package,
+  Rocket,
+} from "lucide-react"
 import "./AboutUs.css"
 
 const AboutUs = () => {
@@ -82,38 +93,52 @@ const AboutUs = () => {
     {
       id: 1,
       title: "Amazon PPC Management",
-      description: "Strategic advertising campaigns that maximize ROI and drive sales growth.",
+      description: "Maximize ROI with strategic, sales-driven Amazon ads.",
       icon: <TrendingUp size={24} />,
       color: "blue",
     },
     {
       id: 2,
-      title: "Amazon FBA",
-      description: "End-to-end fulfillment solutions to streamline your Amazon business operations.",
-      icon: <BarChart2 size={24} />,
+      title: "Amazon FBA Management",
+      description: "Streamline fulfillment for smoother Amazon operations.",
+      icon: <Package size={24} />,
       color: "green",
     },
     {
       id: 3,
-      title: "Listing Optimization",
-      description: "Conversion-focused product listings that stand out from the competition.",
+      title: "Listing Optimization & SEO",
+      description: "Boost visibility and conversions with optimized listings.",
       icon: <CheckCircle size={24} />,
       color: "purple",
     },
     {
       id: 4,
-      title: "Amazon SEO",
-      description: "Keyword strategies that improve visibility and organic ranking on Amazon.",
-      icon: <Award size={24} />,
+      title: "Amazon Brand & Product Launch",
+      description: "Launch successfully with sourcing, setup, and listing support.",
+      icon: <Rocket size={24} />,
       color: "orange",
+    },
+    {
+      id: 5,
+      title: "Efficient Sourcing",
+      description: "Find reliable suppliers and manage sourcing end-to-end.",
+      icon: <BarChart2 size={24} />,
+      color: "blue",
+    },
+    {
+      id: 6,
+      title: "Amazon Listing Audit",
+      description: "Get actionable insights to improve and optimize listings.",
+      icon: <Search size={24} />,
+      color: "green",
     },
   ]
 
   const stats = [
-    { value: "100+", label: "Clients Served", startValue: 0, endValue: 100, suffix: "+" },
-    { value: "$15M+", label: "Sales Generated", startValue: 0, endValue: 15, prefix: "$", suffix: "M+" },
-    { value: "92%", label: "Client Retention", startValue: 0, endValue: 92, suffix: "%" },
-    { value: "7", label: "Amazon Experts", startValue: 0, endValue: 7 },
+    { value: "50+", label: "Helped Brands", startValue: 0, endValue: 100, suffix: "+" },
+    { value: "€4.3M", label: "Revenue Managed per Quarter", startValue: 0, endValue: 15, prefix: "$", suffix: "M+" },
+    { value: "93%", label: "Success Rate", startValue: 0, endValue: 92, suffix: "%" },
+    { value: "6", label: "Amazon Experts", startValue: 0, endValue: 7 },
   ]
 
   const values = [

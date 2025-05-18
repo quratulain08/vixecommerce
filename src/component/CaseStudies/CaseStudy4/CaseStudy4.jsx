@@ -97,7 +97,7 @@ const CaseStudy4 = () => {
       <div className="cs4-hero">
         <div className="cs4-container">
           <div className="cs4-hero-content">
-            <div className="cs4-tag">CASE STUDY #4</div>
+            <div className="cs4-tag">CASE STUDY #2</div>
             <h1 className="cs4-hero-title">
               Baby Product <span className="cs4-highlight">Success Story</span>
               <br />
