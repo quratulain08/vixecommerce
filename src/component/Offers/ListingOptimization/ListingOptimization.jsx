@@ -9,9 +9,10 @@ const ListingOptimization = () => {
   const contentRef = useRef(null)
   const optimizationStepsRef = useRef([])
   const seoStepsRef = useRef([])
+  const elementsRef = useRef([])
 
   useEffect(() => {
-     window.scrollTo(0,0);
+    window.scrollTo(0, 0)
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -33,6 +34,14 @@ const ListingOptimization = () => {
                 if (step && entry.target === step) {
                   setTimeout(() => {
                     step.classList.add("animate")
+                  }, index * 150)
+                }
+              })
+
+              elementsRef.current.forEach((element, index) => {
+                if (element && entry.target === element) {
+                  setTimeout(() => {
+                    element.classList.add("animate")
                   }, index * 150)
                 }
               })
@@ -63,6 +72,12 @@ const ListingOptimization = () => {
       }
     })
 
+    elementsRef.current.forEach((element) => {
+      if (element) {
+        observer.observe(element)
+      }
+    })
+
     return () => {
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current)
@@ -78,6 +93,11 @@ const ListingOptimization = () => {
       seoStepsRef.current.forEach((step) => {
         if (step) {
           observer.unobserve(step)
+        }
+      })
+      elementsRef.current.forEach((element) => {
+        if (element) {
+          observer.unobserve(element)
         }
       })
     }
@@ -155,6 +175,41 @@ const ListingOptimization = () => {
     "Reduce advertising costs with better organic rankings",
     "Stand out from competitors with professional listings",
     "Increase customer satisfaction with clear product information",
+  ]
+
+  const listingElements = [
+    {
+      id: "title",
+      title: "Product Titles",
+      before: "Yoga Mat",
+      after:
+        'Premium Yoga Mat 1/4" Thick, Non-Slip Exercise & Fitness Mat with Carrying Strap for Yoga, Pilates & Floor Exercises (72"x24")',
+      className: "title-card",
+    },
+    {
+      id: "bullet",
+      title: "Bullet Points",
+      before: "• Thick yoga mat\n• Non-slip\n• Comes with strap",
+      after:
+        '• <span class="bullet-highlight">EXTRA THICK & COMFORTABLE:</span> 1/4 inch (6mm) thick premium mat provides optimal cushioning for joints and excellent balance support\n <br/> • <span class="bullet-highlight">NON-SLIP TEXTURE:</span> Double-sided textured surface ensures grip and stability during the most challenging poses',
+      className: "bullet-card",
+    },
+    {
+      id: "description",
+      title: "Product Descriptions",
+      before: "This is a yoga mat for exercise. It's thick and non-slip.",
+      after:
+        'Transform your yoga practice with our Premium Yoga Mat, designed for yogis of all levels. The perfect balance of cushioning and stability, our 1/4" thick mat protects your joints while providing the firm foundation you need for balance poses...',
+      className: "description-card",
+    },
+    {
+      id: "image",
+      title: "Product Images",
+      before: "Single product photo on white background",
+      after:
+        "Main image + lifestyle images + infographics highlighting key features + size comparison + packaging + close-up details",
+      className: "image-card",
+    },
   ]
 
   return (
@@ -247,88 +302,27 @@ const ListingOptimization = () => {
           <h2 className="section-title">Key Listing Elements</h2>
 
           <div className="elements-grid">
-            <div className="element-card">
-              <div className="element-header">
-                <h3>Product Titles</h3>
-              </div>
-              <div className="element-content">
-                <div className="element-before">
-                  <h4>Before</h4>
-                  <p>Yoga Mat</p>
+            {listingElements.map((element, index) => (
+              <div
+                key={element.id}
+                className={`element-card ${element.className}`}
+                ref={(el) => (elementsRef.current[index] = el)}
+              >
+                <div className="element-header">
+                  <h3>{element.title}</h3>
                 </div>
-                <div className="element-after">
-                  <h4>After</h4>
-                  <p>
-                    Premium Yoga Mat 1/4" Thick, Non-Slip Exercise & Fitness Mat with Carrying Strap for Yoga, Pilates &
-                    Floor Exercises (72"x24")
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="element-card">
-              <div className="element-header">
-                <h3>Bullet Points</h3>
-              </div>
-              <div className="element-content">
-                <div className="element-before">
-                  <h4>Before</h4>
-                  <p>
-                    • Thick yoga mat
-                    <br />• Non-slip
-                    <br />• Comes with strap
-                  </p>
-                </div>
-                <div className="element-after">
-                  <h4>After</h4>
-                  <p>
-                    • EXTRA THICK & COMFORTABLE: 1/4 inch (6mm) thick premium mat provides optimal cushioning for joints
-                    and excellent balance support
-                    <br />• NON-SLIP TEXTURE: Double-sided textured surface ensures grip and stability during the most
-                    challenging poses
-                  </p>
+                <div className="element-content">
+                  <div className="element-before">
+                    <h4>Before</h4>
+                    <p dangerouslySetInnerHTML={{ __html: element.before }}></p>
+                  </div>
+                  <div className="element-after">
+                    <h4>After</h4>
+                    <p dangerouslySetInnerHTML={{ __html: element.after }}></p>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <div className="element-card">
-              <div className="element-header">
-                <h3>Product Descriptions</h3>
-              </div>
-              <div className="element-content">
-                <div className="element-before">
-                  <h4>Before</h4>
-                  <p>This is a yoga mat for exercise. It's thick and non-slip.</p>
-                </div>
-                <div className="element-after">
-                  <h4>After</h4>
-                  <p>
-                    Transform your yoga practice with our Premium Yoga Mat, designed for yogis of all levels. The
-                    perfect balance of cushioning and stability, our 1/4" thick mat protects your joints while providing
-                    the firm foundation you need for balance poses...
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="element-card">
-              <div className="element-header">
-                <h3>Product Images</h3>
-              </div>
-              <div className="element-content">
-                <div className="element-before">
-                  <h4>Before</h4>
-                  <p>Single product photo on white background</p>
-                </div>
-                <div className="element-after">
-                  <h4>After</h4>
-                  <p>
-                    Main image + lifestyle images + infographics highlighting key features + size comparison + packaging
-                    + close-up details
-                  </p>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
 

@@ -137,7 +137,7 @@ const AboutUs = () => {
 
   const stats = [
     { value: "50+", label: "Helped Brands", startValue: 0, endValue: 100, suffix: "+" },
-    { value: "€4.3M", label: "Revenue Managed per Quarter", startValue: 0, endValue: 15, prefix: "$", suffix: "M+" },
+    { value: "€4.3M", label: "Revenue Managed per Quarter", startValue: 0, endValue: 15, prefix: "", suffix: "M+" },
     { value: "93%", label: "Success Rate", startValue: 0, endValue: 92, suffix: "%" },
     { value: "6", label: "Amazon Experts", startValue: 0, endValue: 7 },
   ]
@@ -182,9 +182,9 @@ const AboutUs = () => {
           </h1>
           <div className="hero-line"></div>
           <p className="hero-subtitle">Empowering brands to thrive in the Amazon marketplace</p>
-          <button className="hero-button">
+          {/* <button className="hero-button">
             Learn More <ArrowRight size={16} className="btn-icon" />
-          </button>
+          </button> */}
         </div>
       </div>
 

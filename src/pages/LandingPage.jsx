@@ -7,6 +7,8 @@ import Testimonials from '../component/LandingPage/Testimonial/Testimonial';
 import CaseStudies from '../component/LandingPage/CaseStudies/CaseStudies';
 import FAQs from '../component/LandingPage/FAQs/FAQs';
 import AmazonRevenuePartner from '../component/LandingPage/AmazonRevenuePartner/AmazonRevenurePartner';
+import Brand from '../component/LandingPage/FeaturedPartners/FeaturedPartners';
+import FeaturedPartners from '../component/LandingPage/FeaturedPartners/FeaturedPartners';
 
 
 export default function LandingPage() {
@@ -18,6 +20,7 @@ export default function LandingPage() {
       <WhyChooseUs/>
       <CaseStudies/>
       <Testimonials/>
+      <FeaturedPartners/>
       <FAQs/>
     </div>
   );

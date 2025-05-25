@@ -25,6 +25,7 @@ import ListingAudit from './component/Offers/ListingAudit/ListingAudit';
 import ListingOptimization from './component/Offers/ListingOptimization/ListingOptimization';
 import PPCManagement from './component/Offers/PPCManagement/PPCManagement';
 import SourcingSEO from './component/Offers/SourcingSEO/Sourcing';
+import NeedHelp from './component/NeedHelp/NeedHelp';
 
 function App() {
   return (
@@ -52,6 +53,8 @@ function App() {
           {/* AboutUS */}
         <Route path ="/AboutUs" element={<AboutUs/>}/>
         <Route path ="/Team" element={<Team/>}/>
+
+        <Route path="/contact" element = {<NeedHelp/>}/>
 
 
         {/* offers*/ }

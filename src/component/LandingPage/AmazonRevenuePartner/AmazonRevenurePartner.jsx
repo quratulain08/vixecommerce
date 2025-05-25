@@ -73,7 +73,7 @@ const AmazonRevenuePartner = () => {
     id: 2,
     label: "SUCCESS RATE",
     value: "93%",
-    unit: "kPI's Achieved",
+    unit: "KPI's Achieved",
     color: "orange",
   },
   {

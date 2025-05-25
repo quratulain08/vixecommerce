@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import { ArrowRight, CheckCircle, Package, BarChart2, Search, ShoppingCart, Award } from "lucide-react"
 import "./BrandLaunch.css"
 
@@ -8,7 +8,11 @@ const BrandLaunch = () => {
   const sectionRef = useRef(null)
   const contentRef = useRef(null)
   const stepsRef = useRef([])
+    const [showNeedHelp, setShowNeedHelp] = useState(false);
 
+      const handleClick = () => {
+    setShowNeedHelp(true);
+  };
   useEffect(() => {
      window.scrollTo(0,0);
     const observer = new IntersectionObserver(
