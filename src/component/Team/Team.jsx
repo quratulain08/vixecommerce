@@ -224,7 +224,7 @@ const Team = () => {
           </div>
         </div>
 
-        <div className="team-cta">
+        {/* <div className="team-cta">
           <div className="cta-background">
             <div className="cta-shape cta-shape-1"></div>
             <div className="cta-shape cta-shape-2"></div>
@@ -235,7 +235,7 @@ const Team = () => {
             you'd be a good fit, we'd love to hear from you.
           </p>
           <button className="cta-button">View Open Positions</button>
-        </div>
+        </div> */}
       </div>
     </section>
   )

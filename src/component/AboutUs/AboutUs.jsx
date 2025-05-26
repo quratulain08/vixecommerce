@@ -223,17 +223,7 @@ const AboutUs = () => {
           </div>
         </div>
 
-        <div className="stats-section" ref={statsRef}>
-          {stats.map((stat, index) => (
-            <div key={index} className="stat-card">
-              <h2>
-                {stat.prefix || ""}
-                {animateStats ? stat.value : "0"}
-              </h2>
-              <p>{stat.label}</p>
-            </div>
-          ))}
-        </div>
+      
 
         <div className="values-section">
           <div className="section-badge">OUR VALUES</div>

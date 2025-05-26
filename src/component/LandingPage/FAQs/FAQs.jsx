@@ -69,10 +69,10 @@ const FAQs = () => {
           ))}
         </div>
 
-        <div className="faqs-cta">
+        {/* <div className="faqs-cta">
           <p>Still have questions?</p>
           <button className="contact-us-button">Contact Us</button>
-        </div>
+        </div> */}
       </div>
     </section>
   )

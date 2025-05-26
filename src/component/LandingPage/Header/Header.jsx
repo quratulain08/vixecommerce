@@ -283,13 +283,13 @@ const Header = () => {
               </ul>
             </li>
             <li className="nav-item">
-              <Link
+              {/* <Link
                 to="/pricing"
                 className={`nav-link ${activeSection === "pricing" ? "active-page" : ""}`}
                 onClick={closeMenu}
               >
                 PRICING
-              </Link>
+              </Link> */}
             </li>
           </ul>
 

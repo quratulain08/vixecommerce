@@ -510,14 +510,14 @@
 }
 
 /* Stats Section */
-.stats-section {
+.states-section {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
   margin-bottom: 100px;
 }
 
-.stat-card {
+.state-card {
   background: #ffffff;
   border-radius: 15px;
   padding: 40px 30px;
@@ -531,7 +531,7 @@
   overflow: hidden;
 }
 
-.stat-card::before {
+.state-card::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -544,22 +544,22 @@
   transition: transform 0.5s ease;
 }
 
-.stat-card.animate {
+.state-card.animate {
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.stat-card:hover {
+.state-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
-.stat-card:hover::before {
+.state-card:hover::before {
   transform: scaleX(1);
 }
 
-.stat-card h2 {
+.state-card h2 {
   font-size: 3rem;
   font-weight: 800;
   margin: 0 0 15px 0;

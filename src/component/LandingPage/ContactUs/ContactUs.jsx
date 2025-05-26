@@ -118,16 +118,16 @@ const ContactUs = () => {
                 <h4>Case Studies</h4>
                 <ul>
                   <li>
-                    <a href="/CaseStudies/CaseStudy1">Building 7-Figure brand</a>
-                  </li>
-                  <li>
-                    <a href="/CaseStudies/CaseStudy2">Double sales with Half-Ad spend</a>
-                  </li>
-                  <li>
                     <a href="/CaseStudies/CaseStudy3">Textile Niche Product</a>
                   </li>
                   <li>
                     <a href="/CaseStudies/CaseStudy4">Baby Product</a>
+                  </li>
+                  <li>
+                    <a href="/CaseStudies/CaseStudy2">Electronic Niche</a>
+                  </li>
+                  <li>
+                    <a href="/CaseStudies/CaseStudy1">Household Niche</a>
                   </li>
                 </ul>
               </div>
