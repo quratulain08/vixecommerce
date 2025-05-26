@@ -72,15 +72,15 @@ const CaseStudy3 = () => {
       <div className="case-hero">
         <div className="case-container">
           <div className="case-hero-content">
-            <div className="case-tag">CASE STUDY #3</div>
+            <div className="case-tag">CASE STUDY #1</div>
             <h1 className="case-hero-title">
-              Double Sales With <span className="case-highlight">Half Ad-Spend</span>
+              Textile Niche Product <span className="case-highlight">Success</span>
               <br />
-              For Amazon UK Brand
+              Earning <span className="case-highlight">£10,000</span> Net Profit Monthly
             </h1>
             <p className="case-hero-description">
-              See how we transformed a struggling TV brand on Amazon UK by optimizing listings and reducing ad spend
-              while dramatically increasing sales and organic rankings.
+              Discover how we launched a product in a highly competitive Home & Kitchen category on Amazon UK,
+              achieving remarkable success with £40,000 monthly revenue and £10,000 monthly profit.
             </p>
             <button className="case-cta-button">
               Get Similar Results <ArrowUpRight size={18} />
@@ -88,6 +88,11 @@ const CaseStudy3 = () => {
           </div>
           <div className="case-hero-image">
             <div className="case-image-placeholder">
+              {/* you can keep your textile animation inside here */}
+              <div className="cs3-textile-animation">
+                <div className="cs3-textile-pattern"></div>
+                <div className="cs3-textile-fold"></div>
+              </div>
               <div className="case-image-shape"></div>
               <div className="case-image-circle"></div>
             </div>
