@@ -458,3 +458,49 @@
     font-size: 1.8rem;
   }
 }
+
+/* Laptop Screen Adjustments */
+@media (min-width: 769px) and (max-width: 1440px) and (min-height: 600px) and (max-height: 900px) {
+  .hero-section {
+    padding-top: 120px;
+    min-height: calc(100vh - 80px);
+  }
+
+  .hero-content {
+    padding-top: 40px;
+  }
+
+  .hero-badge {
+    margin-bottom: 25px;
+    margin-top: 20px;
+  }
+
+  .hero-title {
+    font-size: 3.4rem;
+    margin-bottom: 25px;
+  }
+
+  .hero-description {
+    font-size: 1.1rem;
+    margin-bottom: 35px;
+  }
+
+  .hero-stats {
+    margin-top: 50px;
+  }
+}
+
+/* Additional adjustment for smaller laptop screens */
+@media (min-width: 769px) and (max-width: 1200px) and (min-height: 600px) and (max-height: 800px) {
+  .hero-section {
+    padding-top: 140px;
+  }
+
+  .hero-content {
+    padding-top: 50px;
+  }
+
+  .hero-title {
+    font-size: 3.2rem;
+  }
+}
