@@ -490,6 +490,18 @@
   transform: scale(1.1);
 }
 
+/* Enhanced service-blue hover effect */
+.service-blue:hover {
+  background: linear-gradient(135deg, #f8fbff 0%, #f0f7ff 50%, #e6f3ff 100%);
+  box-shadow: 0 15px 40px rgba(0, 102, 255, 0.15);
+}
+
+/* Enhanced service-green hover effect */
+.service-green:hover {
+  background: linear-gradient(135deg, #f8fffc 0%, #f0fff8 50%, #e6fff0 100%);
+  box-shadow: 0 15px 40px rgba(15, 252, 190, 0.15);
+}
+
 .service-card h3 {
   font-size: 1.3rem;
   font-weight: 700;

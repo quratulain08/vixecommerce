@@ -179,6 +179,7 @@ const PPCManagement = () => {
                 className={`ppcm-strategy-card ppcm-strategy-${strategy.color}`}
                 ref={(el) => (strategyRef.current[index] = el)}
               >
+                <div className="step-number">{index + 1}</div>
                 <div className="ppcm-strategy-icon">{strategy.icon}</div>
                 <h3>{strategy.title}</h3>
                 <p>{strategy.description}</p>

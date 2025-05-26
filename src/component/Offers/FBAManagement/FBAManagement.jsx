@@ -172,13 +172,14 @@ const FBAManagement = () => {
           <div className="section-badge">WHAT WE DO</div>
           <h2 className="section-title">Our FBA Management Services</h2>
 
-          <div className="services-grid">
+          <div className="process-steps">
             {fbaServices.map((service, index) => (
               <div
                 key={index}
-                className={`service-card service-${service.color}`}
+                className={`process-step service-${service.color}`}
                 ref={(el) => (servicesRef.current[index] = el)}
               >
+                <div className="step-number">{index + 1}</div>
                 <div className="service-icon">{service.icon}</div>
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>

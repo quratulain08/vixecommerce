@@ -154,17 +154,18 @@ const Sourcing = () => {
           </div>
         </div>
 
-        <div className="sourcing-services">
+        <div className="service-process">
           <div className="section-badge">WHAT WE OFFER</div>
           <h2 className="section-title">Our Sourcing Services</h2>
 
-          <div className="service-grid">
+          <div className="process-steps">
             {services.map((service, index) => (
               <div
                 key={index}
-                className={`service-card service-${service.color}`}
+                className={`process-step service-${service.color}`}
                 ref={(el) => (servicesRef.current[index] = el)}
               >
+                <div className="step-number">{index + 1}</div>
                 <div className="service-icon">{service.icon}</div>
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
