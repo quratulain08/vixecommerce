@@ -12,7 +12,19 @@ const Header = () => {
   const [isAboutUsOpen, setIsAboutUsOpen] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState("")
+  const [isScrolled, setIsScrolled] = useState(false)
   const dropdownRef = useRef(null)
+
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY
+      setIsScrolled(scrollPosition > 50)
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   // Set active section based on current path
   useEffect(() => {
@@ -105,11 +117,13 @@ const Header = () => {
   }
 
   return (
-    <header className="header">
+    <header className={`header ${isScrolled ? "scrolled" : ""}`}>
       <div className="header-container">
         <div className="logo-container">
           <Link to="/" className="logo-link" onClick={closeMenu}>
-            <img src={LOGO || "/placeholder.svg"} alt="Logo" className="logo-image" />
+            <div className="logo-wrapper">
+              <img src={LOGO || "/placeholder.svg"} alt="Logo" className="logo-image" />
+            </div>
           </Link>
         </div>
 
@@ -169,7 +183,7 @@ const Header = () => {
                     className={location.pathname === "/Offers/ListingOptimization" ? "active-sublink" : ""}
                     onClick={closeMenu}
                   >
-                    Amazon Listing Optimizatin & SEO
+                    Amazon Listing Optimization & SEO
                   </Link>
                 </li>
                 <li>
@@ -181,7 +195,6 @@ const Header = () => {
                     Amazon PPC Management
                   </Link>
                 </li>
-                
                 <li>
                   <Link
                     to="/Offers/Sourcing"
@@ -202,8 +215,6 @@ const Header = () => {
                 CASE STUDIES <span className="dropdown-arrow">▼</span>
               </Link>
               <ul className={`dropdown-menu ${isCaseStudiesOpen ? "show" : ""}`}>
-               
-              
                 <li>
                   <Link
                     to="/CaseStudies/CaseStudy3"
@@ -222,7 +233,7 @@ const Header = () => {
                     Baby Product
                   </Link>
                 </li>
-                  <li>
+                <li>
                   <Link
                     to="/CaseStudies/CaseStudy2"
                     className={location.pathname === "/CaseStudies/CaseStudy2" ? "active-sublink" : ""}
@@ -231,7 +242,7 @@ const Header = () => {
                     Electronic Niche
                   </Link>
                 </li>
-                 <li>
+                <li>
                   <Link
                     to="/CaseStudies/CaseStudy1"
                     className={location.pathname === "/CaseStudies/CaseStudy1" ? "active-sublink" : ""}

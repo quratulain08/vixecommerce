@@ -61,7 +61,7 @@ const FAQs = () => {
                 <button className="faq-toggle">{openIndex === index ? <Minus size={20} /> : <Plus size={20} />}</button>
               </div>
               {openIndex === index && (
-                <div className="faq-answer">
+                <div className="faq-answerr">
                   <p>{faq.answer}</p>
                 </div>
               )}

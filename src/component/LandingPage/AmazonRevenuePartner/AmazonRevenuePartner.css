@@ -2,7 +2,7 @@
   padding: 100px 0;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, #f9f9f9 0%, #f5f5f5 100%);
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
 }
 
 .revenue-partner-container {
@@ -11,19 +11,20 @@
   padding: 0 20px;
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 40px;
+  align-items: center;
 }
 
 .revenue-partner-content {
   flex: 1;
   min-width: 300px;
   background: #040d21;
-  border-radius: 20px;
+  border-radius: 24px;
   padding: 50px 40px;
   color: #fff;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 40px rgba(4, 13, 33, 0.2);
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.8s ease, transform 0.8s ease;
@@ -41,17 +42,28 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(16, 110, 190, 0.1) 0%, rgba(15, 252, 190, 0.05) 50%, transparent 70%);
+  background: radial-gradient(circle, rgba(0, 102, 255, 0.1) 0%, rgba(15, 252, 190, 0.05) 30%, transparent 70%);
   opacity: 0.5;
   z-index: 1;
   pointer-events: none;
+  animation: float-glow 8s ease-in-out infinite;
+}
+
+@keyframes float-glow {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(20px, 20px) rotate(180deg);
+  }
 }
 
 .about-badge {
   display: inline-block;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-radius: 30px;
   padding: 8px 20px;
   font-size: 0.9rem;
@@ -59,7 +71,7 @@
   color: #0ffcbe;
   margin-bottom: 20px;
   letter-spacing: 1px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(15, 252, 190, 0.2);
   position: relative;
   z-index: 2;
 }
@@ -71,6 +83,10 @@
   line-height: 1.2;
   position: relative;
   z-index: 2;
+  background: linear-gradient(135deg, #ffffff 0%, #0ffcbe 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .about-text {
@@ -89,88 +105,119 @@
   gap: 20px;
 }
 
-.statt-card {
+.stat-card {
   background: #ffffff;
-  border-radius: 10px;              /* smaller corners */
-  padding: 15px 20px;               /* reduced padding */
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04); /* softer shadow */
+  border-radius: 16px;
+  padding: 24px 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
   border: 1px solid rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
   opacity: 0;
-  gap:2px;
-  transform: translateY(10px);      /* smaller animation offset */
+  transform: translateY(20px);
   position: relative;
   overflow: hidden;
-  font-size: 0.9rem;                /* reduced text size */
-  max-width: 200px;      
-  height: 170px;           /* optional: limit card width */
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-
-.statt-card.animate {
+.stat-card.animate {
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .stat-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
 }
 
-.statt-orange {
-  border: 2px solid #ffa500;
-}
-
-.statt-orange::before {
-  content: "";
+.stat-decoration {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 5px;
-  background: linear-gradient(to right, #ffa500, #ff8c00);
+  right: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 0 16px 0 60px;
+  opacity: 0.1;
+  transition: opacity 0.3s ease;
 }
 
-.statt-content {
+.stat-card:hover .stat-decoration {
+  opacity: 0.2;
+}
+
+/* Color Variants using website theme colors */
+.stat-blue {
+  border-left: 4px solid #0066cc;
+}
+
+.stat-blue .stat-decoration {
+  background: linear-gradient(135deg, #0066cc, #0066ff);
+}
+
+.stat-blue .stat-value {
+  color: #0066cc;
+}
+
+.stat-teal {
+  border-left: 4px solid #02b48a;
+}
+
+.stat-teal .stat-decoration {
+  background: linear-gradient(135deg, #02b48a, #0ffcbe);
+}
+
+.stat-teal .stat-value {
+  color: #02b48a;
+}
+
+.stat-content {
   position: relative;
   z-index: 2;
-  
+  flex: 1;
 }
 
-.statt-label {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #555;
-  margin-bottom: 15px;
+.stat-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #6b7280;
+  margin-bottom: 12px;
   letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
-.statt-value-container {
+.stat-value-container {
   display: flex;
   align-items: baseline;
   flex-wrap: wrap;
-  gap: 5px;
-  margin-bottom: 5px;
+  gap: 6px;
+  margin-bottom: 8px;
 }
 
-.statt-value {
-  font-size: 3.5rem;
+.stat-value {
+  font-size: 2.8rem;
   font-weight: 800;
-  color: #ffa500;
   line-height: 1;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.statt-unit {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #333;
+.stat-unit {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #374151;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-.statt-subtext {
-  font-size: 0.9rem;
-  color: #666;
-  margin-top: 5px;
+.stat-subtext {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 4px;
 }
 
 /* Animation for stat values */
@@ -200,11 +247,11 @@
   }
 
   .stat-value {
-    font-size: 3rem;
+    font-size: 2.4rem;
   }
 
   .stat-unit {
-    font-size: 1.3rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -215,6 +262,7 @@
 
   .revenue-partner-container {
     flex-direction: column;
+    gap: 30px;
   }
 
   .revenue-partner-content {
@@ -231,18 +279,20 @@
 
   .revenue-partner-stats {
     grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
   }
 
   .stat-card {
-    padding: 25px;
+    padding: 20px 16px;
+    height: 140px;
   }
 
   .stat-value {
-    font-size: 2.8rem;
+    font-size: 2.2rem;
   }
 
   .stat-unit {
-    font-size: 1.2rem;
+    font-size: 0.85rem;
   }
 }
 
@@ -266,17 +316,23 @@
 
   .revenue-partner-stats {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
 
   .stat-card {
     padding: 20px;
+    height: 130px;
   }
 
   .stat-value {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .stat-unit {
-    font-size: 1.1rem;
+    font-size: 0.8rem;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
   }
 }

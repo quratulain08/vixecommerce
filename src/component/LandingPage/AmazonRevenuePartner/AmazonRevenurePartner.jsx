@@ -61,37 +61,38 @@ const AmazonRevenuePartner = () => {
     }
   }, [])
 
- const stats = [
-  {
-    id: 1,
-    label: "REVENUE MANAGED",
-    value: "€4.3M",
-    unit: "PER QUARTER",
-    color: "orange",
-  },
-  {
-    id: 2,
-    label: "SUCCESS RATE",
-    value: "93%",
-    unit: "KPI's Achieved",
-    color: "orange",
-  },
-  {
-    id: 3,
-    label: "WORKED ON",
-    value: "30+",
-    unit: "CATEGORIES",
-    color: "orange",
-  },
-  {
-    id: 4,
-    label: "WE'VE HELPED",
-    value: "50+",
-    unit: "BRANDS",
-    subtext: "PROSPER TO NEW HEIGHTS",
-    color: "orange",
-  },
-];
+  const stats = [
+    {
+      id: 1,
+      label: "REVENUE MANAGED",
+      value: "€4.3M",
+      unit: "PER QUARTER",
+      color: "blue",
+    },
+    {
+      id: 2,
+      label: "SUCCESS RATE",
+      value: "93%",
+      unit: "KPI's Achieved",
+      color: "teal",
+    },
+    {
+      id: 3,
+      label: "WORKED ON",
+      value: "30+",
+      unit: "CATEGORIES",
+      color: "blue",
+    },
+    {
+      id: 4,
+      label: "WE'VE HELPED",
+      value: "50+",
+      unit: "BRANDS",
+      subtext: "PROSPER TO NEW HEIGHTS",
+      color: "teal",
+    },
+  ]
+
   return (
     <section className="revenue-partner-section" ref={sectionRef}>
       <div className="revenue-partner-container">
@@ -108,15 +109,16 @@ const AmazonRevenuePartner = () => {
 
         <div className="revenue-partner-stats">
           {stats.map((stat, index) => (
-            <div key={stat.id} className={`statt-card stat-${stat.color}`} ref={(el) => (statsRefs.current[index] = el)}>
-              <div className="statt-content">
-                <div className="statt-label">{stat.label}</div>
-                <div className="statt-value-container">
-                  <span className="statt-value">{stat.value}</span>
-                  <span className="statt-unit">{stat.unit}</span>
+            <div key={stat.id} className={`stat-card stat-${stat.color}`} ref={(el) => (statsRefs.current[index] = el)}>
+              <div className="stat-content">
+                <div className="stat-label">{stat.label}</div>
+                <div className="stat-value-container">
+                  <span className="stat-value">{stat.value}</span>
+                  <span className="stat-unit">{stat.unit}</span>
                 </div>
-                {stat.subtext && <div className="statt-subtext">{stat.subtext}</div>}
+                {stat.subtext && <div className="stat-subtext">{stat.subtext}</div>}
               </div>
+              <div className="stat-decoration"></div>
             </div>
           ))}
         </div>
