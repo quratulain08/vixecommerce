@@ -9,6 +9,8 @@ import FizzaZaidi from "../../assets/FizzaZaidi.jpg"
 import UsamaSikandar from "../../assets/UsamaSikander.jpg"
 import UmarTatla from "../../assets/UmarTatla.jpg"
 import AbdullahKhan from "../../assets/AbdullahKhan.jpg"
+import Testimonials from "../LandingPage/Testimonial/Testimonial"
+import Brand from "../LandingPage/FeaturedPartners/FeaturedPartners"
 
 const Team = () => {
   const sectionRef = useRef(null)
@@ -140,9 +142,9 @@ const Team = () => {
         <div className="team-hero-content">
           <div className="hero-badge">OUR TEAM</div>
           <h1>
-            MEET THE <span className="gradient-text">EXPERTS</span>
+            Meet the <span className="gradient-text">Experts</span>
             <br />
-            BEHIND VIX COMMERCE
+            Behind Vix Commerce
           </h1>
           <div className="hero-line"></div>
           <p className="hero-subtitle">Passionate professionals dedicated to your Amazon success</p>
@@ -237,6 +239,8 @@ const Team = () => {
           <button className="cta-button">View Open Positions</button>
         </div> */}
       </div>
+       <Testimonials/>
+      <Brand/>
     </section>
   )
 }

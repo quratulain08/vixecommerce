@@ -3,6 +3,8 @@
 import { useEffect, useRef, useState } from "react"
 import { ArrowRight, CheckCircle, Package, BarChart2, Search, ShoppingCart, Award } from "lucide-react"
 import "./BrandLaunch.css"
+import Testimonial from "../../LandingPage/Testimonial/Testimonial"
+import Brand from "../../LandingPage/FeaturedPartners/FeaturedPartners"
 
 const BrandLaunch = () => {
   const sectionRef = useRef(null)
@@ -129,8 +131,8 @@ const BrandLaunch = () => {
         <div className="service-hero-content">
           <div className="hero-badge">OUR SERVICES</div>
           <h1>
-            AMAZON BRAND &<br />
-            <span className="gradient-text">PRODUCT LAUNCH</span>
+            Amazon brand &<br />
+            <span className="gradient-text">Product launch</span>
           </h1>
           <div className="hero-line"></div>
           <p className="hero-subtitle">Start your Amazon journey with a strong foundation for success</p>
@@ -220,6 +222,8 @@ const BrandLaunch = () => {
           </button>
         </div>
       </div>
+      <Testimonial/>
+      <Brand/>
     </section>
   )
 }

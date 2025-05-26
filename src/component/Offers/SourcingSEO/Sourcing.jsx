@@ -3,6 +3,9 @@
 import { useEffect, useRef } from "react"
 import { ArrowRight, CheckCircle, Search, Globe, Package, Truck } from "lucide-react"
 import "./Sourcing.css"
+import Testimonial from "../../LandingPage/Testimonial/Testimonial"
+import Brand from "../../LandingPage/FeaturedPartners/FeaturedPartners"
+
 
 const Sourcing = () => {
   const sectionRef = useRef(null)
@@ -113,9 +116,9 @@ const Sourcing = () => {
         <div className="sourcing-hero-content">
           <div className="hero-badge">OUR SERVICES</div>
           <h1>
-            EFFICIENT
+            Efficient
             <br />
-            <span className="gradient-text">SOURCING</span>
+            <span className="gradient-text">sourcing</span>
           </h1>
           <div className="hero-line"></div>
           <p className="hero-subtitle">Optimize your supply chain with reliable suppliers and quality products</p>
@@ -272,6 +275,8 @@ const Sourcing = () => {
           </button>
         </div>
       </div>
+       <Testimonial/>
+      <Brand/>
     </section>
   )
 }

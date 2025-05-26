@@ -6,6 +6,9 @@ import cello from "../../../assets/cello.png";
 import stonelight from "../../../assets/stonelight.png";
 import goodman from "../../../assets/goodman.png"
 import brandfetch from "../../../assets/brandfetch.png"
+import realtime from "../../../assets/realtime.jpg"
+import TV from "../../../assets/TVvillage.png"
+import digitaltec from "../../../assets/digitaltec.png"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -15,7 +18,12 @@ const partners = [
   { src: cello, alt: "LDC" },
   { src: stonelight, alt: "MassMutual" },
   { src: goodman, alt: "128 Technologies" },
+  { src: realtime, alt: "real time" },
+  { src: TV, alt: "TV village" },
+  { src: digitaltec, alt: "digitaltec" },
+  
   { src: brandfetch, alt: "cyberleap" },
+
 ];
 
 export default function FeaturedPartners() {

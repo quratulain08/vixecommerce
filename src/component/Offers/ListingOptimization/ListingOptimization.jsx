@@ -3,6 +3,8 @@
 import { useEffect, useRef } from "react"
 import { ArrowRight, CheckCircle, Edit, ImageIcon, Search, FileText, BarChart2, TrendingUp } from "lucide-react"
 import "./ListingOptimization.css"
+import Testimonial from "../../LandingPage/Testimonial/Testimonial"
+import Brand from "../../LandingPage/FeaturedPartners/FeaturedPartners"
 
 const ListingOptimization = () => {
   const sectionRef = useRef(null)
@@ -228,7 +230,7 @@ const ListingOptimization = () => {
         <div className="optimization-hero-content">
           <div className="hero-badge">OUR SERVICES</div>
           <h1>
-            LISTING OPTIMIZATION
+            Listing optimization
             <br />
             <span className="gradient-text">& SEO</span>
           </h1>
@@ -398,6 +400,8 @@ const ListingOptimization = () => {
           </button>
         </div>
       </div>
+       <Testimonial/>
+      <Brand/>
     </section>
   )
 }

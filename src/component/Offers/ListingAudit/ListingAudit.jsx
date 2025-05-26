@@ -3,6 +3,9 @@
 import { useEffect, useRef } from "react"
 import { ArrowRight, CheckCircle, Search, FileText, BarChart2, AlertTriangle, Zap } from "lucide-react"
 import "./ListingAudit.css"
+import Testimonial from "../../LandingPage/Testimonial/Testimonial"
+import Brand from "../../LandingPage/FeaturedPartners/FeaturedPartners"
+
 
 const ListingAudit = () => {
   const sectionRef = useRef(null)
@@ -123,9 +126,9 @@ const ListingAudit = () => {
         <div className="audit-hero-content">
           <div className="hero-badge">OUR SERVICES</div>
           <h1>
-            AMAZON LISTING
+            Amazon listing
             <br />
-            <span className="gradient-text">AUDIT</span>
+            <span className="gradient-text">audit</span>
           </h1>
           <div className="hero-line"></div>
           <p className="hero-subtitle">Uncover hidden opportunities and boost your Amazon performance</p>
@@ -235,6 +238,8 @@ const ListingAudit = () => {
           </button>
         </div>
       </div>
+       <Testimonial/>
+      <Brand/>
     </section>
   )
 }

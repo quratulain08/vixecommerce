@@ -3,6 +3,9 @@
 import { useEffect, useRef } from "react"
 import { ArrowRight, CheckCircle, BarChart2, TrendingUp, ShoppingCart, Settings, Clock } from "lucide-react"
 import "./FBAManagement.css"
+import Testimonial from "../../LandingPage/Testimonial/Testimonial"
+import Brand from "../../LandingPage/FeaturedPartners/FeaturedPartners"
+
 
 const FBAManagement = () => {
   const sectionRef = useRef(null)
@@ -126,9 +129,9 @@ const FBAManagement = () => {
         <div className="fba-hero-content">
           <div className="hero-badge">OUR SERVICES</div>
           <h1>
-            AMAZON FBA
+            Amazon FBA
             <br />
-            <span className="gradient-text">MANAGEMENT</span>
+            <span className="gradient-text">Managment</span>
           </h1>
           <div className="hero-line"></div>
           <p className="hero-subtitle">Focus on growing your business while we handle the day-to-day operations</p>
@@ -265,6 +268,8 @@ const FBAManagement = () => {
           </button>
         </div>
       </div>
+       <Testimonial/>
+      <Brand/>
     </section>
   )
 }

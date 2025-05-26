@@ -3,6 +3,9 @@
 import { useEffect, useRef } from "react"
 import { ArrowRight, CheckCircle, TrendingUp, BarChart2, Target, DollarSign, Search } from "lucide-react"
 import "./PPCManagement.css"
+import Testimonial from "../../LandingPage/Testimonial/Testimonial"
+import Brand from "../../LandingPage/FeaturedPartners/FeaturedPartners"
+
 
 const PPCManagement = () => {
   const sectionRef = useRef(null)
@@ -121,9 +124,9 @@ const PPCManagement = () => {
         <div className="ppcm-hero-content">
           <div className="ppcm-hero-badge">OUR SERVICES</div>
           <h1>
-            AMAZON PPC
+            Amazon PPC
             <br />
-            <span className="ppcm-gradient-text">MANAGEMENT</span>
+            <span className="ppcm-gradient-text">management</span>
           </h1>
           <div className="ppcm-hero-line"></div>
           <p className="ppcm-hero-subtitle">Drive targeted traffic and maximize your return on ad spend</p>
@@ -289,6 +292,8 @@ const PPCManagement = () => {
           </button>
         </div>
       </div>
+       <Testimonial/>
+            <Brand/>
     </section>
   )
 }

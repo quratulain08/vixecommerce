@@ -1,6 +1,9 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
+import Testimonials from "../LandingPage/Testimonial/Testimonial"
+import Brand from "../LandingPage/FeaturedPartners/FeaturedPartners"
+
 import {
   CheckCircle,
   TrendingUp,
@@ -176,9 +179,9 @@ const AboutUs = () => {
         <div className="about-hero-content">
           <div className="hero-badge">ABOUT US</div>
           <h1>
-            YOUR ONE-STOP
+            Your one-stop
             <br />
-            <span className="gradient-text">AMAZON GROWTH PARTNER</span>
+            <span className="gradient-text">Amazon growth partner</span>
           </h1>
           <div className="hero-line"></div>
           <p className="hero-subtitle">Empowering brands to thrive in the Amazon marketplace</p>
@@ -273,6 +276,8 @@ const AboutUs = () => {
           </button>
         </div>
       </div>
+       <Testimonials/>
+      <Brand/>
     </section>
   )
 }
