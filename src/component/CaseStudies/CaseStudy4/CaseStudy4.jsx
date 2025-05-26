@@ -94,25 +94,26 @@ const CaseStudy4 = () => {
   return (
     <section className="cs4-section">
       {/* Hero Section */}
-      <div className="cs4-hero">
-        <div className="cs4-container">
-          <div className="cs4-hero-content">
-            <div className="cs4-tag">CASE STUDY #2</div>
-            <h1 className="cs4-hero-title">
-              Baby Product <span className="cs4-highlight">Success Story</span>
+      <div className="case-hero">
+        <div className="case-container">
+          <div className="case-hero-content">
+            <div className="case-tag">CASE STUDY #2</div>
+            <h1 className="case-hero-title">
+              Baby Product <span className="case-highlight">Success Story</span>
               <br />
-              From Launch to <span className="cs4-highlight">$500,000</span> Valuation
+              From Launch to <span className="case-highlight">$500,000</span> Valuation
             </h1>
-            <p className="cs4-hero-description">
+            <p className="case-hero-description">
               Discover how we successfully launched a baby product in a highly competitive niche on Amazon USA,
               generating $50,000 in monthly sales and achieving a $500,000 valuation offer in less than a year.
             </p>
-            <button className="cs4-cta-button">
+            <button className="case-cta-button">
               Get Similar Results <ArrowUpRight size={18} />
             </button>
           </div>
-          <div className="cs4-hero-image">
-            <div className="cs4-image-placeholder">
+          <div className="case-hero-image">
+            <div className="case-image-placeholder">
+              {/* preserve your custom baby animation */}
               <div className="cs4-baby-animation">
                 <div className="cs4-baby-rattle"></div>
                 <div className="cs4-baby-stars">
@@ -121,8 +122,8 @@ const CaseStudy4 = () => {
                   <div className="cs4-star cs4-star-3"></div>
                 </div>
               </div>
-              <div className="cs4-image-shape"></div>
-              <div className="cs4-image-circle"></div>
+              <div className="case-image-shape"></div>
+              <div className="case-image-circle"></div>
             </div>
           </div>
         </div>

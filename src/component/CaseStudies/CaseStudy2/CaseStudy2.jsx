@@ -40,28 +40,28 @@ const CaseStudy2 = () => {
 
   return (
     <section className="cs2-section">
-      {/* Hero Section */}
-      <div className="cs2-hero">
-        <div className="cs2-container">
-          <div className="cs2-hero-content">
-            <div className="cs2-tag">CASE STUDY #3</div>
-            <h1 className="cs2-hero-title">
-              Double Sales With <span className="cs2-highlight">Half Ad-Spend</span>
+      {/* —— Hero Section  —— */}
+      <div className="case-hero">
+        <div className="case-container">
+          <div className="case-hero-content">
+            <div className="case-tag">CASE STUDY #3</div>
+            <h1 className="case-hero-title">
+              Double Sales With <span className="case-highlight">Half Ad-Spend</span>
               <br />
               For Amazon UK Brand
             </h1>
-            <p className="cs2-hero-description">
+            <p className="case-hero-description">
               See how we transformed a struggling TV brand on Amazon UK by optimizing listings and reducing ad spend
               while dramatically increasing sales and organic rankings.
             </p>
-            <button className="cs2-cta-button">
+            <button className="case-cta-button">
               Get Similar Results <ArrowUpRight size={18} />
             </button>
           </div>
-          <div className="cs2-hero-image">
-            <div className="cs2-image-placeholder">
-              <div className="cs2-image-shape"></div>
-              <div className="cs2-image-circle"></div>
+          <div className="case-hero-image">
+            <div className="case-image-placeholder">
+              <div className="case-image-shape"></div>
+              <div className="case-image-circle"></div>
             </div>
           </div>
         </div>

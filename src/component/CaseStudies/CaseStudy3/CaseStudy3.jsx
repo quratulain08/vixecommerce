@@ -69,31 +69,27 @@ const CaseStudy3 = () => {
   return (
     <section className="cs3-section">
       {/* Hero Section */}
-      <div className="cs3-hero">
-        <div className="cs3-container">
-          <div className="cs3-hero-content">
-            <div className="cs3-tag">CASE STUDY #1</div>
-            <h1 className="cs3-hero-title">
-              Textile Niche Product <span className="cs3-highlight">Success</span>
+      <div className="case-hero">
+        <div className="case-container">
+          <div className="case-hero-content">
+            <div className="case-tag">CASE STUDY #3</div>
+            <h1 className="case-hero-title">
+              Double Sales With <span className="case-highlight">Half Ad-Spend</span>
               <br />
-              Earning <span className="cs3-highlight">£10,000</span> Net Profit Monthly
+              For Amazon UK Brand
             </h1>
-            <p className="cs3-hero-description">
-              Discover how we launched a product in a highly competitive Home & Kitchen category on Amazon UK, achieving
-              remarkable success with £40,000 monthly revenue and £10,000 monthly profit.
+            <p className="case-hero-description">
+              See how we transformed a struggling TV brand on Amazon UK by optimizing listings and reducing ad spend
+              while dramatically increasing sales and organic rankings.
             </p>
-            <button className="cs3-cta-button">
+            <button className="case-cta-button">
               Get Similar Results <ArrowUpRight size={18} />
             </button>
           </div>
-          <div className="cs3-hero-image">
-            <div className="cs3-image-placeholder">
-              <div className="cs3-textile-animation">
-                <div className="cs3-textile-pattern"></div>
-                <div className="cs3-textile-fold"></div>
-              </div>
-              <div className="cs3-image-shape"></div>
-              <div className="cs3-image-circle"></div>
+          <div className="case-hero-image">
+            <div className="case-image-placeholder">
+              <div className="case-image-shape"></div>
+              <div className="case-image-circle"></div>
             </div>
           </div>
         </div>
