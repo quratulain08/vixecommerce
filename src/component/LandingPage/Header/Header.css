@@ -316,6 +316,206 @@
   -webkit-backdrop-filter: blur(4px);
 }
 
+/* ===== RESPONSIVE LOGO MEDIA QUERIES ===== */
+
+/* Large Desktop (1200px and up) - Default logo size */
+@media (min-width: 1200px) {
+  .logo-image {
+    height: 50px;
+  }
+  
+  .logo-wrapper {
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .header.scrolled .logo-wrapper {
+    padding: 8px 4px;
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: 1px solid transparent;
+  }
+}
+
+/* Desktop (992px to 1199px) - Slightly smaller logo */
+@media (max-width: 1199px) and (min-width: 992px) {
+  .logo-image {
+    height: 48px;
+  }
+  
+  .logo-wrapper {
+    padding: 7px 11px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+  }
+  
+  .header.scrolled .logo-wrapper {
+    padding: 7px 4px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+}
+
+/* Tablet Landscape (768px to 991px) - Reduced logo size */
+@media (max-width: 991px) and (min-width: 769px) {
+  .logo-image {
+    height: 45px;
+  }
+  
+  .logo-wrapper {
+    padding: 6px 10px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+  }
+  
+  .header.scrolled .logo-wrapper {
+    padding: 6px 4px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+  }
+}
+
+/* Tablet Portrait and Mobile Landscape (481px to 768px) - Smaller logo */
+@media (max-width: 768px) and (min-width: 481px) {
+  .logo-image {
+    height: 42px;
+  }
+  
+  .logo-wrapper {
+    padding: 5px 8px;
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 8px;
+  }
+  
+  .header.scrolled .logo-wrapper {
+    padding: 5px 3px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .header-container {
+    height: 75px;
+  }
+}
+
+/* Mobile Portrait (320px to 480px) - Compact logo */
+@media (max-width: 480px) {
+  .logo-image {
+    height: 38px;
+  }
+  
+  .logo-wrapper {
+    padding: 4px 6px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 6px;
+  }
+  
+  .header.scrolled .logo-wrapper {
+    padding: 4px 2px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border: 1px solid rgba(0, 0, 0, 0.12);
+  }
+  
+  .header-container {
+    height: 70px;
+    padding: 0 15px;
+  }
+}
+
+/* Small Mobile (up to 320px) - Minimal logo */
+@media (max-width: 320px) {
+  .logo-image {
+    height: 35px;
+  }
+  
+  .logo-wrapper {
+    padding: 3px 5px;
+    background: rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 5px;
+  }
+  
+  .header.scrolled .logo-wrapper {
+    padding: 3px 2px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+  }
+  
+  .header-container {
+    height: 65px;
+    padding: 0 12px;
+  }
+}
+
+/* High DPI/Retina Display Adjustments */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .logo-image {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Logo Hover Effects - Responsive */
+@media (min-width: 769px) {
+  .logo-wrapper:hover {
+    transform: translateY(-1px);
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header.scrolled .logo-wrapper:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+}
+
+/* Disable hover effects on touch devices */
+@media (max-width: 768px) {
+  .logo-wrapper:hover {
+    transform: none;
+    background: rgba(255, 255, 255, 0.18);
+    border-color: rgba(255, 255, 255, 0.35);
+    box-shadow: none;
+  }
+  
+  .header.scrolled .logo-wrapper:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(0, 0, 0, 0.1);
+    box-shadow: none;
+  }
+}
+
+/* ===== END RESPONSIVE LOGO MEDIA QUERIES ===== */
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .hamburger {
@@ -403,27 +603,5 @@
 
   .mobile-menu-overlay {
     display: block;
-  }
-
-  .logo-wrapper {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-  }
-}
-
-@media (max-width: 480px) {
-  .header-container {
-    padding: 0 15px;
-  }
-
-  .navigation {
-    width: 90%;
-    padding: 90px 15px 20px;
-  }
-
-  .logo-image {
-    height: 45px;
   }
 }

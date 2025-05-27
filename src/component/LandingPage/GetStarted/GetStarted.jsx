@@ -119,22 +119,7 @@ const GetStarted = () => {
           </button>
         </div>
 
-        <div className="hero-stats">
-          <div className="stat-item">
-            <span className="stat-number">$15M+</span>
-            <span className="stat-label">Revenue Generated</span>
-          </div>
-          <div className="stat-divider"></div>
-          <div className="stat-item">
-            <span className="stat-number">100+</span>
-            <span className="stat-label">Brands Scaled</span>
-          </div>
-          <div className="stat-divider"></div>
-          <div className="stat-item">
-            <span className="stat-number">92%</span>
-            <span className="stat-label">Client Retention</span>
-          </div>
-        </div>
+      
       </div>
     </section>
   )
