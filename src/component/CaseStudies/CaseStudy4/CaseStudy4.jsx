@@ -39,7 +39,7 @@ const CaseStudy4 = () => {
 
   // Chart animation
   useEffect(() => {
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0)
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -93,38 +93,34 @@ const CaseStudy4 = () => {
 
   return (
     <section className="cs4-section">
-      {/* Hero Section */}
-      <div className="case-hero">
-        <div className="case-container">
-          <div className="case-hero-content">
-            <div className="case-tag">CASE STUDY #2</div>
-            <h1 className="case-hero-title">
-              Baby Product <span className="case-highlight">Success Story</span>
+      {/* Hero Section - Updated with Brand Launch Theme */}
+      <div className="cs4-hero">
+        <div className="hero-background">
+          <div className="hero-shape shape-1"></div>
+          <div className="hero-shape shape-2"></div>
+          <div className="hero-shape shape-3"></div>
+          <div className="hero-particles">
+            {[...Array(20)].map((_, i) => (
+              <div key={i} className={`particle particle-${i + 1}`}></div>
+            ))}
+          </div>
+        </div>
+        <div className="cs4-container">
+          <div className="cs4-hero-content">
+            <div className="hero-badge">CASE STUDY </div>
+            <h1 className="cs4-hero-title">
+              Baby Product <span className="gradient-text">Success Story</span>
               <br />
-              From Launch to <span className="case-highlight">$500,000</span> Valuation
+              From Launch to <span className="gradient-text">$500,000</span> Valuation
             </h1>
-            <p className="case-hero-description">
+            <div className="hero-line"></div>
+            <p className="cs4-hero-description">
               Discover how we successfully launched a baby product in a highly competitive niche on Amazon USA,
               generating $50,000 in monthly sales and achieving a $500,000 valuation offer in less than a year.
             </p>
-            <button className="case-cta-button">
+            {/* <button className="cs4-cta-button">
               Get Similar Results <ArrowUpRight size={18} />
-            </button>
-          </div>
-          <div className="case-hero-image">
-            <div className="case-image-placeholder">
-              {/* preserve your custom baby animation */}
-              <div className="cs4-baby-animation">
-                <div className="cs4-baby-rattle"></div>
-                <div className="cs4-baby-stars">
-                  <div className="cs4-star cs4-star-1"></div>
-                  <div className="cs4-star cs4-star-2"></div>
-                  <div className="cs4-star cs4-star-3"></div>
-                </div>
-              </div>
-              <div className="case-image-shape"></div>
-              <div className="case-image-circle"></div>
-            </div>
+            </button> */}
           </div>
         </div>
       </div>
@@ -273,7 +269,7 @@ const CaseStudy4 = () => {
             </div>
           </div>
 
-          <div className="cs4-section-alt">
+          {/* <div className="cs4-section-alt">
             <h2 className="cs4-section-title">Conclusion</h2>
             <div className="cs4-conclusion">
               <div className="cs4-conclusion-icon">
@@ -292,7 +288,7 @@ const CaseStudy4 = () => {
                 <button className="cs4-secondary-button">Schedule a Free Consultation</button>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

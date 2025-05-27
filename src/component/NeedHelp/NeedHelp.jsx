@@ -7,7 +7,6 @@ import {
   Phone,
   Clock,
   CheckCircle,
-  Headphones,
   FileQuestion,
   BookOpen,
   BarChart2,
@@ -17,6 +16,8 @@ import {
   Award,
   ThumbsUp,
   HelpCircle,
+  Linkedin,
+  ExternalLink,
 } from "lucide-react"
 import "./NeedHelp.css"
 
@@ -25,6 +26,7 @@ const NeedHelp = () => {
   const contentRef = useRef(null)
   const faqRef = useRef(null)
   const statsRef = useRef(null)
+  const featuresRef = useRef(null)
   const [activeQuestion, setActiveQuestion] = useState(null)
   const [formData, setFormData] = useState({
     name: "",
@@ -47,6 +49,8 @@ const NeedHelp = () => {
             } else if (entry.target === faqRef.current) {
               entry.target.classList.add("animate")
             } else if (entry.target === statsRef.current) {
+              entry.target.classList.add("animate")
+            } else if (entry.target === featuresRef.current) {
               entry.target.classList.add("animate")
             }
           }
@@ -71,6 +75,10 @@ const NeedHelp = () => {
       observer.observe(statsRef.current)
     }
 
+    if (featuresRef.current) {
+      observer.observe(featuresRef.current)
+    }
+
     return () => {
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current)
@@ -83,6 +91,9 @@ const NeedHelp = () => {
       }
       if (statsRef.current) {
         observer.unobserve(statsRef.current)
+      }
+      if (featuresRef.current) {
+        observer.unobserve(featuresRef.current)
       }
     }
   }, [])
@@ -99,38 +110,64 @@ const NeedHelp = () => {
     setActiveQuestion(activeQuestion === index ? null : index)
   }
 
+  const handleEmailClick = (email = "brandmanagement@vixcommerce.com") => {
+    window.location.href = `mailto:${email}?subject=Support Request&body=Hello, I need help with...`
+  }
+
+  const handleLinkedInClick = () => {
+    window.open("https://www.linkedin.com/company/vixcommerce/", "_blank", "noopener,noreferrer")
+  }
+
+  const handlePhoneClick = () => {
+    window.location.href = "tel:+15551234567"
+  }
+
   const contactOptions = [
     {
       icon: <Phone size={24} />,
+      heading: "Expert Guidance",
       title: "Call Us",
       description: "Speak directly with our Amazon experts",
       info: "+1 (555) 123-4567",
       color: "blue",
       animation: "fadeInLeft",
+      action: handlePhoneClick,
+      actionIcon: <Phone size={16} />,
+      actionText: "Call Now",
     },
     {
       icon: <Mail size={24} />,
+      heading: "Direct Communication",
       title: "Email Us",
       description: "Send us your questions anytime",
-      info: "support@vixcommerce.com",
+      info: "brandmanagement@vixcommerce.com",
       color: "green",
       animation: "fadeInUp",
+      action: () => handleEmailClick("brandmanagement@vixcommerce.com"),
+      actionIcon: <Mail size={16} />,
+      actionText: "Send Email",
     },
     {
-      icon: <Headphones size={24} />,
-      title: "Priority Support",
-      description: "Get dedicated support for urgent issues",
-      info: "Premium clients only",
-      color: "orange",
+      icon: <Linkedin size={24} />,
+      heading: "Professional Network",
+      title: "Connect on LinkedIn",
+      description: "Follow us for updates and insights",
+      info: "Vix Commerce",
+      color: "linkedin",
       animation: "fadeInUp",
+      action: handleLinkedInClick,
+      actionIcon: <ExternalLink size={16} />,
+      actionText: "Visit Profile",
     },
     {
       icon: <Clock size={24} />,
+      heading: "Quick Response",
       title: "Response Time",
       description: "We aim to respond quickly",
       info: "Within 24 hours",
       color: "purple",
       animation: "fadeInRight",
+      actionText: "Guaranteed",
     },
   ]
 
@@ -194,21 +231,25 @@ const NeedHelp = () => {
       icon: <Shield size={32} />,
       title: "Expert Guidance",
       description: "Get advice from Amazon specialists with years of experience",
+      color: "blue",
     },
     {
       icon: <BarChart2 size={32} />,
       title: "Data-Driven Solutions",
       description: "Receive recommendations backed by market analysis and data",
+      color: "green",
     },
     {
       icon: <FileQuestion size={32} />,
       title: "Troubleshooting",
       description: "Quick resolution for technical issues and account problems",
+      color: "orange",
     },
     {
       icon: <BookOpen size={32} />,
       title: "Knowledge Resources",
       description: "Access our library of guides, tutorials and best practices",
+      color: "purple",
     },
   ]
 
@@ -275,24 +316,39 @@ const NeedHelp = () => {
 
           <div className="contact-options">
             {contactOptions.map((option, index) => (
-              <div key={index} className={`contact-option option-${option.color} ${option.animation}`}>
+              <div
+                key={index}
+                className={`contact-option option-${option.color} ${option.animation}`}
+                onClick={option.action}
+                style={{ cursor: option.action ? "pointer" : "default" }}
+              >
                 <div className="option-icon-wrapper">
                   <div className="option-icon">{option.icon}</div>
                   <div className="option-icon-ring"></div>
+                  <div className="option-icon-glow"></div>
                 </div>
+                <div className="option-heading">{option.heading}</div>
                 <h3>{option.title}</h3>
                 <p>{option.description}</p>
-                <div className="option-info">{option.info}</div>
+                <div className="option-info-container">
+                  <div className="option-info">{option.info}</div>
+                </div>
+                {option.action && (
+                  <button className={`option-action-btn btn-${option.color}`}>
+                    {option.actionIcon}
+                    <span>{option.actionText}</span>
+                  </button>
+                )}
               </div>
             ))}
           </div>
         </div>
 
-        <div className="support-features-section">
+        <div className="support-features-section" ref={featuresRef}>
           <div className="features-grid">
             {supportFeatures.map((feature, index) => (
-              <div key={index} className="feature-card">
-                <div className="feature-icon">{feature.icon}</div>
+              <div key={index} className={`feature-card feature-${feature.color}`}>
+                <div className={`feature-icon icon-${feature.color}`}>{feature.icon}</div>
                 <h3>{feature.title}</h3>
                 <p>{feature.description}</p>
                 <div className="feature-bg"></div>
@@ -300,7 +356,22 @@ const NeedHelp = () => {
             ))}
           </div>
         </div>
-        
+
+        {/* <div className="stats-section" ref={statsRef}>
+          <div className="section-badge">OUR COMMITMENT</div>
+          <h2 className="section-title">Why Choose Our Support</h2>
+          <div className="stats-container">
+            {stats.map((stat, index) => (
+              <div key={index} className={`stat-card stat-${stat.color}`}>
+                <div className={`stat-icon stat-icon-${stat.color}`}>{stat.icon}</div>
+                <div className="stat-value">{stat.value}</div>
+                <div className="stat-label">{stat.label}</div>
+                <div className="stat-bg"></div>
+              </div>
+            ))}
+          </div>
+        </div> */}
+
         <div className="faq-section" ref={faqRef}>
           <div className="section-badge">FREQUENTLY ASKED QUESTIONS</div>
           <h2 className="section-title">Common Questions</h2>
@@ -331,12 +402,15 @@ const NeedHelp = () => {
             <h2>Still Have Questions?</h2>
             <p>Our team is ready to provide personalized assistance for your specific needs</p>
             <div className="cta-buttons">
-              <a href="mailto:support@vixcommerce.com" className="cta-button primary">
+              <button
+                className="cta-button primary"
+                onClick={() => handleEmailClick("brandmanagement@vixcommerce.com")}
+              >
                 Email Us <Mail size={16} className="btn-icon" />
-              </a>
-              <a href="tel:+15551234567" className="cta-button secondary">
+              </button>
+              <button className="cta-button secondary" onClick={handlePhoneClick}>
                 Call Now <Phone size={16} className="btn-icon" />
-              </a>
+              </button>
             </div>
           </div>
           <div className="cta-decoration">

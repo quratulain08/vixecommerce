@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react"
 import { ArrowRight, CheckCircle, TrendingUp, BarChart2, Target, DollarSign, Search } from "lucide-react"
 import "./PPCManagement.css"
+import { useNavigate } from "react-router-dom"
 import Testimonial from "../../LandingPage/Testimonial/Testimonial"
 import Brand from "../../LandingPage/FeaturedPartners/FeaturedPartners"
 
@@ -11,6 +12,11 @@ const PPCManagement = () => {
   const sectionRef = useRef(null)
   const contentRef = useRef(null)
   const strategyRef = useRef([])
+   const navigate = useNavigate();
+  
+    const handleGetStartedClick = () =>{
+      navigate('/contact')
+    }
 
   useEffect(() => {
      window.scrollTo(0,0);
@@ -130,7 +136,7 @@ const PPCManagement = () => {
           </h1>
           <div className="ppcm-hero-line"></div>
           <p className="ppcm-hero-subtitle">Drive targeted traffic and maximize your return on ad spend</p>
-          <button className="ppcm-hero-button">
+          <button className="ppcm-hero-button" onClick={handleGetStartedClick}>
             Get Started <ArrowRight size={16} className="ppcm-btn-icon" />
           </button>
         </div>
@@ -287,8 +293,8 @@ const PPCManagement = () => {
             Partner with Vix Commerce for expert PPC management that drives results. Our team of Amazon advertising
             specialists will help you create and optimize campaigns that increase visibility, sales, and profitability.
           </p>
-          <button className="ppcm-cta-button">
-            Get Started Today <ArrowRight size={16} className="ppcm-btn-icon" />
+          <button className="ppcm-cta-button" onClick={handleGetStartedClick}>
+            Request an Audit <ArrowRight size={16} className="ppcm-btn-icon" />
           </button>
         </div>
       </div>

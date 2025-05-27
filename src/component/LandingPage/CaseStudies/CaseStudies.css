@@ -1,16 +1,16 @@
-.case-studies-section {
+.portfolio-showcase-section {
   padding: 60px 0;
   background-color: #f5f7f9;
   position: relative;
 }
 
-.case-studies-container {
+.portfolio-showcase-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-.case-studies-header {
+.portfolio-showcase-header {
   text-align: center;
   margin-bottom: 40px;
   opacity: 0;
@@ -18,12 +18,12 @@
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.case-studies-header.animate {
+.portfolio-showcase-header.animate {
   opacity: 1;
   transform: translateY(0);
 }
 
-.case-studies-header h2 {
+.portfolio-showcase-header h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 800;
   font-size: 36px;
@@ -31,7 +31,7 @@
   margin-bottom: 10px;
 }
 
-.case-studies-header p {
+.portfolio-showcase-header p {
   font-family: "Manrope", sans-serif;
   font-size: 16px;
   color: #555;
@@ -40,14 +40,14 @@
 }
 
 /* Grid with 4 cards per row */
-.case-studies-grid {
+.portfolio-showcase-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   margin-bottom: 40px;
 }
 
-.case-card {
+.portfolio-showcase-card {
   position: relative;
   border-radius: 10px;
   overflow: hidden;
@@ -56,22 +56,17 @@
   height: 220px;
   opacity: 0;
   transform: translateY(20px);
-  /* Remove the float animation */
-  /* animation: float 3s ease-in-out infinite; */
-  /* animation-play-state: paused; */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.case-card.animate {
+.portfolio-showcase-card.animate {
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.5s ease, transform 0.5s ease;
-  /* Remove animation-play-state */
-  /* animation-play-state: running; */
 }
 
 /* Replace the float animation with a simple fade-in animation */
-@keyframes fadeIn {
+@keyframes portfolioFadeIn {
   0% {
     opacity: 0;
     transform: translateY(20px);
@@ -83,19 +78,18 @@
 }
 
 /* Apply the new animation to animated cards */
-.case-card.animate {
-  animation: fadeIn 0.5s ease forwards;
+.portfolio-showcase-card.animate {
+  animation: portfolioFadeIn 0.5s ease forwards;
 }
 
 /* Keep the hover effect */
-.case-card:hover {
+.portfolio-showcase-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-
 /* Image styling */
-.case-card-image {
+.portfolio-showcase-image {
   position: absolute;
   top: 0;
   left: 0;
@@ -103,19 +97,19 @@
   height: 100%;
 }
 
-.case-card-image img {
+.portfolio-showcase-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s ease;
 }
 
-.case-card:hover .case-card-image img {
+.portfolio-showcase-card:hover .portfolio-showcase-image img {
   transform: scale(1.05);
 }
 
 /* Improved overlay for better text readability */
-.case-card-overlay {
+.portfolio-showcase-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -125,7 +119,7 @@
 }
 
 /* Content styling with improved layout */
-.case-content {
+.portfolio-showcase-content {
   position: relative;
   z-index: 2;
   padding: 15px;
@@ -136,7 +130,7 @@
 }
 
 /* Icon styling - moved to top right for better visibility */
-.case-icon {
+.portfolio-showcase-icon {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -151,28 +145,28 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-.case-card:hover .case-icon {
+.portfolio-showcase-card:hover .portfolio-showcase-icon {
   transform: scale(1.1);
 }
 
-.case-blue .case-icon {
+.portfolio-theme-blue .portfolio-showcase-icon {
   color: #106ebe;
 }
 
-.case-green .case-icon {
+.portfolio-theme-green .portfolio-showcase-icon {
   color: #02b48a;
 }
 
-.case-purple .case-icon {
+.portfolio-theme-purple .portfolio-showcase-icon {
   color: #8000ff;
 }
 
-.case-orange .case-icon {
+.portfolio-theme-orange .portfolio-showcase-icon {
   color: #ff9900;
 }
 
 /* Title styling with improved visibility */
-.case-card h3 {
+.portfolio-showcase-card h3 {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 18px;
@@ -187,12 +181,12 @@
   right: 15px;
 }
 
-.case-card:hover h3 {
+.portfolio-showcase-card:hover h3 {
   transform: translateY(-2px);
 }
 
 /* Fixed View case study button styling */
-.view-case-btn {
+.portfolio-view-btn {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 14px;
@@ -210,44 +204,46 @@
   z-index: 10;
   width: auto;
   min-width: 140px;
+  border: none;
+  cursor: pointer;
 }
 
-.btn-arrow {
+.portfolio-btn-arrow {
   transition: transform 0.3s ease;
 }
 
-.case-card:hover .view-case-btn {
+.portfolio-showcase-card:hover .portfolio-view-btn {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   gap: 12px;
 }
 
-.case-card:hover .btn-arrow {
+.portfolio-showcase-card:hover .portfolio-btn-arrow {
   transform: translateX(3px);
 }
 
-.case-blue .view-case-btn {
+.portfolio-theme-blue .portfolio-view-btn {
   background-color: #106ebe;
   color: white;
 }
 
-.case-green .view-case-btn {
+.portfolio-theme-green .portfolio-view-btn {
   background-color: #02b48a;
   color: white;
 }
 
-.case-purple .view-case-btn {
+.portfolio-theme-purple .portfolio-view-btn {
   background-color: #8000ff;
   color: white;
 }
 
-.case-orange .view-case-btn {
+.portfolio-theme-orange .portfolio-view-btn {
   background-color: #ff9900;
   color: white;
 }
 
 /* Add a subtle pulse animation to the button to draw attention */
-@keyframes pulse {
+@keyframes portfolioPulse {
   0% {
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
   }
@@ -259,84 +255,84 @@
   }
 }
 
-.view-case-btn {
-  animation: pulse 2s infinite;
+.portfolio-view-btn {
+  animation: portfolioPulse 2s infinite;
 }
 
 /* Responsive Styles */
 @media (max-width: 1200px) {
-  .case-studies-grid {
+  .portfolio-showcase-grid {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .case-card {
+  .portfolio-showcase-card {
     height: 200px;
   }
 }
 
 @media (max-width: 1024px) {
-  .case-studies-grid {
+  .portfolio-showcase-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .case-card {
+  .portfolio-showcase-card {
     height: 180px;
   }
 
-  .case-card h3 {
+  .portfolio-showcase-card h3 {
     font-size: 16px;
     bottom: 55px;
   }
 
-  .view-case-btn {
+  .portfolio-view-btn {
     font-size: 13px;
     padding: 6px 12px;
   }
 }
 
 @media (max-width: 768px) {
-  .case-studies-grid {
+  .portfolio-showcase-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .case-studies-header h2 {
+  .portfolio-showcase-header h2 {
     font-size: 32px;
   }
 
-  .case-card {
+  .portfolio-showcase-card {
     height: 200px;
   }
 
-  .case-card h3 {
+  .portfolio-showcase-card h3 {
     bottom: 60px;
   }
 }
 
 @media (max-width: 480px) {
-  .case-studies-grid {
+  .portfolio-showcase-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
   }
 
-  .case-card {
+  .portfolio-showcase-card {
     height: 150px;
   }
 
-  .case-icon {
+  .portfolio-showcase-icon {
     width: 32px;
     height: 32px;
     top: 10px;
     right: 10px;
   }
 
-  .case-card h3 {
+  .portfolio-showcase-card h3 {
     font-size: 14px;
     bottom: 45px;
     left: 10px;
     right: 10px;
   }
 
-  .view-case-btn {
+  .portfolio-view-btn {
     font-size: 12px;
     padding: 5px 10px;
     bottom: 10px;
@@ -344,30 +340,30 @@
     min-width: 120px;
   }
 
-  .case-studies-header h2 {
+  .portfolio-showcase-header h2 {
     font-size: 28px;
   }
 
-  .case-studies-header p {
+  .portfolio-showcase-header p {
     font-size: 15px;
   }
 
-  .btn-arrow {
+  .portfolio-btn-arrow {
     width: 14px;
     height: 14px;
   }
 }
 
 @media (max-width: 360px) {
-  .case-studies-grid {
+  .portfolio-showcase-grid {
     grid-template-columns: 1fr;
   }
 
-  .case-card {
+  .portfolio-showcase-card {
     height: 180px;
   }
 
-  .case-card h3 {
+  .portfolio-showcase-card h3 {
     bottom: 55px;
   }
 }

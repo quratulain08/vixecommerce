@@ -2,15 +2,22 @@
 
 import { useEffect, useRef } from "react"
 import { ArrowRight, CheckCircle, Search, FileText, BarChart2, AlertTriangle, Zap } from "lucide-react"
+import { useNavigate } from "react-router-dom"
 import "./ListingAudit.css"
 import Testimonial from "../../LandingPage/Testimonial/Testimonial"
 import Brand from "../../LandingPage/FeaturedPartners/FeaturedPartners"
+
 
 
 const ListingAudit = () => {
   const sectionRef = useRef(null)
   const contentRef = useRef(null)
   const auditStepsRef = useRef([])
+   const navigate = useNavigate();
+  
+    const handleGetStartedClick = () =>{
+      navigate('/contact')
+    }
 
   useEffect(() => {
      window.scrollTo(0,0);
@@ -132,7 +139,7 @@ const ListingAudit = () => {
           </h1>
           <div className="hero-line"></div>
           <p className="hero-subtitle">Uncover hidden opportunities and boost your Amazon performance</p>
-          <button className="hero-button">
+          <button className="hero-button" onClick={handleGetStartedClick}>
             Get Started <ArrowRight size={16} className="btn-icon" />
           </button>
         </div>
@@ -233,7 +240,7 @@ const ListingAudit = () => {
             Partner with Vix Commerce for a comprehensive Amazon listing audit. Our team of experts will identify
             opportunities for improvement and provide actionable recommendations to boost your performance.
           </p>
-          <button className="cta-button">
+          <button className="cta-button" onClick={handleGetStartedClick}>
             Request an Audit <ArrowRight size={16} className="btn-icon" />
           </button>
         </div>

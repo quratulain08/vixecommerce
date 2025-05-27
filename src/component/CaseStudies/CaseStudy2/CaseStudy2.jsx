@@ -11,7 +11,7 @@ const CaseStudy2 = () => {
 
   // Animation for stats when they come into view
   useEffect(() => {
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0)
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -40,29 +40,34 @@ const CaseStudy2 = () => {
 
   return (
     <section className="cs2-section">
-      {/* —— Hero Section  —— */}
-      <div className="case-hero">
-        <div className="case-container">
-          <div className="case-hero-content">
-            <div className="case-tag">CASE STUDY #3</div>
-            <h1 className="case-hero-title">
-              Double Sales With <span className="case-highlight">Half Ad-Spend</span>
+      {/* Hero Section - Updated with Brand Launch Theme */}
+      <div className="cs2-hero">
+        <div className="hero-background">
+          <div className="hero-shape shape-1"></div>
+          <div className="hero-shape shape-2"></div>
+          <div className="hero-shape shape-3"></div>
+          <div className="hero-particles">
+            {[...Array(20)].map((_, i) => (
+              <div key={i} className={`particle particle-${i + 1}`}></div>
+            ))}
+          </div>
+        </div>
+        <div className="cs2-container">
+          <div className="cs2-hero-content">
+            <div className="hero-badge">CASE STUDY </div>
+            <h1 className="cs2-hero-title">
+              Double Sales With <span className="gradient-text">Half Ad-Spend</span>
               <br />
               For Amazon UK Brand
             </h1>
-            <p className="case-hero-description">
+            <div className="hero-line"></div>
+            <p className="cs2-hero-description">
               See how we transformed a struggling TV brand on Amazon UK by optimizing listings and reducing ad spend
               while dramatically increasing sales and organic rankings.
             </p>
-            <button className="case-cta-button">
+            {/* <button className="cs2-cta-button">
               Get Similar Results <ArrowUpRight size={18} />
-            </button>
-          </div>
-          <div className="case-hero-image">
-            <div className="case-image-placeholder">
-              <div className="case-image-shape"></div>
-              <div className="case-image-circle"></div>
-            </div>
+            </button> */}
           </div>
         </div>
       </div>

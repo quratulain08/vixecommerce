@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef } from "react"
+import { useNavigate } from "react-router-dom"
 import { ArrowRight, CheckCircle, BarChart2, TrendingUp, ShoppingCart, Settings, Clock } from "lucide-react"
 import "./FBAManagement.css"
 import Testimonial from "../../LandingPage/Testimonial/Testimonial"
@@ -11,6 +12,11 @@ const FBAManagement = () => {
   const sectionRef = useRef(null)
   const contentRef = useRef(null)
   const servicesRef = useRef([])
+  const navigate = useNavigate();
+
+  const handleGetStartedClick = () =>{
+    navigate('/contact')
+  }
 
   useEffect(() => {
      window.scrollTo(0,0);
@@ -135,7 +141,7 @@ const FBAManagement = () => {
           </h1>
           <div className="hero-line"></div>
           <p className="hero-subtitle">Focus on growing your business while we handle the day-to-day operations</p>
-          <button className="hero-button">
+          <button className="hero-button" onClick={handleGetStartedClick}>
             Get Started <ArrowRight size={16} className="btn-icon" />
           </button>
         </div>
@@ -263,8 +269,8 @@ const FBAManagement = () => {
             Partner with Vix Commerce and let our experts handle the day-to-day management of your Amazon FBA business.
             Free up your time to focus on growth while we ensure your operations run smoothly and profitably.
           </p>
-          <button className="cta-button">
-            Schedule a Consultation <ArrowRight size={16} className="btn-icon" />
+          <button className="cta-button" onClick={handleGetStartedClick}>
+            Request an Audit <ArrowRight size={16} className="btn-icon" />
           </button>
         </div>
       </div>

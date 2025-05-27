@@ -11,7 +11,7 @@ const CaseStudy1 = () => {
 
   // Animation for stats when they come into view
   useEffect(() => {
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0)
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -40,29 +40,34 @@ const CaseStudy1 = () => {
 
   return (
     <section className="case-study-section">
-      {/* Hero Section */}
+      {/* Hero Section - Updated with Brand Launch Theme */}
       <div className="case-hero">
-        <div className="case-container">
-          <div className="case-hero-content">
-            <div className="case-tag">CASE STUDY #4</div>
-            <h1 className="case-hero-title">
-              European Market <span className="case-highlight">Expansion</span>
-              <br />
-              From Zero to <span className="case-highlight">€2.3 Million</span> Monthly
-            </h1>
-            <p className="case-hero-description">
-              Discover how we helped a new Amazon store launch in Germany and expand across Europe, achieving
-              extraordinary growth and profitability in just over a year.
-            </p>
-            <button className="case-cta-button">
-              Get Similar Results <ArrowUpRight size={18} />
-            </button>
+        <div className="hero-background">
+          <div className="hero-shape shape-1"></div>
+          <div className="hero-shape shape-2"></div>
+          <div className="hero-shape shape-3"></div>
+          <div className="hero-particles">
+            {[...Array(20)].map((_, i) => (
+              <div key={i} className={`particle particle-${i + 1}`}></div>
+            ))}
           </div>
-          <div className="case-hero-image">
-            <div className="case-image-placeholder">
-              <div className="case-image-shape"></div>
-              <div className="case-image-circle"></div>
-            </div>
+        </div>
+        <div className="case-container">
+          <div className="case-hero-content" style={{ maxWidth: "600px" }}>
+            <div className="hero-badge">CASE STUDY</div>
+            <h1 className="case-hero-title">
+              European Market <span className="gradient-text">Expansion</span>
+              <br />
+              <span className="gradient-text">€2.3M</span> Monthly Revenue
+            </h1>
+            <div className="hero-line"></div>
+            <p className="case-hero-description">
+              How we launched an Amazon store in Germany and expanded across Europe, achieving €2.3M monthly revenue and
+              extraordinary growth in just over a year.
+            </p>
+            {/* <button className="case-cta-button">
+              Get Similar Results <ArrowUpRight size={18} />
+            </button> */}
           </div>
         </div>
       </div>

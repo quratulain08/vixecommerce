@@ -64,7 +64,7 @@ const ContactUs = () => {
           <div className="vix-contact-details">
             <div className="vix-contact-detail-item">
               <Mail size={20} />
-              <span>info@yourcompany.com</span>
+              <span>brandmanagement@vixcommerce.com</span>
             </div>
             <div className="vix-contact-detail-item">
               <Phone size={20} />
@@ -72,7 +72,7 @@ const ContactUs = () => {
             </div>
             <div className="vix-contact-detail-item">
               <MapPin size={20} />
-              <span>123 Business Ave, Suite 100, New York, NY 10001</span>
+              <span>Akazienstraße 3a, 10823 Berlin, Germany</span>
             </div>
           </div>
 
@@ -109,9 +109,9 @@ const ContactUs = () => {
                   <li>
                     <a href="/AboutUs">About Us</a>
                   </li>
-                  <li>
+                  {/* <li>
                     <a href="/Pricing">Pricing</a>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
               <div className="vix-links-column">

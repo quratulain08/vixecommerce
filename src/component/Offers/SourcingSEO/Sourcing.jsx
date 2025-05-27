@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react"
 import { ArrowRight, CheckCircle, Search, Globe, Package, Truck } from "lucide-react"
 import "./Sourcing.css"
+import { useNavigate } from "react-router-dom"
 import Testimonial from "../../LandingPage/Testimonial/Testimonial"
 import Brand from "../../LandingPage/FeaturedPartners/FeaturedPartners"
 
@@ -11,6 +12,11 @@ const Sourcing = () => {
   const sectionRef = useRef(null)
   const contentRef = useRef(null)
   const servicesRef = useRef([])
+   const navigate = useNavigate();
+  
+    const handleGetStartedClick = () =>{
+      navigate('/contact')
+    }
 
   useEffect(() => {
      window.scrollTo(0,0);
@@ -122,7 +128,7 @@ const Sourcing = () => {
           </h1>
           <div className="hero-line"></div>
           <p className="hero-subtitle">Optimize your supply chain with reliable suppliers and quality products</p>
-          <button className="hero-button">
+          <button className="hero-button" onClick={handleGetStartedClick}>
             Get Started <ArrowRight size={16} className="btn-icon" />
           </button>
         </div>
@@ -270,8 +276,8 @@ const Sourcing = () => {
             Partner with Vix Commerce to streamline your supply chain. Our team of experts will help you find reliable
             suppliers to grow your business.
           </p>
-          <button className="cta-button">
-            Schedule a Consultation <ArrowRight size={16} className="btn-icon" />
+          <button className="cta-button" onClick={handleGetStartedClick}>
+            Request an Audit <ArrowRight size={16} className="btn-icon" />
           </button>
         </div>
       </div>

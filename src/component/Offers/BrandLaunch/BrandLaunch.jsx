@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
+import { useNavigate } from "react-router-dom"
 import { ArrowRight, CheckCircle, Package, BarChart2, Search, ShoppingCart, Award } from "lucide-react"
 import "./BrandLaunch.css"
 import Testimonial from "../../LandingPage/Testimonial/Testimonial"
@@ -10,10 +11,11 @@ const BrandLaunch = () => {
   const sectionRef = useRef(null)
   const contentRef = useRef(null)
   const stepsRef = useRef([])
+  const navigate = useNavigate();
     const [showNeedHelp, setShowNeedHelp] = useState(false);
 
-      const handleClick = () => {
-    setShowNeedHelp(true);
+  const handleGetStartedClick = () => {
+    navigate('/contact');
   };
   useEffect(() => {
      window.scrollTo(0,0);
@@ -136,7 +138,7 @@ const BrandLaunch = () => {
           </h1>
           <div className="hero-line"></div>
           <p className="hero-subtitle">Start your Amazon journey with a strong foundation for success</p>
-          <button className="hero-button">
+          <button className="hero-button" onClick={handleGetStartedClick}>
             Get Started <ArrowRight size={16} className="btn-icon" />
           </button>
         </div>
@@ -217,8 +219,8 @@ const BrandLaunch = () => {
             Partner with Vix Commerce and start your Amazon journey with a strong foundation. Our team of experts is
             ready to help you achieve your e-commerce goals.
           </p>
-          <button className="cta-button">
-            Schedule a Consultation <ArrowRight size={16} className="btn-icon" />
+          <button className="cta-button" onClick={handleGetStartedClick}>
+           Request an audit <ArrowRight size={16} className="btn-icon" />
           </button>
         </div>
       </div>

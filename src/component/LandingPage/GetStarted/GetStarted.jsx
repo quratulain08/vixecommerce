@@ -3,10 +3,16 @@
 import { useEffect, useRef } from "react"
 import { ArrowRight, Play } from 'lucide-react'
 import "./GetStarted.css"
+import { useNavigate } from "react-router-dom"
 
 const GetStarted = () => {
   const sectionRef = useRef(null)
   const contentRef = useRef(null)
+   const navigate = useNavigate();
+  
+    const handleGetStartedClick = () =>{
+      navigate('/contact')
+    }
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -107,7 +113,7 @@ const GetStarted = () => {
         </p>
 
         <div className="hero-buttons">
-          <button className="btn-primary">
+          <button className="btn-primary" onClick={handleGetStartedClick}>
             <span>Book Call Now</span>
             <ArrowRight size={18} className="btn-icon" />
           </button>

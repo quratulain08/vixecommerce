@@ -18,7 +18,7 @@ const CaseStudies = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
-          document.querySelector(".case-studies-header").classList.add("animate")
+          document.querySelector(".portfolio-showcase-header").classList.add("animate")
 
           // Animate cards with delay
           cardsRef.current.forEach((card, index) => {
@@ -82,31 +82,31 @@ const CaseStudies = () => {
   }
 
   return (
-    <section className="case-studies-section" ref={sectionRef}>
-      <div className="case-studies-container">
-        <div className="case-studies-header">
+    <section className="portfolio-showcase-section" ref={sectionRef}>
+      <div className="portfolio-showcase-container">
+        <div className="portfolio-showcase-header">
           <h2>Case Studies</h2>
           <p>Discover how we've helped businesses achieve remarkable growth and success on Amazon.</p>
         </div>
 
-        <div className="case-studies-grid">
+        <div className="portfolio-showcase-grid">
           {caseStudies.map((caseStudy, index) => (
             <div
               key={caseStudy.id}
-              className={`case-card case-${caseStudy.color}`}
+              className={`portfolio-showcase-card portfolio-theme-${caseStudy.color}`}
               onClick={() => handleCaseClick(caseStudy.path)}
               ref={(el) => (cardsRef.current[index] = el)}
             >
-              <div className="case-card-image">
+              <div className="portfolio-showcase-image">
                 <img src={caseStudy.image || "/placeholder.svg"} alt={caseStudy.title} />
-                <div className="case-card-overlay"></div>
+                <div className="portfolio-showcase-overlay"></div>
               </div>
-              <div className="case-content">
-                <div className="case-icon">{caseStudy.icon}</div>
+              <div className="portfolio-showcase-content">
+                <div className="portfolio-showcase-icon">{caseStudy.icon}</div>
                 <h3>{caseStudy.title}</h3>
-                <button className={`view-case-btn view-case-${caseStudy.color}`}>
-                  View Case Study <ArrowRight size={16} className="btn-arrow" />
-                </button>
+                {/* <button className={`portfolio-view-btn portfolio-view-${caseStudy.color}`}>
+                  View Case Study <ArrowRight size={16} className="portfolio-btn-arrow" />
+                </button> */}
               </div>
             </div>
           ))}

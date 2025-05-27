@@ -492,14 +492,15 @@
   margin-top: 50px;
 }
 
+/* Enhanced Contact Options */
 .contact-option {
   background: #ffffff;
-  border-radius: 15px;
-  padding: 30px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  padding: 35px 25px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
   border: 1px solid rgba(0, 0, 0, 0.05);
   text-align: center;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   position: relative;
   overflow: hidden;
   opacity: 0;
@@ -507,6 +508,322 @@
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   animation-delay: calc(0.2s * var(--index, 1));
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact-option::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s ease;
+}
+
+.contact-option::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.contact-option:hover {
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.contact-option:hover::before {
+  transform: scaleX(1);
+}
+
+.contact-option:hover::after {
+  opacity: 1;
+}
+
+/* Enhanced Icon Wrapper */
+.option-icon-wrapper {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 25px;
+}
+
+.option-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.option-icon-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 3px dashed rgba(0, 0, 0, 0.1);
+  animation: spin 20s linear infinite;
+  transition: border-color 0.3s ease;
+}
+
+.option-icon-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+}
+
+.contact-option:hover .option-icon {
+  transform: translate(-50%, -50%) scale(1.15) rotate(5deg);
+}
+
+.contact-option:hover .option-icon-ring {
+  animation-duration: 8s;
+}
+
+.contact-option:hover .option-icon-glow {
+  opacity: 0.3;
+}
+
+/* Color-specific styling */
+.option-blue::before {
+  background: linear-gradient(to right, #0066ff, #00a3ff);
+}
+
+.option-blue .option-icon {
+  background: linear-gradient(135deg, #e6f5ff 0%, rgba(16, 110, 190, 0.3) 100%);
+  color: #106ebe;
+  border: 2px solid rgba(16, 110, 190, 0.2);
+}
+
+.option-blue .option-icon-glow {
+  background: radial-gradient(circle, rgba(16, 110, 190, 0.4) 0%, transparent 70%);
+}
+
+.option-blue:hover .option-icon-ring {
+  border-color: rgba(16, 110, 190, 0.4);
+}
+
+.option-green::before {
+  background: linear-gradient(to right, #0ffcbe, #00d084);
+}
+
+.option-green .option-icon {
+  background: linear-gradient(135deg, #e6fff5 0%, rgba(15, 252, 190, 0.3) 100%);
+  color: #02b48a;
+  border: 2px solid rgba(15, 252, 190, 0.2);
+}
+
+.option-green .option-icon-glow {
+  background: radial-gradient(circle, rgba(15, 252, 190, 0.4) 0%, transparent 70%);
+}
+
+.option-green:hover .option-icon-ring {
+  border-color: rgba(15, 252, 190, 0.4);
+}
+
+.option-linkedin::before {
+  background: linear-gradient(to right, #0077b5, #005885);
+}
+
+.option-linkedin .option-icon {
+  background: linear-gradient(135deg, #e6f3ff 0%, rgba(0, 119, 181, 0.3) 100%);
+  color: #0077b5;
+  border: 2px solid rgba(0, 119, 181, 0.2);
+}
+
+.option-linkedin .option-icon-glow {
+  background: radial-gradient(circle, rgba(0, 119, 181, 0.4) 0%, transparent 70%);
+}
+
+.option-linkedin:hover .option-icon-ring {
+  border-color: rgba(0, 119, 181, 0.4);
+}
+
+.option-purple::before {
+  background: linear-gradient(to right, #8000ff, #a64dff);
+}
+
+.option-purple .option-icon {
+  background: linear-gradient(135deg, #f0e6ff 0%, rgba(128, 0, 255, 0.3) 100%);
+  color: #8000ff;
+  border: 2px solid rgba(128, 0, 255, 0.2);
+}
+
+.option-purple .option-icon-glow {
+  background: radial-gradient(circle, rgba(128, 0, 255, 0.4) 0%, transparent 70%);
+}
+
+.option-purple:hover .option-icon-ring {
+  border-color: rgba(128, 0, 255, 0.4);
+}
+
+/* New Heading Styling */
+.option-heading {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.option-blue .option-heading {
+  color: #106ebe;
+}
+
+.option-green .option-heading {
+  color: #02b48a;
+}
+
+.option-linkedin .option-heading {
+  color: #0077b5;
+}
+
+.option-purple .option-heading {
+  color: #8000ff;
+}
+
+.contact-option:hover .option-heading {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+/* Enhanced Title and Description */
+.contact-option h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #003366;
+  margin: 0 0 12px 0;
+  transition: color 0.3s ease;
+}
+
+.contact-option:hover h3 {
+  color: #001a33;
+}
+
+.contact-option p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+  margin: 0 0 20px 0;
+  transition: color 0.3s ease;
+}
+
+.contact-option:hover p {
+  color: #444;
+}
+
+/* Enhanced Info Container for Better Email Visibility */
+.option-info-container {
+  margin-bottom: 20px;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.option-info {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0066cc;
+  position: relative;
+  display: block;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: rgba(0, 102, 204, 0.05);
+  border: 1px solid rgba(0, 102, 204, 0.1);
+  transition: all 0.3s ease;
+  word-break: break-all;
+  line-height: 1.4;
+  max-width: 100%;
+  text-align: center;
+}
+
+.option-green .option-info {
+  color: #02b48a;
+  background: rgba(2, 180, 138, 0.05);
+  border-color: rgba(2, 180, 138, 0.1);
+}
+
+.option-linkedin .option-info {
+  color: #0077b5;
+  background: rgba(0, 119, 181, 0.05);
+  border-color: rgba(0, 119, 181, 0.1);
+}
+
+.option-purple .option-info {
+  color: #8000ff;
+  background: rgba(128, 0, 255, 0.05);
+  border-color: rgba(128, 0, 255, 0.1);
+}
+
+.contact-option:hover .option-info {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Enhanced Action Button */
+.option-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  margin-top: auto;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.option-action-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.6s ease;
+}
+
+.option-action-btn:hover::before {
+  left: 100%;
 }
 
 .fadeInLeft {
@@ -537,146 +854,29 @@
   --index: 4;
 }
 
-.contact-option::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.5s ease;
+.btn-blue {
+  background: linear-gradient(135deg, #106ebe 0%, #0066ff 100%);
+  color: white;
 }
 
-.contact-option:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+.btn-green {
+  background: linear-gradient(135deg, #02b48a 0%, #0ffcbe 100%);
+  color: white;
 }
 
-.contact-option:hover::before {
-  transform: scaleX(1);
+.btn-linkedin {
+  background: linear-gradient(135deg, #0077b5 0%, #005885 100%);
+  color: white;
 }
 
-.option-blue::before {
-  background: linear-gradient(to right, #0066ff, #00a3ff);
+.btn-purple {
+  background: linear-gradient(135deg, #8000ff 0%, #a64dff 100%);
+  color: white;
 }
 
-.option-green::before {
-  background: linear-gradient(to right, #0ffcbe, #00d084);
-}
-
-.option-orange::before {
-  background: linear-gradient(to right, #ff9900, #ff6a00);
-}
-
-.option-purple::before {
-  background: linear-gradient(to right, #8000ff, #a64dff);
-}
-
-.option-icon-wrapper {
-  position: relative;
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 20px;
-}
-
-.option-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  transition: transform 0.3s ease;
-}
-
-.option-icon-ring {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  border: 2px dashed rgba(0, 0, 0, 0.1);
-  animation: spin 15s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.option-blue .option-icon {
-  background: linear-gradient(135deg, #e6f5ff 0%, rgba(16, 110, 190, 0.2) 100%);
-  color: #106ebe;
-}
-
-.option-green .option-icon {
-  background: linear-gradient(135deg, #e6fff5 0%, rgba(15, 252, 190, 0.2) 100%);
-  color: #02b48a;
-}
-
-.option-orange .option-icon {
-  background: linear-gradient(135deg, #fff5e6 0%, rgba(255, 153, 0, 0.2) 100%);
-  color: #ff9900;
-}
-
-.option-purple .option-icon {
-  background: linear-gradient(135deg, #f0e6ff 0%, rgba(128, 0, 255, 0.2) 100%);
-  color: #8000ff;
-}
-
-.contact-option:hover .option-icon {
-  transform: translate(-50%, -50%) scale(1.1);
-}
-
-.contact-option h3 {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #003366;
-  margin: 0 0 10px 0;
-}
-
-.contact-option p {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: #555;
-  margin: 0 0 15px 0;
-}
-
-.option-info {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #0066cc;
-  position: relative;
-  display: inline-block;
-}
-
-.option-info::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(to right, #0ffcbe, #0066ff);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease;
-}
-
-.contact-option:hover .option-info::after {
-  transform: scaleX(1);
+.option-action-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
 /* Support Features Section */
@@ -708,10 +908,25 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(0, 102, 255, 0.05) 0%, rgba(15, 252, 190, 0.05) 100%);
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: -1;
+}
+
+.feature-blue .feature-bg {
+  background: linear-gradient(135deg, rgba(0, 102, 255, 0.05) 0%, rgba(15, 252, 190, 0.05) 100%);
+}
+
+.feature-green .feature-bg {
+  background: linear-gradient(135deg, rgba(15, 252, 190, 0.05) 0%, rgba(2, 180, 138, 0.05) 100%);
+}
+
+.feature-orange .feature-bg {
+  background: linear-gradient(135deg, rgba(255, 153, 0, 0.05) 0%, rgba(255, 106, 0, 0.05) 100%);
+}
+
+.feature-purple .feature-bg {
+  background: linear-gradient(135deg, rgba(128, 0, 255, 0.05) 0%, rgba(166, 77, 255, 0.05) 100%);
 }
 
 .feature-card:hover {
@@ -730,15 +945,32 @@
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #f0f7ff 0%, #e6f5ff 100%);
-  color: #0066cc;
   margin-bottom: 20px;
   transition: transform 0.3s ease;
 }
 
+.icon-blue {
+  background: linear-gradient(135deg, #e6f5ff 0%, rgba(16, 110, 190, 0.2) 100%);
+  color: #106ebe;
+}
+
+.icon-green {
+  background: linear-gradient(135deg, #e6fff5 0%, rgba(15, 252, 190, 0.2) 100%);
+  color: #02b48a;
+}
+
+.icon-orange {
+  background: linear-gradient(135deg, #fff5e6 0%, rgba(255, 153, 0, 0.2) 100%);
+  color: #ff9900;
+}
+
+.icon-purple {
+  background: linear-gradient(135deg, #f0e6ff 0%, rgba(128, 0, 255, 0.2) 100%);
+  color: #8000ff;
+}
+
 .feature-card:hover .feature-icon {
   transform: scale(1.1);
-  color: #0ffcbe;
 }
 
 .feature-card h3 {
@@ -793,10 +1025,25 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(0, 102, 255, 0.05) 0%, rgba(15, 252, 190, 0.05) 100%);
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: -1;
+}
+
+.stat-blue .stat-bg {
+  background: linear-gradient(135deg, rgba(0, 102, 255, 0.05) 0%, rgba(15, 252, 190, 0.05) 100%);
+}
+
+.stat-green .stat-bg {
+  background: linear-gradient(135deg, rgba(15, 252, 190, 0.05) 0%, rgba(2, 180, 138, 0.05) 100%);
+}
+
+.stat-orange .stat-bg {
+  background: linear-gradient(135deg, rgba(255, 153, 0, 0.05) 0%, rgba(255, 106, 0, 0.05) 100%);
+}
+
+.stat-purple .stat-bg {
+  background: linear-gradient(135deg, rgba(128, 0, 255, 0.05) 0%, rgba(166, 77, 255, 0.05) 100%);
 }
 
 .stat-card:hover {
@@ -1016,6 +1263,7 @@
   align-items: center;
   gap: 10px;
   text-decoration: none;
+  border: none;
 }
 
 .cta-button.primary {
@@ -1114,6 +1362,10 @@
   .help-cta h2 {
     font-size: 2.2rem;
   }
+
+  .option-info {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1159,6 +1411,33 @@
   .cta-buttons {
     flex-direction: column;
     gap: 15px;
+  }
+
+  .contact-option {
+    padding: 25px 20px;
+    min-height: 280px;
+  }
+
+  .option-heading {
+    font-size: 0.8rem;
+  }
+
+  .contact-option h3 {
+    font-size: 1.2rem;
+  }
+
+  .contact-option p {
+    font-size: 0.95rem;
+  }
+
+  .option-info {
+    font-size: 0.95rem;
+    padding: 6px 10px;
+  }
+
+  .option-action-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
   }
 }
 
@@ -1216,5 +1495,53 @@
   .faq-question {
     font-size: 1rem;
     padding: 15px 20px;
+  }
+
+  .option-action-btn {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+
+  .contact-option {
+    padding: 20px 15px;
+    min-height: 260px;
+  }
+
+  .option-icon-wrapper {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 15px;
+  }
+
+  .option-icon {
+    width: 55px;
+    height: 55px;
+  }
+
+  .option-heading {
+    font-size: 0.75rem;
+    margin-bottom: 6px;
+  }
+
+  .contact-option h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+
+  .contact-option p {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+  }
+
+  .option-info {
+    font-size: 0.85rem;
+    padding: 5px 8px;
+    line-height: 1.3;
+  }
+
+  .option-action-btn {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    gap: 8px;
   }
 }

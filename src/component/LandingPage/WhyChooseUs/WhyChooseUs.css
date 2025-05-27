@@ -18,7 +18,7 @@
 }
 
 .why-choose-us-container {
-  max-width: 1200px;
+  max-width: 1400px; /* Increased from 1200px */
   margin: 0 auto;
   padding: 0 20px;
   position: relative;
@@ -49,7 +49,7 @@
 .carousel-container {
   position: relative;
   width: 100%;
-  max-width: 900px;
+  max-width: 1200px; /* Increased from 900px */
   margin: 0 auto;
   padding-bottom: 60px;
 }
@@ -79,7 +79,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px;
+  padding: 50px; /* Increased from 40px */
   box-sizing: border-box;
 }
 
@@ -97,30 +97,40 @@
 }
 
 .auto-scroll-slide {
-  min-width: 900px;
-  max-width: 900px;
-  padding: 40px;
+  min-width: 1200px; /* Increased from 900px */
+  max-width: 1200px; /* Increased from 900px */
+  padding: 50px; /* Increased from 40px */
   margin-right: 20px;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1280px) {
   .auto-scroll-slide {
-    min-width: 700px;
-    max-width: 700px;
+    min-width: 1000px; /* Increased from 700px */
+    max-width: 1000px; /* Increased from 700px */
+    padding: 45px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .auto-scroll-slide {
+    min-width: 850px; /* Increased from 700px */
+    max-width: 850px; /* Increased from 700px */
+    padding: 40px;
   }
 }
 
 @media (max-width: 768px) {
   .auto-scroll-slide {
-    min-width: 500px;
-    max-width: 500px;
+    min-width: 650px; /* Increased from 500px */
+    max-width: 650px; /* Increased from 500px */
+    padding: 35px;
   }
 }
 
 @media (max-width: 576px) {
   .auto-scroll-slide {
-    min-width: 300px;
-    max-width: 300px;
+    min-width: 350px; /* Increased from 300px */
+    max-width: 350px; /* Increased from 300px */
     padding: 25px 20px;
   }
 }
@@ -128,8 +138,8 @@
 .slide-content {
   display: flex;
   align-items: flex-start;
-  gap: 30px;
-  max-width: 800px;
+  gap: 40px; /* Increased from 30px */
+  max-width: 1000px; /* Increased from 800px */
   margin: 0 auto;
   height: auto;
 }
@@ -137,7 +147,7 @@
 .reason-number {
   font-family: "Poppins", sans-serif;
   font-weight: 800;
-  font-size: 80px;
+  font-size: 90px; /* Increased from 80px */
   line-height: 1;
   background: linear-gradient(135deg, #106ebe 0%, #0ffcbe 100%);
   -webkit-background-clip: text;
@@ -155,22 +165,22 @@
 .reason-text h3 {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  font-size: 28px;
+  font-size: 32px; /* Increased from 28px */
   color: #000;
-  margin-bottom: 10px;
+  margin-bottom: 12px; /* Increased from 10px */
 }
 
 .reason-text h4 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 22px; /* Increased from 20px */
   color: #106ebe;
-  margin-bottom: 15px;
+  margin-bottom: 18px; /* Increased from 15px */
 }
 
 .reason-text p {
   font-family: "Manrope", sans-serif;
-  font-size: 16px;
+  font-size: 17px; /* Increased from 16px */
   line-height: 1.6;
   color: #333;
 }
@@ -179,8 +189,8 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 50px;
-  height: 50px;
+  width: 55px; /* Increased from 50px */
+  height: 55px; /* Increased from 50px */
   border-radius: 50%;
   background: linear-gradient(135deg, #106ebe 0%, #0ffcbe 100%);
   color: white;
@@ -195,11 +205,11 @@
 }
 
 .prev-arrow {
-  left: -25px;
+  left: -35px; /* Adjusted from -25px */
 }
 
 .next-arrow {
-  right: -25px;
+  right: -35px; /* Adjusted from -25px */
 }
 
 .carousel-arrow:hover {
@@ -210,13 +220,13 @@
 .carousel-indicators {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin-top: 20px;
+  gap: 12px; /* Increased from 10px */
+  margin-top: 25px; /* Increased from 20px */
 }
 
 .carousel-indicator {
-  width: 12px;
-  height: 12px;
+  width: 14px; /* Increased from 12px */
+  height: 14px; /* Increased from 12px */
   border-radius: 50%;
   background-color: #ddd;
   border: none;
@@ -246,38 +256,62 @@
 }
 
 /* Responsive styles */
-@media (max-width: 992px) {
+@media (max-width: 1280px) {
   .slide-content {
-    gap: 20px;
+    gap: 35px;
+    max-width: 900px;
   }
 
   .reason-number {
-    font-size: 70px;
+    font-size: 85px;
   }
 
   .reason-text h3 {
-    font-size: 24px;
+    font-size: 30px;
   }
 
   .reason-text h4 {
-    font-size: 18px;
+    font-size: 21px;
+  }
+
+  .reason-text p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .slide-content {
+    gap: 30px;
+    max-width: 800px;
+  }
+
+  .reason-number {
+    font-size: 80px;
+  }
+
+  .reason-text h3 {
+    font-size: 28px;
+  }
+
+  .reason-text h4 {
+    font-size: 20px;
   }
 
   .carousel-slide {
-    padding: 30px;
+    padding: 35px;
   }
 
   .carousel-arrow {
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
   }
 
   .prev-arrow {
-    left: 10px;
+    left: -25px;
   }
 
   .next-arrow {
-    right: 10px;
+    right: -25px;
   }
 }
 
@@ -293,23 +327,24 @@
   .slide-content {
     flex-direction: column;
     text-align: center;
-    gap: 15px;
+    gap: 20px; /* Increased from 15px */
+    max-width: 600px;
   }
 
   .reason-number {
-    font-size: 60px;
+    font-size: 70px; /* Increased from 60px */
   }
 
   .reason-text h3 {
-    font-size: 22px;
+    font-size: 26px; /* Increased from 22px */
   }
 
   .reason-text h4 {
-    font-size: 16px;
+    font-size: 18px; /* Increased from 16px */
   }
 
   .reason-text p {
-    font-size: 15px;
+    font-size: 16px; /* Increased from 15px */
   }
 
   /* Hide navigation arrows on mobile */
@@ -337,7 +372,44 @@
   }
 
   .reason-number {
-    font-size: 50px;
+    font-size: 60px; /* Increased from 50px */
+  }
+
+  .reason-text h3 {
+    font-size: 22px; /* Increased from 20px */
+  }
+
+  .reason-text h4 {
+    font-size: 17px; /* Increased from 16px */
+  }
+
+  .reason-text p {
+    font-size: 15px; /* Increased from 14px */
+  }
+
+  .carousel-container {
+    padding-bottom: 50px;
+  }
+
+  .slide-content {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-container {
+    max-width: 100%;
+    padding: 0 10px 50px;
+  }
+
+  .auto-scroll-slide {
+    min-width: 320px;
+    max-width: 320px;
+    padding: 20px 15px;
+  }
+
+  .reason-number {
+    font-size: 55px;
   }
 
   .reason-text h3 {
@@ -350,9 +422,5 @@
 
   .reason-text p {
     font-size: 14px;
-  }
-
-  .carousel-container {
-    padding-bottom: 50px;
   }
 }

@@ -10,7 +10,7 @@ const CaseStudy3 = () => {
 
   // Animation for stats when they come into view
   useEffect(() => {
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0)
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -68,34 +68,34 @@ const CaseStudy3 = () => {
 
   return (
     <section className="cs3-section">
-      {/* Hero Section */}
-      <div className="case-hero">
-        <div className="case-container">
-          <div className="case-hero-content">
-            <div className="case-tag">CASE STUDY #1</div>
-            <h1 className="case-hero-title">
-              Textile Niche Product <span className="case-highlight">Success</span>
-              <br />
-              Earning <span className="case-highlight">£10,000</span> Net Profit Monthly
-            </h1>
-            <p className="case-hero-description">
-              Discover how we launched a product in a highly competitive Home & Kitchen category on Amazon UK,
-              achieving remarkable success with £40,000 monthly revenue and £10,000 monthly profit.
-            </p>
-            <button className="case-cta-button">
-              Get Similar Results <ArrowUpRight size={18} />
-            </button>
+      {/* Hero Section - Updated with Brand Launch Theme */}
+      <div className="cs3-hero">
+        <div className="hero-background">
+          <div className="hero-shape shape-1"></div>
+          <div className="hero-shape shape-2"></div>
+          <div className="hero-shape shape-3"></div>
+          <div className="hero-particles">
+            {[...Array(20)].map((_, i) => (
+              <div key={i} className={`particle particle-${i + 1}`}></div>
+            ))}
           </div>
-          <div className="case-hero-image">
-            <div className="case-image-placeholder">
-              {/* you can keep your textile animation inside here */}
-              <div className="cs3-textile-animation">
-                <div className="cs3-textile-pattern"></div>
-                <div className="cs3-textile-fold"></div>
-              </div>
-              <div className="case-image-shape"></div>
-              <div className="case-image-circle"></div>
-            </div>
+        </div>
+        <div className="cs3-container">
+          <div className="cs3-hero-content">
+            <div className="hero-badge">CASE STUDY </div>
+            <h1 className="cs3-hero-title">
+              Textile Niche Product <span className="gradient-text">Success</span>
+              <br />
+              Earning <span className="gradient-text">£10,000</span> Net Profit Monthly
+            </h1>
+            <div className="hero-line"></div>
+            <p className="cs3-hero-description">
+              Discover how we launched a product in a highly competitive Home & Kitchen category on Amazon UK, achieving
+              remarkable success with £40,000 monthly revenue and £10,000 monthly profit.
+            </p>
+            {/* <button className="cs3-cta-button">
+              Get Similar Results <ArrowUpRight size={18} />
+            </button> */}
           </div>
         </div>
       </div>
@@ -241,7 +241,7 @@ const CaseStudy3 = () => {
             </div>
           </div>
 
-          <div className="cs3-section-alt">
+          {/* <div className="cs3-section-alt">
             <h2 className="cs3-section-title">Conclusion</h2>
             <div className="cs3-conclusion">
               <div className="cs3-conclusion-icon">
@@ -261,7 +261,7 @@ const CaseStudy3 = () => {
                 <button className="cs3-secondary-button">Schedule a Free Consultation</button>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
