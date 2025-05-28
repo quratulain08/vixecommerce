@@ -64,7 +64,7 @@ const CaseStudy2 = () => {
           <div className="cs2-hero-content">
             <div className="hero-badge">CASE STUDY</div>
             <h1 className="cs2-hero-title">
-              Double sales with <span className="gradient-text">half d-Spend</span>
+              Double sales with <span className="gradient-text">half ad-Spend</span>
               {/* <br />
               For Amazon UK Brand */}
             </h1>

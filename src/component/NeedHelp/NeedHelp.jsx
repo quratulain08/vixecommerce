@@ -241,7 +241,7 @@ const NeedHelp = () => {
           <h1>
             Need help?
             <br />
-            <span className="help-gradient-text">We've got you covered</span>
+            <span className="help-gradient-text">We've got you covered!</span>
           </h1>
           <div className="help-hero-line"></div>
           <p className="help-hero-subtitle">

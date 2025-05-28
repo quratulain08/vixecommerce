@@ -59,22 +59,22 @@ const CaseStudies = () => {
       color: "green",
       image: doublesales,
     },
-    {
-      id: 3,
-      title: "Textile Niche Product",
-      icon: <ShoppingCart size={24} />,
-      path: "/CaseStudies/CaseStudy3",
-      color: "purple",
-      image: textileniche,
-    },
-    {
-      id: 4,
-      title: "Baby Product Success",
-      icon: <BarChart2 size={24} />,
-      path: "/CaseStudies/CaseStudy4",
-      color: "orange",
-      image: babyproduct,
-    },
+    // {
+    //   id: 3,
+    //   title: "Textile Niche Product",
+    //   icon: <ShoppingCart size={24} />,
+    //   path: "/CaseStudies/CaseStudy3",
+    //   color: "purple",
+    //   image: textileniche,
+    // },
+    // {
+    //   id: 4,
+    //   title: "Baby Product Success",
+    //   icon: <BarChart2 size={24} />,
+    //   path: "/CaseStudies/CaseStudy4",
+    //   color: "orange",
+    //   image: babyproduct,
+    // },
   ]
 
   const handleCaseClick = (path) => {

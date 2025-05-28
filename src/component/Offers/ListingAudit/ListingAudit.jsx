@@ -288,7 +288,7 @@ const ListingAudit = () => {
             opportunities for improvement and provide actionable recommendations to boost your performance.
           </p>
           <button className="cta-button" onClick={handleGetStartedClick}>
-            Schedule a call <ArrowRight size={16} className="btn-icon" />
+            Request an audit <ArrowRight size={16} className="btn-icon" />
           </button>
         </div>
       </div>

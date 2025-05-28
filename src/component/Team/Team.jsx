@@ -140,9 +140,9 @@ const Team = () => {
         <div className="team-hero-content">
           <div className="hero-badge">OUR TEAM</div>
           <h1>
-            Meet the <span className="gradient-text">Experts</span>
+            Meet the <span className="gradient-text">experts</span>
             <br />
-            Behind Vix Commerce
+            behind VixCommerce
           </h1>
           <div className="hero-line"></div>
           <p className="hero-subtitle">Passionate professionals dedicated to your Amazon success</p>
@@ -157,7 +157,7 @@ const Team = () => {
               <Users size={16} />
               LEADERSHIP
             </div>
-            <h2 className="section-title">Our Leadership Team</h2>
+            <h2 className="section-title">Our leadership team</h2>
             <p className="section-description">
               Meet the visionaries driving Vix Commerce forward with years of expertise and proven results.
             </p>

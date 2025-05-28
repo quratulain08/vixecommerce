@@ -24,7 +24,7 @@ const CTA = () => {
             ready to help you achieve your e-commerce goals.
           </p>
           <button className="cta-button" onClick={handleGetStartedClick}>
-           Schedule call now <ArrowRight size={16} className="btn-icon" />
+           Schedule a call <ArrowRight size={16} className="btn-icon" />
           </button>
         </div>
     </section>

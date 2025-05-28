@@ -121,9 +121,9 @@ const Sourcing = () => {
         <div className="sourcing-hero-content">
           <div className="hero-badge">OUR SERVICES</div>
           <h1>
-            Efficient
+            Product sourcing
             <br />
-            <span className="gradient-text">sourcing</span>
+            <span className="gradient-text">solutions</span>
           </h1>
           <div className="hero-line"></div>
           <p className="hero-subtitle">Optimize your supply chain with reliable suppliers and quality products</p>
