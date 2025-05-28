@@ -369,11 +369,7 @@ const Header = () => {
                     </div>
                   </Link>
                 </div>
-                <div className="dropdown-footer">
-                  <Link to="/AboutUs" className="view-all-link" onClick={closeMenu}>
-                    Learn More About Us
-                  </Link>
-                </div>
+          
               </div>
             </li>
           </ul>

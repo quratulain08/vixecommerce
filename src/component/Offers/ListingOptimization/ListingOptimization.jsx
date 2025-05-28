@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react"
 import { ArrowRight, CheckCircle, Edit, ImageIcon, Search, FileText, BarChart2, TrendingUp } from "lucide-react"
+import { useNavigate } from "react-router-dom"
 import "./ListingOptimization.css"
 import Testimonial from "../../LandingPage/Testimonial/Testimonial"
 import Brand from "../../LandingPage/FeaturedPartners/FeaturedPartners"
@@ -12,6 +13,11 @@ const ListingOptimization = () => {
   const optimizationStepsRef = useRef([])
   const seoStepsRef = useRef([])
   const elementsRef = useRef([])
+  const navigate = useNavigate()
+
+  const handleGetStartedClick = () => {
+    navigate("/contact")
+  }
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -238,7 +244,7 @@ const ListingOptimization = () => {
           <p className="hero-subtitle">
             Transform your listings into high-converting sales machines with maximum visibility
           </p>
-          <button className="hero-button">
+          <button className="hero-button" onClick={handleGetStartedClick}>
             Get Started <ArrowRight size={16} className="btn-icon" />
           </button>
         </div>
@@ -246,7 +252,7 @@ const ListingOptimization = () => {
 
       <div className="optimization-container">
         <div className="optimization-content" ref={contentRef}>
-          <div className="optimization-text">
+          <div className="overview-section">
             <div className="section-badge">OVERVIEW</div>
             <h2 className="section-title">Comprehensive Listing Optimization & SEO</h2>
             <p>
@@ -266,18 +272,7 @@ const ListingOptimization = () => {
             </p>
           </div>
 
-          <div className="optimization-benefits">
-            <h3>Benefits of Optimized Listings & SEO</h3>
-            <ul className="benefits-list">
-              {benefits.map((benefit, index) => (
-                <li key={index} className="benefit-item">
-                  <CheckCircle size={20} className="benefit-icon" />
-                  <span>{benefit}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+  
 
         <div className="optimization-process">
           <div className="section-badge">OPTIMIZATION PROCESS</div>
@@ -296,6 +291,20 @@ const ListingOptimization = () => {
                 <p>{step.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+           <div className="benefits-section">
+            <h3 className="benefits-title">Benefits of Optimized Listings & SEO</h3>
+            <div className="benefits-grid">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="benefit-card">
+                  <div className="benefit-icon-wrapper">
+                    <CheckCircle size={24} className="benefit-icon" />
+                  </div>
+                  <span className="benefit-text">{benefit}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -395,13 +404,13 @@ const ListingOptimization = () => {
             Partner with Vix Commerce to optimize your Amazon listings for maximum visibility and conversion. Our team
             of experts will create compelling content and visuals that drive sales and grow your business.
           </p>
-          <button className="cta-button">
+          <button className="cta-button" onClick={handleGetStartedClick}>
             Get Optimized Listings <ArrowRight size={16} className="btn-icon" />
           </button>
         </div>
       </div>
-       <Testimonial/>
-      <Brand/>
+      <Testimonial />
+      <Brand />
     </section>
   )
 }

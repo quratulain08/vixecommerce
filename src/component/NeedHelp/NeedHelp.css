@@ -1,11 +1,11 @@
-.need-help-section {
+.help-page-section {
   font-family: "Poppins", sans-serif;
   color: #333;
   overflow: hidden;
 }
 
 /* Hero Section */
-.need-help-hero {
+.help-page-hero {
   position: relative;
   padding: 140px 0;
   text-align: center;
@@ -17,12 +17,12 @@
   color: #fff;
 }
 
-.need-help-hero.animate {
+.help-page-hero.animate {
   opacity: 1;
   transform: translateY(0);
 }
 
-.hero-background {
+.help-hero-background {
   position: absolute;
   top: 0;
   left: 0;
@@ -32,40 +32,40 @@
   z-index: 1;
 }
 
-.hero-shape {
+.help-hero-shape {
   position: absolute;
   border-radius: 50%;
   filter: blur(60px);
 }
 
-.shape-1 {
+.help-shape-1 {
   top: -10%;
   left: -5%;
   width: 500px;
   height: 500px;
   background: rgba(0, 102, 255, 0.3);
-  animation: float 15s ease-in-out infinite;
+  animation: helpFloat 15s ease-in-out infinite;
 }
 
-.shape-2 {
+.help-shape-2 {
   bottom: -15%;
   right: -10%;
   width: 600px;
   height: 600px;
   background: rgba(15, 252, 190, 0.2);
-  animation: float 20s ease-in-out infinite reverse;
+  animation: helpFloat 20s ease-in-out infinite reverse;
 }
 
-.shape-3 {
+.help-shape-3 {
   top: 40%;
   right: 20%;
   width: 300px;
   height: 300px;
   background: rgba(128, 0, 255, 0.15);
-  animation: float 18s ease-in-out infinite 2s;
+  animation: helpFloat 18s ease-in-out infinite 2s;
 }
 
-.hero-particles {
+.help-hero-particles {
   position: absolute;
   top: 0;
   left: 0;
@@ -73,7 +73,7 @@
   height: 100%;
 }
 
-.particle {
+.help-particle {
   position: absolute;
   width: 6px;
   height: 6px;
@@ -82,7 +82,7 @@
 }
 
 /* Floating Icons Animation */
-.floating-icons {
+.help-floating-icons {
   position: absolute;
   top: 0;
   left: 0;
@@ -92,7 +92,7 @@
   pointer-events: none;
 }
 
-.floating-icon {
+.help-floating-icon {
   position: absolute;
   display: flex;
   align-items: center;
@@ -105,45 +105,45 @@
   -webkit-backdrop-filter: blur(5px);
   color: #fff;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  animation: floatIcon 15s ease-in-out infinite;
+  animation: helpFloatIcon 15s ease-in-out infinite;
 }
 
-.icon-1 {
+.help-icon-1 {
   top: 15%;
   left: 10%;
   animation-delay: 0s;
   background: rgba(15, 252, 190, 0.2);
 }
 
-.icon-2 {
+.help-icon-2 {
   top: 25%;
   right: 15%;
   animation-delay: 2s;
   background: rgba(0, 102, 255, 0.2);
 }
 
-.icon-3 {
+.help-icon-3 {
   bottom: 20%;
   left: 20%;
   animation-delay: 4s;
   background: rgba(128, 0, 255, 0.2);
 }
 
-.icon-4 {
+.help-icon-4 {
   top: 40%;
   left: 30%;
   animation-delay: 6s;
   background: rgba(255, 153, 0, 0.2);
 }
 
-.icon-5 {
+.help-icon-5 {
   bottom: 30%;
   right: 25%;
   animation-delay: 8s;
   background: rgba(255, 0, 128, 0.2);
 }
 
-@keyframes floatIcon {
+@keyframes helpFloatIcon {
   0% {
     transform: translate(0, 0) rotate(0deg);
   }
@@ -161,7 +161,7 @@
   }
 }
 
-@keyframes float {
+@keyframes helpFloat {
   0% {
     transform: translate(0, 0) rotate(0deg);
   }
@@ -173,7 +173,7 @@
   }
 }
 
-@keyframes pulse {
+@keyframes helpPulse {
   0% {
     transform: scale(0.8);
     opacity: 0.3;
@@ -188,108 +188,108 @@
   }
 }
 
-.particle-1 {
+.help-particle-1 {
   top: 10%;
   left: 10%;
-  animation: pulse 8s infinite;
+  animation: helpPulse 8s infinite;
 }
-.particle-2 {
+.help-particle-2 {
   top: 20%;
   left: 20%;
-  animation: pulse 12s infinite 1s;
+  animation: helpPulse 12s infinite 1s;
 }
-.particle-3 {
+.help-particle-3 {
   top: 30%;
   left: 15%;
-  animation: pulse 9s infinite 2s;
+  animation: helpPulse 9s infinite 2s;
 }
-.particle-4 {
+.help-particle-4 {
   top: 40%;
   left: 25%;
-  animation: pulse 10s infinite 0.5s;
+  animation: helpPulse 10s infinite 0.5s;
 }
-.particle-5 {
+.help-particle-5 {
   top: 50%;
   left: 10%;
-  animation: pulse 11s infinite 1.5s;
+  animation: helpPulse 11s infinite 1.5s;
 }
-.particle-6 {
+.help-particle-6 {
   top: 60%;
   left: 30%;
-  animation: pulse 9s infinite 3s;
+  animation: helpPulse 9s infinite 3s;
 }
-.particle-7 {
+.help-particle-7 {
   top: 70%;
   left: 15%;
-  animation: pulse 12s infinite 2.5s;
+  animation: helpPulse 12s infinite 2.5s;
 }
-.particle-8 {
+.help-particle-8 {
   top: 80%;
   left: 20%;
-  animation: pulse 10s infinite 1s;
+  animation: helpPulse 10s infinite 1s;
 }
-.particle-9 {
+.help-particle-9 {
   top: 90%;
   left: 10%;
-  animation: pulse 11s infinite 0.5s;
+  animation: helpPulse 11s infinite 0.5s;
 }
-.particle-10 {
+.help-particle-10 {
   top: 10%;
   left: 80%;
-  animation: pulse 9s infinite 2s;
+  animation: helpPulse 9s infinite 2s;
 }
-.particle-11 {
+.help-particle-11 {
   top: 20%;
   left: 70%;
-  animation: pulse 12s infinite 1.5s;
+  animation: helpPulse 12s infinite 1.5s;
 }
-.particle-12 {
+.help-particle-12 {
   top: 30%;
   left: 85%;
-  animation: pulse 10s infinite 1s;
+  animation: helpPulse 10s infinite 1s;
 }
-.particle-13 {
+.help-particle-13 {
   top: 40%;
   left: 75%;
-  animation: pulse 11s infinite 2.5s;
+  animation: helpPulse 11s infinite 2.5s;
 }
-.particle-14 {
+.help-particle-14 {
   top: 50%;
   left: 90%;
-  animation: pulse 9s infinite 0.5s;
+  animation: helpPulse 9s infinite 0.5s;
 }
-.particle-15 {
+.help-particle-15 {
   top: 60%;
   left: 80%;
-  animation: pulse 12s infinite 3s;
+  animation: helpPulse 12s infinite 3s;
 }
-.particle-16 {
+.help-particle-16 {
   top: 70%;
   left: 75%;
-  animation: pulse 10s infinite 1.5s;
+  animation: helpPulse 10s infinite 1.5s;
 }
-.particle-17 {
+.help-particle-17 {
   top: 80%;
   left: 85%;
-  animation: pulse 11s infinite 2s;
+  animation: helpPulse 11s infinite 2s;
 }
-.particle-18 {
+.help-particle-18 {
   top: 90%;
   left: 80%;
-  animation: pulse 9s infinite 1s;
+  animation: helpPulse 9s infinite 1s;
 }
-.particle-19 {
+.help-particle-19 {
   top: 45%;
   left: 45%;
-  animation: pulse 12s infinite 0.5s;
+  animation: helpPulse 12s infinite 0.5s;
 }
-.particle-20 {
+.help-particle-20 {
   top: 55%;
   left: 55%;
-  animation: pulse 10s infinite 2.5s;
+  animation: helpPulse 10s infinite 2.5s;
 }
 
-.need-help-hero-content {
+.help-page-hero-content {
   position: relative;
   z-index: 2;
   max-width: 1200px;
@@ -297,7 +297,7 @@
   padding: 0 20px;
 }
 
-.hero-badge {
+.help-hero-badge {
   display: inline-block;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
@@ -310,10 +310,10 @@
   margin-bottom: 20px;
   letter-spacing: 1px;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  animation: fadeInUp 1s ease 0.3s both;
+  animation: helpFadeInUp 1s ease 0.3s both;
 }
 
-.need-help-hero h1 {
+.help-page-hero h1 {
   font-size: 4rem;
   font-weight: 800;
   color: #ffffff;
@@ -321,10 +321,10 @@
   line-height: 1.2;
   letter-spacing: -0.5px;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  animation: fadeInUp 1s ease 0.5s both;
+  animation: helpFadeInUp 1s ease 0.5s both;
 }
 
-.gradient-text {
+.help-gradient-text {
   background: linear-gradient(to right, #0ffcbe, #0066ff);
   -webkit-background-clip: text;
   background-clip: text;
@@ -332,27 +332,27 @@
   display: inline-block;
 }
 
-.hero-line {
+.help-hero-line {
   width: 80px;
   height: 4px;
   background: linear-gradient(to right, #0ffcbe, #0066ff);
   margin: 30px auto 20px;
   border-radius: 2px;
   position: relative;
-  animation: fadeInUp 1s ease 0.7s both;
+  animation: helpFadeInUp 1s ease 0.7s both;
 }
 
-.hero-subtitle {
+.help-hero-subtitle {
   font-size: 1.2rem;
   color: rgba(255, 255, 255, 0.8);
   margin: 0 0 30px;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  animation: fadeInUp 1s ease 0.9s both;
+  animation: helpFadeInUp 1s ease 0.9s both;
 }
 
-.hero-button {
+.help-hero-button {
   background: linear-gradient(to right, #0ffcbe, #0066ff);
   color: #000;
   border: none;
@@ -367,23 +367,23 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  animation: fadeInUp 1s ease 1.1s both;
+  animation: helpFadeInUp 1s ease 1.1s both;
 }
 
-.hero-button:hover {
+.help-hero-button:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 25px rgba(15, 252, 190, 0.5);
 }
 
-.btn-icon {
+.help-btn-icon {
   transition: transform 0.3s ease;
 }
 
-.hero-button:hover .btn-icon {
+.help-hero-button:hover .help-btn-icon {
   transform: translateX(5px);
 }
 
-@keyframes fadeInUp {
+@keyframes helpFadeInUp {
   from {
     opacity: 0;
     transform: translateY(30px);
@@ -394,7 +394,7 @@
   }
 }
 
-@keyframes fadeInLeft {
+@keyframes helpFadeInLeft {
   from {
     opacity: 0;
     transform: translateX(-30px);
@@ -405,7 +405,7 @@
   }
 }
 
-@keyframes fadeInRight {
+@keyframes helpFadeInRight {
   from {
     opacity: 0;
     transform: translateX(30px);
@@ -417,26 +417,29 @@
 }
 
 /* Container Styling */
-.need-help-container {
+.help-page-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 100px 20px;
 }
 
 /* Section Badge */
-.section-badge {
-  display: inline-block;
+.help-section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   background: rgba(0, 102, 204, 0.1);
   border-radius: 30px;
-  padding: 6px 16px;
+  padding: 8px 16px;
   font-size: 0.8rem;
   font-weight: 600;
   color: #0066cc;
   margin-bottom: 15px;
   letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
-.section-title {
+.help-section-title {
   font-size: 2.5rem;
   font-weight: 800;
   color: #003366;
@@ -444,7 +447,7 @@
   position: relative;
 }
 
-.animated-title {
+.help-animated-title {
   background: linear-gradient(to right, #003366, #0066cc);
   -webkit-background-clip: text;
   background-clip: text;
@@ -452,7 +455,7 @@
   display: inline-block;
 }
 
-.section-title::after {
+.help-section-title::after {
   content: "";
   position: absolute;
   bottom: -10px;
@@ -463,7 +466,7 @@
   border-radius: 2px;
 }
 
-.section-description {
+.help-section-description {
   font-size: 1.1rem;
   line-height: 1.8;
   color: #444;
@@ -472,20 +475,20 @@
 }
 
 /* Need Help Content Section */
-.need-help-content {
+.help-page-content {
   margin-bottom: 80px;
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.need-help-content.animate {
+.help-page-content.animate {
   opacity: 1;
   transform: translateY(0);
 }
 
 /* Contact Options */
-.contact-options {
+.help-contact-options {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 25px;
@@ -493,7 +496,7 @@
 }
 
 /* Enhanced Contact Options */
-.contact-option {
+.help-contact-option {
   background: #ffffff;
   border-radius: 20px;
   padding: 35px 25px;
@@ -507,14 +510,14 @@
   animation-duration: 0.8s;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  animation-delay: calc(0.2s * var(--index, 1));
+  animation-delay: calc(0.2s * var(--help-index, 1));
   min-height: 320px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.contact-option::before {
+.help-contact-option::before {
   content: "";
   position: absolute;
   top: 0;
@@ -526,7 +529,7 @@
   transition: transform 0.6s ease;
 }
 
-.contact-option::after {
+.help-contact-option::after {
   content: "";
   position: absolute;
   top: 0;
@@ -539,28 +542,28 @@
   pointer-events: none;
 }
 
-.contact-option:hover {
+.help-contact-option:hover {
   transform: translateY(-15px) scale(1.02);
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
 }
 
-.contact-option:hover::before {
+.help-contact-option:hover::before {
   transform: scaleX(1);
 }
 
-.contact-option:hover::after {
+.help-contact-option:hover::after {
   opacity: 1;
 }
 
 /* Enhanced Icon Wrapper */
-.option-icon-wrapper {
+.help-option-icon-wrapper {
   position: relative;
   width: 90px;
   height: 90px;
   margin: 0 auto 25px;
 }
 
-.option-icon {
+.help-option-icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -576,7 +579,7 @@
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
-.option-icon-ring {
+.help-option-icon-ring {
   position: absolute;
   top: 0;
   left: 0;
@@ -584,11 +587,11 @@
   height: 100%;
   border-radius: 50%;
   border: 3px dashed rgba(0, 0, 0, 0.1);
-  animation: spin 20s linear infinite;
+  animation: helpSpin 20s linear infinite;
   transition: border-color 0.3s ease;
 }
 
-.option-icon-glow {
+.help-option-icon-glow {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -601,93 +604,102 @@
   z-index: 1;
 }
 
-.contact-option:hover .option-icon {
+.help-contact-option:hover .help-option-icon {
   transform: translate(-50%, -50%) scale(1.15) rotate(5deg);
 }
 
-.contact-option:hover .option-icon-ring {
+.help-contact-option:hover .help-option-icon-ring {
   animation-duration: 8s;
 }
 
-.contact-option:hover .option-icon-glow {
+.help-contact-option:hover .help-option-icon-glow {
   opacity: 0.3;
 }
 
+@keyframes helpSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /* Color-specific styling */
-.option-blue::before {
+.help-option-blue::before {
   background: linear-gradient(to right, #0066ff, #00a3ff);
 }
 
-.option-blue .option-icon {
+.help-option-blue .help-option-icon {
   background: linear-gradient(135deg, #e6f5ff 0%, rgba(16, 110, 190, 0.3) 100%);
   color: #106ebe;
   border: 2px solid rgba(16, 110, 190, 0.2);
 }
 
-.option-blue .option-icon-glow {
+.help-option-blue .help-option-icon-glow {
   background: radial-gradient(circle, rgba(16, 110, 190, 0.4) 0%, transparent 70%);
 }
 
-.option-blue:hover .option-icon-ring {
+.help-option-blue:hover .help-option-icon-ring {
   border-color: rgba(16, 110, 190, 0.4);
 }
 
-.option-green::before {
+.help-option-green::before {
   background: linear-gradient(to right, #0ffcbe, #00d084);
 }
 
-.option-green .option-icon {
+.help-option-green .help-option-icon {
   background: linear-gradient(135deg, #e6fff5 0%, rgba(15, 252, 190, 0.3) 100%);
   color: #02b48a;
   border: 2px solid rgba(15, 252, 190, 0.2);
 }
 
-.option-green .option-icon-glow {
+.help-option-green .help-option-icon-glow {
   background: radial-gradient(circle, rgba(15, 252, 190, 0.4) 0%, transparent 70%);
 }
 
-.option-green:hover .option-icon-ring {
+.help-option-green:hover .help-option-icon-ring {
   border-color: rgba(15, 252, 190, 0.4);
 }
 
-.option-linkedin::before {
+.help-option-linkedin::before {
   background: linear-gradient(to right, #0077b5, #005885);
 }
 
-.option-linkedin .option-icon {
+.help-option-linkedin .help-option-icon {
   background: linear-gradient(135deg, #e6f3ff 0%, rgba(0, 119, 181, 0.3) 100%);
   color: #0077b5;
   border: 2px solid rgba(0, 119, 181, 0.2);
 }
 
-.option-linkedin .option-icon-glow {
+.help-option-linkedin .help-option-icon-glow {
   background: radial-gradient(circle, rgba(0, 119, 181, 0.4) 0%, transparent 70%);
 }
 
-.option-linkedin:hover .option-icon-ring {
+.help-option-linkedin:hover .help-option-icon-ring {
   border-color: rgba(0, 119, 181, 0.4);
 }
 
-.option-purple::before {
+.help-option-purple::before {
   background: linear-gradient(to right, #8000ff, #a64dff);
 }
 
-.option-purple .option-icon {
+.help-option-purple .help-option-icon {
   background: linear-gradient(135deg, #f0e6ff 0%, rgba(128, 0, 255, 0.3) 100%);
   color: #8000ff;
   border: 2px solid rgba(128, 0, 255, 0.2);
 }
 
-.option-purple .option-icon-glow {
+.help-option-purple .help-option-icon-glow {
   background: radial-gradient(circle, rgba(128, 0, 255, 0.4) 0%, transparent 70%);
 }
 
-.option-purple:hover .option-icon-ring {
+.help-option-purple:hover .help-option-icon-ring {
   border-color: rgba(128, 0, 255, 0.4);
 }
 
 /* New Heading Styling */
-.option-heading {
+.help-option-heading {
   font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -697,29 +709,29 @@
   transition: all 0.3s ease;
 }
 
-.option-blue .option-heading {
+.help-option-blue .help-option-heading {
   color: #106ebe;
 }
 
-.option-green .option-heading {
+.help-option-green .help-option-heading {
   color: #02b48a;
 }
 
-.option-linkedin .option-heading {
+.help-option-linkedin .help-option-heading {
   color: #0077b5;
 }
 
-.option-purple .option-heading {
+.help-option-purple .help-option-heading {
   color: #8000ff;
 }
 
-.contact-option:hover .option-heading {
+.help-contact-option:hover .help-option-heading {
   opacity: 1;
   transform: translateY(-2px);
 }
 
 /* Enhanced Title and Description */
-.contact-option h3 {
+.help-contact-option h3 {
   font-size: 1.4rem;
   font-weight: 700;
   color: #003366;
@@ -727,11 +739,11 @@
   transition: color 0.3s ease;
 }
 
-.contact-option:hover h3 {
+.help-contact-option:hover h3 {
   color: #001a33;
 }
 
-.contact-option p {
+.help-contact-option p {
   font-size: 1rem;
   line-height: 1.6;
   color: #666;
@@ -739,12 +751,12 @@
   transition: color 0.3s ease;
 }
 
-.contact-option:hover p {
+.help-contact-option:hover p {
   color: #444;
 }
 
 /* Enhanced Info Container for Better Email Visibility */
-.option-info-container {
+.help-option-info-container {
   margin-bottom: 20px;
   min-height: 50px;
   display: flex;
@@ -752,7 +764,7 @@
   justify-content: center;
 }
 
-.option-info {
+.help-option-info {
   font-size: 1.1rem;
   font-weight: 600;
   color: #0066cc;
@@ -769,31 +781,31 @@
   text-align: center;
 }
 
-.option-green .option-info {
+.help-option-green .help-option-info {
   color: #02b48a;
   background: rgba(2, 180, 138, 0.05);
   border-color: rgba(2, 180, 138, 0.1);
 }
 
-.option-linkedin .option-info {
+.help-option-linkedin .help-option-info {
   color: #0077b5;
   background: rgba(0, 119, 181, 0.05);
   border-color: rgba(0, 119, 181, 0.1);
 }
 
-.option-purple .option-info {
+.help-option-purple .help-option-info {
   color: #8000ff;
   background: rgba(128, 0, 255, 0.05);
   border-color: rgba(128, 0, 255, 0.1);
 }
 
-.contact-option:hover .option-info {
+.help-contact-option:hover .help-option-info {
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Enhanced Action Button */
-.option-action-btn {
+.help-option-action-btn {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -811,7 +823,7 @@
   overflow: hidden;
 }
 
-.option-action-btn::before {
+.help-option-action-btn::before {
   content: "";
   position: absolute;
   top: 0;
@@ -822,87 +834,106 @@
   transition: left 0.6s ease;
 }
 
-.option-action-btn:hover::before {
+.help-option-action-btn:hover::before {
   left: 100%;
 }
 
-.fadeInLeft {
-  animation-name: fadeInLeft;
+.help-fadeInLeft {
+  animation-name: helpFadeInLeft;
 }
 
-.fadeInRight {
-  animation-name: fadeInRight;
+.help-fadeInRight {
+  animation-name: helpFadeInRight;
 }
 
-.fadeInUp {
-  animation-name: fadeInUp;
+.help-fadeInUp {
+  animation-name: helpFadeInUp;
 }
 
-.contact-option:nth-child(1) {
-  --index: 1;
+.help-contact-option:nth-child(1) {
+  --help-index: 1;
 }
 
-.contact-option:nth-child(2) {
-  --index: 2;
+.help-contact-option:nth-child(2) {
+  --help-index: 2;
 }
 
-.contact-option:nth-child(3) {
-  --index: 3;
+.help-contact-option:nth-child(3) {
+  --help-index: 3;
 }
 
-.contact-option:nth-child(4) {
-  --index: 4;
+.help-contact-option:nth-child(4) {
+  --help-index: 4;
 }
 
-.btn-blue {
+.help-btn-blue {
   background: linear-gradient(135deg, #106ebe 0%, #0066ff 100%);
   color: white;
 }
 
-.btn-green {
+.help-btn-green {
   background: linear-gradient(135deg, #02b48a 0%, #0ffcbe 100%);
   color: white;
 }
 
-.btn-linkedin {
+.help-btn-linkedin {
   background: linear-gradient(135deg, #0077b5 0%, #005885 100%);
   color: white;
 }
 
-.btn-purple {
+.help-btn-purple {
   background: linear-gradient(135deg, #8000ff 0%, #a64dff 100%);
   color: white;
 }
 
-.option-action-btn:hover {
+.help-option-action-btn:hover {
   transform: translateY(-3px) scale(1.05);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
 /* Support Features Section */
-.support-features-section {
+.help-support-features-wrapper {
   margin-bottom: 80px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.features-grid {
+.help-support-features-wrapper.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.help-features-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.help-features-header .help-section-title::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.help-support-features-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 25px;
+  gap: 30px;
 }
 
-.feature-card {
+.help-support-feature-card {
   background: #ffffff;
-  border-radius: 15px;
-  padding: 30px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   text-align: center;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
   z-index: 1;
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.feature-bg {
+.help-support-feature-bg {
   position: absolute;
   top: 0;
   left: 0;
@@ -913,217 +944,100 @@
   z-index: -1;
 }
 
-.feature-blue .feature-bg {
+.help-feature-blue .help-support-feature-bg {
   background: linear-gradient(135deg, rgba(0, 102, 255, 0.05) 0%, rgba(15, 252, 190, 0.05) 100%);
 }
 
-.feature-green .feature-bg {
+.help-feature-green .help-support-feature-bg {
   background: linear-gradient(135deg, rgba(15, 252, 190, 0.05) 0%, rgba(2, 180, 138, 0.05) 100%);
 }
 
-.feature-orange .feature-bg {
+.help-feature-orange .help-support-feature-bg {
   background: linear-gradient(135deg, rgba(255, 153, 0, 0.05) 0%, rgba(255, 106, 0, 0.05) 100%);
 }
 
-.feature-purple .feature-bg {
+.help-feature-purple .help-support-feature-bg {
   background: linear-gradient(135deg, rgba(128, 0, 255, 0.05) 0%, rgba(166, 77, 255, 0.05) 100%);
 }
 
-.feature-card:hover {
+.help-support-feature-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
 }
 
-.feature-card:hover .feature-bg {
+.help-support-feature-card:hover .help-support-feature-bg {
   opacity: 1;
 }
 
-.feature-icon {
+.help-support-feature-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   transition: transform 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-.icon-blue {
+.help-icon-blue {
   background: linear-gradient(135deg, #e6f5ff 0%, rgba(16, 110, 190, 0.2) 100%);
   color: #106ebe;
 }
 
-.icon-green {
+.help-icon-green {
   background: linear-gradient(135deg, #e6fff5 0%, rgba(15, 252, 190, 0.2) 100%);
   color: #02b48a;
 }
 
-.icon-orange {
+.help-icon-orange {
   background: linear-gradient(135deg, #fff5e6 0%, rgba(255, 153, 0, 0.2) 100%);
   color: #ff9900;
 }
 
-.icon-purple {
+.help-icon-purple {
   background: linear-gradient(135deg, #f0e6ff 0%, rgba(128, 0, 255, 0.2) 100%);
   color: #8000ff;
 }
 
-.feature-card:hover .feature-icon {
-  transform: scale(1.1);
+.help-support-feature-card:hover .help-support-feature-icon {
+  transform: scale(1.1) rotate(5deg);
 }
 
-.feature-card h3 {
-  font-size: 1.3rem;
+.help-support-feature-title {
+  font-size: 1.4rem;
   font-weight: 700;
   color: #003366;
-  margin: 0 0 10px 0;
+  margin: 0 0 16px 0;
+  line-height: 1.3;
 }
 
-.feature-card p {
-  font-size: 0.95rem;
+.help-support-feature-description {
+  font-size: 1rem;
   line-height: 1.6;
   color: #555;
   margin: 0;
 }
 
-/* Stats Section */
-.stats-section {
-  margin-bottom: 80px;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.stats-section.animate {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.stats-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 25px;
-  margin-top: 20px;
-}
-
-.stat-card {
-  background: #ffffff;
-  border-radius: 15px;
-  padding: 30px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  text-align: center;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.stat-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: -1;
-}
-
-.stat-blue .stat-bg {
-  background: linear-gradient(135deg, rgba(0, 102, 255, 0.05) 0%, rgba(15, 252, 190, 0.05) 100%);
-}
-
-.stat-green .stat-bg {
-  background: linear-gradient(135deg, rgba(15, 252, 190, 0.05) 0%, rgba(2, 180, 138, 0.05) 100%);
-}
-
-.stat-orange .stat-bg {
-  background: linear-gradient(135deg, rgba(255, 153, 0, 0.05) 0%, rgba(255, 106, 0, 0.05) 100%);
-}
-
-.stat-purple .stat-bg {
-  background: linear-gradient(135deg, rgba(128, 0, 255, 0.05) 0%, rgba(166, 77, 255, 0.05) 100%);
-}
-
-.stat-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-}
-
-.stat-card:hover .stat-bg {
-  opacity: 1;
-}
-
-.stat-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  margin-bottom: 15px;
-  transition: transform 0.3s ease;
-}
-
-.stat-icon-blue {
-  background: linear-gradient(135deg, #e6f5ff 0%, rgba(16, 110, 190, 0.2) 100%);
-  color: #106ebe;
-}
-
-.stat-icon-green {
-  background: linear-gradient(135deg, #e6fff5 0%, rgba(15, 252, 190, 0.2) 100%);
-  color: #02b48a;
-}
-
-.stat-icon-orange {
-  background: linear-gradient(135deg, #fff5e6 0%, rgba(255, 153, 0, 0.2) 100%);
-  color: #ff9900;
-}
-
-.stat-icon-purple {
-  background: linear-gradient(135deg, #f0e6ff 0%, rgba(128, 0, 255, 0.2) 100%);
-  color: #8000ff;
-}
-
-.stat-card:hover .stat-icon {
-  transform: scale(1.1);
-}
-
-.stat-value {
-  font-size: 2.5rem;
-  font-weight: 800;
-  background: linear-gradient(135deg, #0066ff 0%, #0ffcbe 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  margin-bottom: 5px;
-}
-
-.stat-label {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #555;
-}
-
 /* FAQ Section */
-.faq-section {
+.help-faq-section {
   margin-bottom: 80px;
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.faq-section.animate {
+.help-faq-section.animate {
   opacity: 1;
   transform: translateY(0);
 }
 
-.faq-container {
+.help-faq-container {
   margin-top: 40px;
 }
 
-.faq-item {
+.help-faq-item {
   background: #ffffff;
   border-radius: 10px;
   margin-bottom: 15px;
@@ -1133,11 +1047,11 @@
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.faq-item:hover {
+.help-faq-item:hover {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
-.faq-question {
+.help-faq-question {
   padding: 20px 25px;
   display: flex;
   justify-content: space-between;
@@ -1148,23 +1062,23 @@
   font-size: 1.1rem;
 }
 
-.faq-icon {
+.help-faq-icon {
   position: relative;
   width: 20px;
   height: 20px;
   flex-shrink: 0;
 }
 
-.plus-icon::before,
-.plus-icon::after,
-.minus-icon::before {
+.help-plus-icon::before,
+.help-plus-icon::after,
+.help-minus-icon::before {
   content: "";
   position: absolute;
   background-color: #0066cc;
   transition: all 0.3s ease;
 }
 
-.plus-icon::before {
+.help-plus-icon::before {
   top: 50%;
   left: 0;
   width: 100%;
@@ -1172,7 +1086,7 @@
   transform: translateY(-50%);
 }
 
-.plus-icon::after {
+.help-plus-icon::after {
   top: 0;
   left: 50%;
   width: 2px;
@@ -1180,7 +1094,7 @@
   transform: translateX(-50%);
 }
 
-.minus-icon::before {
+.help-minus-icon::before {
   top: 50%;
   left: 0;
   width: 100%;
@@ -1188,19 +1102,19 @@
   transform: translateY(-50%);
 }
 
-.faq-answer {
+.help-faq-answer {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
   padding: 0 25px;
 }
 
-.faq-item.active .faq-answer {
+.help-faq-item.help-faq-active .help-faq-answer {
   max-height: 300px;
   padding-bottom: 20px;
 }
 
-.faq-answer p {
+.help-faq-answer p {
   margin: 0;
   color: #555;
   line-height: 1.6;
@@ -1208,7 +1122,7 @@
 }
 
 /* Help CTA Section */
-.help-cta {
+.help-cta-section {
   background: linear-gradient(135deg, #040d21 0%, #0a1f3d 100%);
   border-radius: 20px;
   padding: 60px;
@@ -1220,14 +1134,14 @@
   justify-content: center;
 }
 
-.cta-content {
+.help-cta-content {
   position: relative;
   z-index: 2;
   text-align: center;
   max-width: 700px;
 }
 
-.help-cta h2 {
+.help-cta-section h2 {
   font-size: 2.5rem;
   font-weight: 700;
   margin: 0 0 20px 0;
@@ -1237,21 +1151,21 @@
   color: transparent;
 }
 
-.help-cta p {
+.help-cta-section p {
   font-size: 1.2rem;
   line-height: 1.6;
   margin: 0 0 30px 0;
   color: rgba(255, 255, 255, 0.8);
 }
 
-.cta-buttons {
+.help-cta-buttons {
   display: flex;
   gap: 20px;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.cta-button {
+.help-cta-button {
   padding: 15px 30px;
   border-radius: 30px;
   font-family: "Poppins", sans-serif;
@@ -1266,13 +1180,13 @@
   border: none;
 }
 
-.cta-button.primary {
+.help-cta-primary {
   background: linear-gradient(to right, #0ffcbe, #0066ff);
   color: #000;
   box-shadow: 0 4px 20px rgba(15, 252, 190, 0.3);
 }
 
-.cta-button.secondary {
+.help-cta-secondary {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -1280,23 +1194,23 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.cta-button:hover {
+.help-cta-button:hover {
   transform: translateY(-3px);
 }
 
-.cta-button.primary:hover {
+.help-cta-primary:hover {
   box-shadow: 0 6px 25px rgba(15, 252, 190, 0.5);
 }
 
-.cta-button.secondary:hover {
+.help-cta-secondary:hover {
   background: rgba(255, 255, 255, 0.2);
 }
 
-.cta-button:hover .btn-icon {
+.help-cta-button:hover .help-btn-icon {
   transform: translateX(5px);
 }
 
-.cta-decoration {
+.help-cta-decoration {
   position: absolute;
   top: 0;
   left: 0;
@@ -1305,243 +1219,264 @@
   z-index: 1;
 }
 
-.cta-circle {
+.help-cta-circle {
   position: absolute;
   border-radius: 50%;
   filter: blur(40px);
 }
 
-.circle-1 {
+.help-circle-1 {
   top: -20%;
   left: -10%;
   width: 300px;
   height: 300px;
   background: rgba(0, 102, 255, 0.2);
-  animation: float 15s ease-in-out infinite;
+  animation: helpFloat 15s ease-in-out infinite;
 }
 
-.circle-2 {
+.help-circle-2 {
   bottom: -20%;
   right: -10%;
   width: 250px;
   height: 250px;
   background: rgba(15, 252, 190, 0.15);
-  animation: float 20s ease-in-out infinite reverse;
+  animation: helpFloat 20s ease-in-out infinite reverse;
 }
 
-.circle-3 {
+.help-circle-3 {
   top: 30%;
   right: 20%;
   width: 200px;
   height: 200px;
   background: rgba(128, 0, 255, 0.1);
-  animation: float 18s ease-in-out infinite 2s;
+  animation: helpFloat 18s ease-in-out infinite 2s;
 }
 
 /* Responsive Styles */
 @media (max-width: 1024px) {
-  .need-help-hero h1 {
+  .help-page-hero h1 {
     font-size: 3.5rem;
   }
 
-  .contact-options,
-  .features-grid,
-  .stats-container {
+  .help-contact-options,
+  .help-support-features-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
 
-  .section-title {
+  .help-section-title {
     font-size: 2.2rem;
   }
 
-  .help-cta {
+  .help-cta-section {
     padding: 50px 40px;
   }
 
-  .help-cta h2 {
+  .help-cta-section h2 {
     font-size: 2.2rem;
   }
 
-  .option-info {
+  .help-option-info {
     font-size: 1rem;
   }
 }
 
 @media (max-width: 768px) {
-  .need-help-hero {
+  .help-page-hero {
     padding: 100px 0;
   }
 
-  .need-help-hero h1 {
+  .help-page-hero h1 {
     font-size: 2.8rem;
   }
 
-  .hero-subtitle {
+  .help-hero-subtitle {
     font-size: 1.1rem;
   }
 
-  .need-help-container {
+  .help-page-container {
     padding: 80px 20px;
   }
 
-  .contact-options,
-  .features-grid,
-  .stats-container {
+  .help-contact-options,
+  .help-support-features-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
 
-  .help-cta {
+  .help-cta-section {
     padding: 40px 30px;
   }
 
-  .help-cta h2 {
+  .help-cta-section h2 {
     font-size: 2rem;
   }
 
-  .help-cta p {
+  .help-cta-section p {
     font-size: 1.1rem;
   }
 
-  .section-title {
+  .help-section-title {
     font-size: 2rem;
   }
 
-  .cta-buttons {
+  .help-cta-buttons {
     flex-direction: column;
     gap: 15px;
   }
 
-  .contact-option {
+  .help-contact-option {
     padding: 25px 20px;
     min-height: 280px;
   }
 
-  .option-heading {
+  .help-option-heading {
     font-size: 0.8rem;
   }
 
-  .contact-option h3 {
+  .help-contact-option h3 {
     font-size: 1.2rem;
   }
 
-  .contact-option p {
+  .help-contact-option p {
     font-size: 0.95rem;
   }
 
-  .option-info {
+  .help-option-info {
     font-size: 0.95rem;
     padding: 6px 10px;
   }
 
-  .option-action-btn {
+  .help-option-action-btn {
     padding: 10px 20px;
     font-size: 0.9rem;
   }
 }
 
 @media (max-width: 480px) {
-  .need-help-hero {
+  .help-page-hero {
     padding: 80px 0;
   }
 
-  .need-help-hero h1 {
+  .help-page-hero h1 {
     font-size: 2.2rem;
   }
 
-  .hero-subtitle {
+  .help-hero-subtitle {
     font-size: 1rem;
   }
 
-  .hero-badge {
+  .help-hero-badge {
     font-size: 0.8rem;
     padding: 6px 16px;
   }
 
-  .hero-line {
+  .help-hero-line {
     width: 60px;
     margin: 20px auto 15px;
   }
 
-  .need-help-container {
+  .help-page-container {
     padding: 60px 15px;
   }
 
-  .help-cta {
+  .help-cta-section {
     padding: 30px 20px;
   }
 
-  .help-cta h2 {
+  .help-cta-section h2 {
     font-size: 1.8rem;
   }
 
-  .cta-button {
+  .help-cta-button {
     width: 100%;
     justify-content: center;
     padding: 12px 25px;
     font-size: 0.9rem;
   }
 
-  .section-title {
+  .help-section-title {
     font-size: 1.8rem;
   }
 
-  .section-badge {
+  .help-section-badge {
     font-size: 0.7rem;
     padding: 5px 14px;
   }
 
-  .faq-question {
+  .help-faq-question {
     font-size: 1rem;
     padding: 15px 20px;
   }
 
-  .option-action-btn {
+  .help-option-action-btn {
     padding: 8px 16px;
     font-size: 0.8rem;
   }
 
-  .contact-option {
+  .help-contact-option {
     padding: 20px 15px;
     min-height: 260px;
   }
 
-  .option-icon-wrapper {
+  .help-option-icon-wrapper {
     width: 70px;
     height: 70px;
     margin-bottom: 15px;
   }
 
-  .option-icon {
+  .help-option-icon {
     width: 55px;
     height: 55px;
   }
 
-  .option-heading {
+  .help-option-heading {
     font-size: 0.75rem;
     margin-bottom: 6px;
   }
 
-  .contact-option h3 {
+  .help-contact-option h3 {
     font-size: 1.1rem;
     margin-bottom: 8px;
   }
 
-  .contact-option p {
+  .help-contact-option p {
     font-size: 0.9rem;
     margin-bottom: 15px;
   }
 
-  .option-info {
+  .help-option-info {
     font-size: 0.85rem;
     padding: 5px 8px;
     line-height: 1.3;
   }
 
-  .option-action-btn {
+  .help-option-action-btn {
     padding: 8px 16px;
     font-size: 0.85rem;
     gap: 8px;
+  }
+
+  .help-support-features-grid {
+    gap: 16px;
+  }
+
+  .help-support-feature-card {
+    padding: 30px 20px;
+  }
+
+  .help-support-feature-icon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 20px;
+  }
+
+  .help-support-feature-title {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+  }
+
+  .help-support-feature-description {
+    font-size: 0.9rem;
   }
 }

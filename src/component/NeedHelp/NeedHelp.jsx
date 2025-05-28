@@ -11,15 +11,12 @@ import {
   BookOpen,
   BarChart2,
   Shield,
-  Users,
-  Zap,
-  Award,
-  ThumbsUp,
   HelpCircle,
   Linkedin,
   ExternalLink,
 } from "lucide-react"
 import "./NeedHelp.css"
+import ContactUs from "../LandingPage/ContactUs/ContactUs"
 
 const NeedHelp = () => {
   const sectionRef = useRef(null)
@@ -199,33 +196,6 @@ const NeedHelp = () => {
     },
   ]
 
-  const stats = [
-    {
-      icon: <Users size={28} />,
-      value: "50+",
-      label: "Happy Clients",
-      color: "blue",
-    },
-    {
-      icon: <Award size={28} />,
-      value: "93%",
-      label: "Success Rate",
-      color: "green",
-    },
-    {
-      icon: <Zap size={28} />,
-      value: "24/7",
-      label: "Support Access",
-      color: "orange",
-    },
-    {
-      icon: <ThumbsUp size={28} />,
-      value: "100%",
-      label: "Satisfaction",
-      color: "purple",
-    },
-  ]
-
   const supportFeatures = [
     {
       icon: <Shield size={32} />,
@@ -254,87 +224,87 @@ const NeedHelp = () => {
   ]
 
   return (
-    <section className="need-help-section">
-      <div className="need-help-hero" ref={sectionRef}>
-        <div className="hero-background">
-          <div className="hero-shape shape-1"></div>
-          <div className="hero-shape shape-2"></div>
-          <div className="hero-shape shape-3"></div>
-          <div className="hero-particles">
+    <section className="help-page-section">
+      <div className="help-page-hero" ref={sectionRef}>
+        <div className="help-hero-background">
+          <div className="help-hero-shape help-shape-1"></div>
+          <div className="help-hero-shape help-shape-2"></div>
+          <div className="help-hero-shape help-shape-3"></div>
+          <div className="help-hero-particles">
             {[...Array(20)].map((_, i) => (
-              <div key={i} className={`particle particle-${i + 1}`}></div>
+              <div key={i} className={`help-particle help-particle-${i + 1}`}></div>
             ))}
           </div>
         </div>
-        <div className="need-help-hero-content">
-          <div className="hero-badge">SUPPORT</div>
+        <div className="help-page-hero-content">
+          <div className="help-hero-badge">SUPPORT</div>
           <h1>
             NEED HELP?
             <br />
-            <span className="gradient-text">WE'VE GOT YOU COVERED</span>
+            <span className="help-gradient-text">WE'VE GOT YOU COVERED</span>
           </h1>
-          <div className="hero-line"></div>
-          <p className="hero-subtitle">
+          <div className="help-hero-line"></div>
+          <p className="help-hero-subtitle">
             Our team of Amazon experts is ready to assist you with any questions or challenges you're facing
           </p>
           <button
-            className="hero-button"
+            className="help-hero-button"
             onClick={() => document.getElementById("contact-options").scrollIntoView({ behavior: "smooth" })}
           >
-            Contact Us Now <ArrowRight size={16} className="btn-icon" />
+            Contact Us Now <ArrowRight size={16} className="help-btn-icon" />
           </button>
         </div>
 
-        <div className="floating-icons">
-          <div className="floating-icon icon-1">
+        <div className="help-floating-icons">
+          <div className="help-floating-icon help-icon-1">
             <Mail size={20} />
           </div>
-          <div className="floating-icon icon-2">
+          <div className="help-floating-icon help-icon-2">
             <Phone size={20} />
           </div>
-          <div className="floating-icon icon-3">
+          <div className="help-floating-icon help-icon-3">
             <HelpCircle size={20} />
           </div>
-          <div className="floating-icon icon-4">
+          <div className="help-floating-icon help-icon-4">
             <CheckCircle size={20} />
           </div>
-          <div className="floating-icon icon-5">
+          <div className="help-floating-icon help-icon-5">
             <Shield size={20} />
           </div>
         </div>
       </div>
 
-      <div className="need-help-container">
-        <div className="need-help-content" ref={contentRef} id="contact-options">
-          <div className="section-badge">HOW WE CAN HELP</div>
-          <h2 className="section-title animated-title">We're Here For You</h2>
-          <p className="section-description">
-            At Vix Commerce, we understand that navigating the Amazon marketplace can be challenging. Whether you're
+      <div className="help-page-container">
+        <div className="help-page-content" ref={contentRef} id="contact-options">
+          <div className="help-section-badge">How can we help</div>
+          <h2 className="help-section-title help-animated-title">We're here for you</h2>
+          <p className="help-section-description">
+            At VixCommerce, we understand that navigating the Amazon marketplace can be challenging. Whether you're
             facing technical issues, have questions about our services, or need strategic advice for your Amazon
             business, our dedicated team is here to provide the support you need.
           </p>
 
-          <div className="contact-options">
+          <div className="help-contact-options">
             {contactOptions.map((option, index) => (
               <div
                 key={index}
-                className={`contact-option option-${option.color} ${option.animation}`}
+                className={`help-contact-option help-option-${option.color} help-${option.animation}`}
                 onClick={option.action}
                 style={{ cursor: option.action ? "pointer" : "default" }}
               >
-                <div className="option-icon-wrapper">
-                  <div className="option-icon">{option.icon}</div>
-                  <div className="option-icon-ring"></div>
-                  <div className="option-icon-glow"></div>
+                <div className="help-option-icon-wrapper">
+                  <div className="help-option-icon">{option.icon}</div>
+                  <div className="help-option-icon-ring"></div>
+                  <div className="help-option-icon-glow"></div>
                 </div>
-                <div className="option-heading">{option.heading}</div>
+                <div className="help-option-heading">{option.heading}</div>
                 <h3>{option.title}</h3>
                 <p>{option.description}</p>
-                <div className="option-info-container">
-                  <div className="option-info">{option.info}</div>
+                <div className="help-option-info-container">
+                  <div className="help-option-info">{option.info}</div>
                 </div>
                 {option.action && (
-                  <button className={`option-action-btn btn-${option.color}`}>
+                  <button className={`help-option-action-btn help-btn-${option.color}`}>
                     {option.actionIcon}
                     <span>{option.actionText}</span>
                   </button>
@@ -344,52 +314,54 @@ const NeedHelp = () => {
           </div>
         </div>
 
-        <div className="support-features-section" ref={featuresRef}>
-          <div className="features-grid">
+        {/* Support Features Section with Heading */}
+        <div className="help-support-features-wrapper" ref={featuresRef}>
+          <div className="help-features-header">
+            <div className="help-section-badge">
+              <Shield size={16} />
+              SUPPORT FEATURES
+            </div>
+            <h2 className="help-section-title">How We Support You</h2>
+            <p className="help-section-description">
+              Our comprehensive support system is designed to provide you with the assistance you need, when you need
+              it. From expert guidance to troubleshooting, we're here to help you succeed.
+            </p>
+          </div>
+
+          <div className="help-support-features-grid">
             {supportFeatures.map((feature, index) => (
-              <div key={index} className={`feature-card feature-${feature.color}`}>
-                <div className={`feature-icon icon-${feature.color}`}>{feature.icon}</div>
-                <h3>{feature.title}</h3>
-                <p>{feature.description}</p>
-                <div className="feature-bg"></div>
+              <div key={index} className={`help-support-feature-card help-feature-${feature.color}`}>
+                <div className={`help-support-feature-icon help-icon-${feature.color}`}>{feature.icon}</div>
+                <h3 className="help-support-feature-title">{feature.title}</h3>
+                <p className="help-support-feature-description">{feature.description}</p>
+                <div className="help-support-feature-bg"></div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* <div className="stats-section" ref={statsRef}>
-          <div className="section-badge">OUR COMMITMENT</div>
-          <h2 className="section-title">Why Choose Our Support</h2>
-          <div className="stats-container">
-            {stats.map((stat, index) => (
-              <div key={index} className={`stat-card stat-${stat.color}`}>
-                <div className={`stat-icon stat-icon-${stat.color}`}>{stat.icon}</div>
-                <div className="stat-value">{stat.value}</div>
-                <div className="stat-label">{stat.label}</div>
-                <div className="stat-bg"></div>
-              </div>
-            ))}
-          </div>
-        </div> */}
+        <div className="help-faq-section" ref={faqRef}>
+          <div className="help-section-badge">FREQUENTLY ASKED QUESTIONS</div>
+          <h2 className="help-section-title">Common Questions</h2>
 
-        <div className="faq-section" ref={faqRef}>
-          <div className="section-badge">FREQUENTLY ASKED QUESTIONS</div>
-          <h2 className="section-title">Common Questions</h2>
-
-          <div className="faq-container">
+          <div className="help-faq-container">
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className={`faq-item ${activeQuestion === index ? "active" : ""}`}
+                className={`help-faq-item ${activeQuestion === index ? "help-faq-active" : ""}`}
                 onClick={() => toggleQuestion(index)}
               >
-                <div className="faq-question">
+                <div className="help-faq-question">
                   <span>{faq.question}</span>
-                  <div className="faq-icon">
-                    {activeQuestion === index ? <div className="minus-icon"></div> : <div className="plus-icon"></div>}
+                  <div className="help-faq-icon">
+                    {activeQuestion === index ? (
+                      <div className="help-minus-icon"></div>
+                    ) : (
+                      <div className="help-plus-icon"></div>
+                    )}
                   </div>
                 </div>
-                <div className="faq-answer">
+                <div className="help-faq-answer">
                   <p>{faq.answer}</p>
                 </div>
               </div>
@@ -397,29 +369,30 @@ const NeedHelp = () => {
           </div>
         </div>
 
-        <div className="help-cta">
-          <div className="cta-content">
+        <div className="help-cta-section">
+          <div className="help-cta-content">
             <h2>Still Have Questions?</h2>
             <p>Our team is ready to provide personalized assistance for your specific needs</p>
-            <div className="cta-buttons">
+            <div className="help-cta-buttons">
               <button
-                className="cta-button primary"
+                className="help-cta-button help-cta-primary"
                 onClick={() => handleEmailClick("brandmanagement@vixcommerce.com")}
               >
-                Email Us <Mail size={16} className="btn-icon" />
+                Email Us <Mail size={16} className="help-btn-icon" />
               </button>
-              <button className="cta-button secondary" onClick={handlePhoneClick}>
-                Call Now <Phone size={16} className="btn-icon" />
+              <button className="help-cta-button help-cta-secondary" onClick={handlePhoneClick}>
+                Call Now <Phone size={16} className="help-btn-icon" />
               </button>
             </div>
           </div>
-          <div className="cta-decoration">
-            <div className="cta-circle circle-1"></div>
-            <div className="cta-circle circle-2"></div>
-            <div className="cta-circle circle-3"></div>
+          <div className="help-cta-decoration">
+            <div className="help-cta-circle help-circle-1"></div>
+            <div className="help-cta-circle help-circle-2"></div>
+            <div className="help-cta-circle help-circle-3"></div>
           </div>
         </div>
       </div>
+      <ContactUs />
     </section>
   )
 }

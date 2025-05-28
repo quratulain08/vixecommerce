@@ -7,19 +7,18 @@ import { useNavigate } from "react-router-dom"
 import Testimonial from "../../LandingPage/Testimonial/Testimonial"
 import Brand from "../../LandingPage/FeaturedPartners/FeaturedPartners"
 
-
 const Sourcing = () => {
   const sectionRef = useRef(null)
   const contentRef = useRef(null)
   const servicesRef = useRef([])
-   const navigate = useNavigate();
-  
-    const handleGetStartedClick = () =>{
-      navigate('/contact')
-    }
+  const navigate = useNavigate()
+
+  const handleGetStartedClick = () => {
+    navigate("/contact")
+  }
 
   useEffect(() => {
-     window.scrollTo(0,0);
+    window.scrollTo(0, 0)
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -136,7 +135,7 @@ const Sourcing = () => {
 
       <div className="sourcing-container">
         <div className="sourcing-content" ref={contentRef}>
-          <div className="sourcing-text">
+          <div className="overview-section">
             <div className="section-badge">OVERVIEW</div>
             <h2 className="section-title">Sourcing Excellence</h2>
             <p>
@@ -150,18 +149,7 @@ const Sourcing = () => {
             </p>
           </div>
 
-          <div className="sourcing-benefits">
-            <h3>Benefits of Our Sourcing</h3>
-            <ul className="benefits-list">
-              {benefits.map((benefit, index) => (
-                <li key={index} className="benefit-item">
-                  <CheckCircle size={20} className="benefit-icon" />
-                  <span>{benefit}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+          
 
         <div className="service-process">
           <div className="section-badge">WHAT WE OFFER</div>
@@ -180,6 +168,20 @@ const Sourcing = () => {
                 <p>{service.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+        <div className="benefits-section">
+            <h3 className="benefits-title">Benefits of Our Sourcing</h3>
+            <div className="benefits-grid">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="benefit-card">
+                  <div className="benefit-icon-wrapper">
+                    <CheckCircle size={24} className="benefit-icon" />
+                  </div>
+                  <span className="benefit-text">{benefit}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -281,8 +283,8 @@ const Sourcing = () => {
           </button>
         </div>
       </div>
-       <Testimonial/>
-      <Brand/>
+      <Testimonial />
+      <Brand />
     </section>
   )
 }

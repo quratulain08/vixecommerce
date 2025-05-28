@@ -161,20 +161,7 @@ const BrandLaunch = () => {
             </p>
           </div>
 
-          <div className="benefits-section">
-            <h3 className="benefits-title">Why Choose Our Launch Service</h3>
-            <div className="benefits-grid">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="benefit-card">
-                  <div className="benefit-icon-wrapper">
-                    <CheckCircle size={24} className="benefit-icon" />
-                  </div>
-                  <span className="benefit-text">{benefit}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+          
 
         <div className="service-process">
           <div className="section-badge">OUR PROCESS</div>
@@ -193,6 +180,20 @@ const BrandLaunch = () => {
                 <p>{step.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+        <div className="benefits-section">
+            <h3 className="benefits-title">Why Choose Our Launch Service</h3>
+            <div className="benefits-grid">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="benefit-card">
+                  <div className="benefit-icon-wrapper">
+                    <CheckCircle size={24} className="benefit-icon" />
+                  </div>
+                  <span className="benefit-text">{benefit}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 

@@ -1,13 +1,21 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import { ArrowUpRight } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import "./CaseStudy1.css"
 import casestudy1Image1 from "../../../assets/casestudy1-1.png"
 import casestudy1Image2 from "../../../assets/casestudy1-2.png"
+import { useNavigate } from "react-router-dom"
+import Testimonials from "../../LandingPage/Testimonial/Testimonial"
+import FeaturedPartners from "../../LandingPage/FeaturedPartners/FeaturedPartners"
 
 const CaseStudy1 = () => {
   const statsRef = useRef(null)
+  const navigate = useNavigate()
+
+  const handleGetStartedClick = () => {
+    navigate("/contact")
+  }
 
   // Animation for stats when they come into view
   useEffect(() => {
@@ -40,7 +48,7 @@ const CaseStudy1 = () => {
 
   return (
     <section className="case-study-section">
-      {/* Hero Section - Updated with Brand Launch Theme */}
+      {/* Hero Section */}
       <div className="case-hero">
         <div className="hero-background">
           <div className="hero-shape shape-1"></div>
@@ -57,17 +65,17 @@ const CaseStudy1 = () => {
             <div className="hero-badge">CASE STUDY</div>
             <h1 className="case-hero-title">
               European Market <span className="gradient-text">Expansion</span>
-              <br />
-              <span className="gradient-text">€2.3M</span> Monthly Revenue
+              {/* <br />
+              <span className="gradient-text">€2.3M</span> Monthly Revenue */}
             </h1>
             <div className="hero-line"></div>
             <p className="case-hero-description">
               How we launched an Amazon store in Germany and expanded across Europe, achieving €2.3M monthly revenue and
               extraordinary growth in just over a year.
             </p>
-            {/* <button className="case-cta-button">
-              Get Similar Results <ArrowUpRight size={18} />
-            </button> */}
+            <button className="case-cta-button" onClick={handleGetStartedClick}>
+              Request an Audit <ArrowRight size={18} />
+            </button>
           </div>
         </div>
       </div>
@@ -189,6 +197,8 @@ const CaseStudy1 = () => {
           </div>
         </div>
       </div>
+      <Testimonials/>
+      <FeaturedPartners/>
     </section>
   )
 }

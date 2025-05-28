@@ -1,13 +1,21 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import { ArrowUpRight } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import "./CaseStudy2.css"
 import casestudy2Image1 from "../../../assets/casestudy2-1.png"
 import casestudy2Image2 from "../../../assets/casestudy2-2.png"
+import { useNavigate } from "react-router-dom"
+import Testimonials from "../../LandingPage/Testimonial/Testimonial"
+import FeaturedPartners from "../../LandingPage/FeaturedPartners/FeaturedPartners"
 
 const CaseStudy2 = () => {
   const statsRef = useRef(null)
+  const navigate = useNavigate()
+
+  const handleGetStartedClick = () => {
+    navigate("/contact")
+  }
 
   // Animation for stats when they come into view
   useEffect(() => {
@@ -40,7 +48,7 @@ const CaseStudy2 = () => {
 
   return (
     <section className="cs2-section">
-      {/* Hero Section - Updated with Brand Launch Theme */}
+      {/* Hero Section */}
       <div className="cs2-hero">
         <div className="hero-background">
           <div className="hero-shape shape-1"></div>
@@ -54,20 +62,20 @@ const CaseStudy2 = () => {
         </div>
         <div className="cs2-container">
           <div className="cs2-hero-content">
-            <div className="hero-badge">CASE STUDY </div>
+            <div className="hero-badge">CASE STUDY</div>
             <h1 className="cs2-hero-title">
               Double Sales With <span className="gradient-text">Half Ad-Spend</span>
-              <br />
-              For Amazon UK Brand
+              {/* <br />
+              For Amazon UK Brand */}
             </h1>
             <div className="hero-line"></div>
             <p className="cs2-hero-description">
               See how we transformed a struggling TV brand on Amazon UK by optimizing listings and reducing ad spend
               while dramatically increasing sales and organic rankings.
             </p>
-            {/* <button className="cs2-cta-button">
-              Get Similar Results <ArrowUpRight size={18} />
-            </button> */}
+            <button className="cs2-cta-button" onClick={handleGetStartedClick}>
+              Request an Audit <ArrowRight size={18} />
+            </button>
           </div>
         </div>
       </div>
@@ -100,27 +108,48 @@ const CaseStudy2 = () => {
       <div className="cs2-content">
         <div className="cs2-container">
           <div className="cs2-section">
-            <h2 className="cs2-section-title">Project Overview</h2>
-            <div className="cs2-project-details">
-              <div className="cs2-detail-item">
-                <span className="cs2-detail-label">Project Started:</span>
-                <span className="cs2-detail-value">November 2023</span>
+            <h2 className="cs2-section-title">How We Did It</h2>
+            <h3 className="cs2-section-subtitle">How We Transformed Their Amazon Presence</h3>
+            <div className="cs2-approach-grid">
+              <div className="cs2-approach-item">
+                <div className="cs2-approach-number">01</div>
+                <h4 className="cs2-approach-title">Comprehensive Audit</h4>
+                <p className="cs2-approach-text">
+                  We conducted a thorough analysis of all 100+ product listings, identifying key areas for improvement
+                  in images, copy, and keyword strategy.
+                </p>
               </div>
-              <div className="cs2-detail-item">
-                <span className="cs2-detail-label">Category/Product Type:</span>
-                <span className="cs2-detail-value">TVs</span>
+              <div className="cs2-approach-item">
+                <div className="cs2-approach-number">02</div>
+                <h4 className="cs2-approach-title">Content Optimization</h4>
+                <p className="cs2-approach-text">
+                  Our copywriters completely revamped the bullet points to highlight key features and benefits while
+                  incorporating high-value keywords.
+                </p>
               </div>
-              <div className="cs2-detail-item">
-                <span className="cs2-detail-label">Number of SKUs:</span>
-                <span className="cs2-detail-value">100+ Products</span>
+              <div className="cs2-approach-item">
+                <div className="cs2-approach-number">03</div>
+                <h4 className="cs2-approach-title">Visual Enhancement</h4>
+                <p className="cs2-approach-text">
+                  We created new product images that clearly showcased the unique selling propositions of each TV model,
+                  improving conversion rates.
+                </p>
+              </div>
+              <div className="cs2-approach-item">
+                <div className="cs2-approach-number">04</div>
+                <h4 className="cs2-approach-title">Ad Campaign Refinement</h4>
+                <p className="cs2-approach-text">
+                  We restructured PPC campaigns to focus on high-converting keywords, eliminating wasted ad spend and
+                  improving TACOS dramatically.
+                </p>
               </div>
             </div>
           </div>
 
           <div className="cs2-section-alt">
-            <h2 className="cs2-section-title">Problem, Solution & Results</h2>
+            <h2 className="cs2-section-title">Challenge, Solution & Results</h2>
             <div className="cs2-problem-section">
-              <h3 className="cs2-card-title">Problem</h3>
+              <h3 className="cs2-card-title">Challenge</h3>
               <div className="cs2-text-with-image">
                 <div className="cs2-text">
                   <p>
@@ -158,47 +187,10 @@ const CaseStudy2 = () => {
               </div>
             </div>
           </div>
-
-          <div className="cs2-section">
-            <h2 className="cs2-section-title">Our Approach</h2>
-            <h3 className="cs2-section-subtitle">How We Transformed Their Amazon Presence</h3>
-            <div className="cs2-approach-grid">
-              <div className="cs2-approach-item">
-                <div className="cs2-approach-number">01</div>
-                <h4 className="cs2-approach-title">Comprehensive Audit</h4>
-                <p className="cs2-approach-text">
-                  We conducted a thorough analysis of all 100+ product listings, identifying key areas for improvement
-                  in images, copy, and keyword strategy.
-                </p>
-              </div>
-              <div className="cs2-approach-item">
-                <div className="cs2-approach-number">02</div>
-                <h4 className="cs2-approach-title">Content Optimization</h4>
-                <p className="cs2-approach-text">
-                  Our copywriters completely revamped the bullet points to highlight key features and benefits while
-                  incorporating high-value keywords.
-                </p>
-              </div>
-              <div className="cs2-approach-item">
-                <div className="cs2-approach-number">03</div>
-                <h4 className="cs2-approach-title">Visual Enhancement</h4>
-                <p className="cs2-approach-text">
-                  We created new product images that clearly showcased the unique selling propositions of each TV model,
-                  improving conversion rates.
-                </p>
-              </div>
-              <div className="cs2-approach-item">
-                <div className="cs2-approach-number">04</div>
-                <h4 className="cs2-approach-title">Ad Campaign Refinement</h4>
-                <p className="cs2-approach-text">
-                  We restructured PPC campaigns to focus on high-converting keywords, eliminating wasted ad spend and
-                  improving TACOS dramatically.
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
+      <Testimonials/>
+      <FeaturedPartners/>
     </section>
   )
 }

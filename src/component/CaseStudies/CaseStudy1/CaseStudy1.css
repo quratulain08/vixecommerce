@@ -12,18 +12,20 @@
   position: relative;
 }
 
-/* Hero Section - Brand Launch Theme Applied */
+
 .case-hero {
   position: relative;
-  padding: 60px 0;
+  padding: 140px 0;
   text-align: center;
   overflow: hidden;
   background: #040d21;
+  transition: opacity 0.8s ease, transform 0.8s ease;
   color: #fff;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   align-items: center;
 }
+ 
 
 .hero-background {
   position: absolute;

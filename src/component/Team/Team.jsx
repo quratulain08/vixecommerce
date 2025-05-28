@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import { Linkedin, Twitter, Mail, Award, TrendingUp } from "lucide-react"
+import { Linkedin, Twitter, Mail, Award, TrendingUp, Users, Star } from "lucide-react"
 import "./Team.css"
 import HarisButt from "../../assets/HarisButt.jpg"
 import AliHassan from "../../assets/AliHassan.jpg"
@@ -18,7 +18,7 @@ const Team = () => {
   const teamMembersRef = useRef([])
 
   useEffect(() => {
-     window.scrollTo(0,0);
+    window.scrollTo(0, 0)
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -96,38 +96,35 @@ const Team = () => {
 
   const leaders = [
     {
-      name: "HARIS BUTT",
-      role: "FOUNDER & CEO",
+      name: "Haris Butt",
+      role: "Founder & CEO",
       image: HarisButt,
       description:
-        "Haris is an Amazon Brand Management expert with 5,000+ hours of experience. He has managed 10+ brands across US, German, and Canadian marketplaces, generating over $5M in sales.",
-      stats: [
-        { value: "100%", label: "Upwork Success" },
-        { value: "87%", label: "Client Retention" },
-        { value: "$5M+", label: "Sales Generated" },
-      ],
+        "Haris is an Amazon Brand Management expert with 5,000+ hours of experience. He has managed 10+ brands across US, German, and Canadian marketplaces.",
+      mainStat: "$5M+",
+      mainStatLabel: "Sales Generated",
+      achievements: ["100% Upwork Success Rate", "87% Client Retention", "10+ Brands Managed"],
       quote: "Our mission is to empower brands with the strategies and expertise they need to dominate on Amazon.",
-      icon: <Award size={24} />,
+      icon: <Award size={20} />,
     },
     {
-      name: "ALI HASSAN",
-      role: "CO-FOUNDER & MARKETING DIRECTOR",
+      name: "Ali Hassan",
+      role: "Co-Founder & Marketing Director",
       image: AliHassan,
       description:
-        "Ali Hassan is a top marketing strategist with a 100% Upwork success rate and 99% Fiverr satisfaction. He has managed 20+ brands across 40+ niches, driving $8.5M in sales last year.",
-      stats: [
-        { value: "99%", label: "Fiverr Rating" },
-        { value: "92%", label: "Client Retention" },
-        { value: "$8.5M", label: "Annual Sales" },
-      ],
+        "Ali Hassan is a top marketing strategist with a 100% Upwork success rate and 99% Fiverr satisfaction. He has managed 20+ brands across 40+ niches.",
+      mainStat: "$8.5M",
+      mainStatLabel: "Annual Sales",
+      achievements: ["99% Fiverr Rating", "92% Client Retention", "40+ Niches Covered"],
       quote:
         "We don't just manage Amazon accounts, we build sustainable businesses that thrive in competitive markets.",
-      icon: <TrendingUp size={24} />,
+      icon: <TrendingUp size={20} />,
     },
   ]
 
   return (
     <section className="team-section">
+      {/* Hero Section */}
       <div className="team-hero" ref={sectionRef}>
         <div className="hero-background">
           <div className="hero-shape shape-1"></div>
@@ -152,46 +149,67 @@ const Team = () => {
       </div>
 
       <div className="team-container">
+        {/* Leaders Section */}
         <div className="leaders-section" ref={leadersRef}>
-          <div className="section-badge">LEADERSHIP</div>
-          <h2 className="section-title">Our Leadership Team</h2>
+          <div className="section-header">
+            <div className="section-badge">
+              <Users size={16} />
+              LEADERSHIP
+            </div>
+            <h2 className="section-title">Our Leadership Team</h2>
+            <p className="section-description">
+              Meet the visionaries driving Vix Commerce forward with years of expertise and proven results.
+            </p>
+          </div>
+
           <div className="leaders-grid">
             {leaders.map((leader, index) => (
               <div key={index} className="leader-card">
-                <div className="leader-top">
+                <div className="leader-image-section">
                   <div className="leader-image-container">
                     <img src={leader.image || "/placeholder.svg"} alt={leader.name} className="leader-image" />
-                    <div className="leader-icon">{leader.icon}</div>
-                  </div>
-                  <div className="leader-title">
-                    <h3>{leader.name}</h3>
-                    <p>{leader.role}</p>
+                    <div className="leader-badge-icon">{leader.icon}</div>
                   </div>
                 </div>
 
-                <div className="leader-content">
+                <div className="leader-content-section">
+                  <div className="leader-header">
+                    <h3 className="leader-name">{leader.name}</h3>
+                    <p className="leader-role">{leader.role}</p>
+                  </div>
+
                   <p className="leader-description">{leader.description}</p>
 
-                  <div className="leader-stats">
-                    {leader.stats.map((stat, i) => (
-                      <div key={i} className="leader-stat">
-                        <span className="stat-value">{stat.value}</span>
-                        <span className="stat-label">{stat.label}</span>
-                      </div>
-                    ))}
+                  <div className="leader-highlight">
+                    <div className="highlight-stat">
+                      <span className="highlight-number">{leader.mainStat}</span>
+                      <span className="highlight-label">{leader.mainStatLabel}</span>
+                    </div>
                   </div>
 
-                  <blockquote className="leader-quote">{leader.quote}</blockquote>
+                  <div className="leader-achievements">
+                    <h4 className="achievements-title">Key Achievements</h4>
+                    <ul className="achievements-list">
+                      {leader.achievements.map((achievement, i) => (
+                        <li key={i} className="achievement-item">
+                          <Star size={14} />
+                          {achievement}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
 
-                  <div className="social-links">
+                  <blockquote className="leader-quote">"{leader.quote}"</blockquote>
+
+                  <div className="leader-social">
                     <a href="#" className="social-link">
-                      <Linkedin size={18} />
+                      <Linkedin size={16} />
                     </a>
                     <a href="#" className="social-link">
-                      <Twitter size={18} />
+                      <Twitter size={16} />
                     </a>
                     <a href="#" className="social-link">
-                      <Mail size={18} />
+                      <Mail size={16} />
                     </a>
                   </div>
                 </div>
@@ -200,47 +218,47 @@ const Team = () => {
           </div>
         </div>
 
+        {/* Team Members Section */}
         <div className="team-members-section">
-          <div className="section-badge">OUR EXPERTS</div>
-          <h2 className="section-title">Team Members</h2>
-          <div className="team-members-grid">
+          <div className="section-header">
+            <div className="section-badge">
+              <Users size={16} />
+              OUR EXPERTS
+            </div>
+            <h2 className="section-title">Team Members</h2>
+            <p className="section-description">
+              Our talented team of specialists working together to deliver exceptional results for your brand.
+            </p>
+          </div>
+
+          <div className="team-grid">
             {teamMembers.map((member, index) => (
-              <div key={index} className="team-member-card" ref={(el) => (teamMembersRef.current[index] = el)}>
-                <div className="member-image">
+              <div key={index} className="team-card" ref={(el) => (teamMembersRef.current[index] = el)}>
+                <div className="team-card-image">
                   <img src={member.image || "/placeholder.svg"} alt={member.name} />
-                  <div className="member-social">
-                    <a href="#" className="member-social-link">
-                      <Linkedin size={18} />
-                    </a>
-                    <a href="#" className="member-social-link">
-                      <Mail size={18} />
-                    </a>
+                  <div className="team-card-overlay">
+                    <div className="team-social-links">
+                      <a href="#" className="team-social-link">
+                        <Linkedin size={18} />
+                      </a>
+                      <a href="#" className="team-social-link">
+                        <Mail size={18} />
+                      </a>
+                    </div>
                   </div>
                 </div>
-                <div className="member-info">
-                  <h3>{member.name}</h3>
-                  <p>{member.role}</p>
+                <div className="team-card-content">
+                  <h3 className="team-member-name">{member.name}</h3>
+                  <p className="team-member-role">{member.role}</p>
                 </div>
               </div>
             ))}
           </div>
         </div>
-
-        {/* <div className="team-cta">
-          <div className="cta-background">
-            <div className="cta-shape cta-shape-1"></div>
-            <div className="cta-shape cta-shape-2"></div>
-          </div>
-          <h2>Join Our Growing Team</h2>
-          <p>
-            We're always looking for talented individuals who are passionate about e-commerce and Amazon. If you think
-            you'd be a good fit, we'd love to hear from you.
-          </p>
-          <button className="cta-button">View Open Positions</button>
-        </div> */}
       </div>
-       <Testimonials/>
-      <Brand/>
+
+      <Testimonials />
+      <Brand />
     </section>
   )
 }

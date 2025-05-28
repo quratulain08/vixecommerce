@@ -1,25 +1,25 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import { ArrowRight, CheckCircle, TrendingUp, BarChart2, Target, DollarSign, Search } from "lucide-react"
+import { ArrowRight, CheckCircle, TrendingUp, BarChart2, Target, DollarSign, Search, Zap } from "lucide-react"
 import "./PPCManagement.css"
 import { useNavigate } from "react-router-dom"
 import Testimonial from "../../LandingPage/Testimonial/Testimonial"
 import Brand from "../../LandingPage/FeaturedPartners/FeaturedPartners"
 
-
 const PPCManagement = () => {
   const sectionRef = useRef(null)
   const contentRef = useRef(null)
   const strategyRef = useRef([])
-   const navigate = useNavigate();
-  
-    const handleGetStartedClick = () =>{
-      navigate('/contact')
-    }
+  const resultsRef = useRef([])
+  const navigate = useNavigate()
+
+  const handleGetStartedClick = () => {
+    navigate("/contact")
+  }
 
   useEffect(() => {
-     window.scrollTo(0,0);
+    window.scrollTo(0, 0)
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -34,6 +34,14 @@ const PPCManagement = () => {
                   setTimeout(() => {
                     strategy.classList.add("animate")
                   }, index * 150)
+                }
+              })
+
+              resultsRef.current.forEach((result, index) => {
+                if (result && entry.target === result) {
+                  setTimeout(() => {
+                    result.classList.add("animate")
+                  }, index * 100)
                 }
               })
             }
@@ -57,6 +65,12 @@ const PPCManagement = () => {
       }
     })
 
+    resultsRef.current.forEach((result) => {
+      if (result) {
+        observer.observe(result)
+      }
+    })
+
     return () => {
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current)
@@ -67,6 +81,11 @@ const PPCManagement = () => {
       strategyRef.current.forEach((strategy) => {
         if (strategy) {
           observer.unobserve(strategy)
+        }
+      })
+      resultsRef.current.forEach((result) => {
+        if (result) {
+          observer.unobserve(result)
         }
       })
     }
@@ -114,6 +133,33 @@ const PPCManagement = () => {
     "Stay ahead of competitors",
   ]
 
+  const results = [
+    {
+      icon: <Target size={32} />,
+      number: "30%",
+      description: "Average reduction in ACoS (Advertising Cost of Sale)",
+      color: "blue",
+    },
+    {
+      icon: <TrendingUp size={32} />,
+      number: "45%",
+      description: "Average increase in conversion rates from PPC traffic",
+      color: "green",
+    },
+    {
+      icon: <BarChart2 size={32} />,
+      number: "60%",
+      description: "Average improvement in organic rankings for target keywords",
+      color: "purple",
+    },
+    {
+      icon: <Zap size={32} />,
+      number: "3X",
+      description: "Average return on ad spend (ROAS) for our clients",
+      color: "orange",
+    },
+  ]
+
   return (
     <section className="ppcm-section">
       <div className="ppcm-hero" ref={sectionRef}>
@@ -144,7 +190,7 @@ const PPCManagement = () => {
 
       <div className="ppcm-container">
         <div className="ppcm-content" ref={contentRef}>
-          <div className="ppcm-text">
+          <div className="overview-section">
             <div className="ppcm-section-badge">OVERVIEW</div>
             <h2 className="ppcm-section-title">Strategic PPC Management</h2>
             <p>
@@ -164,19 +210,7 @@ const PPCManagement = () => {
             </p>
           </div>
 
-          <div className="ppcm-benefits">
-            <h3>Benefits of Our PPC Management</h3>
-            <ul className="ppcm-benefits-list">
-              {benefits.map((benefit, index) => (
-                <li key={index} className="ppcm-benefit-item">
-                  <CheckCircle size={20} className="ppcm-benefit-icon" />
-                  <span>{benefit}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
+         
         <div className="ppcm-strategies">
           <div className="ppcm-section-badge">OUR APPROACH</div>
           <h2 className="ppcm-section-title">Strategic PPC Management</h2>
@@ -212,6 +246,21 @@ const PPCManagement = () => {
                 </p>
               </div>
             </div>
+             <div className="benefits-section">
+            <h3 className="benefits-title">Benefits of Our PPC Management</h3>
+            <div className="benefits-grid">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="benefit-card">
+                  <div className="benefit-icon-wrapper">
+                    <CheckCircle size={24} className="benefit-icon" />
+                  </div>
+                  <span className="benefit-text">{benefit}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
 
             <div className="ppcm-timeline-item">
               <div className="ppcm-timeline-number">2</div>
@@ -264,22 +313,17 @@ const PPCManagement = () => {
           <h2 className="ppcm-section-title">What Our PPC Management Delivers</h2>
 
           <div className="ppcm-results-grid">
-            <div className="ppcm-result-card">
-              <div className="ppcm-result-number">30%</div>
-              <p>Average reduction in ACoS (Advertising Cost of Sale)</p>
-            </div>
-            <div className="ppcm-result-card">
-              <div className="ppcm-result-number">45%</div>
-              <p>Average increase in conversion rates from PPC traffic</p>
-            </div>
-            <div className="ppcm-result-card">
-              <div className="ppcm-result-number">60%</div>
-              <p>Average improvement in organic rankings for target keywords</p>
-            </div>
-            <div className="ppcm-result-card">
-              <div className="ppcm-result-number">3X</div>
-              <p>Average return on ad spend (ROAS) for our clients</p>
-            </div>
+            {results.map((result, index) => (
+              <div
+                key={index}
+                className={`ppcm-result-card result-${result.color}`}
+                ref={(el) => (resultsRef.current[index] = el)}
+              >
+                <div className="result-icon-wrapper">{result.icon}</div>
+                <div className="ppcm-result-number">{result.number}</div>
+                <p>{result.description}</p>
+              </div>
+            ))}
           </div>
         </div>
 
@@ -298,8 +342,8 @@ const PPCManagement = () => {
           </button>
         </div>
       </div>
-       <Testimonial/>
-            <Brand/>
+      <Testimonial />
+      <Brand />
     </section>
   )
 }
