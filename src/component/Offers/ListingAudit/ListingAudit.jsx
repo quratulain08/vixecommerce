@@ -1,26 +1,39 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import { ArrowRight, CheckCircle, Search, FileText, BarChart2, AlertTriangle, Zap } from "lucide-react"
+import {
+  ArrowRight,
+  CheckCircle,
+  Search,
+  FileText,
+  BarChart2,
+  AlertTriangle,
+  Zap,
+  Type,
+  ListChecks,
+  FileIcon as FileDescription,
+  Image,
+  Key,
+  DollarSign,
+} from "lucide-react"
 import { useNavigate } from "react-router-dom"
 import "./ListingAudit.css"
 import Testimonial from "../../LandingPage/Testimonial/Testimonial"
 import Brand from "../../LandingPage/FeaturedPartners/FeaturedPartners"
 
-
-
 const ListingAudit = () => {
   const sectionRef = useRef(null)
   const contentRef = useRef(null)
   const auditStepsRef = useRef([])
-   const navigate = useNavigate();
-  
-    const handleGetStartedClick = () =>{
-      navigate('/contact')
-    }
+  const featuresRef = useRef([])
+  const navigate = useNavigate()
+
+  const handleGetStartedClick = () => {
+    navigate("/contact")
+  }
 
   useEffect(() => {
-     window.scrollTo(0,0);
+    window.scrollTo(0, 0)
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -35,6 +48,14 @@ const ListingAudit = () => {
                   setTimeout(() => {
                     step.classList.add("animate")
                   }, index * 150)
+                }
+              })
+
+              featuresRef.current.forEach((feature, index) => {
+                if (feature && entry.target === feature) {
+                  setTimeout(() => {
+                    feature.classList.add("animate")
+                  }, index * 100)
                 }
               })
             }
@@ -58,6 +79,12 @@ const ListingAudit = () => {
       }
     })
 
+    featuresRef.current.forEach((feature) => {
+      if (feature) {
+        observer.observe(feature)
+      }
+    })
+
     return () => {
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current)
@@ -68,6 +95,11 @@ const ListingAudit = () => {
       auditStepsRef.current.forEach((step) => {
         if (step) {
           observer.unobserve(step)
+        }
+      })
+      featuresRef.current.forEach((feature) => {
+        if (feature) {
+          observer.unobserve(feature)
         }
       })
     }
@@ -117,6 +149,47 @@ const ListingAudit = () => {
     "Stay ahead of competitors",
   ]
 
+  const auditElements = [
+    {
+      icon: <Type size={24} />,
+      title: "Product Titles",
+      description:
+        "We analyze your titles for keyword optimization, readability, and compliance with Amazon's guidelines.",
+      color: "blue",
+    },
+    {
+      icon: <ListChecks size={24} />,
+      title: "Bullet Points",
+      description: "We evaluate your bullet points for persuasiveness, keyword inclusion, and benefit-focused content.",
+      color: "purple",
+    },
+    {
+      icon: <FileDescription size={24} />,
+      title: "Product Descriptions",
+      description: "We review your descriptions for completeness, keyword richness, and compelling storytelling.",
+      color: "green",
+    },
+    {
+      icon: <Image size={24} />,
+      title: "Images & Media",
+      description:
+        "We assess your images and videos for quality, information value, and compliance with Amazon standards.",
+      color: "orange",
+    },
+    {
+      icon: <Key size={24} />,
+      title: "Backend Keywords",
+      description: "We check your backend search terms for completeness, relevance, and optimization opportunities.",
+      color: "pink",
+    },
+    {
+      icon: <DollarSign size={24} />,
+      title: "Pricing Strategy",
+      description: "We evaluate your pricing in relation to competitors and perceived value to maximize conversions.",
+      color: "teal",
+    },
+  ]
+
   return (
     <section className="audit-section">
       <div className="audit-hero" ref={sectionRef}>
@@ -147,7 +220,7 @@ const ListingAudit = () => {
 
       <div className="audit-container">
         <div className="audit-content" ref={contentRef}>
-          <div className="audit-text">
+          <div className="overview-section">
             <div className="section-badge">OVERVIEW</div>
             <h2 className="section-title">Comprehensive Listing Audit</h2>
             <p>
@@ -161,16 +234,18 @@ const ListingAudit = () => {
             </p>
           </div>
 
-          <div className="audit-benefits">
-            <h3>Benefits of Our Listing Audit</h3>
-            <ul className="benefits-list">
+          <div className="benefits-section">
+            <h3 className="benefits-title">Benefits of Our Listing Audit</h3>
+            <div className="benefits-grid">
               {benefits.map((benefit, index) => (
-                <li key={index} className="benefit-item">
-                  <CheckCircle size={20} className="benefit-icon" />
-                  <span>{benefit}</span>
-                </li>
+                <div key={index} className="benefit-card">
+                  <div className="benefit-icon-wrapper">
+                    <CheckCircle size={24} className="benefit-icon" />
+                  </div>
+                  <span className="benefit-text">{benefit}</span>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
         </div>
 
@@ -199,34 +274,17 @@ const ListingAudit = () => {
           <h2 className="section-title">Comprehensive Audit Elements</h2>
 
           <div className="features-grid">
-            <div className="feature-card">
-              <h3>Product Titles</h3>
-              <p>
-                We analyze your titles for keyword optimization, readability, and compliance with Amazon's guidelines.
-              </p>
-            </div>
-            <div className="feature-card">
-              <h3>Bullet Points</h3>
-              <p>We evaluate your bullet points for persuasiveness, keyword inclusion, and benefit-focused content.</p>
-            </div>
-            <div className="feature-card">
-              <h3>Product Descriptions</h3>
-              <p>We review your descriptions for completeness, keyword richness, and compelling storytelling.</p>
-            </div>
-            <div className="feature-card">
-              <h3>Images & Media</h3>
-              <p>
-                We assess your images and videos for quality, information value, and compliance with Amazon standards.
-              </p>
-            </div>
-            <div className="feature-card">
-              <h3>Backend Keywords</h3>
-              <p>We check your backend search terms for completeness, relevance, and optimization opportunities.</p>
-            </div>
-            <div className="feature-card">
-              <h3>Pricing Strategy</h3>
-              <p>We evaluate your pricing in relation to competitors and perceived value to maximize conversions.</p>
-            </div>
+            {auditElements.map((element, index) => (
+              <div
+                key={index}
+                className={`feature-card feature-${element.color}`}
+                ref={(el) => (featuresRef.current[index] = el)}
+              >
+                <div className="feature-icon-wrapper">{element.icon}</div>
+                <h3>{element.title}</h3>
+                <p>{element.description}</p>
+              </div>
+            ))}
           </div>
         </div>
 
@@ -245,8 +303,8 @@ const ListingAudit = () => {
           </button>
         </div>
       </div>
-       <Testimonial/>
-      <Brand/>
+      <Testimonial />
+      <Brand />
     </section>
   )
 }

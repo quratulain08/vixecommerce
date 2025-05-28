@@ -20,10 +20,11 @@ export default function LandingPage() {
       <WhatWeOffer/>
       <WhyChooseUs/>
       <CaseStudies/>
+      <CTA/>
       <Testimonials/>
       
       <FeaturedPartners/>
-      <CTA/>
+      
       
       {/* <FAQs/> */}
     </div>

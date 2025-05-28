@@ -1,13 +1,16 @@
 .service-cta {
   background: #040d21;
   border-radius: 20px;
-  padding: 80px 60px;
+  padding: 60px 40px;
   text-align: center;
   color: #ffffff;
   position: relative;
   overflow: hidden;
-  margin-bottom: 50px;
+  margin: 60px auto 50px; /* Center and add bottom margin */
+  max-width: 1000px;    /* Limit width */
+  width: 90%;           /* Responsive width */
 }
+
 
 .cta-background {
   position: absolute;

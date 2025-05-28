@@ -7,19 +7,18 @@ import "./FBAManagement.css"
 import Testimonial from "../../LandingPage/Testimonial/Testimonial"
 import Brand from "../../LandingPage/FeaturedPartners/FeaturedPartners"
 
-
 const FBAManagement = () => {
   const sectionRef = useRef(null)
   const contentRef = useRef(null)
   const servicesRef = useRef([])
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
-  const handleGetStartedClick = () =>{
-    navigate('/contact')
+  const handleGetStartedClick = () => {
+    navigate("/contact")
   }
 
   useEffect(() => {
-     window.scrollTo(0,0);
+    window.scrollTo(0, 0)
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -149,7 +148,7 @@ const FBAManagement = () => {
 
       <div className="fba-container">
         <div className="fba-content" ref={contentRef}>
-          <div className="fba-text">
+          <div className="overview-section">
             <div className="section-badge">OVERVIEW</div>
             <h2 className="section-title">Comprehensive FBA Management</h2>
             <p>
@@ -164,16 +163,18 @@ const FBAManagement = () => {
             </p>
           </div>
 
-          <div className="fba-benefits">
-            <h3>Benefits of Our FBA Management</h3>
-            <ul className="benefits-list">
+          <div className="benefits-section">
+            <h3 className="benefits-title">Benefits of Our FBA Management</h3>
+            <div className="benefits-grid">
               {benefits.map((benefit, index) => (
-                <li key={index} className="benefit-item">
-                  <CheckCircle size={20} className="benefit-icon" />
-                  <span>{benefit}</span>
-                </li>
+                <div key={index} className="benefit-card">
+                  <div className="benefit-icon-wrapper">
+                    <CheckCircle size={24} className="benefit-icon" />
+                  </div>
+                  <span className="benefit-text">{benefit}</span>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
         </div>
 
@@ -274,8 +275,8 @@ const FBAManagement = () => {
           </button>
         </div>
       </div>
-       <Testimonial/>
-      <Brand/>
+      <Testimonial />
+      <Brand />
     </section>
   )
 }

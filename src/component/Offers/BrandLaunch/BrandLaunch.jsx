@@ -11,14 +11,14 @@ const BrandLaunch = () => {
   const sectionRef = useRef(null)
   const contentRef = useRef(null)
   const stepsRef = useRef([])
-  const navigate = useNavigate();
-    const [showNeedHelp, setShowNeedHelp] = useState(false);
+  const navigate = useNavigate()
+  const [showNeedHelp, setShowNeedHelp] = useState(false)
 
   const handleGetStartedClick = () => {
-    navigate('/contact');
-  };
+    navigate("/contact")
+  }
   useEffect(() => {
-     window.scrollTo(0,0);
+    window.scrollTo(0, 0)
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -146,7 +146,7 @@ const BrandLaunch = () => {
 
       <div className="service-container">
         <div className="service-content" ref={contentRef}>
-          <div className="service-text">
+          <div className="overview-section">
             <div className="section-badge">OVERVIEW</div>
             <h2 className="section-title">Launch Your Amazon Business</h2>
             <p>
@@ -161,16 +161,18 @@ const BrandLaunch = () => {
             </p>
           </div>
 
-          <div className="service-benefits">
-            <h3>Benefits of Our Launch Service</h3>
-            <ul className="benefits-list">
+          <div className="benefits-section">
+            <h3 className="benefits-title">Why Choose Our Launch Service</h3>
+            <div className="benefits-grid">
               {benefits.map((benefit, index) => (
-                <li key={index} className="benefit-item">
-                  <CheckCircle size={20} className="benefit-icon" />
-                  <span>{benefit}</span>
-                </li>
+                <div key={index} className="benefit-card">
+                  <div className="benefit-icon-wrapper">
+                    <CheckCircle size={24} className="benefit-icon" />
+                  </div>
+                  <span className="benefit-text">{benefit}</span>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
         </div>
 
@@ -194,21 +196,6 @@ const BrandLaunch = () => {
           </div>
         </div>
 
-        {/* <div className="service-stats">
-          <div className="stat-card">
-            <h2>85%</h2>
-            <p>of new Amazon sellers are profitable within the first year with proper guidance</p>
-          </div>
-          <div className="stat-card">
-            <h2>63%</h2>
-            <p>higher success rate for sellers who launch with optimized listings</p>
-          </div>
-          <div className="stat-card">
-            <h2>2X</h2>
-            <p>faster growth for brands that launch with a strategic plan</p>
-          </div>
-        </div> */}
-
         <div className="service-cta">
           <div className="cta-background">
             <div className="cta-shape cta-shape-1"></div>
@@ -216,16 +203,16 @@ const BrandLaunch = () => {
           </div>
           <h2>Ready to Launch Your Amazon Business?</h2>
           <p>
-            Partner with Vix Commerce and start your Amazon journey with a strong foundation. Our team of experts is
+            Partner with VixCommerce and start your Amazon journey with a strong foundation. Our team of experts is
             ready to help you achieve your e-commerce goals.
           </p>
           <button className="cta-button" onClick={handleGetStartedClick}>
-           Request an audit <ArrowRight size={16} className="btn-icon" />
+            Launch Your Product <ArrowRight size={16} className="btn-icon" />
           </button>
         </div>
       </div>
-      <Testimonial/>
-      <Brand/>
+      <Testimonial />
+      <Brand />
     </section>
   )
 }
