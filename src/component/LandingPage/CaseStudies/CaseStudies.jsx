@@ -85,7 +85,7 @@ const CaseStudies = () => {
     <section className="portfolio-showcase-section" ref={sectionRef}>
       <div className="portfolio-showcase-container">
         <div className="portfolio-showcase-header">
-          <h2>Case Studies</h2>
+          <h2>Case studies</h2>
           <p>Discover how we've helped businesses achieve remarkable growth and success on Amazon.</p>
         </div>
 
