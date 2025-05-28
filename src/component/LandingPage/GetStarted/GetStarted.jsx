@@ -114,7 +114,7 @@ const GetStarted = () => {
 
         <div className="hero-buttons">
           <button className="btn-primary" onClick={handleGetStartedClick}>
-            <span>Get a Free Audit</span>
+            <span>Schedule a call</span>
             <ArrowRight size={18} className="btn-icon" />
           </button>
         </div>
