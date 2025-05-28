@@ -184,7 +184,6 @@
 .hero-badge {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -194,7 +193,8 @@
   font-size: 0.9rem;
   font-weight: 600;
   color: #0ffcbe;
-  margin-bottom: 30px;
+  margin-top: 50px;
+  margin-bottom: 20px;
   letter-spacing: 0.5px;
   animation: badge-pulse 2s infinite ease-in-out;
 }

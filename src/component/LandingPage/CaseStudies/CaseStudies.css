@@ -26,17 +26,17 @@
 .portfolio-showcase-header h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 800;
-  font-size: 36px;
-  color: #003366;
-  margin-bottom: 10px;
+  font-size: 48px;
+  color: #1a202c;
+  margin-bottom: 15px;
+  position: relative;
 }
 
 .portfolio-showcase-header p {
-  font-family: "Manrope", sans-serif;
-  font-size: 16px;
-  color: #555;
-  max-width: 600px;
-  margin: 0 auto;
+ font-family: "Manrope", sans-serif;
+  font-size: 20px;
+  color: #64748b;
+  font-weight: 500;
 }
 
 /* Grid with 4 cards per row */

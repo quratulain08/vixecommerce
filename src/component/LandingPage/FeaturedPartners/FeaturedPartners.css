@@ -4,9 +4,12 @@
   }
   
   .featured-partners-section h2 {
-    font-size: 3.5rem;
-    color: #00838f; 
-    margin-bottom: 15vh;
+    font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 48px;
+  color: #1a202c;
+  margin-bottom: 15px;
+  position: relative;
   }
   
   .partners-grid {

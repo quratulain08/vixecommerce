@@ -271,8 +271,8 @@ const WhyChooseUs = () => {
     <section className="why-choose-us-section">
       <div className="why-choose-us-container">
         <div className="why-choose-us-header">
-          <h2>Why Choose Us?</h2>
-          <p>Discover Why We're the Best Choice for Your Amazon Success</p>
+          <h2>Why choose us?</h2>
+          <p>Discover why we're the best choice for Your Amazon success</p>
         </div>
 
         <div className="carousel-container">

@@ -107,14 +107,14 @@ const GetStarted = () => {
         </h1>
 
         <p className="hero-description">
-          We have individual expert team members for Product Research & Sourcing, Content Writing, Graphic Design, SEO,
-          and PPC Management all under one roof. No need to hire across multiple agencies when you can get it all done
+          We have individual expert team members for product research & sourcing, content writing, graphic design, SEO,
+          and PPC management all under one roof. No need to hire across multiple agencies when you can get it all done
           in one place.
         </p>
 
         <div className="hero-buttons">
           <button className="btn-primary" onClick={handleGetStartedClick}>
-            <span>Book Call Now</span>
+            <span>Get a Free Audit</span>
             <ArrowRight size={18} className="btn-icon" />
           </button>
         </div>

@@ -66,9 +66,9 @@ function App() {
         <Route path ="Offers/Sourcing" element={<SourcingSEO/>}/>
       
       </Routes>
-      <div className="ContactUs">
+      {/* <div className="ContactUs">
         <ContactUs />
-        </div>
+        </div> */}
 
      
       <div className="footer">

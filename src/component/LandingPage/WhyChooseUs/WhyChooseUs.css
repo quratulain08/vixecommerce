@@ -18,11 +18,11 @@
 }
 
 .why-choose-us-container {
-  max-width: 1400px; /* Increased from 1200px */
+   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 24px;
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
 .why-choose-us-header {
@@ -33,17 +33,17 @@
 .why-choose-us-header h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 800;
-  font-size: 42px;
-  color: #000;
-  margin-bottom: 10px;
+  font-size: 48px;
+  color: #1a202c;
+  margin-bottom: 15px;
+  position: relative;
 }
 
 .why-choose-us-header p {
-  font-family: "Manrope", sans-serif;
-  font-size: 18px;
-  color: #555;
-  max-width: 700px;
-  margin: 0 auto;
+ font-family: "Manrope", sans-serif;
+  font-size: 20px;
+  color: #64748b;
+  font-weight: 500;
 }
 
 .carousel-container {
