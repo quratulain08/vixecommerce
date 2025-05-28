@@ -1,40 +1,83 @@
 .featured-partners-section {
-    text-align: center;
-    padding: 40px;
-  }
-  
-  .featured-partners-section h2 {
-    font-family: "Poppins", sans-serif;
+  text-align: center;
+  padding: 40px;
+}
+
+.featured-partners-section h2 {
+  font-family: "Poppins", sans-serif;
   font-weight: 800;
   font-size: 48px;
   color: #1a202c;
   margin-bottom: 15px;
   position: relative;
-  }
-  
+}
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  max-width: 70%;
+  margin: 0 auto;
+  margin-bottom: 10vh;
+}
+
+.partner-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.partner-card img {
+  max-width: 100%;
+  max-height: 90px;
+  object-fit: contain;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
   .partners-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
-    max-width: 70%;
-    margin: 0 auto;
-    margin-bottom: 10vh;
+    grid-template-columns: repeat(3, 1fr); /* Force 3 columns on tablets */
+    max-width: 90%; /* Wider grid on smaller screens */
+    gap: 15px; /* Smaller gap */
   }
   
   .partner-card {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
   }
   
   .partner-card img {
-    max-width: 100%;
-    max-height: 90px;
-    object-fit: contain;
+    max-height: 70px;
   }
   
+  .featured-partners-section h2 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .partners-grid {
+    grid-template-columns: repeat(2, 1fr); /* Force 2 columns on mobile phones */
+    gap: 10px; /* Even smaller gap */
+  }
+  
+  .partner-card {
+    padding: 10px;
+  }
+  
+  .partner-card img {
+    max-height: 60px;
+  }
+  
+  .featured-partners-section {
+    padding: 30px 20px;
+  }
+  
+  .featured-partners-section h2 {
+    font-size: 30px;
+  }
+}
