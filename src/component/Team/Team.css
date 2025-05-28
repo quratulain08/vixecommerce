@@ -634,14 +634,17 @@
   margin: 0;
   font-weight: 500;
 }
+
 .about-cta {
-  background: #040d21;
+ background: #040d21;
   border-radius: 20px;
-  padding: 80px 60px;
+  padding: 60px 60px;
   text-align: center;
   color: #ffffff;
   position: relative;
   overflow: hidden;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .cta-background {

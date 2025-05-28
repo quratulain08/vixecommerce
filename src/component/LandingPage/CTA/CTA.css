@@ -91,3 +91,40 @@
 .cta-button:hover .btn-icon {
   transform: translateX(5px);
 }
+@media (max-width: 768px) {
+  .cta-button {
+    padding: 12px 20px; /* Less padding on smaller screens */
+    font-size: 0.95rem; /* Slightly smaller text if needed */
+  }
+
+  .service-cta {
+    padding: 40px 20px; /* Reduce overall padding in smaller screens */
+  }
+
+  .service-cta h2 {
+    font-size: 2rem; /* Adjust heading size */
+  }
+
+  .service-cta p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-button {
+    padding: 10px 16px; /* Even less padding for very small devices */
+    font-size: 0.9rem;
+  }
+
+  .service-cta {
+    padding: 30px 15px;
+  }
+
+  .service-cta h2 {
+    font-size: 1.75rem;
+  }
+
+  .service-cta p {
+    font-size: 0.95rem;
+  }
+}
