@@ -112,7 +112,7 @@
 
 @media (max-width: 480px) {
   .cta-button {
-    padding: 10px 16px; /* Even less padding for very small devices */
+    padding: 8px 14px; /* Even less padding for very small devices */
     font-size: 0.9rem;
   }
 
