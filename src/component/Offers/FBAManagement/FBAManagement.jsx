@@ -100,13 +100,7 @@ const FBAManagement = () => {
         "We continuously optimize your Amazon account settings, listings, and pricing strategies for maximum profitability.",
       color: "green",
     },
-    {
-      icon: <Clock size={24} />,
-      title: "Proactive Management",
-      description:
-        "We stay ahead of Amazon policy changes, seasonal trends, and marketplace shifts to keep your business competitive.",
-      color: "blue",
-    },
+  
   ]
 
   const benefits = [
@@ -136,7 +130,7 @@ const FBAManagement = () => {
           <h1>
             Amazon FBA
             <br />
-            <span className="gradient-text">Managment</span>
+            <span className="gradient-text">managment</span>
           </h1>
           <div className="hero-line"></div>
           <p className="hero-subtitle">Focus on growing your business while we handle the day-to-day operations</p>
@@ -150,7 +144,7 @@ const FBAManagement = () => {
         <div className="fba-content" ref={contentRef}>
           <div className="overview-section">
             <div className="section-badge">OVERVIEW</div>
-            <h2 className="section-title">Comprehensive FBA Management</h2>
+            <h2 className="section-title">Comprehensive FBA management</h2>
             <p>
               Running a successful Amazon FBA business requires constant attention to detail, monitoring of key metrics,
               and staying up-to-date with Amazon's ever-changing policies. Our Amazon FBA Management service takes this
@@ -167,7 +161,7 @@ const FBAManagement = () => {
 
         <div className="fba-services">
           <div className="section-badge">WHAT WE DO</div>
-          <h2 className="section-title">Our FBA Management Services</h2>
+          <h2 className="section-title">Our FBA management services</h2>
 
           <div className="process-steps">
             {fbaServices.map((service, index) => (
@@ -185,7 +179,7 @@ const FBAManagement = () => {
           </div>
         </div>
         <div className="benefits-section">
-            <h3 className="benefits-title">Benefits of Our FBA Management</h3>
+            <h2 className="benefits-title">Benefits of our FBA management</h2>
             <div className="benefits-grid">
               {benefits.map((benefit, index) => (
                 <div key={index} className="benefit-card">
@@ -201,13 +195,13 @@ const FBAManagement = () => {
 
         <div className="fba-process">
           <div className="section-badge">OUR APPROACH</div>
-          <h2 className="section-title">How We Manage Your FBA Business</h2>
+          <h2 className="section-title">How we manage your FBA business</h2>
 
           <div className="process-timeline">
             <div className="timeline-item">
               <div className="timeline-number">1</div>
               <div className="timeline-content">
-                <h3>Initial Assessment</h3>
+                <h3>Initial assessment</h3>
                 <p>
                   We conduct a comprehensive audit of your Amazon account, analyzing your current performance, inventory
                   levels, pricing strategy, and listing quality.
@@ -218,7 +212,7 @@ const FBAManagement = () => {
             <div className="timeline-item">
               <div className="timeline-number">2</div>
               <div className="timeline-content">
-                <h3>Strategy Development</h3>
+                <h3>Strategy development</h3>
                 <p>
                   Based on our assessment, we develop a customized management strategy tailored to your specific
                   business goals and market position.
@@ -240,7 +234,7 @@ const FBAManagement = () => {
             <div className="timeline-item">
               <div className="timeline-number">4</div>
               <div className="timeline-content">
-                <h3>Daily Management</h3>
+                <h3>Daily management</h3>
                 <p>
                   Our team handles the day-to-day operations of your FBA business, including inventory management, order
                   processing, and customer service.
@@ -251,7 +245,7 @@ const FBAManagement = () => {
             <div className="timeline-item">
               <div className="timeline-number">5</div>
               <div className="timeline-content">
-                <h3>Performance Reporting</h3>
+                <h3>Performance reporting</h3>
                 <p>
                   We provide regular reports on your account's performance, including sales, profitability, inventory
                   levels, and growth opportunities.
@@ -266,13 +260,13 @@ const FBAManagement = () => {
             <div className="cta-shape cta-shape-1"></div>
             <div className="cta-shape cta-shape-2"></div>
           </div>
-          <h2>Ready to Streamline Your Amazon FBA Business?</h2>
+          <h2>Ready to streamline your Amazon FBA business?</h2>
           <p>
             Partner with Vix Commerce and let our experts handle the day-to-day management of your Amazon FBA business.
             Free up your time to focus on growth while we ensure your operations run smoothly and profitably.
           </p>
           <button className="cta-button" onClick={handleGetStartedClick}>
-            Request an Audit <ArrowRight size={16} className="btn-icon" />
+            Schdedule a call <ArrowRight size={16} className="btn-icon" />
           </button>
         </div>
       </div>

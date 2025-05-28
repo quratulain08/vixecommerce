@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <p className="copyright-text">
-          All rights Reserved. Copyright ©{currentYear} <strong>Vix Commerce</strong>
+          All rights Reserved. Copyright ©{currentYear} <strong>VixCommerce</strong>
         </p>
       </div>
     </footer>

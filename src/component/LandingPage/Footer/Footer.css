@@ -1,7 +1,7 @@
 /* Footer.css */
 .footer {
-    background-color: #02b48a;
-    padding: 10px 0;
+   background: #040d21;
+    padding: 12px 0;
     width: 100%;
   }
   
@@ -14,9 +14,9 @@
   
   .copyright-text {
     font-family: "Manrope", sans-serif;
-    font-size: 14px;
-    color: black;
-    font-size: large;
+    font-size: green;
+    color: white;
+    font-size: 20px;
     margin: 0;
   }
   

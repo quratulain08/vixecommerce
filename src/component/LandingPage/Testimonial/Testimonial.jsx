@@ -136,7 +136,7 @@ const Testimonials = () => {
     <section className="testimonials-section">
       <div className="testimonials-container">
         <div className="testimonials-header">
-          <h2>Clients' Testimonials</h2>
+          <h2>Clients' testimonials</h2>
           <p>What they say about our services</p>
         </div>
 

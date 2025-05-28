@@ -364,8 +364,8 @@
 
 .leader-image-container {
   position: relative;
-  width: 140px;
-  height: 140px;
+  width: 200px;
+  height: 200px;
   margin: 0 auto;
 }
 
@@ -545,6 +545,7 @@
   opacity: 0;
   transform: translateY(20px);
   border: 1px solid #f1f5f9;
+  text-align: center; /* Center the content */
 }
 
 .team-card.animate {
@@ -558,21 +559,19 @@
 }
 
 .team-card-image {
-  position: relative;
-  width: 100%;
-  height: 300px;
+  width: 120px;
+  height: 120px;
+  margin: 20px auto 0; /* Center the image and add top margin */
+  border-radius: 50%;
   overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .team-card-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.team-card:hover .team-card-image img {
-  transform: scale(1.05);
+  display: block; /* Remove extra space below image */
 }
 
 .team-card-overlay {
@@ -635,7 +634,95 @@
   margin: 0;
   font-weight: 500;
 }
+.about-cta {
+  background: #040d21;
+  border-radius: 20px;
+  padding: 80px 60px;
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
 
+.cta-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.cta-shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(50px);
+}
+
+.cta-shape-1 {
+  top: -20%;
+  left: -10%;
+  width: 400px;
+  height: 400px;
+  background: rgba(0, 102, 255, 0.2);
+  animation: float 15s ease-in-out infinite;
+}
+
+.cta-shape-2 {
+  bottom: -20%;
+  right: -10%;
+  width: 300px;
+  height: 300px;
+  background: rgba(15, 252, 190, 0.15);
+  animation: float 20s ease-in-out infinite reverse;
+}
+
+.about-cta h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.about-cta p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  position: relative;
+  z-index: 2;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.cta-button {
+  background: linear-gradient(to right, #0ffcbe, #0066ff);
+  color: #000;
+  border: none;
+  border-radius: 30px;
+  padding: 15px 30px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(15, 252, 190, 0.3);
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(15, 252, 190, 0.5);
+}
+
+.cta-button:hover .btn-icon {
+  transform: translateX(5px);
+}
 /* Responsive Design */
 @media (max-width: 1024px) {
   .team-hero h1 {
@@ -689,7 +776,8 @@
   }
 
   .team-card-image {
-    height: 250px;
+    width: 100px;
+    height: 100px;
   }
 }
 

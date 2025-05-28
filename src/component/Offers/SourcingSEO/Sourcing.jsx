@@ -137,7 +137,7 @@ const Sourcing = () => {
         <div className="sourcing-content" ref={contentRef}>
           <div className="overview-section">
             <div className="section-badge">OVERVIEW</div>
-            <h2 className="section-title">Sourcing Excellence</h2>
+            <h2 className="section-title">Sourcing excellence</h2>
             <p>
               Success on Amazon begins with great products. Our Efficient Sourcing service addresses this critical
               aspect of your Amazon business.
@@ -149,29 +149,27 @@ const Sourcing = () => {
             </p>
           </div>
 
-          
+          <div className="service-process">
+            <div className="section-badge">WHAT WE OFFER</div>
+            <h2 className="section-title">Our sourcing services</h2>
 
-        <div className="service-process">
-          <div className="section-badge">WHAT WE OFFER</div>
-          <h2 className="section-title">Our Sourcing Services</h2>
-
-          <div className="process-steps">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className={`process-step service-${service.color}`}
-                ref={(el) => (servicesRef.current[index] = el)}
-              >
-                <div className="step-number">{index + 1}</div>
-                <div className="service-icon">{service.icon}</div>
-                <h3>{service.title}</h3>
-                <p>{service.description}</p>
-              </div>
-            ))}
+            <div className="process-steps">
+              {services.map((service, index) => (
+                <div
+                  key={index}
+                  className={`process-step service-${service.color}`}
+                  ref={(el) => (servicesRef.current[index] = el)}
+                >
+                  <div className="step-number">{index + 1}</div>
+                  <div className="service-icon">{service.icon}</div>
+                  <h3>{service.title}</h3>
+                  <p>{service.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="benefits-section">
-            <h3 className="benefits-title">Benefits of Our Sourcing</h3>
+          <div className="benefits-section">
+            <h3 className="benefits-title">Benefits of our sourcing</h3>
             <div className="benefits-grid">
               {benefits.map((benefit, index) => (
                 <div key={index} className="benefit-card">
@@ -186,82 +184,61 @@ const Sourcing = () => {
         </div>
 
         <div className="sourcing-approach">
-          <div className="approach-container">
-            <div className="approach-content">
-              <div className="section-badge">OUR APPROACH</div>
-              <h2 className="section-title">Sourcing Excellence</h2>
-              <p>
-                Our sourcing approach is built on years of experience working with manufacturers and suppliers around
-                the world. We have established relationships with reliable partners who understand Amazon's requirements
-                and can deliver products that meet your specifications.
-              </p>
-              <ul className="approach-list">
-                <li>
-                  <span className="approach-number">01</span>
-                  <div>
-                    <h3>Market Research</h3>
-                    <p>We analyze market trends and competition to identify profitable product opportunities.</p>
+          <div className="seo-header">
+            <div className="section-badge">OUR APPROACH</div>
+            <h2 className="section-title">Sourcing excellence</h2>
+            <p className="seo-description">
+              Our sourcing approach is built on years of experience working with manufacturers and suppliers around the
+              world. We have established relationships with reliable partners who understand Amazon's requirements and
+              can deliver products that meet your specifications.
+            </p>
+          </div>
+
+          <div className="seo-showcase">
+            <div className="seo-showcase-content">
+              <div className="seo-features-grid">
+                <div className="seo-feature-item">
+                  <div className="seo-feature-icon">
+                    <Search size={32} />
                   </div>
-                </li>
-                <li>
-                  <span className="approach-number">02</span>
-                  <div>
-                    <h3>Supplier Vetting</h3>
-                    <p>We thoroughly vet potential suppliers to ensure reliability, quality, and fair pricing.</p>
+                  <h3>Market Research</h3>
+                  <p>We analyze market trends and competition to identify profitable product opportunities</p>
+                </div>
+                <div className="seo-feature-item">
+                  <div className="seo-feature-icon">
+                    <Globe size={32} />
                   </div>
-                </li>
-                <li>
-                  <span className="approach-number">03</span>
-                  <div>
-                    <h3>Sample Testing</h3>
-                    <p>We coordinate sample production and testing to verify product quality before bulk orders.</p>
+                  <h3>Supplier Vetting</h3>
+                  <p>We thoroughly vet potential suppliers to ensure reliability and quality</p>
+                </div>
+                <div className="seo-feature-item">
+                  <div className="seo-feature-icon">
+                    <Package size={32} />
                   </div>
-                </li>
-                <li>
-                  <span className="approach-number">04</span>
-                  <div>
-                    <h3>Order Management</h3>
-                    <p>We manage the entire order process, from negotiation to production monitoring.</p>
+                  <h3>Sample Testing</h3>
+                  <p>We coordinate sample production and testing to verify product quality</p>
+                </div>
+                <div className="seo-feature-item">
+                  <div className="seo-feature-icon">
+                    <Truck size={32} />
                   </div>
-                </li>
-                <li>
-                  <span className="approach-number">05</span>
-                  <div>
-                    <h3>Logistics Coordination</h3>
-                    <p>We coordinate shipping, customs clearance, and delivery to Amazon fulfillment centers.</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div className="approach-image sourcing-image">
-              <div className="approach-image-content">
-                <div className="approach-icon-grid">
-                  <div className="approach-icon-item">
-                    <Package size={28} />
-                    <span>Quality Products</span>
-                  </div>
-                  <div className="approach-icon-item">
-                    <Globe size={28} />
-                    <span>Global Sourcing</span>
-                  </div>
-                  <div className="approach-icon-item">
-                    <Truck size={28} />
-                    <span>Reliable Shipping</span>
-                  </div>
-                  <div className="approach-icon-item">
-                    <CheckCircle size={28} />
-                    <span>Quality Control</span>
+                  <h3>Logistics Coordination</h3>
+                  <p>We coordinate shipping, customs clearance, and delivery to Amazon</p>
+                </div>
+              </div>
+
+              <div className="seo-results">
+                <div className="seo-result-card">
+                  <div className="result-number">93%</div>
+                  <div className="result-label">Success Rate</div>
+                  <div className="result-description">
+                    Our clients see significant improvements in their supply chain
                   </div>
                 </div>
-                <div className="approach-stats">
-                  <div className="approach-stat">
-                    <span className="stat-number">93%</span>
-                    <span className="stat-label">Success Rate</span>
-                  </div>
-                  <div className="approach-stat">
-                    <span className="stat-number">50+</span>
-                    <span className="stat-label">Helped Brands</span>
-                  </div>
+                <div className="seo-result-card">
+                  <div className="result-number">50+</div>
+                  <div className="result-label">Helped Brands</div>
+                  <div className="result-description">We've helped over 50 brands optimize their sourcing process</div>
                 </div>
               </div>
             </div>
@@ -273,13 +250,13 @@ const Sourcing = () => {
             <div className="cta-shape cta-shape-1"></div>
             <div className="cta-shape cta-shape-2"></div>
           </div>
-          <h2>Ready to Optimize Your Sourcing?</h2>
+          <h2>Ready to optimize your sourcing?</h2>
           <p>
-            Partner with Vix Commerce to streamline your supply chain. Our team of experts will help you find reliable
+            Partner with VixCommerce to streamline your supply chain. Our team of experts will help you find reliable
             suppliers to grow your business.
           </p>
           <button className="cta-button" onClick={handleGetStartedClick}>
-            Request an Audit <ArrowRight size={16} className="btn-icon" />
+            Schedule a call<ArrowRight size={16} className="btn-icon" />
           </button>
         </div>
       </div>

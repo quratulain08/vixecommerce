@@ -64,7 +64,7 @@ const CaseStudy1 = () => {
           <div className="case-hero-content" style={{ maxWidth: "600px" }}>
             <div className="hero-badge">CASE STUDY</div>
             <h1 className="case-hero-title">
-              European Market <span className="gradient-text">Expansion</span>
+              European market <span className="gradient-text">expansion</span>
               {/* <br />
               <span className="gradient-text">€2.3M</span> Monthly Revenue */}
             </h1>
@@ -74,7 +74,7 @@ const CaseStudy1 = () => {
               extraordinary growth in just over a year.
             </p>
             <button className="case-cta-button" onClick={handleGetStartedClick}>
-              Request an Audit <ArrowRight size={18} />
+              Request an audit <ArrowRight size={18} />
             </button>
           </div>
         </div>

@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import { ArrowRight, CheckCircle, Edit, ImageIcon, Search, FileText, BarChart2, TrendingUp } from "lucide-react"
+import { ArrowRight, CheckCircle, Edit, ImageIcon, Search, FileText, BarChart2, TrendingUp } from 'lucide-react'
 import { useNavigate } from "react-router-dom"
 import "./ListingOptimization.css"
 import Testimonial from "../../LandingPage/Testimonial/Testimonial"
@@ -127,13 +127,6 @@ const ListingOptimization = () => {
       color: "green",
     },
     {
-      icon: <ImageIcon size={24} />,
-      title: "Image Enhancement",
-      description:
-        "We create or optimize product images and infographics to showcase features and increase conversions.",
-      color: "blue",
-    },
-    {
       icon: <FileText size={24} />,
       title: "Backend Optimization",
       description: "We optimize backend search terms, attributes, and other hidden fields to improve discoverability.",
@@ -254,7 +247,7 @@ const ListingOptimization = () => {
         <div className="optimization-content" ref={contentRef}>
           <div className="overview-section">
             <div className="section-badge">OVERVIEW</div>
-            <h2 className="section-title">Comprehensive Listing Optimization & SEO</h2>
+            <h2 className="section-title">Comprehensive listing optimization & SEO</h2>
             <p>
               Your Amazon product listings are your digital storefront. In a marketplace with millions of products,
               standing out requires more than just good products—it demands exceptional listings that capture attention,
@@ -276,7 +269,7 @@ const ListingOptimization = () => {
 
         <div className="optimization-process">
           <div className="section-badge">OPTIMIZATION PROCESS</div>
-          <h2 className="section-title">How We Optimize Your Listings</h2>
+          <h2 className="section-title">How we optimize your listings</h2>
 
           <div className="process-steps">
             {optimizationSteps.map((step, index) => (
@@ -294,7 +287,7 @@ const ListingOptimization = () => {
           </div>
         </div>
            <div className="benefits-section">
-            <h3 className="benefits-title">Benefits of Optimized Listings & SEO</h3>
+            <h3 className="benefits-title">Benefits of optimized listings & SEO</h3>
             <div className="benefits-grid">
               {benefits.map((benefit, index) => (
                 <div key={index} className="benefit-card">
@@ -308,7 +301,7 @@ const ListingOptimization = () => {
           </div>
         </div>
 
-        <div className="optimization-elements">
+        {/* <div className="optimization-elements">
           <div className="section-badge">WHAT WE OPTIMIZE</div>
           <h2 className="section-title">Key Listing Elements</h2>
 
@@ -335,59 +328,62 @@ const ListingOptimization = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         <div className="seo-approach">
-          <div className="approach-container">
-            <div className="approach-content">
-              <div className="section-badge">SEO STRATEGY</div>
-              <h2 className="section-title">Amazon SEO Mastery</h2>
-              <p>
-                Our Amazon SEO strategies are designed to improve your organic rankings and drive more traffic to your
-                listings. We focus on both on-page and backend optimizations to ensure maximum visibility in Amazon's
-                search results.
-              </p>
-              <ul className="approach-list">
-                {seoSteps.map((step, index) => (
-                  <li key={index} ref={(el) => (seoStepsRef.current[index] = el)}>
-                    <span className="approach-number">{step.number}</span>
-                    <div>
-                      <h3>{step.title}</h3>
-                      <p>{step.description}</p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="approach-image seo-image">
-              <div className="approach-image-content">
-                <div className="approach-icon-grid">
-                  <div className="approach-icon-item">
-                    <Search size={28} />
-                    <span>Keyword Research</span>
+          <div className="seo-header">
+            <div className="section-badge">SEO STRATEGY</div>
+            <h2 className="section-title">Amazon SEO mastery</h2>
+            <p className="seo-description">
+              Our Amazon SEO strategies are designed to improve your organic rankings and drive more traffic to your
+              listings. We focus on both on-page and backend optimizations to ensure maximum visibility in Amazon's
+              search results.
+            </p>
+          </div>
+          
+          <div className="seo-showcase">
+            <div className="seo-showcase-content">
+              <div className="seo-features-grid">
+                <div className="seo-feature-item">
+                  <div className="seo-feature-icon">
+                    <Search size={32} />
                   </div>
-                  <div className="approach-icon-item">
-                    <TrendingUp size={28} />
-                    <span>Ranking Improvement</span>
-                  </div>
-                  <div className="approach-icon-item">
-                    <BarChart2 size={28} />
-                    <span>Performance Tracking</span>
-                  </div>
-                  <div className="approach-icon-item">
-                    <ArrowRight size={28} />
-                    <span>Conversion Optimization</span>
-                  </div>
+                  <h3>Keyword Research</h3>
+                  <p>Advanced keyword analysis to identify high-converting search terms</p>
                 </div>
-                <div className="approach-stats">
-                  <div className="approach-stat">
-                    <span className="stat-number">65%</span>
-                    <span className="stat-label">Avg. Ranking Improvement</span>
+                <div className="seo-feature-item">
+                  <div className="seo-feature-icon">
+                    <TrendingUp size={32} />
                   </div>
-                  <div className="approach-stat">
-                    <span className="stat-number">3X</span>
-                    <span className="stat-label">Organic Traffic Growth</span>
+                  <h3>Ranking Improvement</h3>
+                  <p>Strategic optimization to boost your product visibility</p>
+                </div>
+                <div className="seo-feature-item">
+                  <div className="seo-feature-icon">
+                    <BarChart2 size={32} />
                   </div>
+                  <h3>Performance Tracking</h3>
+                  <p>Continuous monitoring and data-driven improvements</p>
+                </div>
+                <div className="seo-feature-item">
+                  <div className="seo-feature-icon">
+                    <ArrowRight size={32} />
+                  </div>
+                  <h3>Conversion Optimization</h3>
+                  <p>Enhanced content that turns visitors into customers</p>
+                </div>
+              </div>
+              
+              <div className="seo-results">
+                <div className="seo-result-card">
+                  <div className="result-number">65%</div>
+                  <div className="result-label">Average Ranking Improvement</div>
+                  <div className="result-description">Our clients see significant improvements in search rankings</div>
+                </div>
+                <div className="seo-result-card">
+                  <div className="result-number">3X</div>
+                  <div className="result-label">Organic Traffic Growth</div>
+                  <div className="result-description">Triple your organic visibility with our proven strategies</div>
                 </div>
               </div>
             </div>
@@ -399,13 +395,13 @@ const ListingOptimization = () => {
             <div className="cta-shape cta-shape-1"></div>
             <div className="cta-shape cta-shape-2"></div>
           </div>
-          <h2>Ready to Transform Your Amazon Listings?</h2>
+          <h2>Ready to transform your amazon listings?</h2>
           <p>
-            Partner with Vix Commerce to optimize your Amazon listings for maximum visibility and conversion. Our team
+            Partner with VixCommerce to optimize your Amazon listings for maximum visibility and conversion. Our team
             of experts will create compelling content and visuals that drive sales and grow your business.
           </p>
           <button className="cta-button" onClick={handleGetStartedClick}>
-            Get Optimized Listings <ArrowRight size={16} className="btn-icon" />
+            Get optimized listings <ArrowRight size={16} className="btn-icon" />
           </button>
         </div>
       </div>

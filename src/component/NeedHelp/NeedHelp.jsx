@@ -239,9 +239,9 @@ const NeedHelp = () => {
         <div className="help-page-hero-content">
           <div className="help-hero-badge">SUPPORT</div>
           <h1>
-            NEED HELP?
+            Need help?
             <br />
-            <span className="help-gradient-text">WE'VE GOT YOU COVERED</span>
+            <span className="help-gradient-text">We've got you covered</span>
           </h1>
           <div className="help-hero-line"></div>
           <p className="help-hero-subtitle">
@@ -251,7 +251,7 @@ const NeedHelp = () => {
             className="help-hero-button"
             onClick={() => document.getElementById("contact-options").scrollIntoView({ behavior: "smooth" })}
           >
-            Contact Us Now <ArrowRight size={16} className="help-btn-icon" />
+            Contact us now <ArrowRight size={16} className="help-btn-icon" />
           </button>
         </div>
 
@@ -319,13 +319,13 @@ const NeedHelp = () => {
           <div className="help-features-header">
             <div className="help-section-badge">
               <Shield size={16} />
-              SUPPORT FEATURES
+              Support features
             </div>
-            <h2 className="help-section-title">How We Support You</h2>
-            <p className="help-section-description">
+            <h2 className="help-section-title">How we support you</h2>
+            {/* <p className="help-section-description">
               Our comprehensive support system is designed to provide you with the assistance you need, when you need
               it. From expert guidance to troubleshooting, we're here to help you succeed.
-            </p>
+            </p> */}
           </div>
 
           <div className="help-support-features-grid">
@@ -341,8 +341,8 @@ const NeedHelp = () => {
         </div>
 
         <div className="help-faq-section" ref={faqRef}>
-          <div className="help-section-badge">FREQUENTLY ASKED QUESTIONS</div>
-          <h2 className="help-section-title">Common Questions</h2>
+          <div className="help-section-badge">Frequently asked questions</div>
+          <h2 className="help-section-title">Common questions</h2>
 
           <div className="help-faq-container">
             {faqs.map((faq, index) => (
@@ -371,7 +371,7 @@ const NeedHelp = () => {
 
         <div className="help-cta-section">
           <div className="help-cta-content">
-            <h2>Still Have Questions?</h2>
+            <h2>Still have questions?</h2>
             <p>Our team is ready to provide personalized assistance for your specific needs</p>
             <div className="help-cta-buttons">
               <button

@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import { Linkedin, Twitter, Mail, Award, TrendingUp, Users, Star } from "lucide-react"
+import { Linkedin, Twitter, Mail, Award, TrendingUp, Users, Star,ArrowRight } from "lucide-react"
 import "./Team.css"
 import HarisButt from "../../assets/HarisButt.jpg"
 import AliHassan from "../../assets/AliHassan.jpg"
@@ -11,6 +11,7 @@ import UmarTatla from "../../assets/UmarTatla.jpg"
 import AbdullahKhan from "../../assets/AbdullahKhan.jpg"
 import Testimonials from "../LandingPage/Testimonial/Testimonial"
 import Brand from "../LandingPage/FeaturedPartners/FeaturedPartners"
+
 
 const Team = () => {
   const sectionRef = useRef(null)
@@ -256,6 +257,21 @@ const Team = () => {
           </div>
         </div>
       </div>
+      <div className="about-cta">
+          <div className="cta-background">
+            <div className="cta-shape cta-shape-1"></div>
+            <div className="cta-shape cta-shape-2"></div>
+          </div>
+          <h2>Get Help from Experts</h2>
+          <p>
+            Partner with VixCommerce and take your Amazon presence to the next level. Our team of experts is ready to
+            help you achieve your e-commerce goals.
+          </p>
+          <button className="cta-button">
+            Get help <ArrowRight size={16} className="btn-icon" />
+          </button>
+        </div>
+
 
       <Testimonials />
       <Brand />

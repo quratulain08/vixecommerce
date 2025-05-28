@@ -99,13 +99,7 @@ const BrandLaunch = () => {
         "We create optimized product listings with compelling copy and high-quality images to maximize conversions.",
       color: "green",
     },
-    {
-      icon: <Award size={24} />,
-      title: "Launch Strategy",
-      description:
-        "We develop a comprehensive launch strategy to generate initial sales and reviews for your products.",
-      color: "blue",
-    },
+  
   ]
 
   const benefits = [
@@ -134,12 +128,12 @@ const BrandLaunch = () => {
           <div className="hero-badge">OUR SERVICES</div>
           <h1>
             Amazon brand &<br />
-            <span className="gradient-text">Product launch</span>
+            <span className="gradient-text">product launch</span>
           </h1>
           <div className="hero-line"></div>
           <p className="hero-subtitle">Start your Amazon journey with a strong foundation for success</p>
           <button className="hero-button" onClick={handleGetStartedClick}>
-            Get Started <ArrowRight size={16} className="btn-icon" />
+            Get started <ArrowRight size={16} className="btn-icon" />
           </button>
         </div>
       </div>
@@ -148,7 +142,7 @@ const BrandLaunch = () => {
         <div className="service-content" ref={contentRef}>
           <div className="overview-section">
             <div className="section-badge">OVERVIEW</div>
-            <h2 className="section-title">Launch Your Amazon Business</h2>
+            <h2 className="section-title">Launch your Amazon business</h2>
             <p>
               Launching a new brand or product on Amazon can be overwhelming. With millions of sellers competing for
               attention, standing out requires strategic planning and execution. Our Amazon Brand & Product Launch
@@ -165,7 +159,7 @@ const BrandLaunch = () => {
 
         <div className="service-process">
           <div className="section-badge">OUR PROCESS</div>
-          <h2 className="section-title">How We Launch Your Brand</h2>
+          <h2 className="section-title">How we launch your brand</h2>
 
           <div className="process-steps">
             {launchSteps.map((step, index) => (
@@ -183,7 +177,7 @@ const BrandLaunch = () => {
           </div>
         </div>
         <div className="benefits-section">
-            <h3 className="benefits-title">Why Choose Our Launch Service</h3>
+            <h3 className="benefits-title">Why choose our launch service</h3>
             <div className="benefits-grid">
               {benefits.map((benefit, index) => (
                 <div key={index} className="benefit-card">
@@ -202,13 +196,13 @@ const BrandLaunch = () => {
             <div className="cta-shape cta-shape-1"></div>
             <div className="cta-shape cta-shape-2"></div>
           </div>
-          <h2>Ready to Launch Your Amazon Business?</h2>
+          <h2>Ready to launch your Amazon business?</h2>
           <p>
             Partner with VixCommerce and start your Amazon journey with a strong foundation. Our team of experts is
             ready to help you achieve your e-commerce goals.
           </p>
           <button className="cta-button" onClick={handleGetStartedClick}>
-            Launch Your Product <ArrowRight size={16} className="btn-icon" />
+            Schedule a call <ArrowRight size={16} className="btn-icon" />
           </button>
         </div>
       </div>

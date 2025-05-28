@@ -192,7 +192,7 @@ const PPCManagement = () => {
         <div className="ppcm-content" ref={contentRef}>
           <div className="overview-section">
             <div className="ppcm-section-badge">OVERVIEW</div>
-            <h2 className="ppcm-section-title">Strategic PPC Management</h2>
+            <h2 className="ppcm-section-title">Strategic PPC management</h2>
             <p>
               In today's competitive Amazon marketplace, effective advertising is essential for visibility and sales.
               Our Amazon PPC Management service helps you navigate the complex world of Amazon advertising to maximize
@@ -213,7 +213,7 @@ const PPCManagement = () => {
          
         <div className="ppcm-strategies">
           <div className="ppcm-section-badge">OUR APPROACH</div>
-          <h2 className="ppcm-section-title">Strategic PPC Management</h2>
+          <h2 className="ppcm-section-title">Strategic PPC management</h2>
 
           <div className="ppcm-strategies-grid">
             {ppcStrategies.map((strategy, index) => (
@@ -233,34 +233,19 @@ const PPCManagement = () => {
 
         <div className="ppcm-process">
           <div className="ppcm-section-badge">OUR PROCESS</div>
-          <h2 className="ppcm-section-title">How We Manage Your PPC Campaigns</h2>
+          <h2 className="ppcm-section-title">How we manage your PPC campaigns</h2>
 
           <div className="ppcm-process-timeline">
             <div className="ppcm-timeline-item">
               <div className="ppcm-timeline-number">1</div>
               <div className="ppcm-timeline-content">
-                <h3>Account Analysis</h3>
+                <h3>Account analysis</h3>
                 <p>
                   We begin by analyzing your current PPC performance, product listings, and competitors to identify
                   opportunities and challenges.
                 </p>
               </div>
             </div>
-             <div className="benefits-section">
-            <h3 className="benefits-title">Benefits of Our PPC Management</h3>
-            <div className="benefits-grid">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="benefit-card">
-                  <div className="benefit-icon-wrapper">
-                    <CheckCircle size={24} className="benefit-icon" />
-                  </div>
-                  <span className="benefit-text">{benefit}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
 
             <div className="ppcm-timeline-item">
               <div className="ppcm-timeline-number">2</div>
@@ -307,38 +292,36 @@ const PPCManagement = () => {
             </div>
           </div>
         </div>
-
-        <div className="ppcm-results">
-          <div className="ppcm-section-badge">PROVEN RESULTS</div>
-          <h2 className="ppcm-section-title">What Our PPC Management Delivers</h2>
-
-          <div className="ppcm-results-grid">
-            {results.map((result, index) => (
-              <div
-                key={index}
-                className={`ppcm-result-card result-${result.color}`}
-                ref={(el) => (resultsRef.current[index] = el)}
-              >
-                <div className="result-icon-wrapper">{result.icon}</div>
-                <div className="ppcm-result-number">{result.number}</div>
-                <p>{result.description}</p>
-              </div>
-            ))}
+        <div className="benefits-section">
+            <h3 className="benefits-title">Benefits of our PPC management</h3>
+            <div className="benefits-grid">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="benefit-card">
+                  <div className="benefit-icon-wrapper">
+                    <CheckCircle size={24} className="benefit-icon" />
+                  </div>
+                  <span className="benefit-text">{benefit}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
+
+
+      
 
         <div className="ppcm-cta">
           <div className="ppcm-cta-background">
             <div className="ppcm-cta-shape ppcm-cta-shape-1"></div>
             <div className="ppcm-cta-shape ppcm-cta-shape-2"></div>
           </div>
-          <h2>Ready to Maximize Your Amazon Ad Performance?</h2>
+          <h2>Ready to maximize your Amazon ad performance?</h2>
           <p>
-            Partner with Vix Commerce for expert PPC management that drives results. Our team of Amazon advertising
+            Partner with VixCommerce for expert PPC management that drives results. Our team of Amazon advertising
             specialists will help you create and optimize campaigns that increase visibility, sales, and profitability.
           </p>
           <button className="ppcm-cta-button" onClick={handleGetStartedClick}>
-            Request an Audit <ArrowRight size={16} className="ppcm-btn-icon" />
+           Schedule a call <ArrowRight size={16} className="ppcm-btn-icon" />
           </button>
         </div>
       </div>

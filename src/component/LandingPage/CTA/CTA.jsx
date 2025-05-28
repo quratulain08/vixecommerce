@@ -18,7 +18,7 @@ const CTA = () => {
             <div className="cta-shape cta-shape-1"></div>
             <div className="cta-shape cta-shape-2"></div>
           </div>
-          <h2>Ready to Launch Your Amazon Business?</h2>
+          <h2>Ready to launch your Amazon business?</h2>
           <p>
             Partner with VixCommerce and start your Amazon journey with a strong foundation. Our team of experts is
             ready to help you achieve your e-commerce goals.

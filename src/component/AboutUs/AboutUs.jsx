@@ -195,7 +195,7 @@ const AboutUs = () => {
         <div className="about-content" ref={contentRef}>
           <div className="about-text">
             <div className="section-badge">OUR STORY</div>
-            <h2 className="section-title">Who We Are</h2>
+            <h2 className="section-title">Who we are</h2>
             <p>
               Vix Commerce empowers businesses to thrive on Amazon. Founded in 2021 by two passionate Amazon
               freelancers, we've grown from a duo to a team of seven experts. We understand the Amazon landscape
@@ -210,14 +210,14 @@ const AboutUs = () => {
 
           <div className="about-values">
             <div className="value-card">
-              <h3>Our Mission</h3>
+              <h3>Our mission</h3>
               <p>
                 To empower e-commerce businesses with strategic Amazon expertise that drives sustainable growth and
                 maximizes profitability.
               </p>
             </div>
             <div className="value-card">
-              <h3>Our Vision</h3>
+              <h3>Our vision</h3>
               <p>
                 To be the most trusted Amazon growth partner, known for delivering exceptional results through
                 innovation, integrity, and client-focused solutions.
@@ -230,7 +230,7 @@ const AboutUs = () => {
 
         <div className="values-section">
           <div className="section-badge">OUR VALUES</div>
-          <h2 className="section-title">What Drives Us</h2>
+          <h2 className="section-title">What drives us</h2>
           <div className="values-grid">
             {values.map((value, index) => (
               <div key={index} className="value-box">
@@ -243,8 +243,8 @@ const AboutUs = () => {
         </div>
 
         <div className="services-section">
-          <div className="section-badge">WHAT WE DO</div>
-          <h2 className="section-title">Our Services</h2>
+          <div className="section-badge">What we do </div>
+          <h2 className="section-title">Our services</h2>
           <div className="services-grid">
             {services.map((service, index) => (
               <div
@@ -266,13 +266,13 @@ const AboutUs = () => {
             <div className="cta-shape cta-shape-1"></div>
             <div className="cta-shape cta-shape-2"></div>
           </div>
-          <h2>Ready to Grow Your Amazon Business?</h2>
+          <h2>Ready to Grow your amazon business?</h2>
           <p>
             Partner with Vix Commerce and take your Amazon presence to the next level. Our team of experts is ready to
             help you achieve your e-commerce goals.
           </p>
           <button className="cta-button">
-            Get Started Today <ArrowRight size={16} className="btn-icon" />
+            Get started today <ArrowRight size={16} className="btn-icon" />
           </button>
         </div>
       </div>

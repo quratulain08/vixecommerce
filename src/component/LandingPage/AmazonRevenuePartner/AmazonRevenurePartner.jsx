@@ -98,9 +98,9 @@ const AmazonRevenuePartner = () => {
       <div className="revenue-partner-container">
         <div className="revenue-partner-content" ref={contentRef}>
           <div className="about-badge">ABOUT US</div>
-          <h2 className="about-title">Your Amazon Revenue Partner</h2>
+          <h2 className="about-title">Your Amazon revenue partner</h2>
           <p className="about-text">
-            At Vix Commerce, we are more than just a service provider; we are your strategic partner in navigating the
+            At VixCommerce, we are more than just a service provider; we are your strategic partner in navigating the
             dynamic world of Amazon advertising. With a passion for Amazon excellence and a commitment to driving
             results, we take pride in being a trusted ally for Amazon brand owners seeking to maximize their potential
             on the world's largest online marketplace.

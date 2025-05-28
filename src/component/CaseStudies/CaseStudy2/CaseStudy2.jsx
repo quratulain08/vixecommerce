@@ -64,7 +64,7 @@ const CaseStudy2 = () => {
           <div className="cs2-hero-content">
             <div className="hero-badge">CASE STUDY</div>
             <h1 className="cs2-hero-title">
-              Double Sales With <span className="gradient-text">Half Ad-Spend</span>
+              Double sales with <span className="gradient-text">half d-Spend</span>
               {/* <br />
               For Amazon UK Brand */}
             </h1>
@@ -80,7 +80,7 @@ const CaseStudy2 = () => {
         </div>
       </div>
 
-      {/* Stats Section */}
+      {/* Stats Section
       <div className="cs2-stats" ref={statsRef}>
         <div className="cs2-container">
           <div className="cs2-stats-grid">
@@ -102,7 +102,7 @@ const CaseStudy2 = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Case Study Content */}
       <div className="cs2-content">

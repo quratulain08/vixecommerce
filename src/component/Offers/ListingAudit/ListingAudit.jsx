@@ -127,12 +127,6 @@ const ListingAudit = () => {
       color: "blue",
     },
     {
-      icon: <AlertTriangle size={24} />,
-      title: "Compliance Check",
-      description: "We ensure your listings comply with Amazon's policies and guidelines to prevent suspension risks.",
-      color: "green",
-    },
-    {
       icon: <Zap size={24} />,
       title: "Actionable Recommendations",
       description: "We provide a detailed report with specific, prioritized recommendations for improvement.",
@@ -177,12 +171,6 @@ const ListingAudit = () => {
       color: "orange",
     },
     {
-      icon: <Key size={24} />,
-      title: "Backend Keywords",
-      description: "We check your backend search terms for completeness, relevance, and optimization opportunities.",
-      color: "pink",
-    },
-    {
       icon: <DollarSign size={24} />,
       title: "Pricing Strategy",
       description: "We evaluate your pricing in relation to competitors and perceived value to maximize conversions.",
@@ -222,7 +210,7 @@ const ListingAudit = () => {
         <div className="audit-content" ref={contentRef}>
           <div className="overview-section">
             <div className="section-badge">OVERVIEW</div>
-            <h2 className="section-title">Comprehensive Listing Audit</h2>
+            <h2 className="section-title">Comprehensive listing audit</h2>
             <p>
               Are your Amazon listings performing below expectations? Our Amazon Listing Audit service provides a
               thorough analysis of your product listings to identify areas for improvement and unlock hidden potential.
@@ -238,7 +226,7 @@ const ListingAudit = () => {
 
         <div className="audit-process">
           <div className="section-badge">OUR PROCESS</div>
-          <h2 className="section-title">How We Audit Your Listings</h2>
+          <h2 className="section-title">How we audit your listings</h2>
 
           <div className="process-steps">
             {auditSteps.map((step, index) => (
@@ -256,7 +244,7 @@ const ListingAudit = () => {
           </div>
         </div>
         <div className="benefits-section">
-            <h3 className="benefits-title">Benefits of Our Listing Audit</h3>
+            <h3 className="benefits-title">Benefits of our listing audit</h3>
             <div className="benefits-grid">
               {benefits.map((benefit, index) => (
                 <div key={index} className="benefit-card">
@@ -272,7 +260,7 @@ const ListingAudit = () => {
 
         <div className="audit-features">
           <div className="section-badge">WHAT WE ANALYZE</div>
-          <h2 className="section-title">Comprehensive Audit Elements</h2>
+          <h2 className="section-title">Comprehensive audit elements</h2>
 
           <div className="features-grid">
             {auditElements.map((element, index) => (
@@ -294,13 +282,13 @@ const ListingAudit = () => {
             <div className="cta-shape cta-shape-1"></div>
             <div className="cta-shape cta-shape-2"></div>
           </div>
-          <h2>Ready to Unlock Your Listing's Potential?</h2>
+          <h2>Ready to unlock your listing's potential?</h2>
           <p>
-            Partner with Vix Commerce for a comprehensive Amazon listing audit. Our team of experts will identify
+            Partner with VixCommerce for a comprehensive Amazon listing audit. Our team of experts will identify
             opportunities for improvement and provide actionable recommendations to boost your performance.
           </p>
           <button className="cta-button" onClick={handleGetStartedClick}>
-            Request an Audit <ArrowRight size={16} className="btn-icon" />
+            Schedule a call <ArrowRight size={16} className="btn-icon" />
           </button>
         </div>
       </div>
