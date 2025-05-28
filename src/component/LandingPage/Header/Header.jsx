@@ -5,6 +5,22 @@ import { Link, useLocation } from "react-router-dom"
 import LOGO from "../../../assets/LOGO.png"
 import "./Header.css"
 
+// Import icons (you can replace these with your preferred icon library)
+import {
+  Rocket,
+  Settings,
+  Search,
+  TrendingUp,
+  Target,
+  Package,
+  FileText,
+  Baby,
+  Zap,
+  Home,
+  Users,
+  UserCheck,
+} from "lucide-react"
+
 const Header = () => {
   const location = useLocation()
   const [isServicesOpen, setIsServicesOpen] = useState(false)
@@ -149,62 +165,95 @@ const Header = () => {
               >
                 SERVICES <span className="dropdown-arrow">▼</span>
               </Link>
-              <ul className={`dropdown-menu ${isServicesOpen ? "show" : ""}`}>
-                <li>
+              <div className={`dropdown-menu modern-dropdown ${isServicesOpen ? "show" : ""}`}>
+                <div className="dropdown-header">
+                  <h3>Services</h3>
+                </div>
+                <div className="dropdown-grid">
                   <Link
                     to="/Offers/BrandLaunch"
-                    className={location.pathname === "/Offers/BrandLaunch" ? "active-sublink" : ""}
+                    className={`dropdown-item ${location.pathname === "/Offers/BrandLaunch" ? "active-sublink" : ""}`}
                     onClick={closeMenu}
                   >
-                    Amazon Product and Brand Launch
+                    <div className="item-icon">
+                      <Rocket size={20} />
+                    </div>
+                    <div className="item-content">
+                      <span className="item-description">Amazon Product and Brand Launch</span>
+                    </div>
                   </Link>
-                </li>
-                <li>
+
                   <Link
                     to="/Offers/FBAManagement"
-                    className={location.pathname === "/Offers/FBAManagement" ? "active-sublink" : ""}
+                    className={`dropdown-item ${location.pathname === "/Offers/FBAManagement" ? "active-sublink" : ""}`}
                     onClick={closeMenu}
                   >
-                    Amazon FBA Management
+                    <div className="item-icon">
+                      <Settings size={20} />
+                    </div>
+                    <div className="item-content">
+                      <span className="item-description">Amazon FBA Management</span>
+                    </div>
                   </Link>
-                </li>
-                <li>
+
                   <Link
                     to="/Offers/ListingAudit"
-                    className={location.pathname === "/Offers/ListingAudit" ? "active-sublink" : ""}
+                    className={`dropdown-item ${location.pathname === "/Offers/ListingAudit" ? "active-sublink" : ""}`}
                     onClick={closeMenu}
                   >
-                    Amazon Listing Audit
+                    <div className="item-icon">
+                      <Search size={20} />
+                    </div>
+                    <div className="item-content">
+                      <span className="item-description">Amazon Listing Audit</span>
+                    </div>
                   </Link>
-                </li>
-                <li>
+
                   <Link
                     to="/Offers/ListingOptimization"
-                    className={location.pathname === "/Offers/ListingOptimization" ? "active-sublink" : ""}
+                    className={`dropdown-item ${location.pathname === "/Offers/ListingOptimization" ? "active-sublink" : ""}`}
                     onClick={closeMenu}
                   >
-                    Amazon Listing Optimization & SEO
+                    <div className="item-icon">
+                      <TrendingUp size={20} />
+                    </div>
+                    <div className="item-content">
+                      <span className="item-description">Amazon Listing Optimization & SEO</span>
+                    </div>
                   </Link>
-                </li>
-                <li>
+
                   <Link
                     to="/Offers/PPCManagement"
-                    className={location.pathname === "/Offers/PPCManagement" ? "active-sublink" : ""}
+                    className={`dropdown-item ${location.pathname === "/Offers/PPCManagement" ? "active-sublink" : ""}`}
                     onClick={closeMenu}
                   >
-                    Amazon PPC Management
+                    <div className="item-icon">
+                      <Target size={20} />
+                    </div>
+                    <div className="item-content">
+                      <span className="item-description">Amazon PPC Management</span>
+                    </div>
                   </Link>
-                </li>
-                <li>
+
                   <Link
                     to="/Offers/Sourcing"
-                    className={location.pathname === "/Offers/Sourcing" ? "active-sublink" : ""}
+                    className={`dropdown-item ${location.pathname === "/Offers/Sourcing" ? "active-sublink" : ""}`}
                     onClick={closeMenu}
                   >
-                    Efficient Sourcing
+                    <div className="item-icon">
+                      <Package size={20} />
+                    </div>
+                    <div className="item-content">
+                      <span className="item-description">Product Sourcing Solutions</span>
+                    </div>
                   </Link>
-                </li>
-              </ul>
+                </div>
+                {/* <div className="dropdown-footer">
+                  <Link to="/Offers" className="view-all-link" onClick={closeMenu}>
+                    View All Services
+                  </Link>
+                </div> */}
+              </div>
             </li>
             <li className="nav-item dropdown">
               <Link
@@ -214,44 +263,70 @@ const Header = () => {
               >
                 CASE STUDIES <span className="dropdown-arrow">▼</span>
               </Link>
-              <ul className={`dropdown-menu ${isCaseStudiesOpen ? "show" : ""}`}>
-                <li>
-                  <Link
+              <div className={`dropdown-menu modern-dropdown ${isCaseStudiesOpen ? "show" : ""}`}>
+                <div className="dropdown-header">
+                  <h3>Case Studies</h3>
+                </div>
+                <div className="dropdown-grid">
+                  {/* <Link
                     to="/CaseStudies/CaseStudy3"
-                    className={location.pathname === "/CaseStudies/CaseStudy3" ? "active-sublink" : ""}
+                    className={`dropdown-item ${location.pathname === "/CaseStudies/CaseStudy3" ? "active-sublink" : ""}`}
                     onClick={closeMenu}
                   >
-                    Textile Niche Product
-                  </Link>
-                </li>
-                <li>
-                  <Link
+                    <div className="item-icon">
+                      <FileText size={20} />
+                    </div>
+                    <div className="item-content">
+                      <span className="item-description">Textile Niche Product</span>
+                    </div>
+                  </Link> */}
+
+                  {/* <Link
                     to="/CaseStudies/CaseStudy4"
-                    className={location.pathname === "/CaseStudies/CaseStudy4" ? "active-sublink" : ""}
+                    className={`dropdown-item ${location.pathname === "/CaseStudies/CaseStudy4" ? "active-sublink" : ""}`}
                     onClick={closeMenu}
                   >
-                    Baby Product
-                  </Link>
-                </li>
-                <li>
+                    <div className="item-icon">
+                      <Baby size={20} />
+                    </div>
+                    <div className="item-content">
+                      <span className="item-description">Baby Product Case Study</span>
+                    </div>
+                  </Link> */}
+
                   <Link
                     to="/CaseStudies/CaseStudy2"
-                    className={location.pathname === "/CaseStudies/CaseStudy2" ? "active-sublink" : ""}
+                    className={`dropdown-item ${location.pathname === "/CaseStudies/CaseStudy2" ? "active-sublink" : ""}`}
                     onClick={closeMenu}
                   >
-                    Electronic Niche
+                    <div className="item-icon">
+                      <Zap size={20} />
+                    </div>
+                    <div className="item-content">
+                      <span className="item-description">Electronic Niche</span>
+                    </div>
                   </Link>
-                </li>
-                <li>
+
                   <Link
                     to="/CaseStudies/CaseStudy1"
-                    className={location.pathname === "/CaseStudies/CaseStudy1" ? "active-sublink" : ""}
+                    className={`dropdown-item ${location.pathname === "/CaseStudies/CaseStudy1" ? "active-sublink" : ""}`}
                     onClick={closeMenu}
                   >
-                    Household Niche
+                    <div className="item-icon">
+                      <Home size={20} />
+                    </div>
+                    <div className="item-content">
+                      
+                      <span className="item-description">Household Niche</span>
+                    </div>
                   </Link>
-                </li>
-              </ul>
+                </div>
+                {/* <div className="dropdown-footer">
+                  <Link to="/CaseStudies" className="view-all-link" onClick={closeMenu}>
+                    View All Case Studies
+                  </Link>
+                </div> */}
+              </div>
             </li>
             <li className="nav-item dropdown">
               <Link
@@ -261,35 +336,45 @@ const Header = () => {
               >
                 ABOUT <span className="dropdown-arrow">▼</span>
               </Link>
-              <ul className={`dropdown-menu ${isAboutUsOpen ? "show" : ""}`}>
-                <li>
+              <div className={`dropdown-menu modern-dropdown ${isAboutUsOpen ? "show" : ""}`}>
+                <div className="dropdown-header">
+                  <h3>About</h3>
+                </div>
+                <div className="dropdown-grid">
                   <Link
                     to="/AboutUs"
-                    className={location.pathname === "/AboutUs" ? "active-sublink" : ""}
+                    className={`dropdown-item ${location.pathname === "/AboutUs" ? "active-sublink" : ""}`}
                     onClick={closeMenu}
                   >
-                    About Us
+                    <div className="item-icon">
+                      <Users size={20} />
+                    </div>
+                    <div className="item-content">
+                      <span className="item-title">About Us</span>
+                      <span className="item-description">Learn about our company</span>
+                    </div>
                   </Link>
-                </li>
-                <li>
+
                   <Link
                     to="/Team"
-                    className={location.pathname === "/Team" ? "active-sublink" : ""}
+                    className={`dropdown-item ${location.pathname === "/Team" ? "active-sublink" : ""}`}
                     onClick={closeMenu}
                   >
-                    Team
+                    <div className="item-icon">
+                      <UserCheck size={20} />
+                    </div>
+                    <div className="item-content">
+                      <span className="item-title">Team</span>
+                      <span className="item-description">Meet our team members</span>
+                    </div>
                   </Link>
-                </li>
-              </ul>
-            </li>
-            <li className="nav-item">
-              {/* <Link
-                to="/pricing"
-                className={`nav-link ${activeSection === "pricing" ? "active-page" : ""}`}
-                onClick={closeMenu}
-              >
-                PRICING
-              </Link> */}
+                </div>
+                <div className="dropdown-footer">
+                  <Link to="/AboutUs" className="view-all-link" onClick={closeMenu}>
+                    Learn More About Us
+                  </Link>
+                </div>
+              </div>
             </li>
           </ul>
 
