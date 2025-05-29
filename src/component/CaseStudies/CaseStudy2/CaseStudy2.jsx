@@ -82,8 +82,8 @@ const CaseStudy2 = () => {
       <div className="cs2-content">
         <div className="cs2-container">
           <div className="cs2-section">
-            <h2 className="cs2-section-title">How We Did It</h2>
-            <h3 className="cs2-section-subtitle">How We Transformed Their Amazon Presence</h3>
+            <h2 className="cs2-section-title">How we did it</h2>
+            <h3 className="cs2-section-subtitle">How we transformed their Amazon presence</h3>
             <div className="cs2-approach-grid">
               <div className="cs2-approach-item">
                 <div className="cs2-approach-number">01</div>
@@ -171,13 +171,13 @@ const CaseStudy2 = () => {
             <div className="cta-shape cta-shape-1"></div>
             <div className="cta-shape cta-shape-2"></div>
           </div>
-          <h2>Ready to launch your Amazon business?</h2>
-          <p>
-            Partner with VixCommerce and start your Amazon journey with a strong foundation. Our team of experts is
-            ready to help you achieve your e-commerce goals.
-          </p>
+         <h2>Boost your Amazon sales with PPC</h2>
+<p>
+  Partner with VixCommerce to optimize your Amazon PPC campaigns for maximum ROI. Our team of advertising specialists is dedicated to scaling your sales through data-driven strategies and targeted ad spend.
+</p>
+
           <button className="cta-button" onClick={handleGetStartedClick}>
-            Schedule a call <ArrowRight size={16} className="btn-icon" />
+            Get a free audit <ArrowRight size={16} className="btn-icon" />
           </button>
         </div>
       </div>

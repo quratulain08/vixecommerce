@@ -293,6 +293,19 @@ const Header = () => {
                       <span className="item-description">Baby Product Case Study</span>
                     </div>
                   </Link> */}
+                    <Link
+                    to="/CaseStudies/CaseStudy1"
+                    className={`dropdown-item ${location.pathname === "/CaseStudies/CaseStudy1" ? "active-sublink" : ""}`}
+                    onClick={closeMenu}
+                  >
+                    <div className="item-icon">
+                      <Home size={20} />
+                    </div>
+                    <div className="item-content">
+                      
+                      <span className="item-description">Household Niche</span>
+                    </div>
+                  </Link>
 
                   <Link
                     to="/CaseStudies/CaseStudy2"
@@ -307,19 +320,7 @@ const Header = () => {
                     </div>
                   </Link>
 
-                  <Link
-                    to="/CaseStudies/CaseStudy1"
-                    className={`dropdown-item ${location.pathname === "/CaseStudies/CaseStudy1" ? "active-sublink" : ""}`}
-                    onClick={closeMenu}
-                  >
-                    <div className="item-icon">
-                      <Home size={20} />
-                    </div>
-                    <div className="item-content">
-                      
-                      <span className="item-description">Household Niche</span>
-                    </div>
-                  </Link>
+                
                 </div>
                 {/* <div className="dropdown-footer">
                   <Link to="/CaseStudies" className="view-all-link" onClick={closeMenu}>

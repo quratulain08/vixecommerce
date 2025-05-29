@@ -68,7 +68,7 @@ const CaseStudy1 = () => {
             </h1>
             <div className="hero-line"></div>
             <p className="case-hero-description">
-              How we launched an Amazon store in Germany and expanded across Europe, achieving €2.3M monthly revenue and
+              How we launched an Amazon store in Germany and expanded across Europe, achieving €2.3M revenue and
               extraordinary growth in just over a year.
             </p>
             <button className="case-cta-button" onClick={handleGetStartedClick}>
@@ -84,7 +84,7 @@ const CaseStudy1 = () => {
           <div className="stats-grid">
             <div className="stat-item stat-blue">
               <h3 className="stat-number">€2.3M+</h3>
-              <p className="stat-label">Monthly Revenue</p>
+              <p className="stat-label">Yearly Revenue</p>
             </div>
             <div className="stat-item stat-green">
               <h3 className="stat-number">1.83%</h3>
@@ -106,8 +106,8 @@ const CaseStudy1 = () => {
       <div className="case-content">
         <div className="case-container">
           <div className="case-section">
-            <h2 className="case-section-title">How We Did It</h2>
-            <h3 className="case-section-subtitle">Discover How We Solved The Problem</h3>
+            <h2 className="case-section-title">How we did it</h2>
+            <h3 className="case-section-subtitle">Discover how we solved the problem</h3>
             <div className="case-text-with-image">
               <div className="case-text">
                 <p>
@@ -126,26 +126,7 @@ const CaseStudy1 = () => {
                   operational foundation, leading the business toward establishing a seven-figure brand across Europe.
                 </p>
               </div>
-              <div className="case-image">
-                <div className="case-image-placeholder">
-                  <div className="case-image-shape"></div>
-                  <div className="case-image-circle"></div>
-                  <div className="case-image-stats">
-                    <div className="case-stat">
-                      <span className="case-stat-number">€15K+</span>
-                      <span className="case-stat-label">Daily Sales</span>
-                    </div>
-                    <div className="case-stat">
-                      <span className="case-stat-number">628</span>
-                      <span className="case-stat-label">Open Orders</span>
-                    </div>
-                    <div className="case-stat">
-                      <span className="case-stat-number">100%</span>
-                      <span className="case-stat-label">Featured Rate</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+
             </div>
           </div>
 

@@ -422,6 +422,7 @@
 
 .case-text {
   flex: 0 0 55%;
+  /* align-items: center; */
 }
 
 .case-text p {
@@ -429,6 +430,7 @@
   line-height: 1.7;
   color: #444;
   margin-bottom: 20px;
+  align-items: center;
 }
 
 .case-image {
