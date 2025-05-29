@@ -12,7 +12,6 @@
   position: relative;
 }
 
-
 .case-hero {
   position: relative;
   padding: 140px 0;
@@ -21,11 +20,9 @@
   background: #040d21;
   transition: opacity 0.8s ease, transform 0.8s ease;
   color: #fff;
-  /* min-height: 100vh; */
   display: flex;
   align-items: center;
 }
- 
 
 .hero-background {
   position: absolute;
@@ -247,6 +244,7 @@
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   animation: fadeInUp 1s ease 0.5s both;
   font-family: "Poppins", sans-serif;
+  text-align: center;
 }
 
 .gradient-text {
@@ -276,6 +274,7 @@
   margin-right: auto;
   animation: fadeInUp 1s ease 0.9s both;
   line-height: 1.6;
+  text-align: center;
 }
 
 .case-cta-button {
@@ -361,6 +360,7 @@
   font-weight: 800;
   font-size: 42px;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .stat-blue .stat-number {
@@ -383,15 +383,16 @@
   font-family: "Manrope", sans-serif;
   font-size: 16px;
   color: #333;
+  text-align: center;
 }
 
 /* Case Study Content */
 .case-content {
-  padding: 80px 0;
+  padding: 80px 0 30px;
 }
 
 .case-section {
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 
 .case-section-title {
@@ -400,6 +401,7 @@
   font-size: 36px;
   color: #003366;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .case-section-subtitle {
@@ -408,12 +410,13 @@
   font-size: 24px;
   color: #106ebe;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .case-text-with-image {
   display: flex;
   gap: 40px;
-  align-items: center;
+  /* align-items: center; */
   margin-top: 20px;
 }
 
@@ -497,6 +500,7 @@
   font-size: 22px;
   color: #106ebe;
   margin-bottom: 5px;
+  text-align: center;
 }
 
 .case-stat-label {
@@ -530,6 +534,7 @@
   margin-bottom: 15px;
   position: relative;
   padding-bottom: 15px;
+  /* text-align: center; */
 }
 
 .case-challenge-section .case-card-title::after,
@@ -542,6 +547,7 @@
   width: 50px;
   height: 3px;
   background: linear-gradient(to right, #0ffcbe, #02b48a);
+  text-align: center;
 }
 
 .case-solution-section .case-card-text {
@@ -549,6 +555,107 @@
   line-height: 1.6;
   color: #444;
   margin-bottom: 20px;
+}
+
+/* CTA Section */
+.service-cta {
+  background: #040d21;
+  border-radius: 20px;
+  padding: 60px 40px;
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  margin-top: 5px;
+  /* margin: 20px auto 50px; */
+  max-width: 1000px;
+  width: 90%;
+}
+
+.cta-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.cta-shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(50px);
+}
+
+.cta-shape-1 {
+  top: -20%;
+  left: -10%;
+  width: 400px;
+  height: 400px;
+  background: rgba(0, 102, 255, 0.2);
+  animation: float 15s ease-in-out infinite;
+}
+
+.cta-shape-2 {
+  bottom: -20%;
+  right: -10%;
+  width: 300px;
+  height: 300px;
+  background: rgba(15, 252, 190, 0.15);
+  animation: float 20s ease-in-out infinite reverse;
+}
+
+.service-cta h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.service-cta p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  position: relative;
+  z-index: 2;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+
+.cta-button {
+  background: linear-gradient(to right, #0ffcbe, #0066ff);
+  color: #000;
+  border: none;
+  border-radius: 30px;
+  padding: 15px 30px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(15, 252, 190, 0.3);
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(15, 252, 190, 0.5);
+}
+
+.cta-button:hover .btn-icon {
+  transform: translateX(5px);
+}
+
+.btn-icon {
+  transition: transform 0.3s ease;
 }
 
 /* Responsive Styles */
@@ -622,6 +729,23 @@
   .case-section-alt {
     padding: 40px 30px;
   }
+
+  .service-cta {
+    padding: 40px 20px;
+  }
+
+  .service-cta h2 {
+    font-size: 2rem;
+  }
+
+  .service-cta p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+  }
 }
 
 @media (max-width: 576px) {
@@ -674,6 +798,23 @@
   .case-cta-button {
     width: 100%;
     justify-content: center;
+  }
+
+  .service-cta {
+    padding: 30px 15px;
+  }
+
+  .service-cta h2 {
+    font-size: 1.75rem;
+  }
+
+  .service-cta p {
+    font-size: 0.95rem;
+  }
+
+  .cta-button {
+    padding: 8px 14px;
+    font-size: 0.9rem;
   }
 }
 

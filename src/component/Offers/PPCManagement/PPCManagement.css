@@ -323,7 +323,7 @@
 
 /* Section Badge */
 .ppcm-section-badge {
-  display: inline-block;
+  display: block;
   background: rgba(0, 102, 204, 0.1);
   border-radius: 30px;
   padding: 6px 16px;
@@ -332,6 +332,8 @@
   color: #0066cc;
   margin-bottom: 15px;
   letter-spacing: 1px;
+  text-align: center;
+  margin: 0 auto 15px;
 }
 
 .ppcm-section-title {
@@ -340,17 +342,7 @@
   color: #003366;
   margin: 0 0 30px 0;
   position: relative;
-}
-
-.ppcm-section-title::after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 60px;
-  height: 4px;
-  background: linear-gradient(to right, #0ffcbe, #0066ff);
-  border-radius: 2px;
+  text-align: center;
 }
 
 /* PPC Content Section */
@@ -377,11 +369,6 @@
   text-align: center;
 }
 
-.overview-section .ppcm-section-title::after {
-  left: 50%;
-  transform: translateX(-50%);
-}
-
 .overview-section p {
   font-size: 1.1rem;
   line-height: 1.8;
@@ -402,18 +389,6 @@
   text-align: center;
   margin-bottom: 40px;
   position: relative;
-}
-
-.benefits-title::after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 4px;
-  background: linear-gradient(to right, #0ffcbe, #0066ff);
-  border-radius: 2px;
 }
 
 .benefits-grid {
@@ -550,6 +525,7 @@
 /* Strategies Section */
 .ppcm-strategies {
   margin-bottom: 100px;
+  text-align: center;
 }
 
 .ppcm-strategies-grid {
@@ -642,6 +618,7 @@
   font-weight: 700;
   color: #003366;
   margin: 0 0 10px 0;
+  text-align: center;
 }
 
 .ppcm-strategy-card p {
@@ -654,6 +631,7 @@
 /* Process Timeline */
 .ppcm-process {
   margin-bottom: 100px;
+  text-align: center;
 }
 
 .ppcm-process-timeline {
@@ -712,6 +690,7 @@
   font-weight: 700;
   color: #003366;
   margin: 0 0 10px 0;
+  text-align: center;
 }
 
 .ppcm-timeline-content p {

@@ -324,15 +324,17 @@
 
 /* Section Badge */
 .section-badge {
-  display: inline-block;
+  display: block;
   background: rgba(0, 102, 204, 0.1);
   border-radius: 30px;
   padding: 6px 16px;
   font-size: 0.8rem;
   font-weight: 600;
   color: #0066cc;
-  margin-bottom: 15px;
+  margin: 0 auto 15px auto;
   letter-spacing: 1px;
+  text-align: center;
+  width: fit-content;
 }
 
 .section-title {
@@ -341,15 +343,18 @@
   color: #003366;
   margin: 0 0 30px 0;
   position: relative;
+  text-align: center;
 }
 
 .section-title::after {
   content: "";
   position: absolute;
   bottom: -10px;
-  left: 0;
+  /* left: 50%; */
+  transform: translateX(-50%);
   width: 60px;
   height: 4px;
+  align-items: center;
   background: linear-gradient(to right, #0ffcbe, #0066ff);
   border-radius: 2px;
 }
@@ -534,6 +539,7 @@
 /* Services Section */
 .fba-services {
   margin-bottom: 100px;
+  text-align: center;
 }
 
 .process-steps {
@@ -638,6 +644,7 @@
 /* Process Timeline */
 .fba-process {
   margin-bottom: 100px;
+  text-align: center;
 }
 
 .process-timeline {

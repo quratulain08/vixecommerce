@@ -143,7 +143,7 @@ const FBAManagement = () => {
       <div className="fba-container">
         <div className="fba-content" ref={contentRef}>
           <div className="overview-section">
-            <div className="section-badge">OVERVIEW</div>
+            {/* <div className="section-badge">OVERVIEW</div> */}
             <h2 className="section-title">Comprehensive FBA management</h2>
             <p>
               Running a successful Amazon FBA business requires constant attention to detail, monitoring of key metrics,
@@ -160,7 +160,7 @@ const FBAManagement = () => {
           
 
         <div className="fba-services">
-          <div className="section-badge">WHAT WE DO</div>
+          {/* <div className="section-badge">WHAT WE DO</div> */}
           <h2 className="section-title">Our FBA management services</h2>
 
           <div className="process-steps">
@@ -194,7 +194,7 @@ const FBAManagement = () => {
         </div>
 
         <div className="fba-process">
-          <div className="section-badge">OUR APPROACH</div>
+          {/* <div className="section-badge">OUR APPROACH</div> */}
           <h2 className="section-title">How we manage your FBA business</h2>
 
           <div className="process-timeline">

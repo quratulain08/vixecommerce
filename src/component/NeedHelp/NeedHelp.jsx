@@ -276,7 +276,7 @@ const NeedHelp = () => {
 
       <div className="help-page-container">
         <div className="help-page-content" ref={contentRef} id="contact-options">
-          <div className="help-section-badge">How can we help</div>
+          {/* <div className="help-section-badge">How can we help</div> */}
           <h2 className="help-section-title help-animated-title">We're here for you</h2>
           <p className="help-section-description">
             At VixCommerce, we understand that navigating the Amazon marketplace can be challenging. Whether you're
@@ -317,10 +317,10 @@ const NeedHelp = () => {
         {/* Support Features Section with Heading */}
         <div className="help-support-features-wrapper" ref={featuresRef}>
           <div className="help-features-header">
-            <div className="help-section-badge">
+            {/* <div className="help-section-badge">
               <Shield size={16} />
               Support features
-            </div>
+            </div> */}
             <h2 className="help-section-title">How we support you</h2>
             {/* <p className="help-section-description">
               Our comprehensive support system is designed to provide you with the assistance you need, when you need
@@ -341,7 +341,7 @@ const NeedHelp = () => {
         </div>
 
         <div className="help-faq-section" ref={faqRef}>
-          <div className="help-section-badge">Frequently asked questions</div>
+          {/* <div className="help-section-badge">Frequently asked questions</div> */}
           <h2 className="help-section-title">Common questions</h2>
 
           <div className="help-faq-container">

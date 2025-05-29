@@ -209,7 +209,7 @@ const ListingAudit = () => {
       <div className="audit-container">
         <div className="audit-content" ref={contentRef}>
           <div className="overview-section">
-            <div className="section-badge">OVERVIEW</div>
+            {/* <div className="section-badge">OVERVIEW</div> */}
             <h2 className="section-title">Comprehensive listing audit</h2>
             <p>
               Are your Amazon listings performing below expectations? Our Amazon Listing Audit service provides a
@@ -225,7 +225,7 @@ const ListingAudit = () => {
           
 
         <div className="audit-process">
-          <div className="section-badge">OUR PROCESS</div>
+          {/* <div className="section-badge">OUR PROCESS</div> */}
           <h2 className="section-title">How we audit your listings</h2>
 
           <div className="process-steps">
@@ -259,7 +259,7 @@ const ListingAudit = () => {
         </div>
 
         <div className="audit-features">
-          <div className="section-badge">WHAT WE ANALYZE</div>
+          {/* <div className="section-badge">WHAT WE ANALYZE</div> */}
           <h2 className="section-title">Comprehensive audit elements</h2>
 
           <div className="features-grid">

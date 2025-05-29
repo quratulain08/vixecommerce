@@ -323,14 +323,15 @@
 
 /* Section Badge */
 .section-badge {
-  display: inline-block;
+  display: block;
+  text-align: center;
   background: rgba(0, 102, 204, 0.1);
   border-radius: 30px;
   padding: 6px 16px;
   font-size: 0.8rem;
   font-weight: 600;
   color: #0066cc;
-  margin-bottom: 15px;
+  margin: 0 auto 15px;
   letter-spacing: 1px;
 }
 
@@ -340,13 +341,15 @@
   color: #003366;
   margin: 0 0 30px 0;
   position: relative;
+  text-align: center;
 }
 
 .section-title::after {
   content: "";
   position: absolute;
   bottom: -10px;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 60px;
   height: 4px;
   background: linear-gradient(to right, #0ffcbe, #0066ff);
@@ -375,11 +378,6 @@
 
 .overview-section .section-title {
   text-align: center;
-}
-
-.overview-section .section-title::after {
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .overview-section p {
@@ -534,6 +532,7 @@
 /* Process Section */
 .service-process {
   margin-bottom: 100px;
+  text-align: center;
 }
 
 .process-steps {
@@ -626,6 +625,7 @@
   font-weight: 700;
   color: #003366;
   margin: 0 0 10px 0;
+  text-align: center;
 }
 
 .process-step p {
@@ -641,6 +641,7 @@
   background: #f9fbff;
   border-radius: 20px;
   overflow: hidden;
+  text-align: center;
 }
 
 .approach-container {
@@ -695,6 +696,7 @@
   font-weight: 700;
   color: #003366;
   margin: 0 0 8px 0;
+  text-align: center;
 }
 
 .approach-list p {
@@ -747,6 +749,7 @@
   font-size: 0.9rem;
   font-weight: 600;
   color: #003366;
+  text-align: center;
 }
 
 .approach-stats {
@@ -773,6 +776,113 @@
   font-size: 0.9rem;
   color: #555;
   font-weight: 500;
+}
+
+/* SEO Header */
+.seo-header {
+  text-align: center;
+  margin-bottom: 60px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.seo-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+  margin-top: 20px;
+}
+
+.seo-showcase {
+  background: linear-gradient(135deg, #fafbfc 0%, #f1f5f9 100%);
+  border-radius: 25px;
+  padding: 60px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.seo-showcase-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.seo-features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.seo-feature-item {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.seo-feature-item h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin: 0 0 12px 0;
+  text-align: center;
+}
+
+.seo-feature-item p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #4a5568;
+  margin: 0;
+}
+
+.seo-results {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.seo-result-card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.result-number {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  line-height: 1;
+  text-align: center;
+}
+
+.result-label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.result-description {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #4a5568;
+  margin: 0;
+  text-align: center;
 }
 
 /* CTA Section */
@@ -826,6 +936,7 @@
   margin: 0 0 20px 0;
   position: relative;
   z-index: 2;
+  text-align: center;
 }
 
 .sourcing-cta p {
@@ -836,6 +947,7 @@
   position: relative;
   z-index: 2;
   color: rgba(255, 255, 255, 0.8);
+  text-align: center;
 }
 
 .cta-button {

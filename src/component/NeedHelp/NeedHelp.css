@@ -426,6 +426,7 @@
 /* Section Badge */
 .help-section-badge {
   display: inline-flex;
+  padding-right: 100px;
   align-items: center;
   gap: 8px;
   background: rgba(0, 102, 204, 0.1);
@@ -442,23 +443,26 @@
   font-size: 2.5rem;
   font-weight: 800;
   color: #003366;
-  margin: 0 0 30px 0;
+  /* margin: 0 0 30px 0; */
   position: relative;
+  text-align: center;
 }
 
-.help-animated-title {
+/* .help-animated-title {
   background: linear-gradient(to right, #003366, #0066cc);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   display: inline-block;
-}
+  text-align: center;
+} */
 
 .help-section-title::after {
   content: "";
   position: absolute;
   bottom: -10px;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 60px;
   height: 4px;
   background: linear-gradient(to right, #0ffcbe, #0066ff);
@@ -469,7 +473,7 @@
   font-size: 1.1rem;
   line-height: 1.8;
   color: #444;
-  margin-bottom: 50px;
+  margin: 0 auto 50px auto;
   text-align: center;
   max-width: 800px;
 }
@@ -808,6 +812,7 @@
 .help-option-action-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   padding: 12px 24px;
   border: none;

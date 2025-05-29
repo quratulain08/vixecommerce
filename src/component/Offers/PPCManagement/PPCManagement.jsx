@@ -191,7 +191,7 @@ const PPCManagement = () => {
       <div className="ppcm-container">
         <div className="ppcm-content" ref={contentRef}>
           <div className="overview-section">
-            <div className="ppcm-section-badge">OVERVIEW</div>
+        
             <h2 className="ppcm-section-title">Strategic PPC management</h2>
             <p>
               In today's competitive Amazon marketplace, effective advertising is essential for visibility and sales.
@@ -210,89 +210,88 @@ const PPCManagement = () => {
             </p>
           </div>
 
-         
-        <div className="ppcm-strategies">
-          <div className="ppcm-section-badge">OUR APPROACH</div>
-          <h2 className="ppcm-section-title">Strategic PPC management</h2>
+          <div className="ppcm-strategies">
+            {/* <div className="ppcm-section-badge">OUR APPROACH</div> */}
+            <h2 className="ppcm-section-title">Our PPC strategies</h2>
 
-          <div className="ppcm-strategies-grid">
-            {ppcStrategies.map((strategy, index) => (
-              <div
-                key={index}
-                className={`ppcm-strategy-card ppcm-strategy-${strategy.color}`}
-                ref={(el) => (strategyRef.current[index] = el)}
-              >
-                <div className="step-number">{index + 1}</div>
-                <div className="ppcm-strategy-icon">{strategy.icon}</div>
-                <h3>{strategy.title}</h3>
-                <p>{strategy.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="ppcm-process">
-          <div className="ppcm-section-badge">OUR PROCESS</div>
-          <h2 className="ppcm-section-title">How we manage your PPC campaigns</h2>
-
-          <div className="ppcm-process-timeline">
-            <div className="ppcm-timeline-item">
-              <div className="ppcm-timeline-number">1</div>
-              <div className="ppcm-timeline-content">
-                <h3>Account analysis</h3>
-                <p>
-                  We begin by analyzing your current PPC performance, product listings, and competitors to identify
-                  opportunities and challenges.
-                </p>
-              </div>
-            </div>
-
-            <div className="ppcm-timeline-item">
-              <div className="ppcm-timeline-number">2</div>
-              <div className="ppcm-timeline-content">
-                <h3>Strategy Development</h3>
-                <p>
-                  Based on our analysis, we develop a customized PPC strategy aligned with your business goals and
-                  budget.
-                </p>
-              </div>
-            </div>
-
-            <div className="ppcm-timeline-item">
-              <div className="ppcm-timeline-number">3</div>
-              <div className="ppcm-timeline-content">
-                <h3>Campaign Setup</h3>
-                <p>
-                  We create optimized campaign structures with strategic keyword targeting, bidding strategies, and ad
-                  placements.
-                </p>
-              </div>
-            </div>
-
-            <div className="ppcm-timeline-item">
-              <div className="ppcm-timeline-number">4</div>
-              <div className="ppcm-timeline-content">
-                <h3>Continuous Optimization</h3>
-                <p>
-                  We continuously monitor and optimize your campaigns, adjusting bids, refining keywords, and
-                  eliminating underperforming elements.
-                </p>
-              </div>
-            </div>
-
-            <div className="ppcm-timeline-item">
-              <div className="ppcm-timeline-number">5</div>
-              <div className="ppcm-timeline-content">
-                <h3>Reporting & Analysis</h3>
-                <p>
-                  We provide regular performance reports with insights and recommendations for ongoing improvement and
-                  scaling.
-                </p>
-              </div>
+            <div className="ppcm-strategies-grid">
+              {ppcStrategies.map((strategy, index) => (
+                <div
+                  key={index}
+                  className={`ppcm-strategy-card ppcm-strategy-${strategy.color}`}
+                  ref={(el) => (strategyRef.current[index] = el)}
+                >
+                  <div className="step-number">{index + 1}</div>
+                  <div className="ppcm-strategy-icon">{strategy.icon}</div>
+                  <h3>{strategy.title}</h3>
+                  <p>{strategy.description}</p>
+                </div>
+              ))}
             </div>
           </div>
-        </div>
-        <div className="benefits-section">
+
+          <div className="ppcm-process">
+            {/* <div className="ppcm-section-badge">OUR PROCESS</div> */}
+            <h2 className="ppcm-section-title">How we manage your PPC campaigns</h2>
+
+            <div className="ppcm-process-timeline">
+              <div className="ppcm-timeline-item">
+                <div className="ppcm-timeline-number">1</div>
+                <div className="ppcm-timeline-content">
+                  <h3>Account analysis</h3>
+                  <p>
+                    We begin by analyzing your current PPC performance, product listings, and competitors to identify
+                    opportunities and challenges.
+                  </p>
+                </div>
+              </div>
+
+              <div className="ppcm-timeline-item">
+                <div className="ppcm-timeline-number">2</div>
+                <div className="ppcm-timeline-content">
+                  <h3>Strategy Development</h3>
+                  <p>
+                    Based on our analysis, we develop a customized PPC strategy aligned with your business goals and
+                    budget.
+                  </p>
+                </div>
+              </div>
+
+              <div className="ppcm-timeline-item">
+                <div className="ppcm-timeline-number">3</div>
+                <div className="ppcm-timeline-content">
+                  <h3>Campaign Setup</h3>
+                  <p>
+                    We create optimized campaign structures with strategic keyword targeting, bidding strategies, and ad
+                    placements.
+                  </p>
+                </div>
+              </div>
+
+              <div className="ppcm-timeline-item">
+                <div className="ppcm-timeline-number">4</div>
+                <div className="ppcm-timeline-content">
+                  <h3>Continuous Optimization</h3>
+                  <p>
+                    We continuously monitor and optimize your campaigns, adjusting bids, refining keywords, and
+                    eliminating underperforming elements.
+                  </p>
+                </div>
+              </div>
+
+              <div className="ppcm-timeline-item">
+                <div className="ppcm-timeline-number">5</div>
+                <div className="ppcm-timeline-content">
+                  <h3>Reporting & Analysis</h3>
+                  <p>
+                    We provide regular performance reports with insights and recommendations for ongoing improvement and
+                    scaling.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="benefits-section">
             <h3 className="benefits-title">Benefits of our PPC management</h3>
             <div className="benefits-grid">
               {benefits.map((benefit, index) => (
@@ -307,9 +306,6 @@ const PPCManagement = () => {
           </div>
         </div>
 
-
-      
-
         <div className="ppcm-cta">
           <div className="ppcm-cta-background">
             <div className="ppcm-cta-shape ppcm-cta-shape-1"></div>
@@ -321,7 +317,7 @@ const PPCManagement = () => {
             specialists will help you create and optimize campaigns that increase visibility, sales, and profitability.
           </p>
           <button className="ppcm-cta-button" onClick={handleGetStartedClick}>
-           Schedule a call <ArrowRight size={16} className="ppcm-btn-icon" />
+            Schedule a call <ArrowRight size={16} className="ppcm-btn-icon" />
           </button>
         </div>
       </div>

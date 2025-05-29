@@ -136,8 +136,8 @@ const Sourcing = () => {
       <div className="sourcing-container">
         <div className="sourcing-content" ref={contentRef}>
           <div className="overview-section">
-            <div className="section-badge">OVERVIEW</div>
-            <h2 className="section-title">Sourcing excellence</h2>
+            {/* <div className="section-badge">OVERVIEW</div> */}
+            <h2 className="section-title">Product sourcing solutions</h2>
             <p>
               Success on Amazon begins with great products. Our Efficient Sourcing service addresses this critical
               aspect of your Amazon business.
@@ -150,7 +150,7 @@ const Sourcing = () => {
           </div>
 
           <div className="service-process">
-            <div className="section-badge">WHAT WE OFFER</div>
+            {/* <div className="section-badge">WHAT WE OFFER</div> */}
             <h2 className="section-title">Our sourcing services</h2>
 
             <div className="process-steps">
@@ -185,7 +185,7 @@ const Sourcing = () => {
 
         <div className="sourcing-approach">
           <div className="seo-header">
-            <div className="section-badge">OUR APPROACH</div>
+            {/* <div className="section-badge">OUR APPROACH</div> */}
             <h2 className="section-title">Sourcing excellence</h2>
             <p className="seo-description">
               Our sourcing approach is built on years of experience working with manufacturers and suppliers around the

@@ -141,7 +141,7 @@ const BrandLaunch = () => {
       <div className="service-container">
         <div className="service-content" ref={contentRef}>
           <div className="overview-section">
-            <div className="section-badge">OVERVIEW</div>
+            {/* <div className="section-badge">OVERVIEW</div> */}
             <h2 className="section-title">Launch your Amazon business</h2>
             <p>
               Launching a new brand or product on Amazon can be overwhelming. With millions of sellers competing for
@@ -158,7 +158,7 @@ const BrandLaunch = () => {
           
 
         <div className="service-process">
-          <div className="section-badge">OUR PROCESS</div>
+          {/* <div className="section-badge">OUR PROCESS</div> */}
           <h2 className="section-title">How we launch your brand</h2>
 
           <div className="process-steps">

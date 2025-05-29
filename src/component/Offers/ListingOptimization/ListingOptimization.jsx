@@ -246,7 +246,7 @@ const ListingOptimization = () => {
       <div className="optimization-container">
         <div className="optimization-content" ref={contentRef}>
           <div className="overview-section">
-            <div className="section-badge">OVERVIEW</div>
+            {/* <div className="section-badge">OVERVIEW</div> */}
             <h2 className="section-title">Comprehensive listing optimization & SEO</h2>
             <p>
               Your Amazon product listings are your digital storefront. In a marketplace with millions of products,
@@ -268,7 +268,7 @@ const ListingOptimization = () => {
   
 
         <div className="optimization-process">
-          <div className="section-badge">OPTIMIZATION PROCESS</div>
+          {/* <div className="section-badge">OPTIMIZATION PROCESS</div> */}
           <h2 className="section-title">How we optimize your listings</h2>
 
           <div className="process-steps">
@@ -332,7 +332,7 @@ const ListingOptimization = () => {
 
         <div className="seo-approach">
           <div className="seo-header">
-            <div className="section-badge">SEO STRATEGY</div>
+            {/* <div className="section-badge">SEO STRATEGY</div> */}
             <h2 className="section-title">Amazon SEO mastery</h2>
             <p className="seo-description">
               Our Amazon SEO strategies are designed to improve your organic rankings and drive more traffic to your

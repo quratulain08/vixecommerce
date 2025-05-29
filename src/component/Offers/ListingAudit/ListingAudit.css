@@ -323,7 +323,9 @@
 
 /* Section Badge */
 .section-badge {
-  display: inline-block;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
   background: rgba(0, 102, 204, 0.1);
   border-radius: 30px;
   padding: 6px 16px;
@@ -340,17 +342,7 @@
   color: #003366;
   margin: 0 0 30px 0;
   position: relative;
-}
-
-.section-title::after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 60px;
-  height: 4px;
-  background: linear-gradient(to right, #0ffcbe, #0066ff);
-  border-radius: 2px;
+  text-align: center;
 }
 
 /* Audit Content Section */
@@ -377,11 +369,6 @@
   text-align: center;
 }
 
-.overview-section .section-title::after {
-  left: 50%;
-  transform: translateX(-50%);
-}
-
 .overview-section p {
   font-size: 1.1rem;
   line-height: 1.8;
@@ -402,18 +389,6 @@
   text-align: center;
   margin-bottom: 40px;
   position: relative;
-}
-
-.benefits-title::after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 4px;
-  background: linear-gradient(to right, #0ffcbe, #0066ff);
-  border-radius: 2px;
 }
 
 .benefits-grid {
@@ -533,6 +508,7 @@
 /* Process Section */
 .audit-process {
   margin-bottom: 100px;
+  text-align: center;
 }
 
 .process-steps {
@@ -613,6 +589,7 @@
   font-weight: 700;
   color: #003366;
   margin: 0 0 10px 0;
+  text-align: center;
 }
 
 .process-step p {
@@ -625,6 +602,7 @@
 /* Features Section */
 .audit-features {
   margin-bottom: 100px;
+  text-align: center;
 }
 
 .features-grid {
@@ -724,6 +702,7 @@
   font-weight: 700;
   color: #003366;
   margin: 0 0 15px 0;
+  text-align: center;
 }
 
 .feature-card p {

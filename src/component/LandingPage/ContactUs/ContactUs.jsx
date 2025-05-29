@@ -76,20 +76,7 @@ const ContactUs = () => {
             </div>
           </div>
 
-          <div className="vix-social-links">
-            <a href="#" className="vix-social-link" aria-label="Facebook">
-              <Facebook size={24} />
-            </a>
-            <a href="#" className="vix-social-link" aria-label="Instagram">
-              <Instagram size={24} />
-            </a>
-            <a href="#" className="vix-social-link" aria-label="Twitter">
-              <Twitter size={24} />
-            </a>
-            <a href="#" className="vix-social-link" aria-label="LinkedIn">
-              <Linkedin size={24} />
-            </a>
-          </div>
+      
 
           <div className="vix-quick-links">
             <h3>Quick Links</h3>
@@ -117,12 +104,7 @@ const ContactUs = () => {
               <div className="vix-links-column">
                 <h4>Case Studies</h4>
                 <ul>
-                  <li>
-                    <a href="/CaseStudies/CaseStudy3">Textile Niche Product</a>
-                  </li>
-                  <li>
-                    <a href="/CaseStudies/CaseStudy4">Baby Product</a>
-                  </li>
+
                   <li>
                     <a href="/CaseStudies/CaseStudy2">Electronic Niche</a>
                   </li>

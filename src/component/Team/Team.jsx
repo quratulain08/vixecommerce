@@ -113,10 +113,10 @@ const Team = () => {
       role: "Co-Founder & Marketing Director",
       image: AliHassan,
       description:
-        "Ali Hassan is a top marketing strategist with a 100% Upwork success rate and 99% Fiverr satisfaction. He has managed 20+ brands across 40+ niches.",
+        "Ali Hassan is a top marketing strategist with a 100% Upwork success rate and 99% Fiverr satisfaction. He has managed 40+ brands across 20+ niches.",
       mainStat: "$8.5M",
       mainStatLabel: "Annual Sales",
-      achievements: ["99% Fiverr Rating", "92% Client Retention", "40+ Niches Covered"],
+      achievements: ["99% Fiverr Rating", "92% Client Retention", "20+ Niches Covered"],
       quote:
         "We don't just manage Amazon accounts, we build sustainable businesses that thrive in competitive markets.",
       icon: <TrendingUp size={20} />,

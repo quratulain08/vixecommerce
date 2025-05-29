@@ -391,7 +391,7 @@
 }
 
 .cs2-section {
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 
 .cs2-section-title {
@@ -400,9 +400,11 @@
   font-size: 36px;
   color: #003366;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .cs2-section-subtitle {
+  text-align: center;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 24px;
@@ -445,7 +447,7 @@
   background-color: #f5f7f9;
   padding: 60px;
   border-radius: 20px;
-  margin-bottom: 60px;
+  margin-bottom: 10px;
 }
 
 .cs2-problem-section,
@@ -464,6 +466,7 @@
   margin-bottom: 15px;
   position: relative;
   padding-bottom: 15px;
+  /* text-align: center; */
 }
 
 .cs2-problem-section .cs2-card-title::after,
@@ -476,6 +479,7 @@
   width: 50px;
   height: 3px;
   background: linear-gradient(to right, #0ffcbe, #02b48a);
+  text-align: center;
 }
 
 .cs2-solution-section .cs2-card-text {
@@ -488,7 +492,7 @@
 .cs2-text-with-image {
   display: flex;
   gap: 40px;
-  align-items: center;
+  /* align-items: center; */
   margin-top: 20px;
 }
 

@@ -65,8 +65,6 @@ const CaseStudy2 = () => {
             <div className="hero-badge">CASE STUDY</div>
             <h1 className="cs2-hero-title">
               Double sales with <span className="gradient-text">half ad-Spend</span>
-              {/* <br />
-              For Amazon UK Brand */}
             </h1>
             <div className="hero-line"></div>
             <p className="cs2-hero-description">
@@ -79,30 +77,6 @@ const CaseStudy2 = () => {
           </div>
         </div>
       </div>
-
-      {/* Stats Section
-      <div className="cs2-stats" ref={statsRef}>
-        <div className="cs2-container">
-          <div className="cs2-stats-grid">
-            <div className="cs2-stat-item cs2-stat-blue">
-              <h3 className="cs2-stat-number">100+</h3>
-              <p className="cs2-stat-label">TV Products Optimized</p>
-            </div>
-            <div className="cs2-stat-item cs2-stat-green">
-              <h3 className="cs2-stat-number">63%</h3>
-              <p className="cs2-stat-label">Reduction in TACOS</p>
-            </div>
-            <div className="cs2-stat-item cs2-stat-purple">
-              <h3 className="cs2-stat-number">50%</h3>
-              <p className="cs2-stat-label">Increase in Organic Sales</p>
-            </div>
-            <div className="cs2-stat-item cs2-stat-orange">
-              <h3 className="cs2-stat-number">2</h3>
-              <p className="cs2-stat-label">Months to Complete Optimization</p>
-            </div>
-          </div>
-        </div>
-      </div> */}
 
       {/* Case Study Content */}
       <div className="cs2-content">
@@ -189,8 +163,27 @@ const CaseStudy2 = () => {
           </div>
         </div>
       </div>
-      <Testimonials/>
-      <FeaturedPartners/>
+
+      {/* CTA Section */}
+      <div className="cs2-container">
+        <div className="service-cta">
+          <div className="cta-background">
+            <div className="cta-shape cta-shape-1"></div>
+            <div className="cta-shape cta-shape-2"></div>
+          </div>
+          <h2>Ready to launch your Amazon business?</h2>
+          <p>
+            Partner with VixCommerce and start your Amazon journey with a strong foundation. Our team of experts is
+            ready to help you achieve your e-commerce goals.
+          </p>
+          <button className="cta-button" onClick={handleGetStartedClick}>
+            Schedule a call <ArrowRight size={16} className="btn-icon" />
+          </button>
+        </div>
+      </div>
+
+      <Testimonials />
+      <FeaturedPartners />
     </section>
   )
 }
