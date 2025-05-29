@@ -152,7 +152,7 @@ const Header = () => {
 
         <nav className={`navigation ${isMenuOpen ? "active" : ""}`} ref={dropdownRef}>
           <ul className="nav-list">
-            <li className="nav-item">
+            <li className="nav-item nav-item-home">
               <Link to="/" className={`nav-link ${activeSection === "home" ? "active-page" : ""}`} onClick={closeMenu}>
                 HOME
               </Link>
