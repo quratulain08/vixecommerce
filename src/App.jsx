@@ -26,6 +26,7 @@ import ListingOptimization from './component/Offers/ListingOptimization/ListingO
 import PPCManagement from './component/Offers/PPCManagement/PPCManagement';
 import SourcingSEO from './component/Offers/SourcingSEO/Sourcing';
 import NeedHelp from './component/NeedHelp/NeedHelp';
+import NotFound from './component/NotFound';
 
 function App() {
   return (
@@ -67,6 +68,9 @@ function App() {
         <Route path ="Offers/ListingOptimization" element={<ListingOptimization/>}/>
         <Route path ="Offers/PPCManagement" element={<PPCManagement/>}/>
         <Route path ="Offers/Sourcing" element={<SourcingSEO/>}/>
+
+        {/* Not Found Route */}
+        <Route path="*" element={<NotFound />} />
       
       </Routes>
       {/* <div className="ContactUs">
