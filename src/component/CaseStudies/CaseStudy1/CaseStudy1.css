@@ -313,6 +313,7 @@
 
 /* New Stats Section - Based on provided design */
 .vx-stats-section {
+  margin-top: 90px;
   padding: 80px 0;
   position: relative;
   overflow: hidden;
