@@ -79,16 +79,16 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  align-items: center; /* This ensures all nav items are aligned */
 }
 
 .nav-item {
   position: relative;
   margin: 0 5px;
+  /* Removed individual padding - all nav items now have consistent spacing */
 }
 
-.nav-item-home {
-  padding-bottom: 25px;
-}
+/* Removed the special .nav-item-home class styling that was causing misalignment */
 
 .nav-link {
   display: flex;
@@ -102,6 +102,8 @@
   border-radius: 8px;
   position: relative;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  height: auto; /* Ensures consistent height */
+  line-height: 1; /* Consistent line height */
 }
 
 .header.scrolled .nav-link {
@@ -806,11 +808,13 @@
   .nav-list {
     flex-direction: column;
     width: 100%;
+    align-items: flex-start; /* Reset alignment for mobile */
   }
 
   .nav-item {
     width: 100%;
     margin: 0;
+    padding-top: 25px; /* Add back the padding for mobile menu spacing */
   }
 
   .nav-link {

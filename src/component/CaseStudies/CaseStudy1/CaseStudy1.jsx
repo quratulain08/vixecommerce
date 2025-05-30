@@ -24,7 +24,7 @@ const CaseStudy1 = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.querySelectorAll(".stat-item").forEach((item, index) => {
+            entry.target.querySelectorAll(".vx-stat-card").forEach((item, index) => {
               setTimeout(() => {
                 item.classList.add("animate")
               }, index * 200)
@@ -79,24 +79,45 @@ const CaseStudy1 = () => {
       </div>
 
       {/* Stats Section */}
-      <div className="case-stats" ref={statsRef}>
+      <div className="vx-stats-section" ref={statsRef}>
         <div className="case-container">
-          <div className="stats-grid">
-            <div className="stat-item stat-blue">
-              <h3 className="stat-number">€2.3M+</h3>
-              <p className="stat-label">Yearly Revenue</p>
+          <div className="vx-stats-grid">
+            <div className="vx-stat-card vx-stat-blue">
+              <div className="vx-stat-decoration"></div>
+              <div className="vx-stat-content">
+                <p className="vx-stat-label">Yearly Revenue</p>
+                <div className="vx-stat-value-container">
+                  <h3 className="vx-stat-value">€2.3M+</h3>
+                </div>
+              </div>
             </div>
-            <div className="stat-item stat-green">
-              <h3 className="stat-number">1.83%</h3>
-              <p className="stat-label">ACOS (Reduced from 13.86%)</p>
+            <div className="vx-stat-card vx-stat-teal">
+              <div className="vx-stat-decoration"></div>
+              <div className="vx-stat-content">
+                <p className="vx-stat-label">ACOS</p>
+                <div className="vx-stat-value-container">
+                  <h3 className="vx-stat-value">1.83%</h3>
+                </div>
+                <p className="vx-stat-subtext">Reduced from 13.86%</p>
+              </div>
             </div>
-            <div className="stat-item stat-purple">
-              <h3 className="stat-number">145K+</h3>
-              <p className="stat-label">Monthly Units Sold</p>
+            <div className="vx-stat-card vx-stat-blue">
+              <div className="vx-stat-decoration"></div>
+              <div className="vx-stat-content">
+                <p className="vx-stat-label">Monthly Units Sold</p>
+                <div className="vx-stat-value-container">
+                  <h3 className="vx-stat-value">145K+</h3>
+                </div>
+              </div>
             </div>
-            <div className="stat-item stat-orange">
-              <h3 className="stat-number">61.18%</h3>
-              <p className="stat-label">Return on Investment</p>
+            <div className="vx-stat-card vx-stat-teal">
+              <div className="vx-stat-decoration"></div>
+              <div className="vx-stat-content">
+                <p className="vx-stat-label">Return on Investment</p>
+                <div className="vx-stat-value-container">
+                  <h3 className="vx-stat-value">61.18%</h3>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -108,25 +129,21 @@ const CaseStudy1 = () => {
           <div className="case-section">
             <h2 className="case-section-title">How we did it</h2>
             <h3 className="case-section-subtitle">Discover how we solved the problem</h3>
-            <div className="case-text-with-image">
-              <div className="case-text">
-                <p>
-                  In March 2023, we launched an Amazon store in Germany, initiating a remarkable growth journey. Over
-                  the next year, the store expanded its presence across major European markets, including Italy, Spain,
-                  France, and the UK.
-                </p>
-                <p>
-                  From November to mid-December 2024, the store witnessed consistent growth, with daily sales surging
-                  above €15,000 by December. Despite facing challenges related to inventory management during this rapid
-                  scaling phase, strategic recommendations by VixCommerce ensured record-breaking sales and
-                  profitability.
-                </p>
-                <p>
-                  With 628 open orders and a 100% featured offer rate, the store's performance highlights a strong
-                  operational foundation, leading the business toward establishing a seven-figure brand across Europe.
-                </p>
-              </div>
-
+            <div className="vx-centered-content">
+              <p>
+                In March 2023, we launched an Amazon store in Germany, initiating a remarkable growth journey. Over the
+                next year, the store expanded its presence across major European markets, including Italy, Spain,
+                France, and the UK.
+              </p>
+              <p>
+                From November to mid-December 2024, the store witnessed consistent growth, with daily sales surging
+                above €15,000 by December. Despite facing challenges related to inventory management during this rapid
+                scaling phase, strategic recommendations by VixCommerce ensured record-breaking sales and profitability.
+              </p>
+              <p>
+                With 628 open orders and a 100% featured offer rate, the store's performance highlights a strong
+                operational foundation, leading the business toward establishing a seven-figure brand across Europe.
+              </p>
             </div>
           </div>
 
