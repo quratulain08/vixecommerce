@@ -128,7 +128,7 @@ const CaseStudy1 = () => {
         <div className="case-container">
           <div className="case-section">
             <h2 className="case-section-title">How we did it</h2>
-            <h3 className="case-section-subtitle">Discover how we solved the problem</h3>
+            <h3 className="case-section-subtitle">Building a 7-figure Brand</h3>
             <div className="vx-centered-content">
               <p>
                 In March 2023, we launched an Amazon store in Germany, initiating a remarkable growth journey. Over the

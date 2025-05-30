@@ -1,5 +1,5 @@
 "use client"
-
+import { useNavigate } from "react-router-dom";
 import { useEffect, useRef, useState } from "react"
 import Testimonials from "../LandingPage/Testimonial/Testimonial"
 import Brand from "../LandingPage/FeaturedPartners/FeaturedPartners"
@@ -23,10 +23,12 @@ const AboutUs = () => {
   const statsRef = useRef(null)
   const contentRef = useRef(null)
   const cardsRef = useRef([])
+  const navigate = useNavigate();
+
   const [animateStats, setAnimateStats] = useState(false)
 
   useEffect(() => {
-     window.scrollTo(0,0);
+    window.scrollTo(0, 0);
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -96,46 +98,60 @@ const AboutUs = () => {
   const services = [
     {
       id: 1,
-      title: "Amazon PPC Management",
-      description: "Maximize ROI with strategic, sales-driven Amazon ads.",
-      icon: <TrendingUp size={24} />,
-      color: "blue",
+      title: "Amazon Brand & Product Launch",
+      description: "Launch successfully with sourcing, setup, and listing support.",
+      icon: <Rocket size={24} />,
+      color: "orange",
+      path: "/Offers/BrandLaunch",
+      onClick: () => navigate("/Offers/BrandLaunch"),
     },
     {
       id: 2,
       title: "Amazon FBA Management",
       description: "Streamline fulfillment for smoother Amazon operations.",
       icon: <Package size={24} />,
-      color: "green",
+      color: "pink",
+      path: "/Offers/FBAManagement",
+      onClick: () => navigate("/Offers/FBAManagement"),
+
     },
     {
       id: 3,
-      title: "Listing Optimization & SEO",
-      description: "Boost visibility and conversions with optimized listings.",
-      icon: <CheckCircle size={24} />,
-      color: "purple",
-    },
-    {
-      id: 4,
-      title: "Amazon Brand & Product Launch",
-      description: "Launch successfully with sourcing, setup, and listing support.",
-      icon: <Rocket size={24} />,
-      color: "orange",
-    },
-    {
-      id: 5,
-      title: "Efficient Sourcing",
-      description: "Find reliable suppliers and manage sourcing end-to-end.",
-      icon: <BarChart2 size={24} />,
-      color: "blue",
-    },
-    {
-      id: 6,
       title: "Amazon Listing Audit",
       description: "Get actionable insights to improve and optimize listings.",
       icon: <Search size={24} />,
       color: "green",
+      path: "/Offers/ListingAudit",
+      onClick: () => navigate("/Offers/ListingAudit"),
     },
+    {
+      id: 4,
+      title: "Listing Optimization & SEO",
+      description: "Boost visibility and conversions with optimized listings.",
+      icon: <CheckCircle size={24} />,
+      color: "purple",
+      path: "/Offers/ListingOptimization",
+      onClick: () => navigate("/Offers/ListingOptimization"),
+    },
+    {
+      id: 5,
+      title: "Amazon PPC Management",
+      description: "Maximize ROI with strategic, sales-driven Amazon ads.",
+      icon: <TrendingUp size={24} />,
+      color: "blue",
+      path: "/Offers/PPCManagement",
+      onClick: () => navigate("/Offers/PPCManagement"),
+    },
+    {
+      id: 6,
+      title: "Product Sourcing Solutions", 
+      description: "Find reliable suppliers and manage sourcing end-to-end.",
+      icon: <BarChart2 size={24} />,
+      color: "teal",
+      path: "/Offers/Sourcing",
+      onClick: () => navigate("/Offers/Sourcing"),
+    },
+
   ]
 
   const stats = [
@@ -226,7 +242,7 @@ const AboutUs = () => {
           </div>
         </div>
 
-      
+
 
         <div className="values-section">
           <div className="section-badge">OUR VALUES</div>
@@ -251,6 +267,8 @@ const AboutUs = () => {
                 key={service.id}
                 className={`service-card service-${service.color}`}
                 ref={(el) => (cardsRef.current[index] = el)}
+                onClick={() => navigate(service.path)}
+                style={{ cursor: "pointer" }}
               >
                 <div className="service-icon">{service.icon}</div>
                 <h3>{service.title}</h3>
@@ -258,6 +276,7 @@ const AboutUs = () => {
                 <div className="service-hover-effect"></div>
               </div>
             ))}
+
           </div>
         </div>
 
@@ -276,8 +295,8 @@ const AboutUs = () => {
           </button>
         </div>
       </div>
-       <Testimonials/>
-      <Brand/>
+      <Testimonials />
+      <Brand />
     </section>
   )
 }

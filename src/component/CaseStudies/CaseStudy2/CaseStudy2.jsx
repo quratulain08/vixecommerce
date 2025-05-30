@@ -83,7 +83,7 @@ const CaseStudy2 = () => {
         <div className="cs2-container">
           <div className="cs2-section">
             <h2 className="cs2-section-title">How we did it</h2>
-            <h3 className="cs2-section-subtitle">How we transformed their Amazon presence</h3>
+            <h3 className="cs2-section-subtitle">Double sales with half ad-spend</h3>
             <div className="cs2-approach-grid">
               <div className="cs2-approach-item">
                 <div className="cs2-approach-number">01</div>

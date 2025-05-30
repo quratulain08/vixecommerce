@@ -686,6 +686,15 @@
   background: linear-gradient(135deg, #e6fff5 0%, rgba(15, 252, 190, 0.2) 100%);
   color: #02b48a;
 }
+.service-teal .service-icon {
+  background: linear-gradient(135deg, #f0e6ff 0%, rgba(15, 252, 190, 0.2) 100%);
+  color: orangered;
+}
+
+.service-pink .service-icon {
+  background: linear-gradient(135deg, #f0e6ff 0%, rgba(15, 252, 190, 0.2) 100%);
+  color: palevioletred;
+}
 
 .service-purple .service-icon {
   background: linear-gradient(135deg, #f0e6ff 0%, rgba(128, 0, 255, 0.2) 100%);
