@@ -1,17 +1,14 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import { Linkedin, Twitter, Mail, Award, TrendingUp, Users, Star,ArrowRight } from "lucide-react"
+import { Linkedin, Twitter, Mail, Award, Users, Star, ArrowRight, Phone, MapPin } from "lucide-react"
 import "./Team.css"
-import HarisButt from "../../assets/HarisButt.jpg"
-import AliHassan from "../../assets/AliHassan.jpg"
+import HarisButt from "../../assets/Haris.jpg"
+// import AliHassan from "../../assets/AliHassan.jpg"
 import FizzaZaidi from "../../assets/FizzaZaidi.jpg"
 import UsamaSikandar from "../../assets/UsamaSikander.jpg"
 import UmarTatla from "../../assets/UmarTatla.jpg"
 import AbdullahKhan from "../../assets/AbdullahKhan.jpg"
-import Testimonials from "../LandingPage/Testimonial/Testimonial"
-import Brand from "../LandingPage/FeaturedPartners/FeaturedPartners"
-
 
 const Team = () => {
   const sectionRef = useRef(null)
@@ -97,29 +94,20 @@ const Team = () => {
 
   const leaders = [
     {
-      name: "Haris Butt",
-      role: "Founder & CEO",
+      name: "Muhammad Haris Butt",
+      role: "Amazon Brand Manager",
       image: HarisButt,
       description:
-        "Haris is an Amazon Brand Management expert with 5,000+ hours of experience. He has managed 10+ brands across US, German, and Canadian marketplaces.",
+        "Muhammad Haris Butt is an Amazon Brand Management expert with 5,000+ hours of experience. He has managed 10+ brands across US, German, and Canadian marketplaces.",
       mainStat: "$5M+",
       mainStatLabel: "Sales Generated",
       achievements: ["100% Upwork Success Rate", "87% Client Retention", "10+ Brands Managed"],
       quote: "Our mission is to empower brands with the strategies and expertise they need to dominate on Amazon.",
       icon: <Award size={20} />,
-    },
-    {
-      name: "Ali Hassan",
-      role: "Co-Founder & Marketing Director",
-      image: AliHassan,
-      description:
-        "Ali Hassan is a top marketing strategist with a 100% Upwork success rate and 99% Fiverr satisfaction. He has managed 40+ brands across 20+ niches.",
-      mainStat: "$8.5M",
-      mainStatLabel: "Annual Sales",
-      achievements: ["99% Fiverr Rating", "92% Client Retention", "20+ Niches Covered"],
-      quote:
-        "We don't just manage Amazon accounts, we build sustainable businesses that thrive in competitive markets.",
-      icon: <TrendingUp size={20} />,
+      email: "muhammadharisbutt@vixcommerce.com",
+      personalEmail: "muhamamdharisbutt@gmail.com",
+      phone: "+923224205105",
+      address: "House# 13, Street# 47, Muhalla Kala Burj, Baghbanpura, Lahore Cantt, Lahore, Pakistan",
     },
   ]
 
@@ -159,7 +147,7 @@ const Team = () => {
             </div>
             <h2 className="section-title">Our leadership team</h2>
             <p className="section-description">
-              Meet the visionaries driving Vix Commerce forward with years of expertise and proven results.
+              Meet the visionary driving Vix Commerce forward with years of expertise and proven results.
             </p>
           </div>
 
@@ -198,6 +186,27 @@ const Team = () => {
                         </li>
                       ))}
                     </ul>
+                  </div>
+                  <div className="leader-contact">
+                    <h4 className="contact-title">Contact Information</h4>
+                    <div className="contact-info">
+                      <div className="contact-item">
+                        <Mail size={14} />
+                        <span>{leader.email}</span>
+                      </div>
+                      <div className="contact-item">
+                        <Mail size={14} />
+                        <span>{leader.personalEmail}</span>
+                      </div>
+                      <div className="contact-item">
+                        <Phone size={14} />
+                        <span>{leader.phone}</span>
+                      </div>
+                      <div className="contact-item">
+                        <MapPin size={14} />
+                        <span>{leader.address}</span>
+                      </div>
+                    </div>
                   </div>
 
                   <blockquote className="leader-quote">"{leader.quote}"</blockquote>
@@ -256,8 +265,8 @@ const Team = () => {
             ))}
           </div>
         </div>
-      </div>
-      <div className="about-cta">
+
+        <div className="about-cta">
           <div className="cta-background">
             <div className="cta-shape cta-shape-1"></div>
             <div className="cta-shape cta-shape-2"></div>
@@ -271,10 +280,7 @@ const Team = () => {
             Get help <ArrowRight size={16} className="btn-icon" />
           </button>
         </div>
-
-
-      <Testimonials />
-      <Brand />
+      </div>
     </section>
   )
 }
